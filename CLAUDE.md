@@ -1,0 +1,48 @@
+# CLAUDE.md
+
+Project: **yes-no-maybeso** — do yeses or nos win more on US statewide ballot measures (1976–2024), and do wording, topic and origin change the odds? The published report is a GitHub Pages site served from `docs/`.
+
+## Pipeline (run from repo root, in order)
+
+```
+python3 -I scripts/build_dataset.py   # data/raw/** -> data/measures.csv, data/state_year.csv
+python3 -I scripts/analyze.py         # data/*.csv -> results/*.csv, results/summary.json
+python3 -I scripts/build_site.py      # results/summary.json -> docs/index.html
+```
+
+`docs/index.html` is generated. Never hand-edit it; change `scripts/build_site.py` and rebuild. Prose numbers are interpolated from `results/summary.json`; a few comparisons (CA/OR/WA vs IRI) are hard-coded in the text and must be rechecked if the data changes.
+
+Dependencies: `pip install -r requirements.txt`.
+
+## Data
+
+- `data/raw/wiki/*.html` — Wikipedia state list pages fetched with `scripts/wiki.py` (MediaWiki API). Source of measure-level data for 15 states + DC. Re-fetch to refresh; the parser keys on `wikitable` tables with an `h3` year heading (California 1970–2009 uses bulleted lists).
+- `data/raw/iri_state_year.xls` — IRI initiative counts and approvals by state and year (all initiative states).
+- `data/measures.csv` — one row per measure: state, year, description, origin (`mtype`: initiative / legislative / unknown), topic, domain, passed, yes_pct, wording features.
+- Ballotpedia blocks automated access (403). Do not scrape around it. If full measure-level data for all 50 states is supplied (Ballotpedia export or Matsusaka's IRI database), add a loader in `build_dataset.py` and keep `measures.csv`'s schema.
+
+## Method conventions
+
+- Window is 1976–2024 completed elections; rows with undecided outcomes are dropped.
+- `passed` follows the source's result. It matches `yes_pct > 50` in 98.3% of rows; mismatches are legitimate supermajority rules (FL 60%, WY). Don't "fix" them.
+- Origin (`mtype`) is unknown for ~59% of rows. Anything comparing initiatives with referrals must say it uses identified cases only.
+- Wording models are logits with state and decade fixed effects, errors clustered by state-election. Model A = all rows; Model B = known-origin rows with an origin control. Report both, and report null results as nulls.
+- Topic labels are keyword rules (`TOPICS` in `build_dataset.py`), roughly 75–80% accurate on a 40-row hand audit. Order of rules matters (first match wins); keep `\b` word boundaries (an earlier `rent\b` matched "current").
+
+## Honesty rules for this project
+
+- The report must state that wording results come from the 16-jurisdiction subset, not all 50 states.
+- Wikipedia text mixes official ballot titles and editor summaries, so wording is confounded with who wrote it. Keep that caveat next to any wording claim.
+- Association, not causation. Don't write "rewording would change outcomes".
+- Flag coverage gaps whenever pooled numbers are shown (AZ 1990–2008, MO/SD from 2000, OK from 2004, DC 1979 only).
+
+## Style
+
+Python 3.13, pandas/statsmodels/scipy, no notebooks. Scripts are plain files run with `python3 -I` from the repo root. Charts are hand-built inline SVG with CSS custom properties for light/dark themes (palette from the dataviz skill: slot 1 blue, slot 2 orange), always with a table view.
+
+## Open scope
+
+1. Full 50-state measure-level data.
+2. Official ballot-title text for every measure.
+3. Better topic classifier (labelled sample plus a model, or manual coding).
+4. State covariates: partisanship, signature requirements, turnout.

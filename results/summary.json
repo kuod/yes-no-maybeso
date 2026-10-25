@@ -1,0 +1,2357 @@
+{
+ "headline": {
+  "n": 2465,
+  "passed": 1406,
+  "pass_rate": 0.5703853955375253,
+  "ci": [
+   0.5507486720976746,
+   0.5898030749240863
+  ],
+  "states": 16,
+  "binom_p": 2.946731204024709e-12,
+  "mean_yes_pct": 53.62295493439817,
+  "median_yes_pct": 53.81,
+  "n_with_pct": 1753
+ },
+ "by_state": [
+  {
+   "state": "Hawaii",
+   "n": 109.0,
+   "passed": 91.0,
+   "pass_rate": 0.8349,
+   "lo": 0.754,
+   "hi": 0.8929,
+   "mean_yes_pct": 59.0278
+  },
+  {
+   "state": "Florida",
+   "n": 180.0,
+   "passed": 127.0,
+   "pass_rate": 0.7056,
+   "lo": 0.6352,
+   "hi": 0.7673,
+   "mean_yes_pct": 61.784
+  },
+  {
+   "state": "District of Columbia",
+   "n": 33.0,
+   "passed": 23.0,
+   "pass_rate": 0.697,
+   "lo": 0.5266,
+   "hi": 0.8262,
+   "mean_yes_pct": 60.6933
+  },
+  {
+   "state": "Wyoming",
+   "n": 64.0,
+   "passed": 43.0,
+   "pass_rate": 0.6719,
+   "lo": 0.55,
+   "hi": 0.7743,
+   "mean_yes_pct": 62.5595
+  },
+  {
+   "state": "Missouri",
+   "n": 77.0,
+   "passed": 48.0,
+   "pass_rate": 0.6234,
+   "lo": 0.5117,
+   "hi": 0.7233,
+   "mean_yes_pct": 55.0447
+  },
+  {
+   "state": "Oklahoma",
+   "n": 21.0,
+   "passed": 13.0,
+   "pass_rate": 0.619,
+   "lo": 0.4088,
+   "hi": 0.7925,
+   "mean_yes_pct": 55.3352
+  },
+  {
+   "state": "Alaska",
+   "n": 137.0,
+   "passed": 83.0,
+   "pass_rate": 0.6058,
+   "lo": 0.5222,
+   "hi": 0.6837,
+   "mean_yes_pct": 52.3915
+  },
+  {
+   "state": "Washington",
+   "n": 209.0,
+   "passed": 122.0,
+   "pass_rate": 0.5837,
+   "lo": 0.516,
+   "hi": 0.6485,
+   "mean_yes_pct": 53.1489
+  },
+  {
+   "state": "Montana",
+   "n": 120.0,
+   "passed": 70.0,
+   "pass_rate": 0.5833,
+   "lo": 0.4939,
+   "hi": 0.6676,
+   "mean_yes_pct": 52.9401
+  },
+  {
+   "state": "California",
+   "n": 542.0,
+   "passed": 313.0,
+   "pass_rate": 0.5775,
+   "lo": 0.5355,
+   "hi": 0.6184,
+   "mean_yes_pct": NaN
+  },
+  {
+   "state": "Arizona",
+   "n": 120.0,
+   "passed": 64.0,
+   "pass_rate": 0.5333,
+   "lo": 0.4444,
+   "hi": 0.6202,
+   "mean_yes_pct": 44.55
+  },
+  {
+   "state": "Ohio",
+   "n": 83.0,
+   "passed": 44.0,
+   "pass_rate": 0.5301,
+   "lo": 0.4238,
+   "hi": 0.6338,
+   "mean_yes_pct": 51.9052
+  },
+  {
+   "state": "Colorado",
+   "n": 246.0,
+   "passed": 120.0,
+   "pass_rate": 0.4878,
+   "lo": 0.426,
+   "hi": 0.55,
+   "mean_yes_pct": 49.2625
+  },
+  {
+   "state": "Michigan",
+   "n": 98.0,
+   "passed": 47.0,
+   "pass_rate": 0.4796,
+   "lo": 0.3833,
+   "hi": 0.5774,
+   "mean_yes_pct": 50.3078
+  },
+  {
+   "state": "Oregon",
+   "n": 349.0,
+   "passed": 167.0,
+   "pass_rate": 0.4785,
+   "lo": 0.4266,
+   "hi": 0.5309,
+   "mean_yes_pct": 52.0352
+  },
+  {
+   "state": "South Dakota",
+   "n": 77.0,
+   "passed": 31.0,
+   "pass_rate": 0.4026,
+   "lo": 0.3002,
+   "hi": 0.5142,
+   "mean_yes_pct": 46.6878
+  }
+ ],
+ "by_decade": [
+  {
+   "decade": 1980,
+   "n": 445.0,
+   "passed": 280.0,
+   "pass_rate": 0.6292,
+   "lo": 0.5834,
+   "hi": 0.6728,
+   "mean_yes_pct": 54.6958
+  },
+  {
+   "decade": 1970,
+   "n": 285.0,
+   "passed": 179.0,
+   "pass_rate": 0.6281,
+   "lo": 0.5706,
+   "hi": 0.6821,
+   "mean_yes_pct": 54.7814
+  },
+  {
+   "decade": 2020,
+   "n": 170.0,
+   "passed": 99.0,
+   "pass_rate": 0.5824,
+   "lo": 0.5072,
+   "hi": 0.6539,
+   "mean_yes_pct": 54.9995
+  },
+  {
+   "decade": 2010,
+   "n": 394.0,
+   "passed": 220.0,
+   "pass_rate": 0.5584,
+   "lo": 0.509,
+   "hi": 0.6066,
+   "mean_yes_pct": 53.456
+  },
+  {
+   "decade": 2000,
+   "n": 588.0,
+   "passed": 316.0,
+   "pass_rate": 0.5374,
+   "lo": 0.497,
+   "hi": 0.5773,
+   "mean_yes_pct": 52.0862
+  },
+  {
+   "decade": 1990,
+   "n": 583.0,
+   "passed": 312.0,
+   "pass_rate": 0.5352,
+   "lo": 0.4946,
+   "hi": 0.5753,
+   "mean_yes_pct": 53.3602
+  }
+ ],
+ "by_domain": [
+  {
+   "domain": "other",
+   "n": 228.0,
+   "passed": 145.0,
+   "pass_rate": 0.636,
+   "lo": 0.5717,
+   "hi": 0.6957,
+   "mean_yes_pct": 56.1281
+  },
+  {
+   "domain": "social",
+   "n": 530.0,
+   "passed": 323.0,
+   "pass_rate": 0.6094,
+   "lo": 0.5673,
+   "hi": 0.65,
+   "mean_yes_pct": 54.7571
+  },
+  {
+   "domain": "political process",
+   "n": 575.0,
+   "passed": 328.0,
+   "pass_rate": 0.5704,
+   "lo": 0.5296,
+   "hi": 0.6103,
+   "mean_yes_pct": 53.5822
+  },
+  {
+   "domain": "economic",
+   "n": 713.0,
+   "passed": 390.0,
+   "pass_rate": 0.547,
+   "lo": 0.5103,
+   "hi": 0.5832,
+   "mean_yes_pct": 53.1761
+  },
+  {
+   "domain": "education",
+   "n": 218.0,
+   "passed": 115.0,
+   "pass_rate": 0.5275,
+   "lo": 0.4613,
+   "hi": 0.5927,
+   "mean_yes_pct": 50.2778
+  },
+  {
+   "domain": "environment",
+   "n": 201.0,
+   "passed": 105.0,
+   "pass_rate": 0.5224,
+   "lo": 0.4536,
+   "hi": 0.5904,
+   "mean_yes_pct": 52.2864
+  }
+ ],
+ "by_topic": [
+  {
+   "topic": "criminal justice",
+   "n": 163.0,
+   "passed": 128.0,
+   "pass_rate": 0.7853,
+   "lo": 0.7161,
+   "hi": 0.8414,
+   "mean_yes_pct": 62.4958
+  },
+  {
+   "topic": "transportation & infrastructure",
+   "n": 28.0,
+   "passed": 20.0,
+   "pass_rate": 0.7143,
+   "lo": 0.5294,
+   "hi": 0.8475,
+   "mean_yes_pct": 57.2118
+  },
+  {
+   "topic": "other",
+   "n": 228.0,
+   "passed": 145.0,
+   "pass_rate": 0.636,
+   "lo": 0.5717,
+   "hi": 0.6957,
+   "mean_yes_pct": 56.1281
+  },
+  {
+   "topic": "elections & government",
+   "n": 575.0,
+   "passed": 328.0,
+   "pass_rate": 0.5704,
+   "lo": 0.5296,
+   "hi": 0.6103,
+   "mean_yes_pct": 53.5822
+  },
+  {
+   "topic": "health & welfare",
+   "n": 219.0,
+   "passed": 119.0,
+   "pass_rate": 0.5434,
+   "lo": 0.4772,
+   "hi": 0.608,
+   "mean_yes_pct": 55.4626
+  },
+  {
+   "topic": "taxes & budget",
+   "n": 466.0,
+   "passed": 251.0,
+   "pass_rate": 0.5386,
+   "lo": 0.4932,
+   "hi": 0.5834,
+   "mean_yes_pct": 51.9061
+  },
+  {
+   "topic": "social",
+   "n": 367.0,
+   "passed": 195.0,
+   "pass_rate": 0.5313,
+   "lo": 0.4802,
+   "hi": 0.5818,
+   "mean_yes_pct": 51.813
+  },
+  {
+   "topic": "education",
+   "n": 218.0,
+   "passed": 115.0,
+   "pass_rate": 0.5275,
+   "lo": 0.4613,
+   "hi": 0.5927,
+   "mean_yes_pct": 50.2778
+  },
+  {
+   "topic": "environment & resources",
+   "n": 201.0,
+   "passed": 105.0,
+   "pass_rate": 0.5224,
+   "lo": 0.4536,
+   "hi": 0.5904,
+   "mean_yes_pct": 52.2864
+  }
+ ],
+ "by_mtype": [
+  {
+   "mtype": "legislative",
+   "n": 338.0,
+   "passed": 211.0,
+   "pass_rate": 0.6243,
+   "lo": 0.5715,
+   "hi": 0.6742,
+   "mean_yes_pct": 55.9281
+  },
+  {
+   "mtype": "unknown",
+   "n": 1453.0,
+   "passed": 884.0,
+   "pass_rate": 0.6084,
+   "lo": 0.583,
+   "hi": 0.6332,
+   "mean_yes_pct": 54.6577
+  },
+  {
+   "mtype": "initiative",
+   "n": 674.0,
+   "passed": 311.0,
+   "pass_rate": 0.4614,
+   "lo": 0.4241,
+   "hi": 0.4992,
+   "mean_yes_pct": 50.3868
+  }
+ ],
+ "wording_raw": [
+  {
+   "feature": "restrictive",
+   "n_with": 620,
+   "rate_with": 0.5371,
+   "n_without": 1845,
+   "rate_without": 0.5816,
+   "diff": -0.0445,
+   "chi2_p": 0.059
+  },
+  {
+   "feature": "expansive",
+   "n_with": 1587,
+   "rate_with": 0.5917,
+   "n_without": 878,
+   "rate_without": 0.5319,
+   "diff": 0.0598,
+   "chi2_p": 0.0047
+  },
+  {
+   "feature": "mentions_tax_debt",
+   "n_with": 632,
+   "rate_with": 0.5506,
+   "n_without": 1833,
+   "rate_without": 0.5772,
+   "diff": -0.0266,
+   "chi2_p": 0.2641
+  },
+  {
+   "feature": "is_amendment",
+   "n_with": 1101,
+   "rate_with": 0.6076,
+   "n_without": 1364,
+   "rate_without": 0.5403,
+   "diff": 0.0673,
+   "chi2_p": 0.0009
+  },
+  {
+   "feature": "mentions_increase",
+   "n_with": 157,
+   "rate_with": 0.5414,
+   "n_without": 2308,
+   "rate_without": 0.5724,
+   "diff": -0.031,
+   "chi2_p": 0.4998
+  },
+  {
+   "feature": "mentions_repeal",
+   "n_with": 100,
+   "rate_with": 0.37,
+   "n_without": 2365,
+   "rate_without": 0.5789,
+   "diff": -0.2089,
+   "chi2_p": 0.0001
+  },
+  {
+   "feature": "has_year_title",
+   "n_with": 132,
+   "rate_with": 0.6742,
+   "n_without": 2333,
+   "rate_without": 0.5645,
+   "diff": 0.1097,
+   "chi2_p": 0.017
+  }
+ ],
+ "by_length": [
+  {
+   "len_bin": "shortest 25%",
+   "n": 635.0,
+   "passed": 352.0,
+   "pass_rate": 0.5543,
+   "lo": 0.5155,
+   "hi": 0.5925,
+   "mean_yes_pct": 51.9418
+  },
+  {
+   "len_bin": "short-mid",
+   "n": 658.0,
+   "passed": 361.0,
+   "pass_rate": 0.5486,
+   "lo": 0.5104,
+   "hi": 0.5863,
+   "mean_yes_pct": 53.3767
+  },
+  {
+   "len_bin": "long-mid",
+   "n": 557.0,
+   "passed": 319.0,
+   "pass_rate": 0.5727,
+   "lo": 0.5313,
+   "hi": 0.6132,
+   "mean_yes_pct": 54.211
+  },
+  {
+   "len_bin": "longest 25%",
+   "n": 615.0,
+   "passed": 374.0,
+   "pass_rate": 0.6081,
+   "lo": 0.569,
+   "hi": 0.6459,
+   "mean_yes_pct": 54.2547
+  }
+ ],
+ "len_vs_yespct": {
+  "rho": 0.04957030217353363,
+  "p": 0.0379636872205366
+ },
+ "logit_wording": [
+  {
+   "term": "C(domain, Treatment('other'))[T.economic]",
+   "coef": -0.56,
+   "se": 0.1937,
+   "p": 0.0038,
+   "odds": 0.5712,
+   "lo": 0.3907,
+   "hi": 0.835
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.education]",
+   "coef": -0.6305,
+   "se": 0.2204,
+   "p": 0.0042,
+   "odds": 0.5323,
+   "lo": 0.3456,
+   "hi": 0.8199
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.environment]",
+   "coef": -0.6548,
+   "se": 0.2096,
+   "p": 0.0018,
+   "odds": 0.5195,
+   "lo": 0.3445,
+   "hi": 0.7835
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.political process]",
+   "coef": -0.4812,
+   "se": 0.1855,
+   "p": 0.0095,
+   "odds": 0.6181,
+   "lo": 0.4297,
+   "hi": 0.889
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.social]",
+   "coef": -0.1769,
+   "se": 0.1785,
+   "p": 0.3215,
+   "odds": 0.8378,
+   "lo": 0.5905,
+   "hi": 1.1887
+  },
+  {
+   "term": "restrictive",
+   "coef": 0.0175,
+   "se": 0.1078,
+   "p": 0.8711,
+   "odds": 1.0177,
+   "lo": 0.8238,
+   "hi": 1.2572
+  },
+  {
+   "term": "expansive",
+   "coef": 0.1464,
+   "se": 0.1394,
+   "p": 0.2936,
+   "odds": 1.1577,
+   "lo": 0.8809,
+   "hi": 1.5214
+  },
+  {
+   "term": "mentions_tax_debt",
+   "coef": 0.0421,
+   "se": 0.127,
+   "p": 0.7403,
+   "odds": 1.043,
+   "lo": 0.8131,
+   "hi": 1.3378
+  },
+  {
+   "term": "mentions_increase",
+   "coef": -0.0601,
+   "se": 0.2001,
+   "p": 0.7639,
+   "odds": 0.9417,
+   "lo": 0.6362,
+   "hi": 1.3938
+  },
+  {
+   "term": "mentions_repeal",
+   "coef": -0.8645,
+   "se": 0.2139,
+   "p": 0.0001,
+   "odds": 0.4213,
+   "lo": 0.277,
+   "hi": 0.6406
+  },
+  {
+   "term": "is_amendment",
+   "coef": 0.0512,
+   "se": 0.1419,
+   "p": 0.7183,
+   "odds": 1.0525,
+   "lo": 0.797,
+   "hi": 1.39
+  },
+  {
+   "term": "zlen",
+   "coef": 0.1052,
+   "se": 0.0641,
+   "p": 0.101,
+   "odds": 1.1109,
+   "lo": 0.9797,
+   "hi": 1.2597
+  },
+  {
+   "term": "zflesch",
+   "coef": 0.035,
+   "se": 0.0582,
+   "p": 0.5468,
+   "odds": 1.0357,
+   "lo": 0.9241,
+   "hi": 1.1607
+  }
+ ],
+ "logit_n": 2431,
+ "logit_pseudo_r2": 0.04332172152180447,
+ "ols_yespct": [
+  {
+   "term": "C(domain, Treatment('other'))[T.economic]",
+   "coef": -2.8727,
+   "se": 1.4685,
+   "p": 0.0504
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.education]",
+   "coef": -6.4481,
+   "se": 1.7278,
+   "p": 0.0002
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.environment]",
+   "coef": -3.5463,
+   "se": 1.8326,
+   "p": 0.053
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.political process]",
+   "coef": -4.2362,
+   "se": 1.4293,
+   "p": 0.003
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.social]",
+   "coef": -1.4917,
+   "se": 1.4659,
+   "p": 0.3089
+  },
+  {
+   "term": "restrictive",
+   "coef": -0.2673,
+   "se": 0.9005,
+   "p": 0.7666
+  },
+  {
+   "term": "expansive",
+   "coef": 0.8304,
+   "se": 1.0736,
+   "p": 0.4392
+  },
+  {
+   "term": "mentions_tax_debt",
+   "coef": -2.4707,
+   "se": 1.0363,
+   "p": 0.0171
+  },
+  {
+   "term": "mentions_increase",
+   "coef": -2.2788,
+   "se": 1.5069,
+   "p": 0.1305
+  },
+  {
+   "term": "mentions_repeal",
+   "coef": -5.1415,
+   "se": 1.8452,
+   "p": 0.0053
+  },
+  {
+   "term": "is_amendment",
+   "coef": 1.748,
+   "se": 1.08,
+   "p": 0.1055
+  },
+  {
+   "term": "zlen",
+   "coef": 0.7726,
+   "se": 0.6141,
+   "p": 0.2084
+  },
+  {
+   "term": "zflesch",
+   "coef": -0.2388,
+   "se": 0.4797,
+   "p": 0.6187
+  }
+ ],
+ "ols_n": 1746,
+ "type_known": [
+  {
+   "mtype": "initiative",
+   "n": 674.0,
+   "passed": 311.0,
+   "pass_rate": 0.4614,
+   "lo": 0.4241,
+   "hi": 0.4992,
+   "mean_yes_pct": 50.3868
+  },
+  {
+   "mtype": "legislative",
+   "n": 338.0,
+   "passed": 211.0,
+   "pass_rate": 0.6243,
+   "lo": 0.5715,
+   "hi": 0.6742,
+   "mean_yes_pct": 55.9281
+  }
+ ],
+ "type_chi2_p": 1.4209532711089096e-06,
+ "by_domain_type": [
+  {
+   "domain": "economic",
+   "mtype": "initiative",
+   "n": 186.0,
+   "passed": 76.0,
+   "pass_rate": 0.4086,
+   "lo": 0.3405,
+   "hi": 0.4804,
+   "mean_yes_pct": 49.6104
+  },
+  {
+   "domain": "economic",
+   "mtype": "legislative",
+   "n": 92.0,
+   "passed": 57.0,
+   "pass_rate": 0.6196,
+   "lo": 0.5175,
+   "hi": 0.7121,
+   "mean_yes_pct": 55.9225
+  },
+  {
+   "domain": "education",
+   "mtype": "initiative",
+   "n": 48.0,
+   "passed": 20.0,
+   "pass_rate": 0.4167,
+   "lo": 0.2885,
+   "hi": 0.5572,
+   "mean_yes_pct": 46.9133
+  },
+  {
+   "domain": "education",
+   "mtype": "legislative",
+   "n": 31.0,
+   "passed": 17.0,
+   "pass_rate": 0.5484,
+   "lo": 0.3777,
+   "hi": 0.7084,
+   "mean_yes_pct": 51.8609
+  },
+  {
+   "domain": "environment",
+   "mtype": "initiative",
+   "n": 65.0,
+   "passed": 25.0,
+   "pass_rate": 0.3846,
+   "lo": 0.2759,
+   "hi": 0.5062,
+   "mean_yes_pct": 45.8658
+  },
+  {
+   "domain": "environment",
+   "mtype": "legislative",
+   "n": 18.0,
+   "passed": 9.0,
+   "pass_rate": 0.5,
+   "lo": 0.2903,
+   "hi": 0.7097,
+   "mean_yes_pct": 50.7429
+  },
+  {
+   "domain": "other",
+   "mtype": "initiative",
+   "n": 38.0,
+   "passed": 18.0,
+   "pass_rate": 0.4737,
+   "lo": 0.3248,
+   "hi": 0.6274,
+   "mean_yes_pct": 52.8242
+  },
+  {
+   "domain": "other",
+   "mtype": "legislative",
+   "n": 20.0,
+   "passed": 16.0,
+   "pass_rate": 0.8,
+   "lo": 0.584,
+   "hi": 0.9193,
+   "mean_yes_pct": 64.7968
+  },
+  {
+   "domain": "political process",
+   "mtype": "initiative",
+   "n": 124.0,
+   "passed": 65.0,
+   "pass_rate": 0.5242,
+   "lo": 0.4369,
+   "hi": 0.61,
+   "mean_yes_pct": 53.3738
+  },
+  {
+   "domain": "political process",
+   "mtype": "legislative",
+   "n": 131.0,
+   "passed": 79.0,
+   "pass_rate": 0.6031,
+   "lo": 0.5175,
+   "hi": 0.6828,
+   "mean_yes_pct": 54.7326
+  },
+  {
+   "domain": "social",
+   "mtype": "initiative",
+   "n": 213.0,
+   "passed": 107.0,
+   "pass_rate": 0.5023,
+   "lo": 0.4358,
+   "hi": 0.5689,
+   "mean_yes_pct": 51.0401
+  },
+  {
+   "domain": "social",
+   "mtype": "legislative",
+   "n": 46.0,
+   "passed": 33.0,
+   "pass_rate": 0.7174,
+   "lo": 0.5745,
+   "hi": 0.8268,
+   "mean_yes_pct": 58.8588
+  }
+ ],
+ "iri_state": [
+  {
+   "state": "Alaska",
+   "initiatives": 51,
+   "approved": 27,
+   "iri_approval": 0.5294
+  },
+  {
+   "state": "Arizona",
+   "initiatives": 68,
+   "approved": 32,
+   "iri_approval": 0.4706
+  },
+  {
+   "state": "Arkansas",
+   "initiatives": 31,
+   "approved": 16,
+   "iri_approval": 0.5161
+  },
+  {
+   "state": "California",
+   "initiatives": 223,
+   "approved": 90,
+   "iri_approval": 0.4036
+  },
+  {
+   "state": "Colorado",
+   "initiatives": 123,
+   "approved": 40,
+   "iri_approval": 0.3252
+  },
+  {
+   "state": "Florida",
+   "initiatives": 38,
+   "approved": 30,
+   "iri_approval": 0.7895
+  },
+  {
+   "state": "Idaho",
+   "initiatives": 19,
+   "approved": 10,
+   "iri_approval": 0.5263
+  },
+  {
+   "state": "Illinois",
+   "initiatives": 1,
+   "approved": 1,
+   "iri_approval": 1.0
+  },
+  {
+   "state": "Maine",
+   "initiatives": 55,
+   "approved": 26,
+   "iri_approval": 0.4727
+  },
+  {
+   "state": "Massachusetts",
+   "initiatives": 61,
+   "approved": 28,
+   "iri_approval": 0.459
+  },
+  {
+   "state": "Michigan",
+   "initiatives": 41,
+   "approved": 17,
+   "iri_approval": 0.4146
+  },
+  {
+   "state": "Mississippi",
+   "initiatives": 6,
+   "approved": 2,
+   "iri_approval": 0.3333
+  },
+  {
+   "state": "Missouri",
+   "initiatives": 52,
+   "approved": 29,
+   "iri_approval": 0.5577
+  },
+  {
+   "state": "Montana",
+   "initiatives": 60,
+   "approved": 34,
+   "iri_approval": 0.5667
+  },
+  {
+   "state": "Nebraska",
+   "initiatives": 27,
+   "approved": 12,
+   "iri_approval": 0.4444
+  },
+  {
+   "state": "Nevada",
+   "initiatives": 48,
+   "approved": 34,
+   "iri_approval": 0.7083
+  },
+  {
+   "state": "North Dakota",
+   "initiatives": 63,
+   "approved": 28,
+   "iri_approval": 0.4444
+  },
+  {
+   "state": "Ohio",
+   "initiatives": 41,
+   "approved": 11,
+   "iri_approval": 0.2683
+  },
+  {
+   "state": "Oklahoma",
+   "initiatives": 23,
+   "approved": 12,
+   "iri_approval": 0.5217
+  },
+  {
+   "state": "Oregon",
+   "initiatives": 171,
+   "approved": 61,
+   "iri_approval": 0.3567
+  },
+  {
+   "state": "South Dakota",
+   "initiatives": 57,
+   "approved": 22,
+   "iri_approval": 0.386
+  },
+  {
+   "state": "Utah",
+   "initiatives": 19,
+   "approved": 6,
+   "iri_approval": 0.3158
+  },
+  {
+   "state": "Washington",
+   "initiatives": 111,
+   "approved": 60,
+   "iri_approval": 0.5405
+  },
+  {
+   "state": "Wyoming",
+   "initiatives": 7,
+   "approved": 3,
+   "iri_approval": 0.4286
+  }
+ ],
+ "iri_decade": [
+  {
+   "decade": 1970,
+   "initiatives": 102,
+   "approved": 40,
+   "approval": 0.3922
+  },
+  {
+   "decade": 1980,
+   "initiatives": 251,
+   "approved": 110,
+   "approval": 0.4382
+  },
+  {
+   "decade": 1990,
+   "initiatives": 382,
+   "approved": 177,
+   "approval": 0.4634
+  },
+  {
+   "decade": 2000,
+   "initiatives": 375,
+   "approved": 158,
+   "approval": 0.4213
+  },
+  {
+   "decade": 2010,
+   "initiatives": 286,
+   "approved": 146,
+   "approval": 0.5105
+  }
+ ],
+ "scrape_vs_iri": [
+  {
+   "state": "Alaska",
+   "n": 1,
+   "rate": 1.0,
+   "iri_approval": 0.5294,
+   "initiatives": 51,
+   "gap": 0.4706
+  },
+  {
+   "state": "Arizona",
+   "n": 1,
+   "rate": 0.0,
+   "iri_approval": 0.4706,
+   "initiatives": 68,
+   "gap": -0.4706
+  },
+  {
+   "state": "California",
+   "n": 134,
+   "rate": 0.403,
+   "iri_approval": 0.4036,
+   "initiatives": 223,
+   "gap": -0.0006
+  },
+  {
+   "state": "Colorado",
+   "n": 66,
+   "rate": 0.5152,
+   "iri_approval": 0.3252,
+   "initiatives": 123,
+   "gap": 0.1899
+  },
+  {
+   "state": "Florida",
+   "n": 3,
+   "rate": 0.3333,
+   "iri_approval": 0.7895,
+   "initiatives": 38,
+   "gap": -0.4561
+  },
+  {
+   "state": "Michigan",
+   "n": 19,
+   "rate": 0.6842,
+   "iri_approval": 0.4146,
+   "initiatives": 41,
+   "gap": 0.2696
+  },
+  {
+   "state": "Missouri",
+   "n": 32,
+   "rate": 0.5938,
+   "iri_approval": 0.5577,
+   "initiatives": 52,
+   "gap": 0.0361
+  },
+  {
+   "state": "Montana",
+   "n": 43,
+   "rate": 0.6047,
+   "iri_approval": 0.5667,
+   "initiatives": 60,
+   "gap": 0.038
+  },
+  {
+   "state": "Ohio",
+   "n": 34,
+   "rate": 0.3529,
+   "iri_approval": 0.2683,
+   "initiatives": 41,
+   "gap": 0.0846
+  },
+  {
+   "state": "Oklahoma",
+   "n": 1,
+   "rate": 1.0,
+   "iri_approval": 0.5217,
+   "initiatives": 23,
+   "gap": 0.4783
+  },
+  {
+   "state": "Oregon",
+   "n": 159,
+   "rate": 0.3648,
+   "iri_approval": 0.3567,
+   "initiatives": 171,
+   "gap": 0.0081
+  },
+  {
+   "state": "South Dakota",
+   "n": 33,
+   "rate": 0.3333,
+   "iri_approval": 0.386,
+   "initiatives": 57,
+   "gap": -0.0526
+  },
+  {
+   "state": "Washington",
+   "n": 115,
+   "rate": 0.5304,
+   "iri_approval": 0.5405,
+   "initiatives": 111,
+   "gap": -0.0101
+  },
+  {
+   "state": "Wyoming",
+   "n": 9,
+   "rate": 0.4444,
+   "iri_approval": 0.4286,
+   "initiatives": 7,
+   "gap": 0.0159
+  }
+ ],
+ "state_baseline": {
+  "coef": 3.5086955197644136,
+  "p": 1.8962396850618957e-13
+ },
+ "by_year": [
+  {
+   "year": 1976,
+   "n": 99.0,
+   "passed": 52.0,
+   "pass_rate": 0.5253,
+   "lo": 0.4278,
+   "hi": 0.6208,
+   "mean_yes_pct": 50.0112
+  },
+  {
+   "year": 1977,
+   "n": 15.0,
+   "passed": 9.0,
+   "pass_rate": 0.6,
+   "lo": 0.3575,
+   "hi": 0.8018,
+   "mean_yes_pct": 50.5973
+  },
+  {
+   "year": 1978,
+   "n": 128.0,
+   "passed": 86.0,
+   "pass_rate": 0.6719,
+   "lo": 0.5866,
+   "hi": 0.7472,
+   "mean_yes_pct": 56.3043
+  },
+  {
+   "year": 1979,
+   "n": 43.0,
+   "passed": 32.0,
+   "pass_rate": 0.7442,
+   "lo": 0.5976,
+   "hi": 0.8507,
+   "mean_yes_pct": 60.5295
+  },
+  {
+   "year": 1980,
+   "n": 80.0,
+   "passed": 45.0,
+   "pass_rate": 0.5625,
+   "lo": 0.4534,
+   "hi": 0.6659,
+   "mean_yes_pct": 51.7602
+  },
+  {
+   "year": 1981,
+   "n": 8.0,
+   "passed": 4.0,
+   "pass_rate": 0.5,
+   "lo": 0.2152,
+   "hi": 0.7848,
+   "mean_yes_pct": 49.12
+  },
+  {
+   "year": 1982,
+   "n": 83.0,
+   "passed": 40.0,
+   "pass_rate": 0.4819,
+   "lo": 0.3776,
+   "hi": 0.5878,
+   "mean_yes_pct": 48.58
+  },
+  {
+   "year": 1983,
+   "n": 7.0,
+   "passed": 2.0,
+   "pass_rate": 0.2857,
+   "lo": 0.0822,
+   "hi": 0.6411,
+   "mean_yes_pct": 48.52
+  },
+  {
+   "year": 1984,
+   "n": 70.0,
+   "passed": 51.0,
+   "pass_rate": 0.7286,
+   "lo": 0.6146,
+   "hi": 0.8188,
+   "mean_yes_pct": 59.1884
+  },
+  {
+   "year": 1985,
+   "n": 6.0,
+   "passed": 3.0,
+   "pass_rate": 0.5,
+   "lo": 0.1876,
+   "hi": 0.8124,
+   "mean_yes_pct": 51.93
+  },
+  {
+   "year": 1986,
+   "n": 83.0,
+   "passed": 56.0,
+   "pass_rate": 0.6747,
+   "lo": 0.5681,
+   "hi": 0.7658,
+   "mean_yes_pct": 56.2336
+  },
+  {
+   "year": 1987,
+   "n": 11.0,
+   "passed": 5.0,
+   "pass_rate": 0.4545,
+   "lo": 0.2127,
+   "hi": 0.7199,
+   "mean_yes_pct": 49.2664
+  },
+  {
+   "year": 1988,
+   "n": 87.0,
+   "passed": 68.0,
+   "pass_rate": 0.7816,
+   "lo": 0.6839,
+   "hi": 0.8555,
+   "mean_yes_pct": 62.375
+  },
+  {
+   "year": 1989,
+   "n": 10.0,
+   "passed": 6.0,
+   "pass_rate": 0.6,
+   "lo": 0.3127,
+   "hi": 0.8318,
+   "mean_yes_pct": 57.773
+  },
+  {
+   "year": 1990,
+   "n": 111.0,
+   "passed": 50.0,
+   "pass_rate": 0.4505,
+   "lo": 0.3611,
+   "hi": 0.5431,
+   "mean_yes_pct": 54.6315
+  },
+  {
+   "year": 1991,
+   "n": 8.0,
+   "passed": 2.0,
+   "pass_rate": 0.25,
+   "lo": 0.0715,
+   "hi": 0.5907,
+   "mean_yes_pct": 47.6375
+  },
+  {
+   "year": 1992,
+   "n": 88.0,
+   "passed": 48.0,
+   "pass_rate": 0.5455,
+   "lo": 0.4417,
+   "hi": 0.6454,
+   "mean_yes_pct": 56.0967
+  },
+  {
+   "year": 1993,
+   "n": 18.0,
+   "passed": 7.0,
+   "pass_rate": 0.3889,
+   "lo": 0.203,
+   "hi": 0.6138,
+   "mean_yes_pct": 52.5978
+  },
+  {
+   "year": 1994,
+   "n": 100.0,
+   "passed": 55.0,
+   "pass_rate": 0.55,
+   "lo": 0.4524,
+   "hi": 0.6439,
+   "mean_yes_pct": 54.7839
+  },
+  {
+   "year": 1995,
+   "n": 10.0,
+   "passed": 6.0,
+   "pass_rate": 0.6,
+   "lo": 0.3127,
+   "hi": 0.8318,
+   "mean_yes_pct": 58.672
+  },
+  {
+   "year": 1996,
+   "n": 111.0,
+   "passed": 57.0,
+   "pass_rate": 0.5135,
+   "lo": 0.4216,
+   "hi": 0.6045,
+   "mean_yes_pct": 49.9482
+  },
+  {
+   "year": 1997,
+   "n": 16.0,
+   "passed": 8.0,
+   "pass_rate": 0.5,
+   "lo": 0.28,
+   "hi": 0.72,
+   "mean_yes_pct": 50.7387
+  },
+  {
+   "year": 1998,
+   "n": 105.0,
+   "passed": 69.0,
+   "pass_rate": 0.6571,
+   "lo": 0.5622,
+   "hi": 0.7409,
+   "mean_yes_pct": 54.6857
+  },
+  {
+   "year": 1999,
+   "n": 16.0,
+   "passed": 10.0,
+   "pass_rate": 0.625,
+   "lo": 0.3864,
+   "hi": 0.8152,
+   "mean_yes_pct": 51.0744
+  },
+  {
+   "year": 2000,
+   "n": 125.0,
+   "passed": 65.0,
+   "pass_rate": 0.52,
+   "lo": 0.4331,
+   "hi": 0.6057,
+   "mean_yes_pct": 49.4115
+  },
+  {
+   "year": 2001,
+   "n": 9.0,
+   "passed": 7.0,
+   "pass_rate": 0.7778,
+   "lo": 0.4526,
+   "hi": 0.9368,
+   "mean_yes_pct": 60.4022
+  },
+  {
+   "year": 2002,
+   "n": 110.0,
+   "passed": 61.0,
+   "pass_rate": 0.5545,
+   "lo": 0.4614,
+   "hi": 0.644,
+   "mean_yes_pct": 51.843
+  },
+  {
+   "year": 2003,
+   "n": 10.0,
+   "passed": 3.0,
+   "pass_rate": 0.3,
+   "lo": 0.1078,
+   "hi": 0.6032,
+   "mean_yes_pct": 45.1538
+  },
+  {
+   "year": 2004,
+   "n": 85.0,
+   "passed": 52.0,
+   "pass_rate": 0.6118,
+   "lo": 0.5055,
+   "hi": 0.7084,
+   "mean_yes_pct": 55.6532
+  },
+  {
+   "year": 2005,
+   "n": 21.0,
+   "passed": 5.0,
+   "pass_rate": 0.2381,
+   "lo": 0.1063,
+   "hi": 0.4509,
+   "mean_yes_pct": 46.2492
+  },
+  {
+   "year": 2006,
+   "n": 109.0,
+   "passed": 62.0,
+   "pass_rate": 0.5688,
+   "lo": 0.4751,
+   "hi": 0.6579,
+   "mean_yes_pct": 53.2437
+  },
+  {
+   "year": 2007,
+   "n": 9.0,
+   "passed": 8.0,
+   "pass_rate": 0.8889,
+   "lo": 0.565,
+   "hi": 0.9801,
+   "mean_yes_pct": 55.2389
+  },
+  {
+   "year": 2008,
+   "n": 99.0,
+   "passed": 48.0,
+   "pass_rate": 0.4848,
+   "lo": 0.3888,
+   "hi": 0.582,
+   "mean_yes_pct": 51.4263
+  },
+  {
+   "year": 2009,
+   "n": 11.0,
+   "passed": 5.0,
+   "pass_rate": 0.4545,
+   "lo": 0.2127,
+   "hi": 0.7199,
+   "mean_yes_pct": 57.346
+  },
+  {
+   "year": 2010,
+   "n": 85.0,
+   "passed": 51.0,
+   "pass_rate": 0.6,
+   "lo": 0.4937,
+   "hi": 0.6976,
+   "mean_yes_pct": 55.1707
+  },
+  {
+   "year": 2011,
+   "n": 9.0,
+   "passed": 5.0,
+   "pass_rate": 0.5556,
+   "lo": 0.2666,
+   "hi": 0.8112,
+   "mean_yes_pct": 54.2822
+  },
+  {
+   "year": 2012,
+   "n": 76.0,
+   "passed": 35.0,
+   "pass_rate": 0.4605,
+   "lo": 0.3531,
+   "hi": 0.5718,
+   "mean_yes_pct": 51.107
+  },
+  {
+   "year": 2013,
+   "n": 4.0,
+   "passed": 1.0,
+   "pass_rate": 0.25,
+   "lo": 0.0456,
+   "hi": 0.6994,
+   "mean_yes_pct": 46.7525
+  },
+  {
+   "year": 2014,
+   "n": 53.0,
+   "passed": 28.0,
+   "pass_rate": 0.5283,
+   "lo": 0.3966,
+   "hi": 0.6562,
+   "mean_yes_pct": 50.9511
+  },
+  {
+   "year": 2015,
+   "n": 7.0,
+   "passed": 5.0,
+   "pass_rate": 0.7143,
+   "lo": 0.3589,
+   "hi": 0.9178,
+   "mean_yes_pct": 52.8971
+  },
+  {
+   "year": 2016,
+   "n": 71.0,
+   "passed": 45.0,
+   "pass_rate": 0.6338,
+   "lo": 0.5176,
+   "hi": 0.7363,
+   "mean_yes_pct": 55.257
+  },
+  {
+   "year": 2017,
+   "n": 2.0,
+   "passed": 1.0,
+   "pass_rate": 0.5,
+   "lo": 0.0945,
+   "hi": 0.9055,
+   "mean_yes_pct": 51.72
+  },
+  {
+   "year": 2018,
+   "n": 82.0,
+   "passed": 46.0,
+   "pass_rate": 0.561,
+   "lo": 0.4532,
+   "hi": 0.6633,
+   "mean_yes_pct": 54.5517
+  },
+  {
+   "year": 2019,
+   "n": 5.0,
+   "passed": 3.0,
+   "pass_rate": 0.6,
+   "lo": 0.2307,
+   "hi": 0.8824,
+   "mean_yes_pct": 53.046
+  },
+  {
+   "year": 2020,
+   "n": 55.0,
+   "passed": 37.0,
+   "pass_rate": 0.6727,
+   "lo": 0.541,
+   "hi": 0.7819,
+   "mean_yes_pct": 59.1221
+  },
+  {
+   "year": 2021,
+   "n": 3.0,
+   "passed": 0.0,
+   "pass_rate": 0.0,
+   "lo": 0.0,
+   "hi": 0.5615,
+   "mean_yes_pct": 43.9133
+  },
+  {
+   "year": 2022,
+   "n": 43.0,
+   "passed": 26.0,
+   "pass_rate": 0.6047,
+   "lo": 0.4558,
+   "hi": 0.7363,
+   "mean_yes_pct": 55.8758
+  },
+  {
+   "year": 2023,
+   "n": 5.0,
+   "passed": 3.0,
+   "pass_rate": 0.6,
+   "lo": 0.2307,
+   "hi": 0.8824,
+   "mean_yes_pct": 53.016
+  },
+  {
+   "year": 2024,
+   "n": 64.0,
+   "passed": 33.0,
+   "pass_rate": 0.5156,
+   "lo": 0.3958,
+   "hi": 0.6337,
+   "mean_yes_pct": 51.9519
+  }
+ ],
+ "trend_pass_rate": {
+  "slope_per_decade": -0.011351741118361257,
+  "p": 0.4830800268793382
+ },
+ "state_domain": [
+  {
+   "state": "Alaska",
+   "domain": "economic",
+   "size": 31,
+   "mean": 0.806
+  },
+  {
+   "state": "Alaska",
+   "domain": "education",
+   "size": 9,
+   "mean": 0.556
+  },
+  {
+   "state": "Alaska",
+   "domain": "environment",
+   "size": 20,
+   "mean": 0.45
+  },
+  {
+   "state": "Alaska",
+   "domain": "other",
+   "size": 21,
+   "mean": 0.667
+  },
+  {
+   "state": "Alaska",
+   "domain": "political process",
+   "size": 38,
+   "mean": 0.474
+  },
+  {
+   "state": "Alaska",
+   "domain": "social",
+   "size": 18,
+   "mean": 0.667
+  },
+  {
+   "state": "Arizona",
+   "domain": "economic",
+   "size": 24,
+   "mean": 0.583
+  },
+  {
+   "state": "Arizona",
+   "domain": "education",
+   "size": 12,
+   "mean": 0.583
+  },
+  {
+   "state": "Arizona",
+   "domain": "environment",
+   "size": 6,
+   "mean": 0.0
+  },
+  {
+   "state": "Arizona",
+   "domain": "other",
+   "size": 10,
+   "mean": 0.4
+  },
+  {
+   "state": "Arizona",
+   "domain": "political process",
+   "size": 31,
+   "mean": 0.419
+  },
+  {
+   "state": "Arizona",
+   "domain": "social",
+   "size": 37,
+   "mean": 0.703
+  },
+  {
+   "state": "California",
+   "domain": "economic",
+   "size": 197,
+   "mean": 0.518
+  },
+  {
+   "state": "California",
+   "domain": "education",
+   "size": 52,
+   "mean": 0.615
+  },
+  {
+   "state": "California",
+   "domain": "environment",
+   "size": 59,
+   "mean": 0.542
+  },
+  {
+   "state": "California",
+   "domain": "other",
+   "size": 34,
+   "mean": 0.735
+  },
+  {
+   "state": "California",
+   "domain": "political process",
+   "size": 103,
+   "mean": 0.612
+  },
+  {
+   "state": "California",
+   "domain": "social",
+   "size": 97,
+   "mean": 0.608
+  },
+  {
+   "state": "Colorado",
+   "domain": "economic",
+   "size": 58,
+   "mean": 0.379
+  },
+  {
+   "state": "Colorado",
+   "domain": "education",
+   "size": 17,
+   "mean": 0.294
+  },
+  {
+   "state": "Colorado",
+   "domain": "environment",
+   "size": 8,
+   "mean": 0.25
+  },
+  {
+   "state": "Colorado",
+   "domain": "other",
+   "size": 32,
+   "mean": 0.531
+  },
+  {
+   "state": "Colorado",
+   "domain": "political process",
+   "size": 67,
+   "mean": 0.597
+  },
+  {
+   "state": "Colorado",
+   "domain": "social",
+   "size": 64,
+   "mean": 0.531
+  },
+  {
+   "state": "District of Columbia",
+   "domain": "economic",
+   "size": 7,
+   "mean": 0.714
+  },
+  {
+   "state": "District of Columbia",
+   "domain": "education",
+   "size": 4,
+   "mean": 0.75
+  },
+  {
+   "state": "District of Columbia",
+   "domain": "environment",
+   "size": 1,
+   "mean": 1.0
+  },
+  {
+   "state": "District of Columbia",
+   "domain": "other",
+   "size": 7,
+   "mean": 0.286
+  },
+  {
+   "state": "District of Columbia",
+   "domain": "political process",
+   "size": 6,
+   "mean": 0.833
+  },
+  {
+   "state": "District of Columbia",
+   "domain": "social",
+   "size": 8,
+   "mean": 0.875
+  },
+  {
+   "state": "Florida",
+   "domain": "economic",
+   "size": 64,
+   "mean": 0.766
+  },
+  {
+   "state": "Florida",
+   "domain": "education",
+   "size": 11,
+   "mean": 0.545
+  },
+  {
+   "state": "Florida",
+   "domain": "environment",
+   "size": 10,
+   "mean": 0.8
+  },
+  {
+   "state": "Florida",
+   "domain": "other",
+   "size": 20,
+   "mean": 0.85
+  },
+  {
+   "state": "Florida",
+   "domain": "political process",
+   "size": 46,
+   "mean": 0.587
+  },
+  {
+   "state": "Florida",
+   "domain": "social",
+   "size": 29,
+   "mean": 0.69
+  },
+  {
+   "state": "Hawaii",
+   "domain": "economic",
+   "size": 23,
+   "mean": 0.826
+  },
+  {
+   "state": "Hawaii",
+   "domain": "education",
+   "size": 13,
+   "mean": 0.846
+  },
+  {
+   "state": "Hawaii",
+   "domain": "environment",
+   "size": 4,
+   "mean": 1.0
+  },
+  {
+   "state": "Hawaii",
+   "domain": "other",
+   "size": 11,
+   "mean": 1.0
+  },
+  {
+   "state": "Hawaii",
+   "domain": "political process",
+   "size": 43,
+   "mean": 0.744
+  },
+  {
+   "state": "Hawaii",
+   "domain": "social",
+   "size": 15,
+   "mean": 0.933
+  },
+  {
+   "state": "Michigan",
+   "domain": "economic",
+   "size": 25,
+   "mean": 0.32
+  },
+  {
+   "state": "Michigan",
+   "domain": "education",
+   "size": 8,
+   "mean": 0.0
+  },
+  {
+   "state": "Michigan",
+   "domain": "environment",
+   "size": 11,
+   "mean": 0.909
+  },
+  {
+   "state": "Michigan",
+   "domain": "other",
+   "size": 8,
+   "mean": 0.625
+  },
+  {
+   "state": "Michigan",
+   "domain": "political process",
+   "size": 22,
+   "mean": 0.364
+  },
+  {
+   "state": "Michigan",
+   "domain": "social",
+   "size": 24,
+   "mean": 0.667
+  },
+  {
+   "state": "Missouri",
+   "domain": "economic",
+   "size": 22,
+   "mean": 0.636
+  },
+  {
+   "state": "Missouri",
+   "domain": "education",
+   "size": 4,
+   "mean": 0.75
+  },
+  {
+   "state": "Missouri",
+   "domain": "environment",
+   "size": 7,
+   "mean": 0.857
+  },
+  {
+   "state": "Missouri",
+   "domain": "other",
+   "size": 4,
+   "mean": 0.75
+  },
+  {
+   "state": "Missouri",
+   "domain": "political process",
+   "size": 11,
+   "mean": 0.545
+  },
+  {
+   "state": "Missouri",
+   "domain": "social",
+   "size": 29,
+   "mean": 0.552
+  },
+  {
+   "state": "Montana",
+   "domain": "economic",
+   "size": 34,
+   "mean": 0.471
+  },
+  {
+   "state": "Montana",
+   "domain": "education",
+   "size": 6,
+   "mean": 0.667
+  },
+  {
+   "state": "Montana",
+   "domain": "environment",
+   "size": 6,
+   "mean": 0.333
+  },
+  {
+   "state": "Montana",
+   "domain": "other",
+   "size": 6,
+   "mean": 0.5
+  },
+  {
+   "state": "Montana",
+   "domain": "political process",
+   "size": 44,
+   "mean": 0.591
+  },
+  {
+   "state": "Montana",
+   "domain": "social",
+   "size": 24,
+   "mean": 0.792
+  },
+  {
+   "state": "Ohio",
+   "domain": "economic",
+   "size": 26,
+   "mean": 0.538
+  },
+  {
+   "state": "Ohio",
+   "domain": "education",
+   "size": 5,
+   "mean": 0.4
+  },
+  {
+   "state": "Ohio",
+   "domain": "environment",
+   "size": 5,
+   "mean": 1.0
+  },
+  {
+   "state": "Ohio",
+   "domain": "other",
+   "size": 4,
+   "mean": 0.75
+  },
+  {
+   "state": "Ohio",
+   "domain": "political process",
+   "size": 19,
+   "mean": 0.368
+  },
+  {
+   "state": "Ohio",
+   "domain": "social",
+   "size": 24,
+   "mean": 0.542
+  },
+  {
+   "state": "Oklahoma",
+   "domain": "economic",
+   "size": 4,
+   "mean": 0.75
+  },
+  {
+   "state": "Oklahoma",
+   "domain": "education",
+   "size": 2,
+   "mean": 0.0
+  },
+  {
+   "state": "Oklahoma",
+   "domain": "environment",
+   "size": 1,
+   "mean": 0.0
+  },
+  {
+   "state": "Oklahoma",
+   "domain": "other",
+   "size": 2,
+   "mean": 0.5
+  },
+  {
+   "state": "Oklahoma",
+   "domain": "political process",
+   "size": 6,
+   "mean": 0.833
+  },
+  {
+   "state": "Oklahoma",
+   "domain": "social",
+   "size": 6,
+   "mean": 0.667
+  },
+  {
+   "state": "Oregon",
+   "domain": "economic",
+   "size": 89,
+   "mean": 0.404
+  },
+  {
+   "state": "Oregon",
+   "domain": "education",
+   "size": 37,
+   "mean": 0.514
+  },
+  {
+   "state": "Oregon",
+   "domain": "environment",
+   "size": 36,
+   "mean": 0.306
+  },
+  {
+   "state": "Oregon",
+   "domain": "other",
+   "size": 43,
+   "mean": 0.605
+  },
+  {
+   "state": "Oregon",
+   "domain": "political process",
+   "size": 53,
+   "mean": 0.491
+  },
+  {
+   "state": "Oregon",
+   "domain": "social",
+   "size": 91,
+   "mean": 0.538
+  },
+  {
+   "state": "South Dakota",
+   "domain": "economic",
+   "size": 20,
+   "mean": 0.5
+  },
+  {
+   "state": "South Dakota",
+   "domain": "education",
+   "size": 7,
+   "mean": 0.429
+  },
+  {
+   "state": "South Dakota",
+   "domain": "other",
+   "size": 6,
+   "mean": 0.167
+  },
+  {
+   "state": "South Dakota",
+   "domain": "political process",
+   "size": 23,
+   "mean": 0.435
+  },
+  {
+   "state": "South Dakota",
+   "domain": "social",
+   "size": 21,
+   "mean": 0.333
+  },
+  {
+   "state": "Washington",
+   "domain": "economic",
+   "size": 67,
+   "mean": 0.552
+  },
+  {
+   "state": "Washington",
+   "domain": "education",
+   "size": 24,
+   "mean": 0.458
+  },
+  {
+   "state": "Washington",
+   "domain": "environment",
+   "size": 26,
+   "mean": 0.538
+  },
+  {
+   "state": "Washington",
+   "domain": "other",
+   "size": 18,
+   "mean": 0.611
+  },
+  {
+   "state": "Washington",
+   "domain": "political process",
+   "size": 37,
+   "mean": 0.676
+  },
+  {
+   "state": "Washington",
+   "domain": "social",
+   "size": 37,
+   "mean": 0.649
+  },
+  {
+   "state": "Wyoming",
+   "domain": "economic",
+   "size": 22,
+   "mean": 0.727
+  },
+  {
+   "state": "Wyoming",
+   "domain": "education",
+   "size": 7,
+   "mean": 0.571
+  },
+  {
+   "state": "Wyoming",
+   "domain": "environment",
+   "size": 1,
+   "mean": 1.0
+  },
+  {
+   "state": "Wyoming",
+   "domain": "other",
+   "size": 2,
+   "mean": 1.0
+  },
+  {
+   "state": "Wyoming",
+   "domain": "political process",
+   "size": 26,
+   "mean": 0.654
+  },
+  {
+   "state": "Wyoming",
+   "domain": "social",
+   "size": 6,
+   "mean": 0.5
+  }
+ ],
+ "margins": {
+  "mean_yes_when_pass": 64.43184965380811,
+  "mean_yes_when_fail": 38.89547169811321,
+  "share_pass_above_60": 0.6162215628090999,
+  "share_fail_below_40": 0.48517520215633425
+ },
+ "logit_known_origin": [
+  {
+   "term": "C(mtype)[T.legislative]",
+   "coef": 0.931,
+   "se": 0.213,
+   "p": 0.0,
+   "odds": 2.537,
+   "lo": 1.6712,
+   "hi": 3.8514
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.economic]",
+   "coef": -0.8031,
+   "se": 0.3268,
+   "p": 0.014,
+   "odds": 0.4479,
+   "lo": 0.2361,
+   "hi": 0.8499
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.education]",
+   "coef": -0.8266,
+   "se": 0.3592,
+   "p": 0.0214,
+   "odds": 0.4375,
+   "lo": 0.2164,
+   "hi": 0.8846
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.environment]",
+   "coef": -0.9955,
+   "se": 0.3713,
+   "p": 0.0073,
+   "odds": 0.3695,
+   "lo": 0.1785,
+   "hi": 0.765
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.political process]",
+   "coef": -0.6275,
+   "se": 0.34,
+   "p": 0.065,
+   "odds": 0.534,
+   "lo": 0.2742,
+   "hi": 1.0398
+  },
+  {
+   "term": "C(domain, Treatment('other'))[T.social]",
+   "coef": -0.4467,
+   "se": 0.2869,
+   "p": 0.1194,
+   "odds": 0.6397,
+   "lo": 0.3646,
+   "hi": 1.1224
+  },
+  {
+   "term": "restrictive",
+   "coef": -0.0174,
+   "se": 0.1599,
+   "p": 0.9132,
+   "odds": 0.9827,
+   "lo": 0.7183,
+   "hi": 1.3445
+  },
+  {
+   "term": "expansive",
+   "coef": 0.0696,
+   "se": 0.172,
+   "p": 0.6857,
+   "odds": 1.0721,
+   "lo": 0.7653,
+   "hi": 1.5019
+  },
+  {
+   "term": "mentions_tax_debt",
+   "coef": -0.1266,
+   "se": 0.1804,
+   "p": 0.4826,
+   "odds": 0.8811,
+   "lo": 0.6187,
+   "hi": 1.2547
+  },
+  {
+   "term": "mentions_increase",
+   "coef": 0.1551,
+   "se": 0.2933,
+   "p": 0.597,
+   "odds": 1.1677,
+   "lo": 0.6572,
+   "hi": 2.075
+  },
+  {
+   "term": "mentions_repeal",
+   "coef": -1.0718,
+   "se": 0.2838,
+   "p": 0.0002,
+   "odds": 0.3424,
+   "lo": 0.1963,
+   "hi": 0.5972
+  },
+  {
+   "term": "is_amendment",
+   "coef": -0.3093,
+   "se": 0.2343,
+   "p": 0.1869,
+   "odds": 0.734,
+   "lo": 0.4637,
+   "hi": 1.1618
+  },
+  {
+   "term": "zlen",
+   "coef": 0.2022,
+   "se": 0.0874,
+   "p": 0.0207,
+   "odds": 1.2241,
+   "lo": 1.0314,
+   "hi": 1.4527
+  },
+  {
+   "term": "zflesch",
+   "coef": -0.2174,
+   "se": 0.0938,
+   "p": 0.0205,
+   "odds": 0.8046,
+   "lo": 0.6695,
+   "hi": 0.967
+  }
+ ],
+ "logit_known_n": 1006,
+ "full_coverage_states": [
+  "Alaska",
+  "California",
+  "Colorado",
+  "Florida",
+  "Hawaii",
+  "Michigan",
+  "Montana",
+  "Ohio",
+  "Oregon",
+  "Washington",
+  "Wyoming"
+ ],
+ "by_decade_fullcov": [
+  {
+   "decade": 1970,
+   "n": 252.0,
+   "passed": 156.0,
+   "pass_rate": 0.619,
+   "lo": 0.5577,
+   "hi": 0.6768,
+   "mean_yes_pct": 53.786
+  },
+  {
+   "decade": 1980,
+   "n": 445.0,
+   "passed": 280.0,
+   "pass_rate": 0.6292,
+   "lo": 0.5834,
+   "hi": 0.6728,
+   "mean_yes_pct": 54.6958
+  },
+  {
+   "decade": 1990,
+   "n": 526.0,
+   "passed": 283.0,
+   "pass_rate": 0.538,
+   "lo": 0.4953,
+   "hi": 0.5802,
+   "mean_yes_pct": 53.3602
+  },
+  {
+   "decade": 2000,
+   "n": 463.0,
+   "passed": 252.0,
+   "pass_rate": 0.5443,
+   "lo": 0.4987,
+   "hi": 0.5891,
+   "mean_yes_pct": 52.5995
+  },
+  {
+   "decade": 2010,
+   "n": 313.0,
+   "passed": 173.0,
+   "pass_rate": 0.5527,
+   "lo": 0.4973,
+   "hi": 0.6068,
+   "mean_yes_pct": 53.4632
+  },
+  {
+   "decade": 2020,
+   "n": 138.0,
+   "passed": 83.0,
+   "pass_rate": 0.6014,
+   "lo": 0.5181,
+   "hi": 0.6793,
+   "mean_yes_pct": 56.9035
+  }
+ ]
+}

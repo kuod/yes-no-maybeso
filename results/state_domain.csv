@@ -1,0 +1,96 @@
+state,domain,size,mean
+Alaska,economic,31,0.8064516129032258
+Alaska,education,9,0.5555555555555556
+Alaska,environment,20,0.45
+Alaska,other,21,0.6666666666666666
+Alaska,political process,38,0.47368421052631576
+Alaska,social,18,0.6666666666666666
+Arizona,economic,24,0.5833333333333334
+Arizona,education,12,0.5833333333333334
+Arizona,environment,6,0.0
+Arizona,other,10,0.4
+Arizona,political process,31,0.41935483870967744
+Arizona,social,37,0.7027027027027027
+California,economic,197,0.5177664974619289
+California,education,52,0.6153846153846154
+California,environment,59,0.5423728813559322
+California,other,34,0.7352941176470589
+California,political process,103,0.6116504854368932
+California,social,97,0.6082474226804123
+Colorado,economic,58,0.3793103448275862
+Colorado,education,17,0.29411764705882354
+Colorado,environment,8,0.25
+Colorado,other,32,0.53125
+Colorado,political process,67,0.5970149253731343
+Colorado,social,64,0.53125
+District of Columbia,economic,7,0.7142857142857143
+District of Columbia,education,4,0.75
+District of Columbia,environment,1,1.0
+District of Columbia,other,7,0.2857142857142857
+District of Columbia,political process,6,0.8333333333333334
+District of Columbia,social,8,0.875
+Florida,economic,64,0.765625
+Florida,education,11,0.5454545454545454
+Florida,environment,10,0.8
+Florida,other,20,0.85
+Florida,political process,46,0.5869565217391305
+Florida,social,29,0.6896551724137931
+Hawaii,economic,23,0.8260869565217391
+Hawaii,education,13,0.8461538461538461
+Hawaii,environment,4,1.0
+Hawaii,other,11,1.0
+Hawaii,political process,43,0.7441860465116279
+Hawaii,social,15,0.9333333333333333
+Michigan,economic,25,0.32
+Michigan,education,8,0.0
+Michigan,environment,11,0.9090909090909091
+Michigan,other,8,0.625
+Michigan,political process,22,0.36363636363636365
+Michigan,social,24,0.6666666666666666
+Missouri,economic,22,0.6363636363636364
+Missouri,education,4,0.75
+Missouri,environment,7,0.8571428571428571
+Missouri,other,4,0.75
+Missouri,political process,11,0.5454545454545454
+Missouri,social,29,0.5517241379310345
+Montana,economic,34,0.47058823529411764
+Montana,education,6,0.6666666666666666
+Montana,environment,6,0.3333333333333333
+Montana,other,6,0.5
+Montana,political process,44,0.5909090909090909
+Montana,social,24,0.7916666666666666
+Ohio,economic,26,0.5384615384615384
+Ohio,education,5,0.4
+Ohio,environment,5,1.0
+Ohio,other,4,0.75
+Ohio,political process,19,0.3684210526315789
+Ohio,social,24,0.5416666666666666
+Oklahoma,economic,4,0.75
+Oklahoma,education,2,0.0
+Oklahoma,environment,1,0.0
+Oklahoma,other,2,0.5
+Oklahoma,political process,6,0.8333333333333334
+Oklahoma,social,6,0.6666666666666666
+Oregon,economic,89,0.4044943820224719
+Oregon,education,37,0.5135135135135135
+Oregon,environment,36,0.3055555555555556
+Oregon,other,43,0.6046511627906976
+Oregon,political process,53,0.49056603773584906
+Oregon,social,91,0.5384615384615384
+South Dakota,economic,20,0.5
+South Dakota,education,7,0.42857142857142855
+South Dakota,other,6,0.16666666666666666
+South Dakota,political process,23,0.43478260869565216
+South Dakota,social,21,0.3333333333333333
+Washington,economic,67,0.5522388059701493
+Washington,education,24,0.4583333333333333
+Washington,environment,26,0.5384615384615384
+Washington,other,18,0.6111111111111112
+Washington,political process,37,0.6756756756756757
+Washington,social,37,0.6486486486486487
+Wyoming,economic,22,0.7272727272727273
+Wyoming,education,7,0.5714285714285714
+Wyoming,environment,1,1.0
+Wyoming,other,2,1.0
+Wyoming,political process,26,0.6538461538461539
+Wyoming,social,6,0.5
