@@ -77,8 +77,10 @@ def broad(t):
 
 
 # --- wording features ---------------------------------------------------------------------
-RESTRICT = r"\b(?:prohibit|ban|bar|forbid|limit|restrict|repeal|eliminat|abolish|end|cap|reduce|reduc|cut|prevent|require[sd]? (?:a )?(?:two-thirds|supermajority|voter)|term limit)"
-EXPAND = r"\b(?:authoriz|allow|permit|legaliz|establish|create|creat|provid|guarantee|protect|increase|expand|extend|raise|issu|enact|grant|amend|adopt)"
+RESTRICT = (r"\b(?:prohibit\w*|bans?|banned|banning|forbid\w*|limit\w*|restrict\w*|repeal\w*|eliminat\w*|abolish\w*|caps?|capped|capping|"
+            r"reduc\w*|cuts?|cutting|prevent\w*|term limits?|require[sd]? (?:a )?(?:two-thirds|supermajority|voter))\b")
+EXPAND = (r"\b(?:authoriz\w*|allow\w*|permit\w*|legaliz\w*|establish\w*|creat\w*|provid\w*|guarantee\w*|protect\w*|"
+          r"expand\w*|extend\w*|issu\w*|enact\w*|grant\w*)\b")
 TAXWORD = r"\b(?:tax|taxes|taxation|fee|fees|bond|bonds|debt|levy|assessment)\b"
 
 

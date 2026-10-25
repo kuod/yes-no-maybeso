@@ -10,6 +10,7 @@ python3 -I scripts/analyze.py         # data/*.csv -> results/*.csv, results/sum
 python3 -I scripts/build_presidential.py  # data/raw/politics/pres_* -> data/presidential.csv
 python3 -I scripts/build_politics.py  # + gov_leg_*.csv -> data/state_politics.csv, data/measures_politics.csv
 python3 -I scripts/analyze_politics.py    # -> results/politics.json, results/politics_*.csv
+python3 -I scripts/robustness.py      # adversarial checks -> results/robustness.json (slow: bootstrap)
 python3 -I scripts/build_site.py      # results/*.json -> docs/index.html
 ```
 
@@ -40,7 +41,13 @@ Dependencies: `pip install -r requirements.txt`.
 - `lean` = Democratic two-party presidential margin (pts) at the last presidential election strictly before the measure's year. `shift4` = lean minus the margin one race earlier (positive = state moved toward Democrats); `shift8` = two races earlier.
 - Models use state and decade fixed effects, so lean/shift are identified within state over time. The raw cross-state pattern (Republican-leaning states pass more) is a between-state difference and vanishes with fixed effects; don't report it as an effect of partisanship.
 - Yes/no is not ideologically signed: averaged over all measures the partisan effects can cancel. The report says so; testing direction needs per-measure ideological coding (not built yet).
-- Partisan results are mostly null. Report the governor-party signal (OR ≈1.17, n.s.; +2.6 pts yes share, p=0.03) as a lead, not a finding, given the number of tests.
+- Partisan results are mostly null. The one signal that survives is governor party on yes share (+2.6 pts; wild cluster bootstrap p≈0.006, 14 states; Bonferroni over ~10 tests ≈0.06); pass/fail odds ratio ≈1.17 is not significant. Report both together. With ~15 clusters never quote ordinary cluster-robust p-values for state-level regressors; use the bootstrap in `robustness.py`.
+
+## Lessons from the adversarial pass
+
+- Wording regexes must use whole-word boundaries and be checked for what they actually match (`amend` once made "expansive" a proxy for "amendment"). Audit token counts after any regex change.
+- Origin comparisons need a within-state version; Oregon dominates the identified referrals.
+- Wikipedia lists omit measures (≥113 initiatives vs IRI). Don't present pooled counts as complete.
 
 ## Honesty rules for this project
 
