@@ -1,0 +1,197 @@
+state,year,gov_name,gov_party,senate_dem,senate_rep,senate_other,house_dem,house_rep,house_other,source_note
+Florida,1976,Reubin Askew,D,27,12,1,86,34,0,other seats: 1I
+Florida,1977,Reubin Askew,D,30,9,1,92,28,0,other seats: 1I
+Florida,1978,Reubin Askew,D,30,9,1,92,28,0,other seats: 1I
+Florida,1979,Bob Graham,D,29,11,0,89,31,0,
+Florida,1980,Bob Graham,D,29,11,0,89,31,0,
+Florida,1981,Bob Graham,D,27,13,0,81,39,0,
+Florida,1982,Bob Graham,D,27,13,0,81,39,0,
+Florida,1983,Bob Graham,D,32,8,0,84,36,0,
+Florida,1984,Bob Graham,D,32,8,0,84,36,0,
+Florida,1985,Bob Graham,D,31,9,0,77,43,0,
+Florida,1986,Bob Graham,D,30,10,0,77,43,0,seat footnote on page
+Florida,1987,Bob Martinez,R,25,15,0,73,47,0,2 rows for year on page; used governor in office at Nov election
+Florida,1988,Bob Martinez,R,25,15,0,73,47,0,
+Florida,1989,Bob Martinez,R,23,17,0,70,50,0,
+Florida,1990,Bob Martinez,R,23,17,0,70,50,0,
+Florida,1991,Lawton Chiles,D,23,17,0,74,46,0,
+Florida,1992,Lawton Chiles,D,22,18,0,74,46,0,seat footnote on page
+Florida,1993,Lawton Chiles,D,20,20,0,71,49,0,seat footnote on page; 20-20 Senate tie
+Florida,1994,Lawton Chiles,D,20,20,0,71,49,0,seat footnote on page; 20-20 Senate tie
+Florida,1995,Lawton Chiles,D,19,21,0,63,57,0,
+Florida,1996,Lawton Chiles,D,18,22,0,63,57,0,seat footnote on page
+Florida,1997,Lawton Chiles,D,17,23,0,59,61,0,
+Florida,1998,Lawton Chiles,D,15,25,0,54,66,0,seat footnote on page
+Florida,1999,Jeb Bush,R,15,25,0,47,73,0,2 rows for year on page; used governor in office at Nov election; seat footnote on page
+Florida,2000,Jeb Bush,R,15,25,0,45,75,0,seat footnote on page
+Florida,2001,Jeb Bush,R,15,25,0,43,77,0,seat footnote on page
+Florida,2002,Jeb Bush,R,15,25,0,43,77,0,seat footnote on page
+Florida,2003,Jeb Bush,R,14,26,0,39,81,0,
+Florida,2004,Jeb Bush,R,14,26,0,39,81,0,
+Florida,2005,Jeb Bush,R,14,26,0,36,84,0,
+Florida,2006,Jeb Bush,R,14,26,0,35,85,0,seat footnote on page
+Florida,2007,Charlie Crist,R,14,26,0,42,78,0,
+Florida,2008,Charlie Crist,R,14,26,0,43,77,0,seat footnote on page
+Florida,2009,Charlie Crist,R,14,26,0,44,76,0,
+Florida,2010,Charlie Crist,I,14,26,0,44,76,0,
+Florida,2011,Rick Scott,R,12,28,0,39,81,0,
+Florida,2012,Rick Scott,R,12,28,0,39,81,0,
+Florida,2013,Rick Scott,R,14,26,0,44,76,0,
+Florida,2014,Rick Scott,R,14,26,0,45,75,0,seat footnote on page
+Florida,2015,Rick Scott,R,14,26,0,39,81,0,
+Florida,2016,Rick Scott,R,14,26,0,39,81,0,
+Florida,2017,Rick Scott,R,15,25,0,41,79,0,
+Florida,2018,Rick Scott,R,16,24,0,42,78,0,seat footnote on page
+Florida,2019,Ron DeSantis,R,17,23,0,47,73,0,
+Florida,2020,Ron DeSantis,R,17,23,0,47,73,0,
+Florida,2021,Ron DeSantis,R,16,24,0,42,78,0,
+Florida,2022,Ron DeSantis,R,16,24,0,42,78,0,
+Florida,2023,Ron DeSantis,R,12,28,0,35,85,0,
+Florida,2024,Ron DeSantis,R,12,28,0,36,84,0,seat footnote on page
+Hawaii,1976,George Ariyoshi,D,17,8,0,34,17,0,
+Hawaii,1977,George Ariyoshi,D,17,8,0,41,10,0,
+Hawaii,1978,George Ariyoshi,D,17,8,0,41,10,0,
+Hawaii,1979,George Ariyoshi,D,18,7,0,42,9,0,
+Hawaii,1980,George Ariyoshi,D,18,7,0,42,9,0,
+Hawaii,1981,George Ariyoshi,D,17,8,0,39,12,0,
+Hawaii,1982,George Ariyoshi,D,17,8,0,39,12,0,
+Hawaii,1983,George Ariyoshi,D,17,8,0,43,8,0,
+Hawaii,1984,George Ariyoshi,D,17,8,0,43,8,0,
+Hawaii,1985,George Ariyoshi,D,22,3,0,40,11,0,
+Hawaii,1986,George Ariyoshi,D,22,3,0,40,11,0,3 rows for year on page; used first (identical)
+Hawaii,1987,John D. WaiheÊ»e III,D,20,5,0,40,11,0,
+Hawaii,1988,John D. WaiheÊ»e III,D,20,5,0,40,11,0,
+Hawaii,1989,John D. WaiheÊ»e III,D,22,3,0,45,6,0,
+Hawaii,1990,John D. WaiheÊ»e III,D,22,3,0,45,6,0,2 rows for year on page; used first (identical)
+Hawaii,1991,John D. WaiheÊ»e III,D,22,3,0,45,6,0,
+Hawaii,1992,John D. WaiheÊ»e III,D,22,3,0,45,6,0,
+Hawaii,1993,John D. WaiheÊ»e III,D,22,3,0,47,4,0,
+Hawaii,1994,John D. WaiheÊ»e III,D,22,3,0,47,4,0,
+Hawaii,1995,Ben Cayetano,D,23,2,0,44,7,0,
+Hawaii,1996,Ben Cayetano,D,23,2,0,44,7,0,
+Hawaii,1997,Ben Cayetano,D,23,2,0,39,12,0,
+Hawaii,1998,Ben Cayetano,D,23,2,0,39,12,0,
+Hawaii,1999,Ben Cayetano,D,23,2,0,39,12,0,
+Hawaii,2000,Ben Cayetano,D,23,2,0,39,12,0,
+Hawaii,2001,Ben Cayetano,D,22,3,0,32,19,0,
+Hawaii,2002,Ben Cayetano,D,22,3,0,32,19,0,2 rows for year on page; used first (identical)
+Hawaii,2003,Linda Lingle,R,20,5,0,36,15,0,
+Hawaii,2004,Linda Lingle,R,20,5,0,36,15,0,
+Hawaii,2005,Linda Lingle,R,20,5,0,41,10,0,
+Hawaii,2006,Linda Lingle,R,20,5,0,41,10,0,
+Hawaii,2007,Linda Lingle,R,20,5,0,43,8,0,
+Hawaii,2008,Linda Lingle,R,20,5,0,43,8,0,
+Hawaii,2009,Linda Lingle,R,23,2,0,45,6,0,
+Hawaii,2010,Linda Lingle,R,23,2,0,45,6,0,
+Hawaii,2011,Neil Abercrombie,D,24,1,0,43,8,0,
+Hawaii,2012,Neil Abercrombie,D,24,1,0,43,8,0,
+Hawaii,2013,Neil Abercrombie,D,24,1,0,44,7,0,
+Hawaii,2014,Neil Abercrombie,D,24,1,0,44,7,0,
+Hawaii,2015,David Ige,D,24,1,0,44,7,0,
+Hawaii,2016,David Ige,D,24,1,0,44,7,0,
+Hawaii,2017,David Ige,D,25,0,0,46,5,0,
+Hawaii,2018,David Ige,D,25,0,0,46,5,0,
+Hawaii,2019,David Ige,D,24,1,0,46,5,0,
+Hawaii,2020,David Ige,D,24,1,0,46,5,0,
+Hawaii,2021,David Ige,D,24,1,0,47,4,0,
+Hawaii,2022,David Ige,D,24,1,0,47,4,0,
+Hawaii,2023,Josh Green,D,23,2,0,45,6,0,
+Hawaii,2024,Josh Green,D,23,2,0,45,6,0,
+Michigan,1976,William Milliken,R,24,14,0,66,44,0,
+Michigan,1977,William Milliken,R,24,14,0,68,42,0,
+Michigan,1978,William Milliken,R,24,14,0,68,42,0,
+Michigan,1979,William Milliken,R,24,14,0,70,40,0,
+Michigan,1980,William Milliken,R,24,14,0,70,40,0,
+Michigan,1981,William Milliken,R,24,14,0,64,46,0,
+Michigan,1982,William Milliken,R,24,14,0,64,46,0,
+Michigan,1983,James J. Blanchard,D,20,18,0,63,47,0,
+Michigan,1984,James J. Blanchard,D,18,20,0,63,47,0,seat footnote on page
+Michigan,1985,James J. Blanchard,D,18,20,0,57,53,0,seat footnote on page
+Michigan,1986,James J. Blanchard,D,18,20,0,57,53,0,seat footnote on page
+Michigan,1987,James J. Blanchard,D,18,20,0,64,46,0,seat footnote on page
+Michigan,1988,James J. Blanchard,D,18,20,0,64,46,0,seat footnote on page
+Michigan,1989,James J. Blanchard,D,18,20,0,61,49,0,seat footnote on page
+Michigan,1990,James J. Blanchard,D,18,20,0,61,49,0,seat footnote on page
+Michigan,1991,John Engler,R,18,20,0,61,49,0,seat footnote on page
+Michigan,1992,John Engler,R,18,20,0,61,49,0,seat footnote on page
+Michigan,1993,John Engler,R,16,22,0,55,55,0,seat footnote on page; 55-55 House tie; power-sharing agreement per page footnote
+Michigan,1994,John Engler,R,16,22,0,55,55,0,seat footnote on page; 55-55 House tie; power-sharing agreement per page footnote
+Michigan,1995,John Engler,R,16,22,0,54,56,0,
+Michigan,1996,John Engler,R,16,22,0,54,56,0,
+Michigan,1997,John Engler,R,16,22,0,58,52,0,
+Michigan,1998,John Engler,R,16,22,0,58,52,0,
+Michigan,1999,John Engler,R,15,23,0,52,58,0,
+Michigan,2000,John Engler,R,15,23,0,52,58,0,
+Michigan,2001,John Engler,R,15,23,0,51,59,0,
+Michigan,2002,John Engler,R,15,23,0,51,59,0,
+Michigan,2003,Jennifer Granholm,D,16,22,0,47,63,0,
+Michigan,2004,Jennifer Granholm,D,16,22,0,47,63,0,
+Michigan,2005,Jennifer Granholm,D,16,22,0,52,58,0,
+Michigan,2006,Jennifer Granholm,D,16,22,0,52,58,0,
+Michigan,2007,Jennifer Granholm,D,17,21,0,58,52,0,
+Michigan,2008,Jennifer Granholm,D,17,21,0,58,52,0,
+Michigan,2009,Jennifer Granholm,D,16,21,0,67,43,0,seat footnote on page
+Michigan,2010,Jennifer Granholm,D,16,22,0,67,43,0,seat footnote on page
+Michigan,2011,Rick Snyder,R,12,26,0,47,63,0,
+Michigan,2012,Rick Snyder,R,12,26,0,46,64,0,seat footnote on page
+Michigan,2013,Rick Snyder,R,12,26,0,51,59,0,
+Michigan,2014,Rick Snyder,R,12,26,0,51,59,0,
+Michigan,2015,Rick Snyder,R,11,27,0,47,63,0,
+Michigan,2016,Rick Snyder,R,11,27,0,47,63,0,
+Michigan,2017,Rick Snyder,R,11,27,0,47,63,0,
+Michigan,2018,Rick Snyder,R,11,27,0,47,63,0,
+Michigan,2019,Gretchen Whitmer,D,16,22,0,52,58,0,2 rows for year on page; used first (identical); seat footnote on page
+Michigan,2020,Gretchen Whitmer,D,16,22,0,52,58,0,seat footnote on page
+Michigan,2021,Gretchen Whitmer,D,16,22,0,52,58,0,seat footnote on page
+Michigan,2022,Gretchen Whitmer,D,16,22,0,52,58,0,"2 rows for year on page; used first (identical); page has 2 house rows: 58R,52D and 57R,53D; used first; seat footnote on page"
+Michigan,2023,Gretchen Whitmer,D,20,18,0,56,54,0,
+Michigan,2024,Gretchen Whitmer,D,20,18,0,56,54,0,
+Missouri,1976,Kit Bond,R,23,11,0,113,50,0,
+Missouri,1977,Joseph P. Teasdale,D,24,10,0,111,52,0,
+Missouri,1978,Joseph P. Teasdale,D,24,10,0,111,52,0,
+Missouri,1979,Joseph P. Teasdale,D,23,11,0,116,47,0,
+Missouri,1980,Joseph P. Teasdale,D,23,11,0,116,47,0,
+Missouri,1981,Kit Bond,R,24,10,0,111,52,0,
+Missouri,1982,Kit Bond,R,24,10,0,111,52,0,
+Missouri,1983,Kit Bond,R,22,12,0,110,53,0,
+Missouri,1984,Kit Bond,R,22,12,0,110,53,0,2 rows for year on page; used first (identical)
+Missouri,1985,John Ashcroft,R,21,13,0,108,55,0,
+Missouri,1986,John Ashcroft,R,21,13,0,108,55,0,
+Missouri,1987,John Ashcroft,R,21,13,0,111,52,0,
+Missouri,1988,John Ashcroft,R,21,13,0,111,52,0,
+Missouri,1989,John Ashcroft,R,22,12,0,104,59,0,
+Missouri,1990,John Ashcroft,R,22,12,0,104,59,0,
+Missouri,1991,John Ashcroft,R,23,11,0,98,65,0,
+Missouri,1992,John Ashcroft,R,23,11,0,98,65,0,
+Missouri,1993,Mel Carnahan,D,20,14,0,100,63,0,
+Missouri,1994,Mel Carnahan,D,20,14,0,100,63,0,2 rows for year on page; used first (identical)
+Missouri,1995,Mel Carnahan,D,19,15,0,87,76,0,
+Missouri,1996,Mel Carnahan,D,19,15,0,87,76,0,
+Missouri,1997,Mel Carnahan,D,19,15,0,88,75,0,
+Missouri,1998,Mel Carnahan,D,19,15,0,88,75,0,
+Missouri,1999,Mel Carnahan,D,18,16,0,85,78,0,
+Missouri,2000,Roger B. Wilson,D,18,16,0,85,78,0,2 rows for year on page; used governor in office at Nov election
+Missouri,2001,Bob Holden,D,16,18,0,87,76,0,
+Missouri,2002,Bob Holden,D,16,18,0,87,76,0,2 rows for year on page; used first (identical)
+Missouri,2003,Bob Holden,D,14,20,0,73,90,0,
+Missouri,2004,Bob Holden,D,14,20,0,73,90,0,
+Missouri,2005,Matt Blunt,R,11,23,0,66,97,0,
+Missouri,2006,Matt Blunt,R,11,23,0,66,97,0,
+Missouri,2007,Matt Blunt,R,13,21,0,71,92,0,
+Missouri,2008,Matt Blunt,R,13,21,0,71,92,0,
+Missouri,2009,Jay Nixon,D,11,23,0,74,89,0,
+Missouri,2010,Jay Nixon,D,11,23,0,74,89,0,
+Missouri,2011,Jay Nixon,D,8,26,0,57,106,0,
+Missouri,2012,Jay Nixon,D,8,26,0,56,106,1,other seats: 1I
+Missouri,2013,Jay Nixon,D,10,24,0,53,110,0,
+Missouri,2014,Jay Nixon,D,10,24,0,53,110,0,
+Missouri,2015,Jay Nixon,D,9,25,0,45,117,1,other seats: 1I
+Missouri,2016,Jay Nixon,D,9,25,0,45,117,1,other seats: 1I
+Missouri,2017,Eric Greitens,R,9,25,0,46,117,0,
+Missouri,2018,Mike Parson,R,10,24,0,46,117,0,2 rows for year on page; used governor in office at Nov election
+Missouri,2019,Mike Parson,R,10,24,0,47,116,0,
+Missouri,2020,Mike Parson,R,10,24,0,47,116,0,
+Missouri,2021,Mike Parson,R,10,24,0,49,114,0,
+Missouri,2022,Mike Parson,R,10,24,0,49,114,0,
+Missouri,2023,Mike Parson,R,10,24,0,52,111,0,
+Missouri,2024,Mike Parson,R,10,24,0,52,111,0,

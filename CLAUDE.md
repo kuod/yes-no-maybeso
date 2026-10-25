@@ -7,7 +7,10 @@ Project: **yes-no-maybeso** — do yeses or nos win more on US statewide ballot 
 ```
 python3 -I scripts/build_dataset.py   # data/raw/** -> data/measures.csv, data/state_year.csv
 python3 -I scripts/analyze.py         # data/*.csv -> results/*.csv, results/summary.json
-python3 -I scripts/build_site.py      # results/summary.json -> docs/index.html
+python3 -I scripts/build_presidential.py  # data/raw/politics/pres_* -> data/presidential.csv
+python3 -I scripts/build_politics.py  # + gov_leg_*.csv -> data/state_politics.csv, data/measures_politics.csv
+python3 -I scripts/analyze_politics.py    # -> results/politics.json, results/politics_*.csv
+python3 -I scripts/build_site.py      # results/*.json -> docs/index.html
 ```
 
 `docs/index.html` is generated. Never hand-edit it; change `scripts/build_site.py` and rebuild. Prose numbers are interpolated from `results/summary.json`; a few comparisons (CA/OR/WA vs IRI) are hard-coded in the text and must be rechecked if the data changes.
@@ -21,6 +24,9 @@ Dependencies: `pip install -r requirements.txt`.
 - `data/measures.csv` — one row per measure: state, year, description, origin (`mtype`: initiative / legislative / unknown), topic, domain, passed, yes_pct, wording features.
 - Ballotpedia blocks automated access (403). Do not scrape around it. If full measure-level data for all 50 states is supplied (Ballotpedia export or Matsusaka's IRI database), add a loader in `build_dataset.py` and keep `measures.csv`'s schema.
 
+- `data/raw/politics/pres_1976_2016.tsv` — MIT Election Lab state presidential returns (Harvard Dataverse, doi:10.7910/DVN/42MVDX, v20171015). 2020 and 2024 come from `tonmcg/US_County_Level_Election_Results` county files summed to state.
+- `data/raw/politics/gov_leg_{A,B,C,D}.csv` — governor party and legislative seat counts per state-year (15 states, 1976–2024) from Wikipedia "Political party strength in <State>". **Extracted by four subagents, not by a script**, so the pipeline cannot regenerate them. They passed row-count, chamber-size and 17 known-state-year checks, but are not fully audited. Ties are coded `tie` and counted as a split legislature. DC is excluded from all partisan analysis.
+
 ## Method conventions
 
 - Window is 1976–2024 completed elections; rows with undecided outcomes are dropped.
@@ -28,6 +34,13 @@ Dependencies: `pip install -r requirements.txt`.
 - Origin (`mtype`) is unknown for ~59% of rows. Anything comparing initiatives with referrals must say it uses identified cases only.
 - Wording models are logits with state and decade fixed effects, errors clustered by state-election. Model A = all rows; Model B = known-origin rows with an origin control. Report both, and report null results as nulls.
 - Topic labels are keyword rules (`TOPICS` in `build_dataset.py`), roughly 75–80% accurate on a 40-row hand audit. Order of rules matters (first match wins); keep `\b` word boundaries (an earlier `rent\b` matched "current").
+
+## Partisan-context definitions
+
+- `lean` = Democratic two-party presidential margin (pts) at the last presidential election strictly before the measure's year. `shift4` = lean minus the margin one race earlier (positive = state moved toward Democrats); `shift8` = two races earlier.
+- Models use state and decade fixed effects, so lean/shift are identified within state over time. The raw cross-state pattern (Republican-leaning states pass more) is a between-state difference and vanishes with fixed effects; don't report it as an effect of partisanship.
+- Yes/no is not ideologically signed: averaged over all measures the partisan effects can cancel. The report says so; testing direction needs per-measure ideological coding (not built yet).
+- Partisan results are mostly null. Report the governor-party signal (OR ≈1.17, n.s.; +2.6 pts yes share, p=0.03) as a lead, not a finding, given the number of tests.
 
 ## Honesty rules for this project
 
@@ -45,4 +58,4 @@ Python 3.13, pandas/statsmodels/scipy, no notebooks. Scripts are plain files run
 1. Full 50-state measure-level data.
 2. Official ballot-title text for every measure.
 3. Better topic classifier (labelled sample plus a model, or manual coding).
-4. State covariates: partisanship, signature requirements, turnout.
+4. Ideological direction coding of each measure (conservative / liberal / neutral) to test climate-by-direction effects; other state covariates (signature requirements, turnout).

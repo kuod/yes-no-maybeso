@@ -120,6 +120,67 @@ c_forest = dotrange(rowsf, [(f"Model A: all measures (n={S['logit_n']:,})", B), 
                     fmt=lambda v: f"{v:g}×", xticks=[0.25, 0.5, 1, 2], label_w=250, xlabel="Odds ratio of passing (1× = no effect; left = hurts, right = helps)")
 t_forest = table(pd.DataFrame(tab), [("term", "Wording feature"), ("a", "Model A: OR (95% CI)"), ("b", "Model B: OR (95% CI)")])
 
+
+# ---------------- politics charts ----------------
+PJ = json.load(open("results/politics.json"))
+PEOPLE = {"D": "Democratic", "R": "Republican"}
+
+def prow(r, label):
+    return (label, [wrow(r)])
+
+split_rows = []
+for r in PJ["by_gov"]:
+    split_rows.append(prow(r, f"Governor: {PEOPLE[r['gov_party']]}"))
+for r in sorted(PJ["by_leg"], key=lambda r: {"D": 0, "R": 1, "split": 2}[r["leg_ctrl"]]):
+    split_rows.append(prow(r, {"D": "Legislature: Democratic (both chambers)", "R": "Legislature: Republican (both chambers)", "split": "Legislature: split or tied"}[r["leg_ctrl"]]))
+for r in sorted(PJ["by_trifecta"], key=lambda r: {"D trifecta": 0, "R trifecta": 1, "divided": 2}[r["trifecta"]]):
+    split_rows.append(prow(r, {"D trifecta": "Democratic trifecta", "R trifecta": "Republican trifecta", "divided": "Divided government"}[r["trifecta"]]))
+for r in PJ["by_lean_cat"]:
+    split_rows.append(prow(r, "State lean: " + r["lean_cat"]))
+for r in PJ["by_shift_dir"]:
+    split_rows.append(prow(r, "Since last race: " + r["shift_dir"]))
+c_split = dotrange(split_rows, [("Passed", B)], 0.4, 0.75, ref=0.5, xticks=[0.4, 0.5, 0.6, 0.7], label_w=250, xlabel="Share of measures that passed (95% CI)")
+t_split = table(pd.DataFrame([dict(group=l, n=int(x[0][3].split("n=")[1]), rate=x[0][0]) for l, x in split_rows]), [("group", "Context"), ("n", "n", int), ("rate", "Pass rate", lambda v: pct(v, 1))])
+
+sh = pd.DataFrame(PJ["state_shift"])
+pv = sh.pivot(index="state", columns="shift_dir", values=["pass_rate", "lo", "hi", "n"])
+rows = []
+for st_ in pv.index:
+    def cell(k, nm):
+        return (pv.loc[st_, ("pass_rate", k)], pv.loc[st_, ("lo", k)], pv.loc[st_, ("hi", k)], f"{st_}, {nm}: {pct(pv.loc[st_, ('pass_rate', k)], 1)} passed, n={int(pv.loc[st_, ('n', k)])}")
+    rows.append((f"{st_} ({int(pv.loc[st_, ('n', 'toward R (>2 pts)')])}/{int(pv.loc[st_, ('n', 'toward D (>2 pts)')])})",
+                 [cell("toward D (>2 pts)", "after a shift toward D"), cell("toward R (>2 pts)", "after a shift toward R")]))
+rows.sort(key=lambda r: r[1][0][0] - r[1][1][0])
+c_shift = dotrange(rows, [("After the state moved toward Democrats", B), ("After the state moved toward Republicans", O)], 0.1, 1.0, ref=0.5, xticks=[0.2, 0.4, 0.6, 0.8, 1.0], label_w=190, xlabel="Share passed (95% CI); n in brackets = toward R / toward D")
+t_shift = table(sh, [("state", "State"), ("shift_dir", "Shift"), ("n", "n", int), ("pass_rate", "Pass rate", lambda v: pct(v, 1))])
+
+def fmtm(v):
+    return f"D+{v:.0f}" if v > 0 else (f"R+{-v:.0f}" if v < 0 else "even")
+order_states = sorted(PJ["lean_2024"], key=lambda k: PJ["lean_2024"][k])
+mv_rows = []
+for st_ in order_states:
+    a_, b_ = PJ["lean_1980"][st_], PJ["lean_2024"][st_]
+    mv_rows.append((st_, [(a_, a_, a_, f"{st_} 1980: {fmtm(a_)}"), (b_, b_, b_, f"{st_} 2024: {fmtm(b_)} (change {b_ - a_:+.1f} pts)")]))
+c_move = dotrange(mv_rows, [("1980 presidential race", B), ("2024 presidential race", O)], -50, 50, ref=0, fmt=lambda v: fmtm(v) if v else "even", xticks=[-40, -20, 0, 20, 40], label_w=120, xlabel="Two-party presidential margin (negative = Republican, positive = Democratic)")
+t_move = table(pd.DataFrame([dict(state=k, a=PJ["lean_1980"][k], b=PJ["lean_2024"][k]) for k in order_states]), [("state", "State"), ("a", "1980", fmtm), ("b", "2024", fmtm)])
+
+LAB2 = {"lean10": "Lean: +10 pts more Democratic", "shift10": "Shifted +10 pts toward Democrats", "gov_D": "Democratic governor (vs Republican)",
+        "C(leg_cat, Treatment('R'))[T.D]": "Democratic legislature (vs Republican)", "C(leg_cat, Treatment('R'))[T.split]": "Split or tied legislature (vs Republican)"}
+M1 = {r["term"]: r for r in PJ["m1"]["rows"]}; M2 = {r["term"]: r for r in PJ["m2"]["rows"]}
+frows, ftab = [], []
+for k, lab in LAB2.items():
+    def tp_(r, nm):
+        return None if r is None else (r["odds"], r["lo"], r["hi"], f"{nm}: odds ratio {r['odds']:.2f} (95% CI {r['lo']:.2f}–{r['hi']:.2f}), p={r['p']:.2f}")
+    frows.append((lab, [tp_(M1.get(k), "Presidential terms only"), tp_(M2.get(k), "All partisan terms")]))
+    ftab.append(dict(term=lab, a="–" if k not in M1 else f"{M1[k]['odds']:.2f} ({M1[k]['lo']:.2f}–{M1[k]['hi']:.2f}), p={M1[k]['p']:.2f}", b=f"{M2[k]['odds']:.2f} ({M2[k]['lo']:.2f}–{M2[k]['hi']:.2f}), p={M2[k]['p']:.2f}"))
+c_pforest = dotrange(frows, [(f"Model 1: presidential lean and shift (n={PJ['m1']['n']:,})", B), (f"Model 2: plus governor and legislature (n={PJ['m2']['n']:,})", O)], 0.5, 2.0, ref=1.0, log=True,
+                     fmt=lambda v: f"{v:g}×", xticks=[0.5, 0.75, 1, 1.5, 2], label_w=290, xlabel="Odds ratio of passing (1× = no effect)")
+t_pforest = table(pd.DataFrame(ftab), [("term", "Partisan context"), ("a", "Model 1: OR (95% CI)"), ("b", "Model 2: OR (95% CI)")])
+G_ = {r["gov_party"]: r for r in PJ["by_gov"]}; L_ = {r["leg_ctrl"]: r for r in PJ["by_leg"]}; T_ = {r["trifecta"]: r for r in PJ["by_trifecta"]}
+SD_ = {r["shift_dir"]: r for r in PJ["by_shift_dir"]}; LC_ = {r["lean_cat"]: r for r in PJ["by_lean_cat"]}
+OY = {r["term"]: r for r in PJ["ols_yes"]["rows"]}
+CH = PJ["lean_change_1980_2024"]
+
 # ---------------- text ----------------
 ini = next(r for r in S["type_known"] if r["mtype"] == "initiative")
 leg = next(r for r in S["type_known"] if r["mtype"] == "legislative")
@@ -171,6 +232,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>One wording signal is robust: asking voters to repeal, eliminate or abolish something.</b> Those measures passed {pct(wr['mentions_repeal']['rate_with'])} of the time vs {pct(wr['mentions_repeal']['rate_without'])}, and the effect survives controls for state, decade, topic and length (odds ratio {rep['odds']:.2f}; {repB['odds']:.2f} in the stricter model).</li>
 <li><b>Most other wording features do nothing detectable</b> once state and topic are held fixed: restrictive vs expansive verbs, mentioning taxes or debt, or being a constitutional amendment.</li>
 <li><b>Topic matters, but less than origin.</b> Criminal-justice measures pass most (79%); environment, education, social and tax measures sit near 52–54%.</li>
+<li><b>Partisan climate mostly doesn't move the average yes/no.</b> Presidential lean and a state becoming more Democratic or Republican show no reliable effect once the state is held fixed, and legislative control shows none. Democratic-governor years pass slightly more often (odds ratio {M2['gov_D']['odds']:.2f}, not significant on its own), a lead worth watching (<a href="#politics">section 5</a>).</li>
 <li><b>State culture matters a lot.</b> Pass rates range from {pct(st.iloc[0].pass_rate)} (South Dakota) to {pct(st.iloc[-1].pass_rate)} (Hawaii). A state's own track record is a strong predictor of any new measure (p&lt;0.001).</li>
 </ul>
 
@@ -211,6 +273,35 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <div class="fig">{c_iri}{t_iri}</div>
 <p>IRI's all-state series shows initiative approval rising from 39% in the 1970s to 51% in the 2010s, which is the opposite direction of the pooled series above. Initiatives and referrals tell different stories, another reason to keep origin separate.</p>
 
+<h2 id="politics">5. Does politics matter? Presidential lean, governors and legislatures</h2>
+<p>To test whether a state's partisan climate affects yes-or-no outcomes, I attached four pieces of context to every measure (DC is excluded because it has no governor or state legislature):</p>
+<ul>
+<li><b>Lean:</b> the Democratic two-party margin in the <i>most recent presidential race before the measure's year</i> (a same-year race is simultaneous, not history).</li>
+<li><b>Shift:</b> how far that margin moved from the race before it. Positive means the state was becoming more Democratic; negative, more Republican. I also tested a two-cycle (8-year) shift.</li>
+<li><b>Governor's party</b> and <b>legislative control</b> (both chambers Democratic, both Republican, or split/tied) as shown for that year in Wikipedia's party-strength tables. A Democratic or Republican trifecta means governor plus both chambers.</li>
+</ul>
+<div class="fig"><h3>How these states moved, 1980 to 2024</h3>{c_move}{t_move}
+<p class="note">Colors here mark the year, not a party. Over this period, the states in the data that became <b>more Democratic</b> were California ({CH['California']:+.0f} pts), Colorado ({CH['Colorado']:+.0f}), Washington ({CH['Washington']:+.0f}), Arizona ({CH['Arizona']:+.0f}) and Oregon ({CH['Oregon']:+.0f}), plus Alaska and Hawaii (about +21). The states that became <b>more Republican</b> were Missouri ({CH['Missouri']:+.0f}), Wyoming ({CH['Wyoming']:+.0f}) and Oklahoma ({CH['Oklahoma']:+.0f}). Margins are two-party, so they ignore third-party votes (Anderson in 1980, Perot in 1992 and 1996) and long-run comparisons are approximate.</p></div>
+
+<h3>The raw picture</h3>
+<div class="fig">{c_split}{t_split}</div>
+<p>Raw differences are small and lean one way. Under Democratic governors {pct(G_['D']['pass_rate'], 1)} of measures passed vs {pct(G_['R']['pass_rate'], 1)} under Republicans. Under Democratic legislatures {pct(L_['D']['pass_rate'], 1)} vs {pct(L_['R']['pass_rate'], 1)} (Republican) and {pct(L_['split']['pass_rate'], 1)} (split). Democratic trifectas passed {pct(T_['D trifecta']['pass_rate'], 1)}, Republican trifectas {pct(T_['R trifecta']['pass_rate'], 1)}. The 95% intervals overlap in most comparisons. Part of the governor gap is state composition: Hawaii is mostly Democratic-run and passes 83% of its measures, and without it the gap roughly halves (58.3% vs 55.1% becomes 56.4% vs 54.8%).</p>
+<p>Presidential lean points the other way in the raw data: measures in Republican-leaning states (more than 10 points) passed {pct(LC_['R-leaning (>10 pts)']['pass_rate'], 1)}, vs {pct(LC_['D-leaning (>10 pts)']['pass_rate'], 1)} in Democratic-leaning ones. And states that had just moved toward Democrats passed {pct(SD_['toward D (>2 pts)']['pass_rate'], 1)} vs {pct(SD_['toward R (>2 pts)']['pass_rate'], 1)} after moving toward Republicans.</p>
+
+<h3>With controls: mostly no detectable effect</h3>
+<p>The cleaner test uses state fixed effects, so lean and shift are identified by <i>the same state changing over time</i> rather than comparing, say, Wyoming with California. It also controls for decade and topic and clusters by state-election.</p>
+<div class="fig">{c_pforest}{t_pforest}</div>
+<ul>
+<li><b>A state's presidential lean does not predict yes or no</b> once the state is held fixed (odds ratio {M1['lean10']['odds']:.2f} per 10 points, p={M1['lean10']['p']:.2f}). The raw Republican-state advantage is a difference between states, not an effect of partisanship.</li>
+<li><b>A state becoming more Democratic or more Republican shows no reliable effect</b> (odds ratio {M1['shift10']['odds']:.2f} per 10 points toward Democrats, p={M1['shift10']['p']:.2f}; the 8-year version is similar). The point estimate leans slightly negative, so the raw gap above is not distinguishable from noise.</li>
+<li><b>Governor's party:</b> Democratic-governor years pass somewhat more often (odds ratio {M2['gov_D']['odds']:.2f}, CI {M2['gov_D']['lo']:.2f}–{M2['gov_D']['hi']:.2f}, p={M2['gov_D']['p']:.2f}). Within states it is directionally consistent: Democratic governors saw more passes in 10 of the 12 states with enough data, averaging +5.6 points. Taken alone, that is not significant. On the continuous outcome, yes share is {OY['gov_D']['coef']:+.1f} points higher under Democratic governors (p={OY['gov_D']['p']:.2f}), the one nominally significant partisan result in the whole analysis. With roughly ten partisan tests, treat it as a lead, not a finding.</li>
+<li><b>Legislative control shows nothing</b> (Democratic: {M2['C(leg_cat, Treatment(\'R\'))[T.D]']['odds']:.2f}×, split: {M2['C(leg_cat, Treatment(\'R\'))[T.split]']['odds']:.2f}× vs Republican; both p&gt;0.5).</li>
+<li><b>Does it depend on topic or origin?</b> The one interaction that stands out is that education measures do worse as a state moves toward Democrats (odds ratio 0.68 per 10 points, p=0.03). It is one of twelve interaction terms, so it may be chance. Among initiatives with a known origin there is weak evidence of a lower pass rate in more Democratic states (odds ratio 0.79 per 10 points, p=0.07; n=884), and no clear difference for referrals.</li>
+</ul>
+<div class="fig"><h3>Within the same state: after shifts toward Democrats vs toward Republicans</h3>{c_shift}{t_shift}
+<p class="note">Only the 14 states with at least 8 measures in each condition. Pass rates were higher after shifts toward Republicans in 9 of the 14 (average +3.1 points), which a sign test cannot distinguish from a coin flip (p=0.42). Intervals overlap in nearly every state.</p></div>
+<div class="callout"><b>Why the null result isn't surprising.</b> A "yes" vote is not inherently partisan: it can enact a conservative or a liberal policy. If Democratic-leaning electorates say yes to a minimum-wage hike and no to a tax cap while Republican ones do the opposite, the pass rate averaged across all measures cancels out. So these results show that a state's partisan climate does not make voters <i>generally</i> more or less willing to say yes. They say nothing about whether partisanship shapes <i>which</i> measures pass. Testing that needs each measure coded for its ideological direction, which this dataset does not yet have (see next steps).</div>
+
 <h2 id="limits">Limits and next steps</h2>
 <ul>
 <li><b>Not all 50 states.</b> Measure-level data cover 15 states and DC; ~24 states allow citizen initiatives but all 50 hold referred measures. Coverage varies: Arizona 1990–2008, Missouri and South Dakota from 2000, Oklahoma from 2004, DC 1979 only. Pooled figures overweight California, Oregon, Colorado and Washington.</li>
@@ -218,10 +309,12 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>Topic labels are keyword rules</b> (about 75–80% sensible in a hand audit of 40 titles), so topic effects are blurred toward zero.</li>
 <li><b>Wording is measured from summaries, not full ballot language.</b> And "wording" is correlated with substance: a measure to repeal a law is also a different <i>policy</i>, so this is association, not proof that rewording would change outcomes.</li>
 <li><b>Outcomes:</b> passage matches simple majority in 98.3% of rows with vote data; exceptions are legitimate supermajority rules (Florida's 60%, Wyoming).</li>
+<li><b>Partisan context:</b> governor and legislature data were extracted from Wikipedia's party-strength pages by four parallel agents, then checked for row counts, chamber sizes and 17 known state-years. Treat individual cells as probably right, not audited. Ties are coded as split. Years are as shown on the page, with the governor in office that year. Only 15 states, so partisan estimates are noisy. Without ideological coding of each measure, the partisan analysis cannot say whether liberal or conservative measures fare differently by climate.</li>
+<li><b>Next (also):</b> code each measure's ideological direction (conservative, liberal, neutral) to test climate-by-direction effects, the natural follow-up to section 5.</li>
 <li><b>Next:</b> add Ballotpedia or IRI measure-level data for all states; add official ballot titles; add a better topic classifier; model state-level covariates (partisanship, signature rules).</li>
 </ul>
 
-<footer>Data: Wikipedia state ballot-measure lists (CC BY-SA), IRI state-by-year initiative counts (Matsusaka, USC). Code, data and method: see the repository. Generated by <code>scripts/build_site.py</code> from <code>results/summary.json</code>.</footer>
+<footer>Data: Wikipedia state ballot-measure and party-strength lists (CC BY-SA), IRI state-by-year initiative counts (Matsusaka, USC), MIT Election Data and Science Lab presidential returns 1976-2016, county-level presidential results 2020 and 2024 (tonmcg). Code, data and method: see the repository. Generated by <code>scripts/build_site.py</code> from <code>results/summary.json</code>.</footer>
 </main></body></html>"""
 
 open("docs/index.html", "w").write(PAGE)

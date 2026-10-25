@@ -1,0 +1,736 @@
+state,year,gov_name,gov_party,senate_dem,senate_rep,senate_other,house_dem,house_rep,house_other,source_note,senate_ctrl,house_ctrl,leg_ctrl,trifecta
+Alaska,1976,Jay Hammond,R,13,7,0,30,9,1,,D,D,D,divided
+Alaska,1977,Jay Hammond,R,12,8,0,25,15,0,,D,D,D,divided
+Alaska,1978,Jay Hammond,R,12,8,0,25,15,0,,D,D,D,divided
+Alaska,1979,Jay Hammond,R,9,11,0,25,14,1,,R,D,split,divided
+Alaska,1980,Jay Hammond,R,9,11,0,25,14,1,,R,D,split,divided
+Alaska,1981,Jay Hammond,R,10,10,0,22,16,2,"House coalition (Republican-led, per page footnote) from June 1981; Libertarians counted in other",tie,D,split,divided
+Alaska,1982,Jay Hammond,R,10,10,0,22,16,2,,tie,D,split,divided
+Alaska,1983,Bill Sheffield,D,9,11,0,20,20,0,,R,tie,split,divided
+Alaska,1984,Bill Sheffield,D,9,11,0,20,20,0,,R,tie,split,divided
+Alaska,1985,Bill Sheffield,D,9,11,0,21,18,1,,R,D,split,divided
+Alaska,1986,Bill Sheffield,D,9,11,0,21,18,1,,R,D,split,divided
+Alaska,1987,Steve Cowper,D,8,12,0,24,16,0,,R,D,split,divided
+Alaska,1988,Steve Cowper,D,8,12,0,24,16,0,,R,D,split,divided
+Alaska,1989,Steve Cowper,D,8,12,0,24,16,0,,R,D,split,divided
+Alaska,1990,Steve Cowper,D,8,12,0,24,16,0,,R,D,split,divided
+Alaska,1991,Wally Hickel,I,10,10,0,23,17,0,,tie,D,split,divided
+Alaska,1992,Wally Hickel,I,10,10,0,23,17,0,,tie,D,split,divided
+Alaska,1993,Wally Hickel,I,9,10,1,20,18,2,House has 1 AKIP + 1 I counted in other; bipartisan coalition caucus control per page footnotes,R,D,split,divided
+Alaska,1994,Wally Hickel,R,9,10,1,21,18,1,"Table splits year: Hickel AKIP then R; last row used (gov R, House 21D,18R,1I). Coalition House; AKIP rep switched to D May 1994 per footnote",R,D,split,divided
+Alaska,1995,Tony Knowles,D,7,12,1,17,22,1,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,1996,Tony Knowles,D,7,12,1,17,22,1,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,1997,Tony Knowles,D,6,14,0,15,25,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,1998,Tony Knowles,D,6,14,0,15,25,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,1999,Tony Knowles,D,5,15,0,14,26,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2000,Tony Knowles,D,5,15,0,14,26,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2001,Tony Knowles,D,6,14,0,13,27,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2002,Tony Knowles,D,6,14,0,13,27,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2003,Frank Murkowski,R,8,12,0,13,27,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2004,Frank Murkowski,R,8,12,0,13,27,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2005,Frank Murkowski,R,8,12,0,14,26,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2006,Frank Murkowski,R,8,12,0,14,26,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2007,Sarah Palin,R,9,11,0,17,23,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2008,Sarah Palin,R,9,11,0,17,23,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2009,Sean Parnell,R,10,10,0,18,22,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,tie,R,split,divided
+Alaska,2010,Sean Parnell,R,10,10,0,18,22,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,tie,R,split,divided
+Alaska,2011,Sean Parnell,R,10,10,0,16,24,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,tie,R,split,divided
+Alaska,2012,Sean Parnell,R,10,10,0,16,24,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,tie,R,split,divided
+Alaska,2013,Sean Parnell,R,7,13,0,14,26,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2014,Sean Parnell,R,7,13,0,14,26,0,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2015,Bill Walker,I,6,14,0,16,23,1,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2016,Bill Walker,I,6,14,0,16,23,1,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2017,Bill Walker,I,6,14,0,17,21,2,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2018,Bill Walker,I,6,14,0,17,21,2,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,divided
+Alaska,2019,Mike Dunleavy,R,7,13,0,15,23,2,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2020,Mike Dunleavy,R,7,13,0,15,23,2,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2021,Mike Dunleavy,R,7,13,0,15,21,4,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2022,Mike Dunleavy,R,7,13,0,15,21,4,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2023,Mike Dunleavy,R,9,11,0,13,21,6,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Alaska,2024,Mike Dunleavy,R,9,11,0,13,22,5,Page footnotes describe bipartisan coalition caucuses in some years; raw party counts shown,R,R,R,R trifecta
+Arizona,1976,Raúl Héctor Castro,D,18,12,0,27,33,0,,D,R,split,divided
+Arizona,1977,Wesley Bolin,D,16,14,0,22,38,0,Year split Castro/Bolin; Bolin used,D,R,split,divided
+Arizona,1978,Bruce Babbitt,D,16,14,0,22,38,0,Year split Bolin/Babbitt; Babbitt used,D,R,split,divided
+Arizona,1979,Bruce Babbitt,D,14,16,0,18,42,0,,R,R,R,divided
+Arizona,1980,Bruce Babbitt,D,14,16,0,18,42,0,,R,R,R,divided
+Arizona,1981,Bruce Babbitt,D,14,16,0,17,43,0,,R,R,R,divided
+Arizona,1982,Bruce Babbitt,D,14,16,0,17,43,0,,R,R,R,divided
+Arizona,1983,Bruce Babbitt,D,12,18,0,21,39,0,,R,R,R,divided
+Arizona,1984,Bruce Babbitt,D,12,18,0,21,39,0,,R,R,R,divided
+Arizona,1985,Bruce Babbitt,D,12,18,0,22,38,0,,R,R,R,divided
+Arizona,1986,Bruce Babbitt,D,12,18,0,22,38,0,,R,R,R,divided
+Arizona,1987,Evan Mecham,R,11,19,0,24,36,0,,R,R,R,R trifecta
+Arizona,1988,Rose Mofford,D,11,19,0,24,36,0,Year split Mecham/Mofford; Mofford used,R,R,R,divided
+Arizona,1989,Rose Mofford,D,13,17,0,26,34,0,,R,R,R,divided
+Arizona,1990,Rose Mofford,D,13,17,0,26,34,0,,R,R,R,divided
+Arizona,1991,Fife Symington,R,17,13,0,27,33,0,,D,R,split,divided
+Arizona,1992,Fife Symington,R,17,13,0,27,33,0,,D,R,split,divided
+Arizona,1993,Fife Symington,R,12,18,0,25,35,0,,R,R,R,R trifecta
+Arizona,1994,Fife Symington,R,12,18,0,25,35,0,,R,R,R,R trifecta
+Arizona,1995,Fife Symington,R,11,19,0,22,38,0,,R,R,R,R trifecta
+Arizona,1996,Fife Symington,R,11,19,0,22,38,0,,R,R,R,R trifecta
+Arizona,1997,Jane Dee Hull,R,12,18,0,22,38,0,Year split Symington/Hull; Hull used,R,R,R,R trifecta
+Arizona,1998,Jane Dee Hull,R,12,18,0,22,38,0,,R,R,R,R trifecta
+Arizona,1999,Jane Dee Hull,R,14,16,0,20,40,0,,R,R,R,R trifecta
+Arizona,2000,Jane Dee Hull,R,14,16,0,20,40,0,,R,R,R,R trifecta
+Arizona,2001,Jane Dee Hull,R,15,15,0,24,36,0,,tie,R,split,divided
+Arizona,2002,Jane Dee Hull,R,15,15,0,24,36,0,,tie,R,split,divided
+Arizona,2003,Janet Napolitano,D,13,17,0,21,39,0,,R,R,R,divided
+Arizona,2004,Janet Napolitano,D,13,17,0,21,39,0,,R,R,R,divided
+Arizona,2005,Janet Napolitano,D,12,18,0,22,38,0,,R,R,R,divided
+Arizona,2006,Janet Napolitano,D,12,18,0,21,39,0,,R,R,R,divided
+Arizona,2007,Janet Napolitano,D,13,17,0,27,33,0,,R,R,R,divided
+Arizona,2008,Janet Napolitano,D,13,17,0,27,33,0,,R,R,R,divided
+Arizona,2009,Jan Brewer,R,12,18,0,24,36,0,,R,R,R,R trifecta
+Arizona,2010,Jan Brewer,R,12,18,0,24,36,0,,R,R,R,R trifecta
+Arizona,2011,Jan Brewer,R,9,21,0,20,40,0,,R,R,R,R trifecta
+Arizona,2012,Jan Brewer,R,9,21,0,20,40,0,,R,R,R,R trifecta
+Arizona,2013,Jan Brewer,R,13,17,0,24,36,0,,R,R,R,R trifecta
+Arizona,2014,Jan Brewer,R,13,17,0,24,36,0,,R,R,R,R trifecta
+Arizona,2015,Doug Ducey,R,13,17,0,24,36,0,,R,R,R,R trifecta
+Arizona,2016,Doug Ducey,R,12,18,0,24,36,0,,R,R,R,R trifecta
+Arizona,2017,Doug Ducey,R,13,17,0,25,35,0,,R,R,R,R trifecta
+Arizona,2018,Doug Ducey,R,13,17,0,25,35,0,"Duplicate year rows, identical",R,R,R,R trifecta
+Arizona,2019,Doug Ducey,R,13,17,0,29,31,0,,R,R,R,R trifecta
+Arizona,2020,Doug Ducey,R,13,17,0,29,31,0,,R,R,R,R trifecta
+Arizona,2021,Doug Ducey,R,14,16,0,29,31,0,,R,R,R,R trifecta
+Arizona,2022,Doug Ducey,R,14,16,0,29,31,0,,R,R,R,R trifecta
+Arizona,2023,Katie Hobbs,D,14,16,0,29,31,0,,R,R,R,divided
+Arizona,2024,Katie Hobbs,D,14,16,0,29,31,0,,R,R,R,divided
+California,1976,Jerry Brown,D,25,15,0,55,25,0,,D,D,D,D trifecta
+California,1977,Jerry Brown,D,28,12,0,57,23,0,,D,D,D,D trifecta
+California,1978,Jerry Brown,D,28,12,0,57,23,0,,D,D,D,D trifecta
+California,1979,Jerry Brown,D,26,14,0,50,30,0,,D,D,D,D trifecta
+California,1980,Jerry Brown,D,26,14,0,50,30,0,,D,D,D,D trifecta
+California,1981,Jerry Brown,D,26,14,0,47,33,0,,D,D,D,D trifecta
+California,1982,Jerry Brown,D,26,14,0,47,33,0,,D,D,D,D trifecta
+California,1983,George Deukmejian,R,25,15,0,48,32,0,,D,D,D,divided
+California,1984,George Deukmejian,R,25,15,0,48,32,0,,D,D,D,divided
+California,1985,George Deukmejian,R,25,15,0,47,33,0,,D,D,D,divided
+California,1986,George Deukmejian,R,25,15,0,47,33,0,,D,D,D,divided
+California,1987,George Deukmejian,R,24,14,1,44,36,0,Senate sums to 39 as shown on page (1 seat unlisted/vacant),D,D,D,divided
+California,1988,George Deukmejian,R,24,14,1,44,36,0,Senate sums to 39 as shown on page (1 seat unlisted/vacant),D,D,D,divided
+California,1989,George Deukmejian,R,24,14,1,47,33,0,Senate sums to 39 as shown on page (1 seat unlisted/vacant),D,D,D,divided
+California,1990,George Deukmejian,R,24,14,1,47,33,0,Senate sums to 39 as shown on page (1 seat unlisted/vacant),D,D,D,divided
+California,1991,Pete Wilson,R,25,14,1,46,34,0,,D,D,D,divided
+California,1992,Pete Wilson,R,25,14,1,46,34,0,,D,D,D,divided
+California,1993,Pete Wilson,R,23,15,2,48,32,0,,D,D,D,divided
+California,1994,Pete Wilson,R,23,15,2,48,32,0,,D,D,D,divided
+California,1995,Pete Wilson,R,21,17,2,39,41,0,,D,R,split,divided
+California,1996,Pete Wilson,R,21,17,2,39,41,0,,D,R,split,divided
+California,1997,Pete Wilson,R,23,16,1,43,37,0,,D,D,D,divided
+California,1998,Pete Wilson,R,23,16,1,43,37,0,,D,D,D,divided
+California,1999,Gray Davis,D,25,15,0,47,32,1,,D,D,D,D trifecta
+California,2000,Gray Davis,D,25,15,0,47,32,1,,D,D,D,D trifecta
+California,2001,Gray Davis,D,26,14,0,50,30,0,,D,D,D,D trifecta
+California,2002,Gray Davis,D,26,14,0,50,30,0,,D,D,D,D trifecta
+California,2003,Gray Davis,D,25,15,0,48,32,0,,D,D,D,D trifecta
+California,2004,Arnold Schwarzenegger,R,25,15,0,48,32,0,,D,D,D,divided
+California,2005,Arnold Schwarzenegger,R,25,15,0,48,32,0,,D,D,D,divided
+California,2006,Arnold Schwarzenegger,R,25,15,0,48,32,0,,D,D,D,divided
+California,2007,Arnold Schwarzenegger,R,25,15,0,48,32,0,,D,D,D,divided
+California,2008,Arnold Schwarzenegger,R,25,15,0,48,32,0,,D,D,D,divided
+California,2009,Arnold Schwarzenegger,R,25,15,0,50,29,1,,D,D,D,divided
+California,2010,Arnold Schwarzenegger,R,25,15,0,50,29,1,,D,D,D,divided
+California,2011,Jerry Brown,D,25,15,0,52,28,0,,D,D,D,D trifecta
+California,2012,Jerry Brown,D,25,15,0,52,27,1,,D,D,D,D trifecta
+California,2013,Jerry Brown,D,29,11,0,55,25,0,,D,D,D,D trifecta
+California,2014,Jerry Brown,D,28,12,0,55,25,0,,D,D,D,D trifecta
+California,2015,Jerry Brown,D,26,14,0,52,28,0,,D,D,D,D trifecta
+California,2016,Jerry Brown,D,26,14,0,52,28,0,,D,D,D,D trifecta
+California,2017,Jerry Brown,D,27,13,0,55,25,0,,D,D,D,D trifecta
+California,2018,Jerry Brown,D,26,14,0,55,25,0,,D,D,D,D trifecta
+California,2019,Gavin Newsom,D,29,11,0,61,18,1,"Duplicate rows, identical",D,D,D,D trifecta
+California,2020,Gavin Newsom,D,29,11,0,61,18,1,,D,D,D,D trifecta
+California,2021,Gavin Newsom,D,31,9,0,60,19,1,,D,D,D,D trifecta
+California,2022,Gavin Newsom,D,31,9,0,60,19,1,,D,D,D,D trifecta
+California,2023,Gavin Newsom,D,32,8,0,62,18,0,,D,D,D,D trifecta
+California,2024,Gavin Newsom,D,31,9,0,62,18,0,"Table has two 2024 rows (Senate 32D,8R then 31D,9R); last row used",D,D,D,D trifecta
+Colorado,1976,Richard Lamm,D,16,19,0,39,26,0,,R,D,split,divided
+Colorado,1977,Richard Lamm,D,17,18,0,30,35,0,,R,R,R,divided
+Colorado,1978,Richard Lamm,D,17,18,0,30,35,0,,R,R,R,divided
+Colorado,1979,Richard Lamm,D,13,22,0,27,38,0,,R,R,R,divided
+Colorado,1980,Richard Lamm,D,13,22,0,27,38,0,,R,R,R,divided
+Colorado,1981,Richard Lamm,D,13,22,0,26,39,0,,R,R,R,divided
+Colorado,1982,Richard Lamm,D,13,22,0,26,39,0,,R,R,R,divided
+Colorado,1983,Richard Lamm,D,13,22,0,25,40,0,,R,R,R,divided
+Colorado,1984,Richard Lamm,D,13,22,0,25,40,0,,R,R,R,divided
+Colorado,1985,Richard Lamm,D,11,24,0,17,48,0,,R,R,R,divided
+Colorado,1986,Richard Lamm,D,11,24,0,17,48,0,,R,R,R,divided
+Colorado,1987,Roy Romer,D,10,25,0,24,41,0,,R,R,R,divided
+Colorado,1988,Roy Romer,D,10,25,0,24,41,0,,R,R,R,divided
+Colorado,1989,Roy Romer,D,11,24,0,25,40,0,,R,R,R,divided
+Colorado,1990,Roy Romer,D,11,24,0,25,40,0,,R,R,R,divided
+Colorado,1991,Roy Romer,D,12,23,0,27,38,0,,R,R,R,divided
+Colorado,1992,Roy Romer,D,12,23,0,27,38,0,,R,R,R,divided
+Colorado,1993,Roy Romer,D,16,19,0,31,34,0,,R,R,R,divided
+Colorado,1994,Roy Romer,D,16,19,0,31,34,0,,R,R,R,divided
+Colorado,1995,Roy Romer,D,16,19,0,24,41,0,,R,R,R,divided
+Colorado,1996,Roy Romer,D,16,19,0,24,41,0,,R,R,R,divided
+Colorado,1997,Roy Romer,D,15,20,0,24,41,0,,R,R,R,divided
+Colorado,1998,Roy Romer,D,15,20,0,24,41,0,,R,R,R,divided
+Colorado,1999,Bill Owens,R,14,21,0,26,39,0,Duplicate year rows; last used,R,R,R,R trifecta
+Colorado,2000,Bill Owens,R,14,21,0,26,39,0,,R,R,R,R trifecta
+Colorado,2001,Bill Owens,R,18,17,0,27,38,0,,D,R,split,divided
+Colorado,2002,Bill Owens,R,18,17,0,27,38,0,,D,R,split,divided
+Colorado,2003,Bill Owens,R,17,18,0,28,37,0,,R,R,R,R trifecta
+Colorado,2004,Bill Owens,R,17,18,0,28,37,0,,R,R,R,R trifecta
+Colorado,2005,Bill Owens,R,18,17,0,35,30,0,Duplicate year rows; last used,D,D,D,divided
+Colorado,2006,Bill Owens,R,18,17,0,35,30,0,Duplicate year rows; last used,D,D,D,divided
+Colorado,2007,Bill Ritter,D,20,15,0,39,26,0,,D,D,D,D trifecta
+Colorado,2008,Bill Ritter,D,20,15,0,39,26,0,,D,D,D,D trifecta
+Colorado,2009,Bill Ritter,D,21,14,0,38,27,0,,D,D,D,D trifecta
+Colorado,2010,Bill Ritter,D,21,14,0,38,27,0,,D,D,D,D trifecta
+Colorado,2011,John Hickenlooper,D,20,15,0,32,33,0,,D,R,split,divided
+Colorado,2012,John Hickenlooper,D,20,15,0,32,33,0,,D,R,split,divided
+Colorado,2013,John Hickenlooper,D,20,15,0,37,28,0,,D,D,D,D trifecta
+Colorado,2014,John Hickenlooper,D,18,17,0,37,28,0,,D,D,D,D trifecta
+Colorado,2015,John Hickenlooper,D,17,18,0,34,31,0,,R,D,split,divided
+Colorado,2016,John Hickenlooper,D,17,18,0,34,31,0,Duplicate year rows; last used,R,D,split,divided
+Colorado,2017,John Hickenlooper,D,17,18,0,37,28,0,,R,D,split,divided
+Colorado,2018,John Hickenlooper,D,17,18,0,37,28,0,,R,D,split,divided
+Colorado,2019,Jared Polis,D,19,16,0,41,24,0,,D,D,D,D trifecta
+Colorado,2020,Jared Polis,D,19,16,0,41,24,0,,D,D,D,D trifecta
+Colorado,2021,Jared Polis,D,20,15,0,41,24,0,,D,D,D,D trifecta
+Colorado,2022,Jared Polis,D,21,14,0,41,24,0,,D,D,D,D trifecta
+Colorado,2023,Jared Polis,D,23,12,0,46,19,0,,D,D,D,D trifecta
+Colorado,2024,Jared Polis,D,23,12,0,46,19,0,,D,D,D,D trifecta
+Florida,1976,Reubin Askew,D,27,12,1,86,34,0,other seats: 1I,D,D,D,D trifecta
+Florida,1977,Reubin Askew,D,30,9,1,92,28,0,other seats: 1I,D,D,D,D trifecta
+Florida,1978,Reubin Askew,D,30,9,1,92,28,0,other seats: 1I,D,D,D,D trifecta
+Florida,1979,Bob Graham,D,29,11,0,89,31,0,,D,D,D,D trifecta
+Florida,1980,Bob Graham,D,29,11,0,89,31,0,,D,D,D,D trifecta
+Florida,1981,Bob Graham,D,27,13,0,81,39,0,,D,D,D,D trifecta
+Florida,1982,Bob Graham,D,27,13,0,81,39,0,,D,D,D,D trifecta
+Florida,1983,Bob Graham,D,32,8,0,84,36,0,,D,D,D,D trifecta
+Florida,1984,Bob Graham,D,32,8,0,84,36,0,,D,D,D,D trifecta
+Florida,1985,Bob Graham,D,31,9,0,77,43,0,,D,D,D,D trifecta
+Florida,1986,Bob Graham,D,30,10,0,77,43,0,seat footnote on page,D,D,D,D trifecta
+Florida,1987,Bob Martinez,R,25,15,0,73,47,0,2 rows for year on page; used governor in office at Nov election,D,D,D,divided
+Florida,1988,Bob Martinez,R,25,15,0,73,47,0,,D,D,D,divided
+Florida,1989,Bob Martinez,R,23,17,0,70,50,0,,D,D,D,divided
+Florida,1990,Bob Martinez,R,23,17,0,70,50,0,,D,D,D,divided
+Florida,1991,Lawton Chiles,D,23,17,0,74,46,0,,D,D,D,D trifecta
+Florida,1992,Lawton Chiles,D,22,18,0,74,46,0,seat footnote on page,D,D,D,D trifecta
+Florida,1993,Lawton Chiles,D,20,20,0,71,49,0,seat footnote on page; 20-20 Senate tie,tie,D,split,divided
+Florida,1994,Lawton Chiles,D,20,20,0,71,49,0,seat footnote on page; 20-20 Senate tie,tie,D,split,divided
+Florida,1995,Lawton Chiles,D,19,21,0,63,57,0,,R,D,split,divided
+Florida,1996,Lawton Chiles,D,18,22,0,63,57,0,seat footnote on page,R,D,split,divided
+Florida,1997,Lawton Chiles,D,17,23,0,59,61,0,,R,R,R,divided
+Florida,1998,Lawton Chiles,D,15,25,0,54,66,0,seat footnote on page,R,R,R,divided
+Florida,1999,Jeb Bush,R,15,25,0,47,73,0,2 rows for year on page; used governor in office at Nov election; seat footnote on page,R,R,R,R trifecta
+Florida,2000,Jeb Bush,R,15,25,0,45,75,0,seat footnote on page,R,R,R,R trifecta
+Florida,2001,Jeb Bush,R,15,25,0,43,77,0,seat footnote on page,R,R,R,R trifecta
+Florida,2002,Jeb Bush,R,15,25,0,43,77,0,seat footnote on page,R,R,R,R trifecta
+Florida,2003,Jeb Bush,R,14,26,0,39,81,0,,R,R,R,R trifecta
+Florida,2004,Jeb Bush,R,14,26,0,39,81,0,,R,R,R,R trifecta
+Florida,2005,Jeb Bush,R,14,26,0,36,84,0,,R,R,R,R trifecta
+Florida,2006,Jeb Bush,R,14,26,0,35,85,0,seat footnote on page,R,R,R,R trifecta
+Florida,2007,Charlie Crist,R,14,26,0,42,78,0,,R,R,R,R trifecta
+Florida,2008,Charlie Crist,R,14,26,0,43,77,0,seat footnote on page,R,R,R,R trifecta
+Florida,2009,Charlie Crist,R,14,26,0,44,76,0,,R,R,R,R trifecta
+Florida,2010,Charlie Crist,I,14,26,0,44,76,0,,R,R,R,divided
+Florida,2011,Rick Scott,R,12,28,0,39,81,0,,R,R,R,R trifecta
+Florida,2012,Rick Scott,R,12,28,0,39,81,0,,R,R,R,R trifecta
+Florida,2013,Rick Scott,R,14,26,0,44,76,0,,R,R,R,R trifecta
+Florida,2014,Rick Scott,R,14,26,0,45,75,0,seat footnote on page,R,R,R,R trifecta
+Florida,2015,Rick Scott,R,14,26,0,39,81,0,,R,R,R,R trifecta
+Florida,2016,Rick Scott,R,14,26,0,39,81,0,,R,R,R,R trifecta
+Florida,2017,Rick Scott,R,15,25,0,41,79,0,,R,R,R,R trifecta
+Florida,2018,Rick Scott,R,16,24,0,42,78,0,seat footnote on page,R,R,R,R trifecta
+Florida,2019,Ron DeSantis,R,17,23,0,47,73,0,,R,R,R,R trifecta
+Florida,2020,Ron DeSantis,R,17,23,0,47,73,0,,R,R,R,R trifecta
+Florida,2021,Ron DeSantis,R,16,24,0,42,78,0,,R,R,R,R trifecta
+Florida,2022,Ron DeSantis,R,16,24,0,42,78,0,,R,R,R,R trifecta
+Florida,2023,Ron DeSantis,R,12,28,0,35,85,0,,R,R,R,R trifecta
+Florida,2024,Ron DeSantis,R,12,28,0,36,84,0,seat footnote on page,R,R,R,R trifecta
+Hawaii,1976,George Ariyoshi,D,17,8,0,34,17,0,,D,D,D,D trifecta
+Hawaii,1977,George Ariyoshi,D,17,8,0,41,10,0,,D,D,D,D trifecta
+Hawaii,1978,George Ariyoshi,D,17,8,0,41,10,0,,D,D,D,D trifecta
+Hawaii,1979,George Ariyoshi,D,18,7,0,42,9,0,,D,D,D,D trifecta
+Hawaii,1980,George Ariyoshi,D,18,7,0,42,9,0,,D,D,D,D trifecta
+Hawaii,1981,George Ariyoshi,D,17,8,0,39,12,0,,D,D,D,D trifecta
+Hawaii,1982,George Ariyoshi,D,17,8,0,39,12,0,,D,D,D,D trifecta
+Hawaii,1983,George Ariyoshi,D,17,8,0,43,8,0,,D,D,D,D trifecta
+Hawaii,1984,George Ariyoshi,D,17,8,0,43,8,0,,D,D,D,D trifecta
+Hawaii,1985,George Ariyoshi,D,22,3,0,40,11,0,,D,D,D,D trifecta
+Hawaii,1986,George Ariyoshi,D,22,3,0,40,11,0,3 rows for year on page; used first (identical),D,D,D,D trifecta
+Hawaii,1987,John D. WaiheÊ»e III,D,20,5,0,40,11,0,,D,D,D,D trifecta
+Hawaii,1988,John D. WaiheÊ»e III,D,20,5,0,40,11,0,,D,D,D,D trifecta
+Hawaii,1989,John D. WaiheÊ»e III,D,22,3,0,45,6,0,,D,D,D,D trifecta
+Hawaii,1990,John D. WaiheÊ»e III,D,22,3,0,45,6,0,2 rows for year on page; used first (identical),D,D,D,D trifecta
+Hawaii,1991,John D. WaiheÊ»e III,D,22,3,0,45,6,0,,D,D,D,D trifecta
+Hawaii,1992,John D. WaiheÊ»e III,D,22,3,0,45,6,0,,D,D,D,D trifecta
+Hawaii,1993,John D. WaiheÊ»e III,D,22,3,0,47,4,0,,D,D,D,D trifecta
+Hawaii,1994,John D. WaiheÊ»e III,D,22,3,0,47,4,0,,D,D,D,D trifecta
+Hawaii,1995,Ben Cayetano,D,23,2,0,44,7,0,,D,D,D,D trifecta
+Hawaii,1996,Ben Cayetano,D,23,2,0,44,7,0,,D,D,D,D trifecta
+Hawaii,1997,Ben Cayetano,D,23,2,0,39,12,0,,D,D,D,D trifecta
+Hawaii,1998,Ben Cayetano,D,23,2,0,39,12,0,,D,D,D,D trifecta
+Hawaii,1999,Ben Cayetano,D,23,2,0,39,12,0,,D,D,D,D trifecta
+Hawaii,2000,Ben Cayetano,D,23,2,0,39,12,0,,D,D,D,D trifecta
+Hawaii,2001,Ben Cayetano,D,22,3,0,32,19,0,,D,D,D,D trifecta
+Hawaii,2002,Ben Cayetano,D,22,3,0,32,19,0,2 rows for year on page; used first (identical),D,D,D,D trifecta
+Hawaii,2003,Linda Lingle,R,20,5,0,36,15,0,,D,D,D,divided
+Hawaii,2004,Linda Lingle,R,20,5,0,36,15,0,,D,D,D,divided
+Hawaii,2005,Linda Lingle,R,20,5,0,41,10,0,,D,D,D,divided
+Hawaii,2006,Linda Lingle,R,20,5,0,41,10,0,,D,D,D,divided
+Hawaii,2007,Linda Lingle,R,20,5,0,43,8,0,,D,D,D,divided
+Hawaii,2008,Linda Lingle,R,20,5,0,43,8,0,,D,D,D,divided
+Hawaii,2009,Linda Lingle,R,23,2,0,45,6,0,,D,D,D,divided
+Hawaii,2010,Linda Lingle,R,23,2,0,45,6,0,,D,D,D,divided
+Hawaii,2011,Neil Abercrombie,D,24,1,0,43,8,0,,D,D,D,D trifecta
+Hawaii,2012,Neil Abercrombie,D,24,1,0,43,8,0,,D,D,D,D trifecta
+Hawaii,2013,Neil Abercrombie,D,24,1,0,44,7,0,,D,D,D,D trifecta
+Hawaii,2014,Neil Abercrombie,D,24,1,0,44,7,0,,D,D,D,D trifecta
+Hawaii,2015,David Ige,D,24,1,0,44,7,0,,D,D,D,D trifecta
+Hawaii,2016,David Ige,D,24,1,0,44,7,0,,D,D,D,D trifecta
+Hawaii,2017,David Ige,D,25,0,0,46,5,0,,D,D,D,D trifecta
+Hawaii,2018,David Ige,D,25,0,0,46,5,0,,D,D,D,D trifecta
+Hawaii,2019,David Ige,D,24,1,0,46,5,0,,D,D,D,D trifecta
+Hawaii,2020,David Ige,D,24,1,0,46,5,0,,D,D,D,D trifecta
+Hawaii,2021,David Ige,D,24,1,0,47,4,0,,D,D,D,D trifecta
+Hawaii,2022,David Ige,D,24,1,0,47,4,0,,D,D,D,D trifecta
+Hawaii,2023,Josh Green,D,23,2,0,45,6,0,,D,D,D,D trifecta
+Hawaii,2024,Josh Green,D,23,2,0,45,6,0,,D,D,D,D trifecta
+Michigan,1976,William Milliken,R,24,14,0,66,44,0,,D,D,D,divided
+Michigan,1977,William Milliken,R,24,14,0,68,42,0,,D,D,D,divided
+Michigan,1978,William Milliken,R,24,14,0,68,42,0,,D,D,D,divided
+Michigan,1979,William Milliken,R,24,14,0,70,40,0,,D,D,D,divided
+Michigan,1980,William Milliken,R,24,14,0,70,40,0,,D,D,D,divided
+Michigan,1981,William Milliken,R,24,14,0,64,46,0,,D,D,D,divided
+Michigan,1982,William Milliken,R,24,14,0,64,46,0,,D,D,D,divided
+Michigan,1983,James J. Blanchard,D,20,18,0,63,47,0,,D,D,D,D trifecta
+Michigan,1984,James J. Blanchard,D,18,20,0,63,47,0,seat footnote on page,R,D,split,divided
+Michigan,1985,James J. Blanchard,D,18,20,0,57,53,0,seat footnote on page,R,D,split,divided
+Michigan,1986,James J. Blanchard,D,18,20,0,57,53,0,seat footnote on page,R,D,split,divided
+Michigan,1987,James J. Blanchard,D,18,20,0,64,46,0,seat footnote on page,R,D,split,divided
+Michigan,1988,James J. Blanchard,D,18,20,0,64,46,0,seat footnote on page,R,D,split,divided
+Michigan,1989,James J. Blanchard,D,18,20,0,61,49,0,seat footnote on page,R,D,split,divided
+Michigan,1990,James J. Blanchard,D,18,20,0,61,49,0,seat footnote on page,R,D,split,divided
+Michigan,1991,John Engler,R,18,20,0,61,49,0,seat footnote on page,R,D,split,divided
+Michigan,1992,John Engler,R,18,20,0,61,49,0,seat footnote on page,R,D,split,divided
+Michigan,1993,John Engler,R,16,22,0,55,55,0,seat footnote on page; 55-55 House tie; power-sharing agreement per page footnote,R,tie,split,divided
+Michigan,1994,John Engler,R,16,22,0,55,55,0,seat footnote on page; 55-55 House tie; power-sharing agreement per page footnote,R,tie,split,divided
+Michigan,1995,John Engler,R,16,22,0,54,56,0,,R,R,R,R trifecta
+Michigan,1996,John Engler,R,16,22,0,54,56,0,,R,R,R,R trifecta
+Michigan,1997,John Engler,R,16,22,0,58,52,0,,R,D,split,divided
+Michigan,1998,John Engler,R,16,22,0,58,52,0,,R,D,split,divided
+Michigan,1999,John Engler,R,15,23,0,52,58,0,,R,R,R,R trifecta
+Michigan,2000,John Engler,R,15,23,0,52,58,0,,R,R,R,R trifecta
+Michigan,2001,John Engler,R,15,23,0,51,59,0,,R,R,R,R trifecta
+Michigan,2002,John Engler,R,15,23,0,51,59,0,,R,R,R,R trifecta
+Michigan,2003,Jennifer Granholm,D,16,22,0,47,63,0,,R,R,R,divided
+Michigan,2004,Jennifer Granholm,D,16,22,0,47,63,0,,R,R,R,divided
+Michigan,2005,Jennifer Granholm,D,16,22,0,52,58,0,,R,R,R,divided
+Michigan,2006,Jennifer Granholm,D,16,22,0,52,58,0,,R,R,R,divided
+Michigan,2007,Jennifer Granholm,D,17,21,0,58,52,0,,R,D,split,divided
+Michigan,2008,Jennifer Granholm,D,17,21,0,58,52,0,,R,D,split,divided
+Michigan,2009,Jennifer Granholm,D,16,21,0,67,43,0,seat footnote on page,R,D,split,divided
+Michigan,2010,Jennifer Granholm,D,16,22,0,67,43,0,seat footnote on page,R,D,split,divided
+Michigan,2011,Rick Snyder,R,12,26,0,47,63,0,,R,R,R,R trifecta
+Michigan,2012,Rick Snyder,R,12,26,0,46,64,0,seat footnote on page,R,R,R,R trifecta
+Michigan,2013,Rick Snyder,R,12,26,0,51,59,0,,R,R,R,R trifecta
+Michigan,2014,Rick Snyder,R,12,26,0,51,59,0,,R,R,R,R trifecta
+Michigan,2015,Rick Snyder,R,11,27,0,47,63,0,,R,R,R,R trifecta
+Michigan,2016,Rick Snyder,R,11,27,0,47,63,0,,R,R,R,R trifecta
+Michigan,2017,Rick Snyder,R,11,27,0,47,63,0,,R,R,R,R trifecta
+Michigan,2018,Rick Snyder,R,11,27,0,47,63,0,,R,R,R,R trifecta
+Michigan,2019,Gretchen Whitmer,D,16,22,0,52,58,0,2 rows for year on page; used first (identical); seat footnote on page,R,R,R,divided
+Michigan,2020,Gretchen Whitmer,D,16,22,0,52,58,0,seat footnote on page,R,R,R,divided
+Michigan,2021,Gretchen Whitmer,D,16,22,0,52,58,0,seat footnote on page,R,R,R,divided
+Michigan,2022,Gretchen Whitmer,D,16,22,0,52,58,0,"2 rows for year on page; used first (identical); page has 2 house rows: 58R,52D and 57R,53D; used first; seat footnote on page",R,R,R,divided
+Michigan,2023,Gretchen Whitmer,D,20,18,0,56,54,0,,D,D,D,D trifecta
+Michigan,2024,Gretchen Whitmer,D,20,18,0,56,54,0,,D,D,D,D trifecta
+Missouri,1976,Kit Bond,R,23,11,0,113,50,0,,D,D,D,divided
+Missouri,1977,Joseph P. Teasdale,D,24,10,0,111,52,0,,D,D,D,D trifecta
+Missouri,1978,Joseph P. Teasdale,D,24,10,0,111,52,0,,D,D,D,D trifecta
+Missouri,1979,Joseph P. Teasdale,D,23,11,0,116,47,0,,D,D,D,D trifecta
+Missouri,1980,Joseph P. Teasdale,D,23,11,0,116,47,0,,D,D,D,D trifecta
+Missouri,1981,Kit Bond,R,24,10,0,111,52,0,,D,D,D,divided
+Missouri,1982,Kit Bond,R,24,10,0,111,52,0,,D,D,D,divided
+Missouri,1983,Kit Bond,R,22,12,0,110,53,0,,D,D,D,divided
+Missouri,1984,Kit Bond,R,22,12,0,110,53,0,2 rows for year on page; used first (identical),D,D,D,divided
+Missouri,1985,John Ashcroft,R,21,13,0,108,55,0,,D,D,D,divided
+Missouri,1986,John Ashcroft,R,21,13,0,108,55,0,,D,D,D,divided
+Missouri,1987,John Ashcroft,R,21,13,0,111,52,0,,D,D,D,divided
+Missouri,1988,John Ashcroft,R,21,13,0,111,52,0,,D,D,D,divided
+Missouri,1989,John Ashcroft,R,22,12,0,104,59,0,,D,D,D,divided
+Missouri,1990,John Ashcroft,R,22,12,0,104,59,0,,D,D,D,divided
+Missouri,1991,John Ashcroft,R,23,11,0,98,65,0,,D,D,D,divided
+Missouri,1992,John Ashcroft,R,23,11,0,98,65,0,,D,D,D,divided
+Missouri,1993,Mel Carnahan,D,20,14,0,100,63,0,,D,D,D,D trifecta
+Missouri,1994,Mel Carnahan,D,20,14,0,100,63,0,2 rows for year on page; used first (identical),D,D,D,D trifecta
+Missouri,1995,Mel Carnahan,D,19,15,0,87,76,0,,D,D,D,D trifecta
+Missouri,1996,Mel Carnahan,D,19,15,0,87,76,0,,D,D,D,D trifecta
+Missouri,1997,Mel Carnahan,D,19,15,0,88,75,0,,D,D,D,D trifecta
+Missouri,1998,Mel Carnahan,D,19,15,0,88,75,0,,D,D,D,D trifecta
+Missouri,1999,Mel Carnahan,D,18,16,0,85,78,0,,D,D,D,D trifecta
+Missouri,2000,Roger B. Wilson,D,18,16,0,85,78,0,2 rows for year on page; used governor in office at Nov election,D,D,D,D trifecta
+Missouri,2001,Bob Holden,D,16,18,0,87,76,0,,R,D,split,divided
+Missouri,2002,Bob Holden,D,16,18,0,87,76,0,2 rows for year on page; used first (identical),R,D,split,divided
+Missouri,2003,Bob Holden,D,14,20,0,73,90,0,,R,R,R,divided
+Missouri,2004,Bob Holden,D,14,20,0,73,90,0,,R,R,R,divided
+Missouri,2005,Matt Blunt,R,11,23,0,66,97,0,,R,R,R,R trifecta
+Missouri,2006,Matt Blunt,R,11,23,0,66,97,0,,R,R,R,R trifecta
+Missouri,2007,Matt Blunt,R,13,21,0,71,92,0,,R,R,R,R trifecta
+Missouri,2008,Matt Blunt,R,13,21,0,71,92,0,,R,R,R,R trifecta
+Missouri,2009,Jay Nixon,D,11,23,0,74,89,0,,R,R,R,divided
+Missouri,2010,Jay Nixon,D,11,23,0,74,89,0,,R,R,R,divided
+Missouri,2011,Jay Nixon,D,8,26,0,57,106,0,,R,R,R,divided
+Missouri,2012,Jay Nixon,D,8,26,0,56,106,1,other seats: 1I,R,R,R,divided
+Missouri,2013,Jay Nixon,D,10,24,0,53,110,0,,R,R,R,divided
+Missouri,2014,Jay Nixon,D,10,24,0,53,110,0,,R,R,R,divided
+Missouri,2015,Jay Nixon,D,9,25,0,45,117,1,other seats: 1I,R,R,R,divided
+Missouri,2016,Jay Nixon,D,9,25,0,45,117,1,other seats: 1I,R,R,R,divided
+Missouri,2017,Eric Greitens,R,9,25,0,46,117,0,,R,R,R,R trifecta
+Missouri,2018,Mike Parson,R,10,24,0,46,117,0,2 rows for year on page; used governor in office at Nov election,R,R,R,R trifecta
+Missouri,2019,Mike Parson,R,10,24,0,47,116,0,,R,R,R,R trifecta
+Missouri,2020,Mike Parson,R,10,24,0,47,116,0,,R,R,R,R trifecta
+Missouri,2021,Mike Parson,R,10,24,0,49,114,0,,R,R,R,R trifecta
+Missouri,2022,Mike Parson,R,10,24,0,49,114,0,,R,R,R,R trifecta
+Missouri,2023,Mike Parson,R,10,24,0,52,111,0,,R,R,R,R trifecta
+Missouri,2024,Mike Parson,R,10,24,0,52,111,0,,R,R,R,R trifecta
+Montana,1976,Thomas Lee Judge,D,30,20,0,67,33,0,Wikipedia Political party strength in Montana,D,D,D,D trifecta
+Montana,1977,Thomas Lee Judge,D,25,25,0,57,43,0,tie chamber: party control granted to governor's party,tie,D,split,divided
+Montana,1978,Thomas Lee Judge,D,25,25,0,57,43,0,tie chamber: party control granted to governor's party,tie,D,split,divided
+Montana,1979,Thomas Lee Judge,D,24,26,0,55,45,0,Wikipedia Political party strength in Montana,R,D,split,divided
+Montana,1980,Thomas Lee Judge,D,24,26,0,55,45,0,Wikipedia Political party strength in Montana,R,D,split,divided
+Montana,1981,Ted Schwinden,D,22,28,0,43,57,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,1982,Ted Schwinden,D,22,28,0,43,57,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,1983,Ted Schwinden,D,24,26,0,55,45,0,Wikipedia Political party strength in Montana,R,D,split,divided
+Montana,1984,Ted Schwinden,D,24,26,0,55,45,0,Wikipedia Political party strength in Montana,R,D,split,divided
+Montana,1985,Ted Schwinden,D,28,22,0,50,50,0,"House tied 50-50; Speakership to governor's party by statute, committees organized 50-50",D,tie,split,divided
+Montana,1986,Ted Schwinden,D,28,22,0,50,50,0,"House tied 50-50; Speakership to governor's party by statute, committees organized 50-50",D,tie,split,divided
+Montana,1987,Ted Schwinden,D,25,25,0,49,51,0,"Senate tied 25-25; Presidency to governor's party by statute, committees organized 50-50",tie,R,split,divided
+Montana,1988,Ted Schwinden,D,25,25,0,49,51,0,"Senate tied 25-25; Presidency to governor's party by statute, committees organized 50-50",tie,R,split,divided
+Montana,1989,Stan Stephens,R,23,27,0,52,48,0,Wikipedia Political party strength in Montana,R,D,split,divided
+Montana,1990,Stan Stephens,R,23,27,0,52,48,0,Wikipedia Political party strength in Montana,R,D,split,divided
+Montana,1991,Stan Stephens,R,29,21,0,61,39,0,Wikipedia Political party strength in Montana,D,D,D,divided
+Montana,1992,Stan Stephens,R,29,21,0,61,39,0,Wikipedia Political party strength in Montana,D,D,D,divided
+Montana,1993,Marc Racicot,R,30,20,0,47,53,0,Wikipedia Political party strength in Montana,D,R,split,divided
+Montana,1994,Marc Racicot,R,30,20,0,47,53,0,Wikipedia Political party strength in Montana,D,R,split,divided
+Montana,1995,Marc Racicot,R,19,31,0,33,67,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,1996,Marc Racicot,R,19,31,0,33,67,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,1997,Marc Racicot,R,16,34,0,35,65,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,1998,Marc Racicot,R,16,34,0,35,65,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,1999,Marc Racicot,R,18,32,0,41,59,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2000,Marc Racicot,R,18,32,0,41,59,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2001,Judy Martz,R,19,31,0,42,58,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2002,Judy Martz,R,19,31,0,42,58,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2003,Judy Martz,R,21,29,0,47,53,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2004,Judy Martz,R,21,29,0,47,53,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2005,Brian Schweitzer,D,27,23,0,50,50,0,tie chamber: party control granted to governor's party,D,tie,split,divided
+Montana,2006,Brian Schweitzer,D,27,23,0,50,50,0,tie chamber: party control granted to governor's party,D,tie,split,divided
+Montana,2007,Brian Schweitzer,D,26,24,0,49,50,1,footnote: Republican Sam Kitzenberg switched parties shortly after 2006 election; 1 Constitution Party member (counted as other) caucused with Republicans,D,R,split,divided
+Montana,2008,Brian Schweitzer,D,26,24,0,49,50,1,footnote: Republican Sam Kitzenberg switched parties shortly after 2006 election; 1 Constitution Party member (counted as other) caucused with Republicans,D,R,split,divided
+Montana,2009,Brian Schweitzer,D,23,27,0,50,50,0,tie chamber: party control granted to governor's party,R,tie,split,divided
+Montana,2010,Brian Schweitzer,D,23,27,0,50,50,0,tie chamber: party control granted to governor's party,R,tie,split,divided
+Montana,2011,Brian Schweitzer,D,22,28,0,32,68,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2012,Brian Schweitzer,D,22,28,0,32,68,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2013,Steve Bullock,D,21,29,0,39,61,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2014,Steve Bullock,D,21,29,0,39,61,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2015,Steve Bullock,D,21,29,0,41,59,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2016,Steve Bullock,D,21,29,0,41,59,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2017,Steve Bullock,D,18,32,0,41,59,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2018,Steve Bullock,D,18,32,0,41,59,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2019,Steve Bullock,D,20,30,0,42,58,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2020,Steve Bullock,D,20,30,0,42,58,0,Wikipedia Political party strength in Montana,R,R,R,divided
+Montana,2021,Greg Gianforte,R,19,31,0,33,67,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2022,Greg Gianforte,R,19,31,0,33,67,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2023,Greg Gianforte,R,16,34,0,32,68,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Montana,2024,Greg Gianforte,R,16,34,0,32,68,0,Wikipedia Political party strength in Montana,R,R,R,R trifecta
+Ohio,1976,Jim Rhodes,R,21,12,0,59,40,0,Wikipedia Political party strength in Ohio,D,D,D,divided
+Ohio,1977,Jim Rhodes,R,21,12,0,62,37,0,Wikipedia Political party strength in Ohio,D,D,D,divided
+Ohio,1978,Jim Rhodes,R,21,12,0,62,37,0,Wikipedia Political party strength in Ohio,D,D,D,divided
+Ohio,1979,Jim Rhodes,R,18,15,0,63,36,0,Wikipedia Political party strength in Ohio,D,D,D,divided
+Ohio,1980,Jim Rhodes,R,18,15,0,63,36,0,Wikipedia Political party strength in Ohio,D,D,D,divided
+Ohio,1981,Jim Rhodes,R,15,18,0,56,43,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1982,Jim Rhodes,R,15,18,0,56,43,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1983,Dick Celeste,D,17,16,0,62,37,0,Wikipedia Political party strength in Ohio,D,D,D,D trifecta
+Ohio,1984,Dick Celeste,D,17,16,0,62,37,0,Wikipedia Political party strength in Ohio,D,D,D,D trifecta
+Ohio,1985,Dick Celeste,D,15,18,0,59,40,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1986,Dick Celeste,D,15,18,0,59,40,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1987,Dick Celeste,D,15,18,0,60,39,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1988,Dick Celeste,D,15,18,0,60,39,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1989,Dick Celeste,D,14,19,0,59,40,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1990,Dick Celeste,D,14,19,0,59,40,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1991,George Voinovich,R,12,21,0,61,38,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1992,George Voinovich,R,12,21,0,61,38,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1993,George Voinovich,R,13,20,0,53,46,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1994,George Voinovich,R,13,20,0,53,46,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,1995,George Voinovich,R,13,20,0,43,56,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,1996,George Voinovich,R,13,20,0,43,56,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,1997,George Voinovich,R,12,21,0,39,60,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,1998,George Voinovich,R,12,21,0,39,60,0,table has 2 rows for year; used first row; governor changed mid-year; used Nov governor,R,R,R,R trifecta
+Ohio,1999,Bob Taft,R,12,21,0,40,59,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2000,Bob Taft,R,12,21,0,40,59,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2001,Bob Taft,R,12,21,0,39,60,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2002,Bob Taft,R,12,21,0,39,60,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2003,Bob Taft,R,11,22,0,37,62,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2004,Bob Taft,R,11,22,0,37,62,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2005,Bob Taft,R,11,22,0,38,61,0,table has 2 rows for year; used last row,R,R,R,R trifecta
+Ohio,2006,Bob Taft,R,11,22,0,38,61,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2007,Ted Strickland,D,12,21,0,46,53,0,Wikipedia Political party strength in Ohio,R,R,R,divided
+Ohio,2008,Ted Strickland,D,12,21,0,46,53,0,table has 3 rows for year; used last row,R,R,R,divided
+Ohio,2009,Ted Strickland,D,12,21,0,53,46,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,2010,Ted Strickland,D,12,21,0,53,46,0,Wikipedia Political party strength in Ohio,R,D,split,divided
+Ohio,2011,John Kasich,R,10,23,0,40,59,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2012,John Kasich,R,10,23,0,40,59,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2013,John Kasich,R,10,23,0,39,60,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2014,John Kasich,R,10,23,0,39,60,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2015,John Kasich,R,10,23,0,34,65,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2016,John Kasich,R,10,23,0,34,65,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2017,John Kasich,R,9,24,0,33,66,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2018,John Kasich,R,9,24,0,33,66,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2019,Mike DeWine,R,9,24,0,38,61,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2020,Mike DeWine,R,9,24,0,38,61,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2021,Mike DeWine,R,8,25,0,35,64,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2022,Mike DeWine,R,8,25,0,35,64,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2023,Mike DeWine,R,7,26,0,32,67,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Ohio,2024,Mike DeWine,R,7,26,0,32,67,0,Wikipedia Political party strength in Ohio,R,R,R,R trifecta
+Oklahoma,1976,David Boren,D,39,9,0,76,25,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1977,David Boren,D,39,9,0,78,23,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1978,David Boren,D,39,9,0,78,23,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1979,George Nigh,D,39,9,0,75,26,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1980,George Nigh,D,39,9,0,75,26,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1981,George Nigh,D,37,11,0,73,28,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1982,George Nigh,D,37,11,0,73,28,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1983,George Nigh,D,34,14,0,76,25,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1984,George Nigh,D,34,14,0,76,25,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1985,George Nigh,D,34,14,0,70,31,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1986,George Nigh,D,34,14,0,70,31,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1987,Henry Bellmon,R,31,17,0,70,31,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1988,Henry Bellmon,R,31,17,0,70,31,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1989,Henry Bellmon,R,33,15,0,69,32,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1990,Henry Bellmon,R,33,15,0,69,32,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1991,David Walters,D,37,11,0,69,32,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1992,David Walters,D,37,11,0,69,32,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1993,David Walters,D,37,11,0,68,33,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,1994,David Walters,D,37,11,0,68,33,0,table has 2 rows for year; used last row,D,D,D,D trifecta
+Oklahoma,1995,Frank Keating,R,35,13,0,65,36,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1996,Frank Keating,R,35,13,0,65,36,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1997,Frank Keating,R,33,15,0,65,36,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1998,Frank Keating,R,33,15,0,65,36,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,1999,Frank Keating,R,33,15,0,61,40,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,2000,Frank Keating,R,33,15,0,61,40,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,2001,Frank Keating,R,30,18,0,53,48,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,2002,Frank Keating,R,30,18,0,53,48,0,Wikipedia Political party strength in Oklahoma,D,D,D,divided
+Oklahoma,2003,Brad Henry,D,28,20,0,53,48,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,2004,Brad Henry,D,28,20,0,53,48,0,Wikipedia Political party strength in Oklahoma,D,D,D,D trifecta
+Oklahoma,2005,Brad Henry,D,26,22,0,44,57,0,table has 2 rows for year; used last row,D,R,split,divided
+Oklahoma,2006,Brad Henry,D,26,22,0,44,57,0,"footnote (see page): special election/seat change; table has 2 rows for year; used last row; first row 25D-23R, second row 26D-22R senate",D,R,split,divided
+Oklahoma,2007,Brad Henry,D,24,24,0,44,57,0,Wikipedia Political party strength in Oklahoma,tie,R,split,divided
+Oklahoma,2008,Brad Henry,D,24,24,0,44,57,0,table has 2 rows for year; used last row,tie,R,split,divided
+Oklahoma,2009,Brad Henry,D,22,26,0,40,61,0,Wikipedia Political party strength in Oklahoma,R,R,R,divided
+Oklahoma,2010,Brad Henry,D,22,26,0,39,62,0,footnote (see page),R,R,R,divided
+Oklahoma,2011,Mary Fallin,R,16,32,0,31,70,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2012,Mary Fallin,R,16,32,0,31,67,0,House includes 3 vacancies (not counted in other),R,R,R,R trifecta
+Oklahoma,2013,Mary Fallin,R,12,36,0,29,72,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2014,Mary Fallin,R,12,36,0,29,72,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2015,Mary Fallin,R,8,40,0,29,72,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2016,Mary Fallin,R,9,39,0,30,71,0,footnote (see page): special election/vacancy,R,R,R,R trifecta
+Oklahoma,2017,Mary Fallin,R,6,42,0,26,75,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2018,Mary Fallin,R,6,42,0,26,75,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2019,Kevin Stitt,R,9,39,0,24,77,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2020,Kevin Stitt,R,9,39,0,24,77,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2021,Kevin Stitt,R,9,39,0,19,82,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2022,Kevin Stitt,R,9,39,0,19,82,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2023,Kevin Stitt,R,8,40,0,20,81,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oklahoma,2024,Kevin Stitt,R,8,40,0,20,81,0,Wikipedia Political party strength in Oklahoma,R,R,R,R trifecta
+Oregon,1976,Robert W. Straub,D,22,7,1,38,22,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,1977,Robert W. Straub,D,24,6,0,37,23,0,footnote: independent from 1975 session switched to Democratic,D,D,D,D trifecta
+Oregon,1978,Robert W. Straub,D,24,6,0,37,23,0,footnote: independent from 1975 session switched to Democratic,D,D,D,D trifecta
+Oregon,1979,Victor Atiyeh,R,23,7,0,34,26,0,Wikipedia Political party strength in Oregon,D,D,D,divided
+Oregon,1980,Victor Atiyeh,R,23,7,0,34,26,0,table has 2 rows for year; used last row,D,D,D,divided
+Oregon,1981,Victor Atiyeh,R,22,8,0,33,27,0,Wikipedia Political party strength in Oregon,D,D,D,divided
+Oregon,1982,Victor Atiyeh,R,22,8,0,33,27,0,Wikipedia Political party strength in Oregon,D,D,D,divided
+Oregon,1983,Victor Atiyeh,R,21,9,0,36,24,0,Wikipedia Political party strength in Oregon,D,D,D,divided
+Oregon,1984,Victor Atiyeh,R,21,9,0,36,24,0,table has 2 rows for year; used last row,D,D,D,divided
+Oregon,1985,Victor Atiyeh,R,18,12,0,34,26,0,Wikipedia Political party strength in Oregon,D,D,D,divided
+Oregon,1986,Victor Atiyeh,R,18,12,0,34,26,0,Wikipedia Political party strength in Oregon,D,D,D,divided
+Oregon,1987,Neil Goldschmidt,D,17,13,0,31,29,0,table has 2 rows for year; used last row,D,D,D,D trifecta
+Oregon,1988,Neil Goldschmidt,D,17,13,0,31,29,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,1989,Neil Goldschmidt,D,19,11,0,32,28,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,1990,Neil Goldschmidt,D,19,11,0,32,28,0,table has 2 rows for year; used last row,D,D,D,D trifecta
+Oregon,1991,Barbara Roberts,D,20,10,0,29,31,0,Wikipedia Political party strength in Oregon,D,R,split,divided
+Oregon,1992,Barbara Roberts,D,20,10,0,29,31,0,Wikipedia Political party strength in Oregon,D,R,split,divided
+Oregon,1993,Barbara Roberts,D,16,14,0,28,32,0,Wikipedia Political party strength in Oregon,D,R,split,divided
+Oregon,1994,Barbara Roberts,D,16,14,0,28,32,0,Wikipedia Political party strength in Oregon,D,R,split,divided
+Oregon,1995,John Kitzhaber,D,11,19,0,27,33,0,Wikipedia Political party strength in Oregon,R,R,R,divided
+Oregon,1996,John Kitzhaber,D,11,19,0,27,33,0,table has 2 rows for year; used last row,R,R,R,divided
+Oregon,1997,John Kitzhaber,D,10,20,0,29,31,0,Wikipedia Political party strength in Oregon,R,R,R,divided
+Oregon,1998,John Kitzhaber,D,10,20,0,29,31,0,Wikipedia Political party strength in Oregon,R,R,R,divided
+Oregon,1999,John Kitzhaber,D,13,17,0,25,34,1,Wikipedia Political party strength in Oregon,R,R,R,divided
+Oregon,2000,John Kitzhaber,D,13,17,0,25,34,1,Wikipedia Political party strength in Oregon,R,R,R,divided
+Oregon,2001,John Kitzhaber,D,14,16,0,27,32,1,Wikipedia Political party strength in Oregon,R,R,R,divided
+Oregon,2002,John Kitzhaber,D,14,16,0,27,32,1,Wikipedia Political party strength in Oregon,R,R,R,divided
+Oregon,2003,Ted Kulongoski,D,15,15,0,25,35,0,"Senate 15-15: power-sharing agreement (D president, R president pro tem, committees split evenly)",tie,R,split,divided
+Oregon,2004,Ted Kulongoski,D,15,15,0,25,35,0,"Senate 15-15: power-sharing agreement (D president, R president pro tem, committees split evenly)",tie,R,split,divided
+Oregon,2005,Ted Kulongoski,D,17,11,0,27,33,0,"Page shows Senate 17D, 11R (sums to 28, not 30; 2 seats unaccounted on page)",D,R,split,divided
+Oregon,2006,Ted Kulongoski,D,17,11,0,27,33,0,"Page shows Senate 17D, 11R (sums to 28, not 30; 2 seats unaccounted on page)",D,R,split,divided
+Oregon,2007,Ted Kulongoski,D,19,11,0,31,29,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2008,Ted Kulongoski,D,19,11,0,31,29,0,table has 2 rows for year; used last row,D,D,D,D trifecta
+Oregon,2009,Ted Kulongoski,D,18,12,0,36,24,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2010,Ted Kulongoski,D,18,12,0,36,24,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2011,John Kitzhaber,D,16,14,0,30,30,0,"House 30-30: power-sharing agreement with Co-Speakers, committees split evenly",D,tie,split,divided
+Oregon,2012,John Kitzhaber,D,16,14,0,30,30,0,"House 30-30: power-sharing agreement with Co-Speakers, committees split evenly",D,tie,split,divided
+Oregon,2013,John Kitzhaber,D,16,14,0,34,26,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2014,John Kitzhaber,D,16,14,0,34,26,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2015,Kate Brown,D,18,12,0,35,25,0,table has 2 rows for year; used last row; governor changed mid-year; used Nov governor,D,D,D,D trifecta
+Oregon,2016,Kate Brown,D,18,12,0,35,25,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2017,Kate Brown,D,17,13,0,35,25,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2018,Kate Brown,D,17,13,0,35,25,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2019,Kate Brown,D,18,12,0,38,22,0,table has 2 rows for year; used last row,D,D,D,D trifecta
+Oregon,2020,Kate Brown,D,18,12,0,38,22,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2021,Kate Brown,D,18,11,1,37,23,0,Sen. Brian Boquist left R for Independent Party of Oregon (counted as other),D,D,D,D trifecta
+Oregon,2022,Kate Brown,D,18,11,1,37,23,0,Sen. Brian Boquist left R for Independent Party of Oregon (counted as other),D,D,D,D trifecta
+Oregon,2023,Tina Kotek,D,17,12,1,35,25,0,Wikipedia Political party strength in Oregon,D,D,D,D trifecta
+Oregon,2024,Tina Kotek,D,17,13,0,35,24,1,"footnote: Boquist rejoined Republicans; Rep. Charlie Conrad left R June 20, 2024 for Independent Party of Oregon (counted as other)",D,D,D,D trifecta
+South Dakota,1976,Richard F. Kneip,D,19,16,0,33,37,0,Kneip first 4-yr term,D,R,split,divided
+South Dakota,1977,Richard F. Kneip,D,11,24,0,22,48,0,Kneip first 4-yr term,R,R,R,divided
+South Dakota,1978,Harvey Wollman,D,11,24,0,22,48,0,Gov Kneip resigned 7/24/1978; Wollman (D) served to 1/1/1979,R,R,R,divided
+South Dakota,1979,Bill Janklow,R,11,24,0,22,48,0,,R,R,R,R trifecta
+South Dakota,1980,Bill Janklow,R,11,24,0,22,48,0,,R,R,R,R trifecta
+South Dakota,1981,Bill Janklow,R,10,25,0,21,49,0,,R,R,R,R trifecta
+South Dakota,1982,Bill Janklow,R,10,25,0,21,49,0,,R,R,R,R trifecta
+South Dakota,1983,Bill Janklow,R,9,26,0,18,52,0,,R,R,R,R trifecta
+South Dakota,1984,Bill Janklow,R,9,26,0,18,52,0,,R,R,R,R trifecta
+South Dakota,1985,Bill Janklow,R,10,25,0,13,57,0,,R,R,R,R trifecta
+South Dakota,1986,Bill Janklow,R,10,25,0,13,57,0,,R,R,R,R trifecta
+South Dakota,1987,George S. Mickelson,R,11,24,0,22,48,0,Mickelson died in office 1993 (Miller R succeeded),R,R,R,R trifecta
+South Dakota,1988,George S. Mickelson,R,11,24,0,22,48,0,Mickelson died in office 1993 (Miller R succeeded),R,R,R,R trifecta
+South Dakota,1989,George S. Mickelson,R,15,20,0,24,46,0,Mickelson died in office 1993 (Miller R succeeded),R,R,R,R trifecta
+South Dakota,1990,George S. Mickelson,R,15,20,0,24,46,0,Mickelson died in office 1993 (Miller R succeeded),R,R,R,R trifecta
+South Dakota,1991,George S. Mickelson,R,17,18,0,25,45,0,Mickelson died in office 1993 (Miller R succeeded),R,R,R,R trifecta
+South Dakota,1992,George S. Mickelson,R,17,18,0,25,45,0,Mickelson died in office 1993 (Miller R succeeded),R,R,R,R trifecta
+South Dakota,1993,Walter Dale Miller,R,20,15,0,29,41,0,assumed office after death/resignation,D,R,split,divided
+South Dakota,1994,Walter Dale Miller,R,20,15,0,29,41,0,assumed office after death/resignation,D,R,split,divided
+South Dakota,1995,Bill Janklow,R,16,19,0,24,45,1,"other seats: 45R, 24D, 1I",R,R,R,R trifecta
+South Dakota,1996,Bill Janklow,R,16,19,0,24,45,1,"other seats: 45R, 24D, 1I",R,R,R,R trifecta
+South Dakota,1997,Bill Janklow,R,13,22,0,23,47,0,,R,R,R,R trifecta
+South Dakota,1998,Bill Janklow,R,13,22,0,23,47,0,,R,R,R,R trifecta
+South Dakota,1999,Bill Janklow,R,13,22,0,18,52,0,,R,R,R,R trifecta
+South Dakota,2000,Bill Janklow,R,13,22,0,18,52,0,,R,R,R,R trifecta
+South Dakota,2001,Bill Janklow,R,11,24,0,20,50,0,,R,R,R,R trifecta
+South Dakota,2002,Bill Janklow,R,11,24,0,20,50,0,,R,R,R,R trifecta
+South Dakota,2003,Mike Rounds,R,9,26,0,21,49,0,,R,R,R,R trifecta
+South Dakota,2004,Mike Rounds,R,9,26,0,21,49,0,,R,R,R,R trifecta
+South Dakota,2005,Mike Rounds,R,10,25,0,19,51,0,,R,R,R,R trifecta
+South Dakota,2006,Mike Rounds,R,10,25,0,19,51,0,,R,R,R,R trifecta
+South Dakota,2007,Mike Rounds,R,15,20,0,20,50,0,,R,R,R,R trifecta
+South Dakota,2008,Mike Rounds,R,15,20,0,20,50,0,,R,R,R,R trifecta
+South Dakota,2009,Mike Rounds,R,14,21,0,24,46,0,,R,R,R,R trifecta
+South Dakota,2010,Mike Rounds,R,14,21,0,24,46,0,,R,R,R,R trifecta
+South Dakota,2011,Dennis Daugaard,R,5,30,0,19,50,1,"Dem senator-elect switched to R before session; other seats: 50R, 19D, 1I",R,R,R,R trifecta
+South Dakota,2012,Dennis Daugaard,R,5,30,0,19,50,1,"Dem senator-elect switched to R before session; other seats: 50R, 19D, 1I",R,R,R,R trifecta
+South Dakota,2013,Dennis Daugaard,R,7,28,0,17,53,0,,R,R,R,R trifecta
+South Dakota,2014,Dennis Daugaard,R,7,28,0,17,53,0,,R,R,R,R trifecta
+South Dakota,2015,Dennis Daugaard,R,8,27,0,12,58,0,,R,R,R,R trifecta
+South Dakota,2016,Dennis Daugaard,R,8,27,0,12,58,0,,R,R,R,R trifecta
+South Dakota,2017,Dennis Daugaard,R,6,29,0,10,60,0,,R,R,R,R trifecta
+South Dakota,2018,Dennis Daugaard,R,6,29,0,10,60,0,,R,R,R,R trifecta
+South Dakota,2019,Kristi Noem,R,5,30,0,11,59,0,,R,R,R,R trifecta
+South Dakota,2020,Kristi Noem,R,5,30,0,11,59,0,,R,R,R,R trifecta
+South Dakota,2021,Kristi Noem,R,3,32,0,8,62,0,,R,R,R,R trifecta
+South Dakota,2022,Kristi Noem,R,3,32,0,8,62,0,,R,R,R,R trifecta
+South Dakota,2023,Kristi Noem,R,4,31,0,7,63,0,,R,R,R,R trifecta
+South Dakota,2024,Kristi Noem,R,4,31,0,7,63,0,,R,R,R,R trifecta
+Washington,1976,Daniel J. Evans,R,30,19,0,62,36,0,,D,D,D,divided
+Washington,1977,Dixy Lee Ray,D,30,19,0,62,36,0,,D,D,D,D trifecta
+Washington,1978,Dixy Lee Ray,D,30,19,0,62,36,0,,D,D,D,D trifecta
+Washington,1979,Dixy Lee Ray,D,30,19,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees",D,tie,split,divided
+Washington,1980,Dixy Lee Ray,D,30,19,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees",D,tie,split,divided
+Washington,1981,John Spellman,R,24,25,0,42,56,0,legislator switched D to R giving R majority,R,R,R,R trifecta
+Washington,1982,John Spellman,R,24,25,0,43,55,0,legislator switched D to R giving R majority; special election flipped seat R to D,R,R,R,R trifecta
+Washington,1983,John Spellman,R,26,23,0,54,44,0,,D,D,D,divided
+Washington,1984,John Spellman,R,26,23,0,53,45,0,,D,D,D,divided
+Washington,1985,Booth Gardner,D,27,22,0,53,45,0,,D,D,D,D trifecta
+Washington,1986,Booth Gardner,D,27,22,0,53,45,0,,D,D,D,D trifecta
+Washington,1987,Booth Gardner,D,25,24,0,61,37,0,,D,D,D,D trifecta
+Washington,1988,Booth Gardner,D,24,25,0,61,37,0,"special election flipped seat D to R, flipping chamber",R,D,split,divided
+Washington,1989,Booth Gardner,D,24,25,0,63,35,0,"special election flipped seat D to R, flipping chamber",R,D,split,divided
+Washington,1990,Booth Gardner,D,24,25,0,63,35,0,"special election flipped seat D to R, flipping chamber",R,D,split,divided
+Washington,1991,Booth Gardner,D,24,25,0,58,40,0,"special election flipped seat D to R, flipping chamber",R,D,split,divided
+Washington,1992,Booth Gardner,D,24,25,0,58,40,0,"special election flipped seat D to R, flipping chamber",R,D,split,divided
+Washington,1993,Mike Lowry,D,28,21,0,65,33,0,,D,D,D,D trifecta
+Washington,1994,Mike Lowry,D,28,21,0,65,33,0,,D,D,D,D trifecta
+Washington,1995,Mike Lowry,D,25,24,0,37,61,0,legislator switched D to R,D,R,split,divided
+Washington,1996,Mike Lowry,D,25,24,0,36,62,0,legislator switched D to R,D,R,split,divided
+Washington,1997,Gary Locke,D,23,26,0,42,56,0,,R,R,R,divided
+Washington,1998,Gary Locke,D,23,26,0,41,57,0,special election flipped seat D to R,R,R,R,divided
+Washington,1999,Gary Locke,D,27,23,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees",D,tie,split,divided
+Washington,2000,Gary Locke,D,27,23,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees",D,tie,split,divided
+Washington,2001,Gary Locke,D,25,24,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees",D,tie,split,divided
+Washington,2002,Gary Locke,D,25,24,0,50,48,0,"special election flipped seat R to D, breaking tie and flipping chamber",D,D,D,D trifecta
+Washington,2003,Gary Locke,D,24,25,0,52,46,0,,R,D,split,divided
+Washington,2004,Gary Locke,D,24,25,0,52,46,0,,R,D,split,divided
+Washington,2005,Christine Gregoire,D,26,23,0,55,43,0,,D,D,D,D trifecta
+Washington,2006,Christine Gregoire,D,26,23,0,55,43,0,,D,D,D,D trifecta
+Washington,2007,Christine Gregoire,D,32,17,0,62,36,0,,D,D,D,D trifecta
+Washington,2008,Christine Gregoire,D,32,17,0,63,35,0,legislator switched R to D,D,D,D,D trifecta
+Washington,2009,Christine Gregoire,D,31,18,0,62,36,0,,D,D,D,D trifecta
+Washington,2010,Christine Gregoire,D,31,18,0,61,37,0,special election flipped seat D to R,D,D,D,D trifecta
+Washington,2011,Christine Gregoire,D,27,22,0,56,42,0,,D,D,D,D trifecta
+Washington,2012,Christine Gregoire,D,27,22,0,56,42,0,,D,D,D,D trifecta
+Washington,2013,Jay Inslee,D,26,23,0,55,43,0,coalition of 2 Democrats and 23 Republicans controlled Senate majority,D,D,D,D trifecta
+Washington,2014,Jay Inslee,D,25,24,0,55,43,0,special election flipped seat D to R,D,D,D,D trifecta
+Washington,2015,Jay Inslee,D,24,25,0,51,47,0,one conservative Democrat caucused with Republicans,R,D,split,divided
+Washington,2016,Jay Inslee,D,24,25,0,50,48,0,special election flipped seat D to R; one conservative Democrat caucused with Republicans,R,D,split,divided
+Washington,2017,Jay Inslee,D,25,24,0,50,48,0,special election flipped seat D to R; one conservative Democrat caucused with Republicans,D,D,D,D trifecta
+Washington,2018,Jay Inslee,D,26,23,0,50,48,0,special election flipped seat R to D; special election flipped seat D to R; one conservative Democrat caucused with Republicans,D,D,D,D trifecta
+Washington,2019,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans,D,D,D,D trifecta
+Washington,2020,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans,D,D,D,D trifecta
+Washington,2021,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans,D,D,D,D trifecta
+Washington,2022,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans,D,D,D,D trifecta
+Washington,2023,Jay Inslee,D,29,20,0,58,40,0,,D,D,D,D trifecta
+Washington,2024,Jay Inslee,D,29,20,0,58,40,0,,D,D,D,D trifecta
+Wyoming,1976,Edgar Herschler,D,15,15,0,29,32,1,"Senate 15-15 tie; coin flip gave Democrats Senate presidency, committee control alternated; other seats: 32R, 29D, 1I; House size 62 in this period",tie,R,split,divided
+Wyoming,1977,Edgar Herschler,D,12,18,0,29,32,1,"other seats: 32R, 29D, 1I; House size 62 in this period",R,R,R,divided
+Wyoming,1978,Edgar Herschler,D,12,18,0,29,32,1,"other seats: 32R, 29D, 1I; House size 62 in this period",R,R,R,divided
+Wyoming,1979,Edgar Herschler,D,11,19,0,20,42,0,House size 62 in this period,R,R,R,divided
+Wyoming,1980,Edgar Herschler,D,11,19,0,20,42,0,House size 62 in this period,R,R,R,divided
+Wyoming,1981,Edgar Herschler,D,11,19,0,23,39,0,House size 62 in this period,R,R,R,divided
+Wyoming,1982,Edgar Herschler,D,11,19,0,23,39,0,House size 62 in this period,R,R,R,divided
+Wyoming,1983,Edgar Herschler,D,11,19,0,25,38,1,"other seats: 38R, 25D, 1I; House size 62 in this period",R,R,R,divided
+Wyoming,1984,Edgar Herschler,D,11,19,0,25,38,1,"other seats: 38R, 25D, 1I; House size 62 in this period",R,R,R,divided
+Wyoming,1985,Edgar Herschler,D,11,19,0,18,46,0,House size 62 in this period,R,R,R,divided
+Wyoming,1986,Edgar Herschler,D,11,19,0,18,46,0,House size 62 in this period,R,R,R,divided
+Wyoming,1987,Mike Sullivan,D,11,19,0,20,44,0,House size 62 in this period,R,R,R,divided
+Wyoming,1988,Mike Sullivan,D,11,19,0,20,44,0,House size 62 in this period,R,R,R,divided
+Wyoming,1989,Mike Sullivan,D,11,19,0,21,43,0,House size 62 in this period,R,R,R,divided
+Wyoming,1990,Mike Sullivan,D,11,19,0,21,43,0,House size 62 in this period,R,R,R,divided
+Wyoming,1991,Mike Sullivan,D,10,20,0,22,42,0,House size 62 in this period,R,R,R,divided
+Wyoming,1992,Mike Sullivan,D,10,20,0,22,42,0,House size 62 in this period,R,R,R,divided
+Wyoming,1993,Mike Sullivan,D,10,20,0,19,41,0,,R,R,R,divided
+Wyoming,1994,Mike Sullivan,D,10,20,0,19,41,0,,R,R,R,divided
+Wyoming,1995,Jim Geringer,R,10,20,0,13,47,0,,R,R,R,R trifecta
+Wyoming,1996,Jim Geringer,R,10,20,0,13,47,0,,R,R,R,R trifecta
+Wyoming,1997,Jim Geringer,R,9,21,0,17,43,0,,R,R,R,R trifecta
+Wyoming,1998,Jim Geringer,R,9,21,0,17,43,0,,R,R,R,R trifecta
+Wyoming,1999,Jim Geringer,R,9,21,0,17,43,0,,R,R,R,R trifecta
+Wyoming,2000,Jim Geringer,R,9,21,0,17,43,0,,R,R,R,R trifecta
+Wyoming,2001,Jim Geringer,R,10,20,0,14,46,0,,R,R,R,R trifecta
+Wyoming,2002,Jim Geringer,R,10,20,0,14,46,0,,R,R,R,R trifecta
+Wyoming,2003,Dave Freudenthal,D,10,20,0,15,45,0,,R,R,R,divided
+Wyoming,2004,Dave Freudenthal,D,10,20,0,15,45,0,,R,R,R,divided
+Wyoming,2005,Dave Freudenthal,D,7,23,0,14,46,0,,R,R,R,divided
+Wyoming,2006,Dave Freudenthal,D,7,23,0,14,46,0,,R,R,R,divided
+Wyoming,2007,Dave Freudenthal,D,7,23,0,17,43,0,,R,R,R,divided
+Wyoming,2008,Dave Freudenthal,D,7,23,0,17,43,0,,R,R,R,divided
+Wyoming,2009,Dave Freudenthal,D,7,23,0,19,41,0,,R,R,R,divided
+Wyoming,2010,Dave Freudenthal,D,7,23,0,19,41,0,,R,R,R,divided
+Wyoming,2011,Matt Mead,R,4,26,0,10,50,0,,R,R,R,R trifecta
+Wyoming,2012,Matt Mead,R,4,26,0,10,50,0,,R,R,R,R trifecta
+Wyoming,2013,Matt Mead,R,4,26,0,8,52,0,,R,R,R,R trifecta
+Wyoming,2014,Matt Mead,R,4,26,0,8,52,0,,R,R,R,R trifecta
+Wyoming,2015,Matt Mead,R,4,26,0,9,51,0,,R,R,R,R trifecta
+Wyoming,2016,Matt Mead,R,4,26,0,9,51,0,,R,R,R,R trifecta
+Wyoming,2017,Matt Mead,R,3,27,0,9,51,0,,R,R,R,R trifecta
+Wyoming,2018,Matt Mead,R,3,27,0,9,51,0,,R,R,R,R trifecta
+Wyoming,2019,Mark Gordon,R,3,27,0,9,50,1,"other seats: 50R, 9D, 1I",R,R,R,R trifecta
+Wyoming,2020,Mark Gordon,R,3,27,0,9,50,1,"other seats: 50R, 9D, 1I",R,R,R,R trifecta
+Wyoming,2021,Mark Gordon,R,2,28,0,7,51,2,"other seats: 51R, 7D, 1L, 1I",R,R,R,R trifecta
+Wyoming,2022,Mark Gordon,R,2,28,0,7,51,2,"other seats: 51R, 7D, 1L, 1I",R,R,R,R trifecta
+Wyoming,2023,Mark Gordon,R,2,28,0,5,57,0,,R,R,R,R trifecta
+Wyoming,2024,Mark Gordon,R,2,28,0,5,57,0,,R,R,R,R trifecta

@@ -1,0 +1,148 @@
+state,year,gov_name,gov_party,senate_dem,senate_rep,senate_other,house_dem,house_rep,house_other,source_note
+South Dakota,1976,Richard F. Kneip,D,19,16,0,33,37,0,Kneip first 4-yr term
+South Dakota,1977,Richard F. Kneip,D,11,24,0,22,48,0,Kneip first 4-yr term
+South Dakota,1978,Harvey Wollman,D,11,24,0,22,48,0,Gov Kneip resigned 7/24/1978; Wollman (D) served to 1/1/1979
+South Dakota,1979,Bill Janklow,R,11,24,0,22,48,0,
+South Dakota,1980,Bill Janklow,R,11,24,0,22,48,0,
+South Dakota,1981,Bill Janklow,R,10,25,0,21,49,0,
+South Dakota,1982,Bill Janklow,R,10,25,0,21,49,0,
+South Dakota,1983,Bill Janklow,R,9,26,0,18,52,0,
+South Dakota,1984,Bill Janklow,R,9,26,0,18,52,0,
+South Dakota,1985,Bill Janklow,R,10,25,0,13,57,0,
+South Dakota,1986,Bill Janklow,R,10,25,0,13,57,0,
+South Dakota,1987,George S. Mickelson,R,11,24,0,22,48,0,Mickelson died in office 1993 (Miller R succeeded)
+South Dakota,1988,George S. Mickelson,R,11,24,0,22,48,0,Mickelson died in office 1993 (Miller R succeeded)
+South Dakota,1989,George S. Mickelson,R,15,20,0,24,46,0,Mickelson died in office 1993 (Miller R succeeded)
+South Dakota,1990,George S. Mickelson,R,15,20,0,24,46,0,Mickelson died in office 1993 (Miller R succeeded)
+South Dakota,1991,George S. Mickelson,R,17,18,0,25,45,0,Mickelson died in office 1993 (Miller R succeeded)
+South Dakota,1992,George S. Mickelson,R,17,18,0,25,45,0,Mickelson died in office 1993 (Miller R succeeded)
+South Dakota,1993,Walter Dale Miller,R,20,15,0,29,41,0,assumed office after death/resignation
+South Dakota,1994,Walter Dale Miller,R,20,15,0,29,41,0,assumed office after death/resignation
+South Dakota,1995,Bill Janklow,R,16,19,0,24,45,1,"other seats: 45R, 24D, 1I"
+South Dakota,1996,Bill Janklow,R,16,19,0,24,45,1,"other seats: 45R, 24D, 1I"
+South Dakota,1997,Bill Janklow,R,13,22,0,23,47,0,
+South Dakota,1998,Bill Janklow,R,13,22,0,23,47,0,
+South Dakota,1999,Bill Janklow,R,13,22,0,18,52,0,
+South Dakota,2000,Bill Janklow,R,13,22,0,18,52,0,
+South Dakota,2001,Bill Janklow,R,11,24,0,20,50,0,
+South Dakota,2002,Bill Janklow,R,11,24,0,20,50,0,
+South Dakota,2003,Mike Rounds,R,9,26,0,21,49,0,
+South Dakota,2004,Mike Rounds,R,9,26,0,21,49,0,
+South Dakota,2005,Mike Rounds,R,10,25,0,19,51,0,
+South Dakota,2006,Mike Rounds,R,10,25,0,19,51,0,
+South Dakota,2007,Mike Rounds,R,15,20,0,20,50,0,
+South Dakota,2008,Mike Rounds,R,15,20,0,20,50,0,
+South Dakota,2009,Mike Rounds,R,14,21,0,24,46,0,
+South Dakota,2010,Mike Rounds,R,14,21,0,24,46,0,
+South Dakota,2011,Dennis Daugaard,R,5,30,0,19,50,1,"Dem senator-elect switched to R before session; other seats: 50R, 19D, 1I"
+South Dakota,2012,Dennis Daugaard,R,5,30,0,19,50,1,"Dem senator-elect switched to R before session; other seats: 50R, 19D, 1I"
+South Dakota,2013,Dennis Daugaard,R,7,28,0,17,53,0,
+South Dakota,2014,Dennis Daugaard,R,7,28,0,17,53,0,
+South Dakota,2015,Dennis Daugaard,R,8,27,0,12,58,0,
+South Dakota,2016,Dennis Daugaard,R,8,27,0,12,58,0,
+South Dakota,2017,Dennis Daugaard,R,6,29,0,10,60,0,
+South Dakota,2018,Dennis Daugaard,R,6,29,0,10,60,0,
+South Dakota,2019,Kristi Noem,R,5,30,0,11,59,0,
+South Dakota,2020,Kristi Noem,R,5,30,0,11,59,0,
+South Dakota,2021,Kristi Noem,R,3,32,0,8,62,0,
+South Dakota,2022,Kristi Noem,R,3,32,0,8,62,0,
+South Dakota,2023,Kristi Noem,R,4,31,0,7,63,0,
+South Dakota,2024,Kristi Noem,R,4,31,0,7,63,0,
+Washington,1976,Daniel J. Evans,R,30,19,0,62,36,0,
+Washington,1977,Dixy Lee Ray,D,30,19,0,62,36,0,
+Washington,1978,Dixy Lee Ray,D,30,19,0,62,36,0,
+Washington,1979,Dixy Lee Ray,D,30,19,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees"
+Washington,1980,Dixy Lee Ray,D,30,19,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees"
+Washington,1981,John Spellman,R,24,25,0,42,56,0,legislator switched D to R giving R majority
+Washington,1982,John Spellman,R,24,25,0,43,55,0,legislator switched D to R giving R majority; special election flipped seat R to D
+Washington,1983,John Spellman,R,26,23,0,54,44,0,
+Washington,1984,John Spellman,R,26,23,0,53,45,0,
+Washington,1985,Booth Gardner,D,27,22,0,53,45,0,
+Washington,1986,Booth Gardner,D,27,22,0,53,45,0,
+Washington,1987,Booth Gardner,D,25,24,0,61,37,0,
+Washington,1988,Booth Gardner,D,24,25,0,61,37,0,"special election flipped seat D to R, flipping chamber"
+Washington,1989,Booth Gardner,D,24,25,0,63,35,0,"special election flipped seat D to R, flipping chamber"
+Washington,1990,Booth Gardner,D,24,25,0,63,35,0,"special election flipped seat D to R, flipping chamber"
+Washington,1991,Booth Gardner,D,24,25,0,58,40,0,"special election flipped seat D to R, flipping chamber"
+Washington,1992,Booth Gardner,D,24,25,0,58,40,0,"special election flipped seat D to R, flipping chamber"
+Washington,1993,Mike Lowry,D,28,21,0,65,33,0,
+Washington,1994,Mike Lowry,D,28,21,0,65,33,0,
+Washington,1995,Mike Lowry,D,25,24,0,37,61,0,legislator switched D to R
+Washington,1996,Mike Lowry,D,25,24,0,36,62,0,legislator switched D to R
+Washington,1997,Gary Locke,D,23,26,0,42,56,0,
+Washington,1998,Gary Locke,D,23,26,0,41,57,0,special election flipped seat D to R
+Washington,1999,Gary Locke,D,27,23,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees"
+Washington,2000,Gary Locke,D,27,23,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees"
+Washington,2001,Gary Locke,D,25,24,0,49,49,0,"power-sharing agreement, co-Speakers, evenly divided committees"
+Washington,2002,Gary Locke,D,25,24,0,50,48,0,"special election flipped seat R to D, breaking tie and flipping chamber"
+Washington,2003,Gary Locke,D,24,25,0,52,46,0,
+Washington,2004,Gary Locke,D,24,25,0,52,46,0,
+Washington,2005,Christine Gregoire,D,26,23,0,55,43,0,
+Washington,2006,Christine Gregoire,D,26,23,0,55,43,0,
+Washington,2007,Christine Gregoire,D,32,17,0,62,36,0,
+Washington,2008,Christine Gregoire,D,32,17,0,63,35,0,legislator switched R to D
+Washington,2009,Christine Gregoire,D,31,18,0,62,36,0,
+Washington,2010,Christine Gregoire,D,31,18,0,61,37,0,special election flipped seat D to R
+Washington,2011,Christine Gregoire,D,27,22,0,56,42,0,
+Washington,2012,Christine Gregoire,D,27,22,0,56,42,0,
+Washington,2013,Jay Inslee,D,26,23,0,55,43,0,coalition of 2 Democrats and 23 Republicans controlled Senate majority
+Washington,2014,Jay Inslee,D,25,24,0,55,43,0,special election flipped seat D to R
+Washington,2015,Jay Inslee,D,24,25,0,51,47,0,one conservative Democrat caucused with Republicans
+Washington,2016,Jay Inslee,D,24,25,0,50,48,0,special election flipped seat D to R; one conservative Democrat caucused with Republicans
+Washington,2017,Jay Inslee,D,25,24,0,50,48,0,special election flipped seat D to R; one conservative Democrat caucused with Republicans
+Washington,2018,Jay Inslee,D,26,23,0,50,48,0,special election flipped seat R to D; special election flipped seat D to R; one conservative Democrat caucused with Republicans
+Washington,2019,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans
+Washington,2020,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans
+Washington,2021,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans
+Washington,2022,Jay Inslee,D,29,20,0,57,41,0,one conservative Democrat caucused with Republicans
+Washington,2023,Jay Inslee,D,29,20,0,58,40,0,
+Washington,2024,Jay Inslee,D,29,20,0,58,40,0,
+Wyoming,1976,Edgar Herschler,D,15,15,0,29,32,1,"Senate 15-15 tie; coin flip gave Democrats Senate presidency, committee control alternated; other seats: 32R, 29D, 1I; House size 62 in this period"
+Wyoming,1977,Edgar Herschler,D,12,18,0,29,32,1,"other seats: 32R, 29D, 1I; House size 62 in this period"
+Wyoming,1978,Edgar Herschler,D,12,18,0,29,32,1,"other seats: 32R, 29D, 1I; House size 62 in this period"
+Wyoming,1979,Edgar Herschler,D,11,19,0,20,42,0,House size 62 in this period
+Wyoming,1980,Edgar Herschler,D,11,19,0,20,42,0,House size 62 in this period
+Wyoming,1981,Edgar Herschler,D,11,19,0,23,39,0,House size 62 in this period
+Wyoming,1982,Edgar Herschler,D,11,19,0,23,39,0,House size 62 in this period
+Wyoming,1983,Edgar Herschler,D,11,19,0,25,38,1,"other seats: 38R, 25D, 1I; House size 62 in this period"
+Wyoming,1984,Edgar Herschler,D,11,19,0,25,38,1,"other seats: 38R, 25D, 1I; House size 62 in this period"
+Wyoming,1985,Edgar Herschler,D,11,19,0,18,46,0,House size 62 in this period
+Wyoming,1986,Edgar Herschler,D,11,19,0,18,46,0,House size 62 in this period
+Wyoming,1987,Mike Sullivan,D,11,19,0,20,44,0,House size 62 in this period
+Wyoming,1988,Mike Sullivan,D,11,19,0,20,44,0,House size 62 in this period
+Wyoming,1989,Mike Sullivan,D,11,19,0,21,43,0,House size 62 in this period
+Wyoming,1990,Mike Sullivan,D,11,19,0,21,43,0,House size 62 in this period
+Wyoming,1991,Mike Sullivan,D,10,20,0,22,42,0,House size 62 in this period
+Wyoming,1992,Mike Sullivan,D,10,20,0,22,42,0,House size 62 in this period
+Wyoming,1993,Mike Sullivan,D,10,20,0,19,41,0,
+Wyoming,1994,Mike Sullivan,D,10,20,0,19,41,0,
+Wyoming,1995,Jim Geringer,R,10,20,0,13,47,0,
+Wyoming,1996,Jim Geringer,R,10,20,0,13,47,0,
+Wyoming,1997,Jim Geringer,R,9,21,0,17,43,0,
+Wyoming,1998,Jim Geringer,R,9,21,0,17,43,0,
+Wyoming,1999,Jim Geringer,R,9,21,0,17,43,0,
+Wyoming,2000,Jim Geringer,R,9,21,0,17,43,0,
+Wyoming,2001,Jim Geringer,R,10,20,0,14,46,0,
+Wyoming,2002,Jim Geringer,R,10,20,0,14,46,0,
+Wyoming,2003,Dave Freudenthal,D,10,20,0,15,45,0,
+Wyoming,2004,Dave Freudenthal,D,10,20,0,15,45,0,
+Wyoming,2005,Dave Freudenthal,D,7,23,0,14,46,0,
+Wyoming,2006,Dave Freudenthal,D,7,23,0,14,46,0,
+Wyoming,2007,Dave Freudenthal,D,7,23,0,17,43,0,
+Wyoming,2008,Dave Freudenthal,D,7,23,0,17,43,0,
+Wyoming,2009,Dave Freudenthal,D,7,23,0,19,41,0,
+Wyoming,2010,Dave Freudenthal,D,7,23,0,19,41,0,
+Wyoming,2011,Matt Mead,R,4,26,0,10,50,0,
+Wyoming,2012,Matt Mead,R,4,26,0,10,50,0,
+Wyoming,2013,Matt Mead,R,4,26,0,8,52,0,
+Wyoming,2014,Matt Mead,R,4,26,0,8,52,0,
+Wyoming,2015,Matt Mead,R,4,26,0,9,51,0,
+Wyoming,2016,Matt Mead,R,4,26,0,9,51,0,
+Wyoming,2017,Matt Mead,R,3,27,0,9,51,0,
+Wyoming,2018,Matt Mead,R,3,27,0,9,51,0,
+Wyoming,2019,Mark Gordon,R,3,27,0,9,50,1,"other seats: 50R, 9D, 1I"
+Wyoming,2020,Mark Gordon,R,3,27,0,9,50,1,"other seats: 50R, 9D, 1I"
+Wyoming,2021,Mark Gordon,R,2,28,0,7,51,2,"other seats: 51R, 7D, 1L, 1I"
+Wyoming,2022,Mark Gordon,R,2,28,0,7,51,2,"other seats: 51R, 7D, 1L, 1I"
+Wyoming,2023,Mark Gordon,R,2,28,0,5,57,0,
+Wyoming,2024,Mark Gordon,R,2,28,0,5,57,0,
