@@ -1,0 +1,543 @@
+year,election,measure,description,passed
+1976,"June 8, 1976",1,The State School Building Lease-Purchase Bond Law Of 1976.,False
+1976,"November 2, 1976",1,Housing Finance Bond Law Of 1975.,False
+1976,"June 8, 1976",10,Bonds To Refund State Indebtedness.,False
+1976,"November 2, 1976",10,Property Taxation by Local Governments Whose Boundaries Include Area in Two or More Counties.,True
+1976,"June 8, 1976",11,Motor Vehicle Taxes--Local Surplus Property.,True
+1976,"November 2, 1976",11,Tax Rates on Unsecured Property.,True
+1976,"June 8, 1976",12,Interest Rate.,False
+1976,"November 2, 1976",12,Loans by State for Energy Conservation Improvements in Residential Structures.,False
+1976,"June 8, 1976",13,Property Tax Postponement.,True
+1976,"November 2, 1976",13,Greyhound Dog Racing – Initiative Statute.,False
+1976,"June 8, 1976",14,Miscellaneous Constitutional Revisions.,True
+1976,"November 2, 1976",14,Agricultural Labor Relations – Initiative Statute.,False
+1976,"June 8, 1976",15,Nuclear Power Plants-Initiative Statute.,False
+1976,"November 2, 1976",15,"Chiropractors, Board of Examiners. Licensing Requirements.",True
+1976,"June 8, 1976",2,Veterans Bond Act Of 1976.,True
+1976,"November 2, 1976",2,"Nejedly-Hart State, Urban and Coastal Park Bond Act of 1976.",True
+1976,"June 8, 1976",3,California Safe Drinking Water Bond Law Of 1976.,True
+1976,"November 2, 1976",3,Residential Energy Conservation Bond Law.,False
+1976,"June 8, 1976",4,Bonds To Provide Public Community College Facilities.,False
+1976,"November 2, 1976",4,University of California. Competitive Bidding. Grounds for Denial of Admission.,True
+1976,"June 8, 1976",5,"Banks, Corporations, Franchises And Insurers-Taxation.",True
+1976,"November 2, 1976",5,Interest Rates Allowable.,False
+1976,"June 8, 1976",6,Insurance Company Home Office Tax Deduction.,True
+1976,"November 2, 1976",6,Bills and Statutes-Effective Date. Governor's Consideration. Referendum.,False
+1976,"June 8, 1976",7,Taxation of Restricted Historic Property.,True
+1976,"November 2, 1976",7,"Judges. Censure, Removal, Judicial Performance Commission.",True
+1976,"June 8, 1976",8,Deposit of Public Money In Savings and Loan Associations.,True
+1976,"November 2, 1976",8,County Superintendents of Schools and Boards of Education.,True
+1976,"June 8, 1976",9,Bingo.,True
+1976,"November 2, 1976",9,State Constitutional Offices. Filling Vacancies In. Confirmation.,True
+1978,"June 6, 1978",1,State School Building Aid Bond Law of 1978.,False
+1978,"November 7, 1978",1,Veterans Bond Act of 1978.,True
+1978,"June 6, 1978",10,Taxation – Rehabilitated Property.,False
+1978,"June 6, 1978",11,Taxation – County Owned Real Property.,False
+1978,"June 6, 1978",12,"Constitutional Officers, Legislators and Judges Compensation.",False
+1978,"June 6, 1978",13,Property Tax Limitation.,True
+1978,"June 6, 1978",2,Clean Water and Water Conservation Bond Law of 1978.,True
+1978,"November 7, 1978",2,Public Utilities Commission.,False
+1978,"June 6, 1978",3,Taxation Exemption – Alternative Energy Systems.,False
+1978,"November 7, 1978",3,State Surplus Coastal Property.,True
+1978,"June 6, 1978",4,City Charters – Boards of Education.,True
+1978,"November 7, 1978",4,Chiropractors. School Accreditation and License Revocation.,True
+1978,"June 6, 1978",5,Administrative Agencies.,True
+1978,"November 7, 1978",5,Regulation of Smoking.,False
+1978,"June 6, 1978",6,Sheriffs.,True
+1978,"November 7, 1978",6,School Employees. Homosexuality.,False
+1978,"June 6, 1978",7,Local Agencies – Insurance Pooling Arrangements.,True
+1978,"November 7, 1978",7,Murder. Penalty.,True
+1978,"June 6, 1978",8,Owner Occupied Dwellings – Tax Rate.,False
+1978,"November 7, 1978",8,Post Disaster Taxation.,True
+1978,"June 6, 1978",9,Interest Rate – Judgments.,True
+1979,"November 6, 1979",1,School Assignment and Transportation of Pupils.,True
+1979,"November 6, 1979",2,Loan Interest Rates.,True
+1979,"November 6, 1979",3,Property Taxation – Veteran's Exemption.,True
+1979,"November 6, 1979",4,Limitation of Government Appropriations.,True
+1980,"June 3, 1980",1,Parklands And Renewable Resources Investment Program.,False
+1980,"November 4, 1980",1,Parklands Acquisition and Development Program.,True
+1980,"June 3, 1980",10,Rent-Control Through Local Ordinance. Initiative Constitutional Amendment.,False
+1980,"November 4, 1980",10,Smoking and No-Smoking Sections—Initiative Statute,False
+1980,"June 3, 1980",11,Oil profits tax. Initiative statute.,False
+1980,"November 4, 1980",11,Judges' Salaries.,True
+1980,"June 3, 1980",2,Veterans Bond Act Of 1980.,True
+1980,"November 4, 1980",2,Lake Tahoe Acquisitions Bond Act of 1980.,False
+1980,"June 3, 1980",3,State Capitol Maintenance.,True
+1980,"November 4, 1980",3,Insurance Guarantee Funds. Tax Offset.,False
+1980,"June 3, 1980",4,Low-Rent Housing.,False
+1980,"November 4, 1980",4,Taxation. Real Property. Property Acquisition by Taxing Entity.,False
+1980,"June 3, 1980",5,Freedom Of Press.,True
+1980,"November 4, 1980",5,"Taxation. Real Property Valuation. Disasters, Seismic Safety, Change in Ownership.",False
+1980,"June 3, 1980",6,Reapportionment.,True
+1980,"November 4, 1980",6,Number of Jurors in Civil Cases.,True
+1980,"June 3, 1980",7,Disaster Assistance.,True
+1980,"November 4, 1980",7,Taxation. Real Property Valuation. Solar Energy Systems,True
+1980,"June 3, 1980",8,Alternative Energy Sources Facilities Financing.,True
+1980,"November 4, 1980",8,Water Resources Development and Protection,True
+1980,"June 3, 1980",9,Taxation. Income. Initiative Constitutional Amendment.,False
+1980,"November 4, 1980",9,California Safe Drinking Water Bond Law Of 1976.,True
+1982,"June 8, 1982",1,New Prison Construction Bond Act of 1981.,True
+1982,"November 2, 1982",1,State School Building Lease-Purchase Bond Law Of 1982.,True
+1982,"June 8, 1982",10,Reapportionment. Congressional Districts.,False
+1982,"November 2, 1982",10,"Unifying Superior, Municipal, And Justice Courts.",False
+1982,"June 8, 1982",11,Reapportionment. Senate Districts.,False
+1982,"November 2, 1982",11,Beverage Containers.,False
+1982,"June 8, 1982",12,Reapportionment. Assembly Districts.,False
+1982,"November 2, 1982",12,Nuclear Weapons.,True
+1982,"November 2, 1982",13,Water Resources.,False
+1982,"November 2, 1982",14,Reapportionment By Districting Commission Or Supreme Court.,False
+1982,"November 2, 1982",15,Handgun Registration.,False
+1982,"June 8, 1982",2,President of Senate.,False
+1982,"November 2, 1982",2,County Jail Capital Expenditure Bond Act of 1981.,True
+1982,"June 8, 1982",3,Taxation. Real Property Valuation. Change in Ownership.,True
+1982,"November 2, 1982",3,Veterans Bond Act Of 1982.,True
+1982,"June 8, 1982",4,Bail.,True
+1982,"November 2, 1982",4,Lake Tahoe Acquisitions Bond Act.,True
+1982,"June 8, 1982",5,Gift And Inheritance Taxes. Initiative Statute.,True
+1982,"November 2, 1982",5,First-Time Home Buyers Bond Act Of 1982.,True
+1982,"June 8, 1982",6,Gift And Inheritance Taxes. Initiative Statute.,True
+1982,"November 2, 1982",6,Public Pension Fund Investment.,False
+1982,"June 8, 1982",7,Income Tax Indexing. Initiative statute.,True
+1982,"November 2, 1982",7,Taxation. Real Property Valuation. New Construction.,False
+1982,"June 8, 1982",8,Criminal Justice. Initiative Statutes & Constitutional Amendment.,True
+1982,"November 2, 1982",8,Transfer Of Funds By Local Governments.,True
+1982,"June 8, 1982",9,Water Facilities Including A Peripheral Canal.,False
+1982,"November 2, 1982",9,School Textbooks. Nonpublic Schools.,False
+1984,"June 5, 1984",16,County Jail Capital Expenditure Bond Act Of 1984.,True
+1984,"June 5, 1984",17,New Prison Construction Bond Act Of 1984.,True
+1984,"June 5, 1984",18,California Park And Recreational Facilities Act Of 1984.,True
+1984,"June 5, 1984",19,Fish And Wildlife Habitat Enhancement Act Of 1984.,True
+1984,"June 5, 1984",20,Elected Officials. Disqualification For Libelous Or Slanderous Campaign Statements.,True
+1984,"June 5, 1984",21,Public Pension Fund Investments.,True
+1984,"June 5, 1984",22,Exempt State Civil Service Position.,False
+1984,"June 5, 1984",23,Property Taxation. Seismic Safety Construction Exclusion.,True
+1984,"June 5, 1984",24,"Legislature: Rules, Procedures, Powers, Funding. Initiative Statute.",True
+1984,"November 6, 1984",25,Clean Water Bond Law.,True
+1984,"November 6, 1984",26,State School Building Lease-Purchase Bond Law of 1984.,True
+1984,"November 6, 1984",27,Hazardous Substance Cleanup Bond Act of 1984.,True
+1984,"November 6, 1984",28,California Safe Drinking Water Bond Law of 1984.,True
+1984,"November 6, 1984",29,Veterans Bond Act of 1984.,True
+1984,"November 6, 1984",30,Senior Center Bond Act of 1984.,True
+1984,"November 6, 1984",31,Property Taxation. Fire Protection System Exclusion of 1984.,True
+1984,"November 6, 1984",32,Supreme Court. Transfer of Causes and Review of Decisions of 1984.,True
+1984,"November 6, 1984",33,Property Tax Postponement. Disabled Person.,True
+1984,"November 6, 1984",34,Property Taxation. Historic Structure Exemption.,False
+1984,"November 6, 1984",36,Taxation. Initiative Constitutional Amendment.,False
+1984,"November 6, 1984",37,State Lottery. Initiative Constitutional Amendment & Statute.,True
+1984,"November 6, 1984",38,Voting Materials in English Only. Initiative Statute.,True
+1984,"November 6, 1984",39,Reapportionment. Initiative Constitutional Amendment & Statute.,False
+1984,"November 6, 1984",40,Campaign Contribution Limitations. Elective State Offices. Initiative Statute.,False
+1984,"November 6, 1984",41,Public Aid and Medical Assistance Programs. Initiative Statute.,False
+1986,"June 3, 1986",42,Veterans Bond Act Of 1986.,True
+1986,"June 3, 1986",43,Community Parklands Act Of 1986.,True
+1986,"June 3, 1986",44,Water Conservation And Water Quality Bond Law Of 1986.,True
+1986,"June 3, 1986",45,Deposit Of Public Moneys in Credit Union.,True
+1986,"June 3, 1986",46,Property Taxation.,True
+1986,"June 3, 1986",47,Allocation Of Vehicle License Fee Taxes To Counties And Cities.,True
+1986,"June 3, 1986",48,Legislators' And Judges' Retirement Systems.,True
+1986,"June 3, 1986",49,Nonpartisan Office.,True
+1986,"June 3, 1986",50,Property Taxation. Disasters.,True
+1986,"June 3, 1986",51,Multiple Defendants Tort Damage Liability. Initiative Statute.,True
+1986,"June 3, 1986",52,County Correctional Facility Capital Expenditure Bond Act Of 1986,True
+1986,"November 4, 1986",53,Greene-Hughes School Building Lease-Purchase Bond Law Of 1986.,True
+1986,"November 4, 1986",54,New Prison Construction Bond Act Of 1986.,True
+1986,"November 4, 1986",55,California Safe Drinking Water Bond Law Of 1986.,True
+1986,"November 4, 1986",56,Higher Education Facilities Bond Act Of 1986.,True
+1986,"November 4, 1986",57,Retirement Benefits For Nonjudicial And Nonlegislative Elected State Constitutional Officers.,True
+1986,"November 4, 1986",58,Taxation. Family Transfers.,True
+1986,"November 4, 1986",59,Elected District Attorney.,True
+1986,"November 4, 1986",60,Taxation. Replacement Residences.,True
+1986,"November 4, 1986",61,"Compensation Of Public Officials, Employees, Individual Public Contractors. Initiative Constitutional Amendment & Statute.",False
+1986,"November 4, 1986",62,Taxation. Local Governments And Districts. Initiative Statute.,True
+1986,"November 4, 1986",63,Official State Language. Initiative Constitutional Amendment.,True
+1986,"November 4, 1986",64,Acquired Immune Deficiency Syndrome (AIDS). Initiative Statute.,False
+1986,"November 4, 1986",65,Restrictions On Toxic Discharges into Drinking Water; Requirement Of Notice Of Persons' Exposure To Toxics. Initiative Statute.,True
+1988,"November 8, 1988",100,"Insurance Rates, Regulation. Initiative Statute.",False
+1988,"November 8, 1988",101,Automobile Accident Claims And Insurance Rates. Initiative Statute.,False
+1988,"November 8, 1988",102,Reporting Exposure To AIDS Virus. Initiative Statute.,False
+1988,"November 8, 1988",103,"Insurance Rates, Regulation, Commissioner. Initiative Statute.",True
+1988,"November 8, 1988",104,Automobile And Other Insurance. Initiative Statute.,False
+1988,"November 8, 1988",105,"Disclosures To Consumers, Voter, Investors. Initiative Statute.",True
+1988,"November 8, 1988",106,Attorney Fees Limit For Tort Claims. Initiative Statute.,False
+1988,"June 7, 1988",66,Elected County Assessor.,True
+1988,"June 7, 1988",67,Second Degree Murder Of Peace Officer. Minimum Term.,True
+1988,"June 7, 1988",68,Legislative Campaigns. Spending and Contribution Limits. Partial Public Funding. Initiative Statute.,True
+1988,"June 7, 1988",69,Acquired Immune Deficiency Syndrome—AIDS. Initiative Statute.,False
+1988,"June 7, 1988",70,"Wildlife, Coastal, And Park Land Conservation Bond Act. Initiative Statute.",True
+1988,"June 7, 1988",71,Appropriations Limit Adjustment. Initiative Constitutional Amendment.,False
+1988,"June 7, 1988",72,Emergency Reserve. Dedication Of Certain Taxes To Transportation. Appropriation Limit Change. Initiative Constitutional Amendment.,False
+1988,"June 7, 1988",73,Campaign Funding. Contribution Limits. Prohibition Of Public Funding. Initiative Statute.,True
+1988,"June 7, 1988",74,Deddeh Transportation Bond Act.,False
+1988,"June 7, 1988",75,School Facilities Bond Act Of 1988.,True
+1988,"June 7, 1988",76,Veterans Bond Act Of 1988.,True
+1988,"June 7, 1988",77,California Earthquake Safety And Housing Rehabilitation Bond Act Of 1988.,True
+1988,"November 8, 1988",78,Higher Education Facilities Bond Act Of 1988.,True
+1988,"November 8, 1988",79,1988 School Facilities Bond Act.,True
+1988,"November 8, 1988",80,New Prison Construction Bond Act Of 1988.,True
+1988,"November 8, 1988",81,California Safe Drinking Water Bond Act Of 1988.,True
+1988,"November 8, 1988",82,Water Conservation Bond Law Of 1988.,True
+1988,"November 8, 1988",83,Clean Water And Water Reclamation Bond Act Of 1988.,True
+1988,"November 8, 1988",84,Housing And Homeless Bond Act Of 1988.,True
+1988,"November 8, 1988",85,Library Construction And Renovation Bond Act Of 1988.,True
+1988,"November 8, 1988",86,County Correctional Facility Capital Expenditure And Youth Facility Bond Act Of 1988.,True
+1988,"November 8, 1988",87,Property Tax Revenues. Redevelopment Agencies.,True
+1988,"November 8, 1988",88,Deposit Of Public Moneys.,True
+1988,"November 8, 1988",89,Governor's Parole Review.,True
+1988,"November 8, 1988",90,Assessed Valuation. Replacement Dwellings.,True
+1988,"November 8, 1988",91,Justice Courts. Eligibility.,True
+1988,"November 8, 1988",92,Commission On Judicial Performance.,True
+1988,"November 8, 1988",93,Veteran's Property Tax Exemption.,True
+1988,"November 8, 1988",94,Judges.,True
+1988,"November 8, 1988",95,Hunger And Homelessness Funding. Initiative Statute.,False
+1988,"November 8, 1988",96,Communicable Disease Tests. Initiative Statute.,True
+1988,"November 8, 1988",97,State Occupational Safety And Health Plan. Initiative Statute.,True
+1988,"November 8, 1988",98,School Funding. Initiative Constitutional Amendment and Statute.,True
+1988,"November 8, 1988",99,Cigarette And Tobacco Tax. Benefit Fund. Initiative Constitutional Amendment and Statute.,True
+1990,"June 5, 1990",107,Housing And Homeless Bond Act Of 1990.,True
+1990,"June 5, 1990",108,Passenger Rail And Clean Air Bond Act Of 1990,True
+1990,"June 5, 1990",109,Governor's Review Of Legislation. Legislative Deadlines.,True
+1990,"June 5, 1990",110,Property Tax Exemption For Severely Disabled Persons.,True
+1990,"June 5, 1990",111,The Traffic Congestion Relief And Spending Limitation Act Of 1990.,True
+1990,"June 5, 1990",112,"State Officials, Ethics, Salaries. Open Meetings.",True
+1990,"June 5, 1990",113,Practice Of Chiropractic. Legislative Initiative Amendment.,True
+1990,"June 5, 1990",114,Murder Of A Peace Officer. Criminal Penalties. Special Circumstance. Peace Officer Definition.,True
+1990,"June 5, 1990",115,Criminal Law.,True
+1990,"June 5, 1990",116,Rail Transportation. Bond Act.,True
+1990,"June 5, 1990",117,Wildlife Protection.,True
+1990,"June 5, 1990",118,Legislature. Reapportionment. Ethics.,False
+1990,"June 5, 1990",119,Reapportionment By Commission. Initiative. Constitutional Amendment And Statute.,False
+1990,"June 5, 1990",120,New Prison Construction Bond Act Of 1990.,True
+1990,"June 5, 1990",121,Higher Education Facilities Bond Act Of June 1990.,True
+1990,"June 5, 1990",122,Earthquake Safety And Public Buildings Rehabilitation Bond Act Of 1990.,True
+1990,"June 5, 1990",123,1990 School Facilities Bond Act.,True
+1990,"November 6, 1990",124,Local Hospital Districts.,False
+1990,"November 6, 1990",125,Motor Vehicle Tax. Rail Transit Funding.,False
+1990,"November 6, 1990",126,Alcoholic Beverages. Taxes.,False
+1990,"November 6, 1990",127,Earthquake Safety. Property Tax Exclusion.,True
+1990,"November 6, 1990",128,Environment. Public Health. Bonds.,False
+1990,"November 6, 1990",129,"Drug Enforcement, Prevention, Treatment, Prisons. Bonds.",False
+1990,"November 6, 1990",130,Forest Acquisition. Timber Harvesting Practices. Bond Act.,False
+1990,"November 6, 1990",131,Limits On Terms Of Office. Ethics. Campaign Financing.,False
+1990,"November 6, 1990",132,Marine Resources. Initiative Constitutional Amendment.,True
+1990,"November 6, 1990",133,Drug Enforcement And Prevention. Taxes. Prison Terms.,False
+1990,"November 6, 1990",134,Alcohol Surtax.,False
+1990,"November 6, 1990",135,Pesticide Regulation.,False
+1990,"November 6, 1990",136,"State, Local Taxation.",False
+1990,"November 6, 1990",137,Initiative And Referendum Process.,False
+1990,"November 6, 1990",138,Forestry Programs. Timber Harvesting Practices.,False
+1990,"November 6, 1990",139,Prison Inmate Labor. Tax Credit.,True
+1990,"November 6, 1990",140,"Limits On Terms Of Office, Legislators' Retirement, Legislative Operating Costs.",True
+1990,"November 6, 1990",141,Toxic Chemical Discharge. Public Agencies. Legislative Statute.,False
+1990,"November 6, 1990",142,Veterans' Bond Act Of 1990.,True
+1990,"November 6, 1990",143,Higher Education Facilities Bond Act Of November 1990.,False
+1990,"November 6, 1990",144,New Prison Construction Bond Act Of 1990-B.,False
+1990,"November 6, 1990",145,California Housing Bond Act Of 1990.,False
+1990,"November 6, 1990",146,School Facilities Bond Act Of 1990.,True
+1990,"November 6, 1990",147,County Correctional Facility Capital Expenditure And Juvenile Facility Bond Act Of 1990.,False
+1990,"November 6, 1990",148,Water Resources Bond Act Of 1990.,False
+1990,"November 6, 1990",149,"California Park, Recreation, And Wildlife Enhancement Act Of 1990.",False
+1990,"November 6, 1990",150,County Courthouse Facility Capital Expenditure Bond Act Of 1990.,False
+1990,"November 6, 1990",151,Child Care Facilities Financing Act Of 1990.,False
+1992,"June 2, 1992",152,School Facilities Bond Act of 1992,True
+1992,"June 2, 1992",153,Higher Education Facilities Bond Act of June 1992,True
+1992,"June 2, 1992",154,Property Tax Postponement.,False
+1992,"November 3, 1992",155,1992 School Facilities Bond Act.,True
+1992,"November 3, 1992",156,Passenger Rail and Clean Air Bond Act of 1992.,False
+1992,"November 3, 1992",157,Toll Roads and Highways.,False
+1992,"November 3, 1992",158,Office of California Analyst.,False
+1992,"November 3, 1992",159,Office of the Auditor General.,False
+1992,"November 3, 1992",160,Property Tax Exemption.,True
+1992,"November 3, 1992",161,Physician-Assisted Death. Terminal Condition.,False
+1992,"November 3, 1992",162,Public Employees' Retirement Systems.,True
+1992,"November 3, 1992",163,Ends Taxation of Certain Food Products.,True
+1992,"November 3, 1992",164,Congressional Term Limits.,True
+1992,"November 3, 1992",165,Budget Process. Welfare. Procedural and Substantive Changes.,False
+1992,"November 3, 1992",166,Basic Health Care Coverage.,False
+1992,"November 3, 1992",167,State Taxes.,False
+1993,"November 2, 1993",168,Low Rent Housing Projects.,False
+1993,"November 2, 1993",169,Budget Implementation.,False
+1993,"November 2, 1993",170,Property Taxes. Schools. Development-Fee Limits.,False
+1993,"November 2, 1993",171,Property Taxation. Transfer of Base Year Value.,True
+1993,"November 2, 1993",172,Local Public Safety Protection and Improvement Act of 1993.,True
+1993,"November 2, 1993",173,California Housing and Jobs Investment Bond Act. $185 Million Legislative Bond Act.,False
+1993,"November 2, 1993",174,Education. Vouchers.,False
+1994,"June 7, 1994",175,Renters' Income Tax Credit.,False
+1994,"June 7, 1994",176,Taxation: Nonprofit Organizations.,True
+1994,"June 7, 1994",177,Property Tax Exemption. Disabled Persons' Access.,True
+1994,"June 7, 1994",178,Property Tax Exclusion. Water Conservation Equipment.,False
+1994,"June 7, 1994",179,Murder: Punishment.,True
+1994,"June 7, 1994",180,"Park Lands, Historic Sites, Wildlife and Forest Conservation Bond Act.",False
+1994,"November 8, 1994",181,Passenger Rail and Clean Air Bond Act of 1994.,False
+1994,"November 8, 1994",183,Recall Elections. State Officers.,True
+1994,"November 8, 1994",184,Increased Sentences. Repeat Offenders (Three Strikes),True
+1994,"November 8, 1994",185,Public Transportation Trust Funds. Gasoline Sales Tax. Initiative Statute.,False
+1994,"November 8, 1994",186,Health Services. Taxes.,False
+1994,"November 8, 1994",187,Illegal Aliens. Ineligibility for Public Services. Verification and Reporting.,True
+1994,"November 8, 1994",188,Smoking and Tobacco Products. Local Preemption. Statewide Regulation.,False
+1994,"November 8, 1994",189,Bail Exception. Felony Sexual Assault.,True
+1994,"November 8, 1994",190,Commission on Judicial Performance.,True
+1994,"November 8, 1994",191,Abolish Justice Courts,True
+1994,"June 7, 1994",1A,Earthquake Relief and Seismic Retrofit Bond Act of 1994.,False
+1994,"June 7, 1994",1B,School Facilities Bond Act of 1994.,False
+1994,"June 7, 1994",1C,Higher Education Facilities Bond Act of June 1994.,False
+1996,"March 26, 1996",192,Seismic Retrofit Bond Act of 1996.,True
+1996,"March 26, 1996",193,Property Appraisal. Exception. Grandparent-Grandchild Transfer.,True
+1996,"March 26, 1996",194,Prisoners. Joint Venture Program. Unemployment Benefits. Parole.,True
+1996,"March 26, 1996",195,Punishment. Special Circumstances. Carjacking. Murder of Juror.,True
+1996,"March 26, 1996",196,Punishment for Murder. Special Circumstances. Drive-By Shootings.,True
+1996,"March 26, 1996",197,Amendment of the California Wildlife Protection Act of 1990 (Proposition 117). Mountain Lions.,False
+1996,"March 26, 1996",198,Elections. Open Primary.,True
+1996,"March 26, 1996",199,Limits on Mobilehome Rent Control. Low-Income Rental Assistance. Initiative Statute.,False
+1996,"March 26, 1996",200,No-Fault Motor Vehicle Insurance. Initiative Statute.,False
+1996,"March 26, 1996",201,Attorneys' Fees. Shareholder Actions. Class Actions.,False
+1996,"March 26, 1996",202,Attorneys' Contingent Fees. Limits.,False
+1996,"March 26, 1996",203,Public Education Facilities Bond Act of 1996.,True
+1996,"November 5, 1996",204,"Safe, Clean, Reliable Water Supply Act.",True
+1996,"November 5, 1996",205,Youthful and Adult Offender Local Facilities Bond Act of 1996.,False
+1996,"November 5, 1996",206,Veterans' Bond Act of 1996.,True
+1996,"November 5, 1996",207,Attorneys. Fees. Right to Negotiate. Frivolous Lawsuits.,False
+1996,"November 5, 1996",208,Campaign Contributions and Spending Limits. Restricts Lobbyists.,True
+1996,"November 5, 1996",209,Prohibition Against Discrimination or Preferential Treatment by State and Other Public Entities.,True
+1996,"November 5, 1996",210,Minimum Wage Increase.,True
+1996,"November 5, 1996",211,Attorney-Client Fee Arrangements. Securities Fraud. Lawsuits.,False
+1996,"November 5, 1996",212,Campaign Contributions and Spending Limits. Repeals Gift and Honoraria Limits. Restricts Lobbyists.,False
+1996,"November 5, 1996",213,"Limitation on Recovery to Felons, Uninsured Motorists, Drunk Drivers.",True
+1996,"November 5, 1996",214,Health Care. Consumer Protection. Initiative Statute.,False
+1996,"November 5, 1996",215,Compassionate Use Act of 1996. Medical Use of Marijuana.,True
+1996,"November 5, 1996",216,Health Care. Consumer Protection. Taxes on Corporate Restructuring.,False
+1996,"November 5, 1996",217,Top Income Tax Brackets. Reinstatement. Revenues to Local Agencies.,False
+1996,"November 5, 1996",218,"Voter Approval for Local Government Taxes. Limitations on Fees, Assessments, and Charges.",True
+1998,"November 3, 1998",1,Property Taxes: Contaminated Property.,True
+1998,"November 3, 1998",10,State and County Early Childhood Development Programs. Additional Tobacco Surtax.,True
+1998,"November 3, 1998",11,Local Sales and Use Taxes—Revenue Sharing.,True
+1998,"November 3, 1998",1A,Class Size Reduction Kindergarten-University Public Education Facilities Bond Act of 1998.,True
+1998,"November 3, 1998",2,Transportation: Funding.,True
+1998,"June 2, 1998",219,Ballot Measures. Application.,True
+1998,"June 2, 1998",220,Courts. Superior and Municipal Court Consolidation.,True
+1998,"June 2, 1998",221,Subordinate Judicial Officers. Discipline.,True
+1998,"June 2, 1998",222,Murder. Peace Officer Victim. Sentence Credits.,True
+1998,"June 2, 1998",223,Schools. Spending Limits on Administration.,False
+1998,"June 2, 1998",224,State-Funded Design and Engineering Services. Initiative Constitutional Amendment.,False
+1998,"June 2, 1998",225,Limiting Congressional Terms. Proposed U.S. Constitutional Amendment.,True
+1998,"June 2, 1998",226,"Political Contributions by Employees, Union Members, Foreign Entities.",False
+1998,"June 2, 1998",227,English Language in Public Schools.,True
+1998,"November 3, 1998",3,Partisan Presidential Primary Elections.,False
+1998,"November 3, 1998",4,Trapping Practices. Bans Use of Specified Traps and Animal Poisons.,True
+1998,"November 3, 1998",5,Tribal-State Gaming Compacts. Tribal Casinos.,True
+1998,"November 3, 1998",6,Criminal Law. Prohibition on Slaughter of Horses and Sale of Law. Prohibition on Slaughter of Horses and Sale of Horsemeat for Human Consumption.,True
+1998,"November 3, 1998",7,Air Quality Improvement. Tax Credits.,False
+1998,"November 3, 1998",8,Public Schools. Permanent Class Size Reduction. Parent- Teacher Councils. Teacher Credentialing. Pupil Suspension for Drug Possession. Chief Inspector's Office.,False
+1998,"November 3, 1998",9,Electric Utilities. Assessments. Bonds.,False
+2000,"March 7, 2000",12,"Safe Neighborhood Parks, Clean Water, Clean Air, and Coastal Protection Bond Act of 2000.",True
+2000,"March 7, 2000",13,"Safe Drinking Water, Clean Water, Watershed Protection, and Flood Protection Bond Act.",True
+2000,"March 7, 2000",14,California Reading and Literacy Improvement and Public Library Construction and Renovation Bond Act of 2000,True
+2000,"March 7, 2000",15,The Hertzberg-Polanco Crime Laboratories Construction Bond Act of 1999.,False
+2000,"March 7, 2000",16,Veterans Homes Bond Act of 2000.,True
+2000,"March 7, 2000",17,Lotteries. Charitable Raffles. Legislative Constitutional Amendment.,True
+2000,"March 7, 2000",18,Murder: Special Circumstances. Legislative Initiative Amendment.,True
+2000,"March 7, 2000",19,Murder. BART and CSU Peace Officers. Legislative Initiative Amendment.,True
+2000,"March 7, 2000",1A,Gambling on Tribal Lands. Legislative Constitutional Amendment.,True
+2000,"March 7, 2000",20,California State Lottery. Allocation for Instructional Materials. Legislative Initiative Amendment.,True
+2000,"March 7, 2000",21,Juvenile Crime. Initiative Statute.,True
+2000,"March 7, 2000",22,Limit on Marriages. Initiative Statute.,True
+2000,"March 7, 2000",23,'None of the Above' Ballot Option. Initiative Statute.,False
+2000,"March 7, 2000",25,Election Campaigns. Contributions and Spending Limits. Public Financing. Disclosures. Initiative Statute.,False
+2000,"March 7, 2000",26,"School Facilities. Local Majority Vote. Bonds, Taxes. Initiative Constitutional Amendment and Statute.",False
+2000,"March 7, 2000",27,Elections. Term Limit Declarations for Congressional Candidates. Initiative Statute.,False
+2000,"March 7, 2000",28,Repeal of Proposition 10 Tobacco Surtax. Initiative Statute.,False
+2000,"March 7, 2000",29,1998 Indian Gaming Compacts. Referendum Statute.,True
+2000,"March 7, 2000",30,Insurance Claims Practices. Civil Remedies. Referendum.,False
+2000,"March 7, 2000",31,Insurance Claims Practices. Civil Remedy Amendments. Referendum.,False
+2000,"November 7, 2000",32,Veterans' Bond Act of 2000. A.B. 2305.,True
+2000,"November 7, 2000",33,Legislature. Participation in Public Employees' Retirement System. A.C.A. 12.,False
+2000,"November 7, 2000",34,Campaign Contributions and Spending. Limits. Disclosure. S.B. 1223.,True
+2000,"November 7, 2000",35,Public Works Projects. Use of Private Contractors for Engineering and Architectural Services. Initiative.,True
+2000,"November 7, 2000",36,Drugs. Probation and Treatment Program. Initiative.,True
+2000,"November 7, 2000",37,Fees. Vote Requirements. Taxes. Initiative.,False
+2000,"November 7, 2000",38,School Vouchers. State-Funded Private and Religious Education. Public Schoolfunding. Initiative.,False
+2000,"November 7, 2000",39,"School Facilities. 55% Local Vote. Bonds, Taxes. Accountability Requirements. Initiative.",True
+2002,"March 5, 2002",40,"The California Clean Water, Clean Air, Safe Neighborhood Parks, and Coastal Protection Act of 2002. AB 1602.",True
+2002,"March 5, 2002",41,Voting Modernization Bond Act of 2002. (Shelley-Hertzberg Act). AB 56.,True
+2002,"March 5, 2002",42,Transportation Congestion Improvement Act. Allocation of Existing Motor Vehicle Fuel Sales and Use Tax Revenues for Transportation Purposes Only. Legislative Constitutional Amendment. ACA 4.,True
+2002,"March 5, 2002",43,Right to Have Vote Counted. ACA 9.,True
+2002,"March 5, 2002",44,Chiropractors. Unprofessional Conduct. SB 1988.,False
+2002,"March 5, 2002",45,Legislative Term Limits. Local Voter Petitions. Initiative.,False
+2002,"November 5, 2002",46,Housing and Emergency Shelter Trust Fund Act of 2002. S.B. 1227.,True
+2002,"November 5, 2002",47,Kindergarten-University Public Education Facilities Bond Act of 2002. A.B. 47.,True
+2002,"November 5, 2002",48,Court Consolidation. A.C.A. 15.,True
+2002,"November 5, 2002",49,Before and After School Programs. State Grants. Initiative.,True
+2002,"November 5, 2002",50,"Water Quality, Supply and Safe Drinking Water Projects. Coastal Wetlands Purchase and Protection. Bonds. Initiative.",True
+2002,"November 5, 2002",51,Transportation. Distribution of Existing Motor Vehicle Sales and Use Tax. Initiative.,False
+2002,"November 5, 2002",52,Election Day Voter Registration. Voter Fraud Penalties. Initiative.,False
+2003,"October 7, 2003",53,Funds Dedicated for State and Local Infrastructure. Legislative Constitutional Amendment. A.C.A. 11.,False
+2003,"October 7, 2003",54,"Classification by Race, Ethnicity, Color, or National Origin. Initiative Constitutional Amendment.",False
+2004,"November 2, 2004",1A,Protection of Local Government Revenues.,True
+2004,"March 2, 2004",55,Kindergarten-University Public Education Facilities Bond Act of 2004.,True
+2004,"March 2, 2004",56,"State Budget, Related Taxes, and Reserve. Voting Requirements. Penalties. Initiative Constitutional Amendment and Statute.",False
+2004,"March 2, 2004",57,The Economic Recovery Bond Act.,True
+2004,"March 2, 2004",58,The California Balanced Budget Act.,True
+2004,"November 2, 2004",59,"Public Records, Open Meetings. Legislative Constitutional Amendment.",True
+2004,"November 2, 2004",60,Election Rights of Political Parties. Legislative Constitutional Amendment.,True
+2004,"November 2, 2004",60A,Surplus Property. Legislative Constitutional Amendment.,True
+2004,"November 2, 2004",61,Children's Hospital Projects. Grant Program. Bond Act. Initiative Statute.,True
+2004,"November 2, 2004",62,Elections. Primaries. Initiative Constitutional Amendment and Statute.,False
+2004,"November 2, 2004",63,"Mental Health Services Expansion, Funding. Tax on Personal Incomes Above $1 Million. Initiative Statute.",True
+2004,"November 2, 2004",64,Limits on Private Enforcement of Unfair Business Competition Laws. Initiative Statute.,True
+2004,"November 2, 2004",65,"Local Government Funds, Revenues. State Mandates. Initiative Constitutional Amendment.",False
+2004,"November 2, 2004",66,"Limitations on ""Three Strikes"" Law. Sex Crimes. Punishment. Initiative Statute.",False
+2004,"November 2, 2004",67,Emergency Medical Services. Funding. Telephone Surcharge. Initiative Constitutional Amendment and Statute.,False
+2004,"November 2, 2004",68,"Non-Tribal Commercial Gambling Expansion. Tribal Gaming Compact Amendments. Revenues, Tax Exemptions. Initiative Constitutional Amendments and Statute.",False
+2004,"November 2, 2004",69,DNA Samples. Collection. Database. Funding. Initiative Statute.,True
+2004,"November 2, 2004",70,Tribal Gaming Compacts. Exclusive Gaming Rights. Contributions to State. Initiative Constitutional Amendment and Statute.,False
+2004,"November 2, 2004",71,Stem Cell Research. Funding. Bonds. Initiative Constitutional Amendment and Statute.,True
+2004,"November 2, 2004",72,Health Care Coverage Requirements. Referendum.,False
+2005,"November 8, 2005",73,Termination of Minor's Pregnancy. Waiting Period and Parental Notification. Initiative Constitutional Amendment.,False
+2005,"November 8, 2005",74,Public School Teachers. Waiting Period for Permanent Status. Dismissal. Initiative Statute.,False
+2005,"November 8, 2005",75,Public Employee Union Dues. Required Employee Consent for Political Contributions. Initiative Statute.,False
+2005,"November 8, 2005",76,School Funding. State Spending. Initiative Constitutional Amendment.,False
+2005,"November 8, 2005",77,Reapportionment. Initiative Constitutional Amendment.,False
+2005,"November 8, 2005",78,Prescription Drugs. Discounts. Initiative Statute.,False
+2005,"November 8, 2005",79,Prescription Drug Discounts. State-Negotiated Rebates. Initiative Statute.,False
+2005,"November 8, 2005",80,Electric Service Providers. Regulation. Initiative Statute.,False
+2006,"November 7, 2006",1A,Protection of Transportation Funding,True
+2006,"November 7, 2006",1B,"Highway Safety, Traffic Reduction, Air Quality, and Port Security",True
+2006,"November 7, 2006",1C,Housing and Emergency Shelter Trust Fund Act of 2006,True
+2006,"November 7, 2006",1D,Kindergarten-University Public Education Facilities Bond Act of 2006,True
+2006,"November 7, 2006",1E,Disaster Preparedness and Flood Prevention Act of 2006,True
+2006,"June 6, 2006",81,California Reading and Literacy Improvement and Public Library Construction and Renovation Bond Act of 2006,False
+2006,"June 6, 2006",82,"Public Preschool Education. Tax Increase on Incomes Over $400,000 for Individuals; $800,000 for Couples.",False
+2006,"November 7, 2006",83,"Comprehensive Registered Sex Offender Laws (popularly known as ""Jessica's Law"")",True
+2006,"November 7, 2006",84,"Bonds for clean water, flood control, state and local park improvements, etc.",True
+2006,"November 7, 2006",85,Parental Notification before Termination of Teen's Pregnancy (second attempt at Proposition 73),False
+2006,"November 7, 2006",86,Increase on Cigarette Tax,False
+2006,"November 7, 2006",87,Funding for alternative forms of energy,False
+2006,"November 7, 2006",88,Property Parcel Tax to fund for Education,False
+2006,"November 7, 2006",89,"Campaign Finance Restrictions, including a corporate tax increase",False
+2006,"November 7, 2006",90,Eminent Domain and Environmental Law Enforcement Restrictions,False
+2008,"November 4, 2008",10,Alternative Fuel Vehicles and Renewable Energy. Statute.,False
+2008,"November 4, 2008",11,Redistricting. Constitutional Amendment and Statute.,True
+2008,"November 4, 2008",12,Veterans' Bond Act of 2008. S.B. 1572.,True
+2008,"November 4, 2008",1A,California High Speed Rail Bond. S.B. 1856.,True
+2008,"November 4, 2008",2,Treatment of Farm Animals. Statute.,True
+2008,"November 4, 2008",3,Children's Hospital Bond Act. Grant Program. Statute.,True
+2008,"November 4, 2008",4,Waiting Period and Parental Notification Before Termination of Minor's Pregnancy. Constitutional Amendment. (third attempt at Proposition 73),False
+2008,"November 4, 2008",5,"Nonviolent Offenders. Sentencing, Parole and Rehabilitation. Statute.",False
+2008,"November 4, 2008",6,Criminal Penalties and Laws. Public Safety Funding. Statute.,False
+2008,"November 4, 2008",7,Renewable Energy. Statute.,False
+2008,"November 4, 2008",8,"Amends the California Constitution so that ""Only marriage between a man and a woman is valid or recognized in California."" Initiative Constitutional Amendment.",True
+2008,"November 4, 2008",9,Criminal Justice System. Victims' Rights. Parole. Constitutional Amendment and Statute.,True
+2008,"February 5, 2008",91,Transportation money. Initiative Constitutional Amendment.,False
+2008,"February 5, 2008",92,Community Colleges. Funding. Governance. Fees. Initiative Constitutional Amendment and Statute.,False
+2008,"February 5, 2008",93,Limits on Legislators' Terms in Office. Initiative Constitutional Amendment.,False
+2008,"February 5, 2008",94,Referendum on Amendment to Indian Gaming Compact (Pechanga Band of Luiseño Mission Indians),True
+2008,"February 5, 2008",95,Referendum on Amendment to Indian Gaming Compact (Morongo Band of Mission Indians),True
+2008,"February 5, 2008",96,Referendum on Amendment to Indian Gaming Compact (Sycuan Band of the Kumeyaay Nation),True
+2008,"February 5, 2008",97,Referendum on Amendment to Indian Gaming Compact (Agua Caliente Band of Cahuilla Indians),True
+2008,"June 3, 2008",98,Eminent Domain. Limits on Government Authority. Initiative Constitutional Amendment.,False
+2008,"June 3, 2008",99,Eminent Domain. Limits on Government Acquisition of Owner-Occupied Residence. Initiative Constitutional Amendment.,True
+2009,"May 19, 2009",1A,State finance.,False
+2009,"May 19, 2009",1B,Education finance.,False
+2009,"May 19, 2009",1C,California State Lottery.,False
+2009,"May 19, 2009",1D,California Children and Families Act: use of funds: services for children.a,False
+2009,"May 19, 2009",1E,The Mental Health Services Act: Proposition 63 amendments.,False
+2009,"May 19, 2009",1F,State officer salary increases.,True
+2010,"June 8, 2010 primary",,Limits on property tax assessment. Seismic retrofitting of existing buildings. Legislative constitutional amendment.,True
+2010,"June 8, 2010 primary",,"Elections. Open primaries/""Top Two primary Act"".",True
+2010,"June 8, 2010 primary",,California Fair Elections Act.,False
+2010,"June 8, 2010 primary",,Imposes new two-thirds voter approval requirement for local public electricity providers. Initiative constitutional amendment.,False
+2010,"June 8, 2010 primary",,Allows auto insurance companies to base their prices in part on a driver's history of insurance coverage. Initiative statute.,False
+2010,"November 2, 2010 general election",,Changes California law to legalize marijuana for recreational use.,False
+2010,"November 2, 2010 general election",,Redistricting of congressional districts.,True
+2010,"November 2, 2010 general election",,Establishes $18 annual vehicle license surcharge to help fund state parks and wildlife programs and grants free admission to all state parks to surcharged vehicles.,False
+2010,"November 2, 2010 general election",,Prohibits the state from taking funds used for transportation or local government projects and services.,True
+2010,"November 2, 2010 general election",,Repeals AB 32 until unemployment is below 5.5% for four consecutive quarters.,False
+2010,"November 2, 2010 general election",,"Repeals recent legislation (tax breaks) that would allow businesses to carry back losses, share tax credits, and use a sales-based income calculation to lower taxable income.",False
+2010,"November 2, 2010 general election",,Changes legislative vote requirement to pass a budget from two-thirds to a simple majority. The two-thirds majority for passing taxes would not change.,True
+2010,"November 2, 2010 general election",,Increases legislative vote requirement to two-thirds for state levies and charges. Imposes additional requirement for voters to approve local levies and charges with limited exceptions.,True
+2010,"November 2, 2010 general election",,Repeals state legislature redistricting law,False
+2012,"June 5, 2012 primary",,"Limits on legislators' terms in office: state legislature from 14 to 12 years, 12 years total state Assembly and Senate term limits.",True
+2012,"June 5, 2012 primary",,"Imposes additional tax on cigarettes for cancer research. $1.00 per pack, equivalent tax increase on other tobacco products.",False
+2012,"November 6, 2012 general election",,Increases income and sales taxes temporarily for education and public safety funding. Initiative constitutional amendment.,True
+2012,"November 6, 2012 general election",,"Constitutional amendment changing responsibilities of local governments, the Legislature and the Governor in regards to the state budget. Initiative constitutional amendment and statute.",False
+2012,"November 6, 2012 general election",,"Prohibits Union and Corporate using payroll-deducted funds for political purposes, as well as to politicians or their political action committees. Initiative statute.",False
+2012,"November 6, 2012 general election",,Changes current law to allow insurance companies to set prices based on whether the driver previously carried auto insurance with any insurance company. Initiative statute.,False
+2012,"November 6, 2012 general election",,Repeals the death penalty. Initiative statute.,False
+2012,"November 6, 2012 general election",,Imposes higher penalties on human trafficking. Initiative statute.,True
+2012,"November 6, 2012 general election",,Revises three strikes law to impose life sentence only when new felony conviction is serious or violent. Initiative statute.,True
+2012,"November 6, 2012 general election",,Requires labeling on raw or processed food offered for sale to consumers if made from plants or animals with genetic material changed in specified ways. Initiative statute.,False
+2012,"November 6, 2012 general election",,Increases income taxes for education and early childhood programs. Initiative statute.,False
+2012,"November 6, 2012 general election",,Requires multistate businesses to calculate their California income tax liability based on the percentage of their sales in California and allocates potential revenue to create energy efficient and clean jobs. Initiative statute.,True
+2012,"November 6, 2012 general election",,Redistricting of State Senate districts. Referendum.,True
+2014,"June 3, 2014 primary",,Veterans Housing and Homeless Prevention Bond Act Of 2014.,True
+2014,"June 3, 2014 primary",,Requires local governments to comply with laws that provide public access to their body meetings and records of government officials. Also eliminates the reimbursement for the costs of such compliance. Legislative constitutional amendment.,True
+2014,"November 4, 2014 general election",,"Water Quality, Supply, and Infrastructure Improvement Act of 2014. (pushed from November 2010 to a revised version for November 2014).",True
+2014,"November 4, 2014 general election",,State Budget. Budget Stabilization Account. Legislative Constitutional Amendment.,True
+2014,"November 4, 2014 general election",,Healthcare Insurance. Rate Changes. Initiative Statute.,False
+2014,"November 4, 2014 general election",,Drug and Alcohol Testing of Doctors. Medical Negligence Lawsuits. Initiative Statute.,False
+2014,"November 4, 2014 general election",,Criminal Sentences. Misdemeanor Penalties. Initiative Statute.,True
+2014,"November 4, 2014 general election",,Indian Gaming Compacts. Referendum.,False
+2016,"June 7, 2016 primary election",,Amends the state constitution to require a two-thirds vote in the respective chamber of the state legislature to suspend a state senator or assembly member. The proposal would also withhold the salaries and benefits of the suspended legislator.,True
+2016,"November 8, 2016 general election",,School Bonds. Funding for K-12 School and Community College Facilities. Initiative Statutory Amendment. This initiative statutory amendment would authorize $9 billion in bonds for school construction and modernization.,True
+2016,"November 8, 2016 general election",,"State Fees on Hospitals. Federal Medi-Cal Matching Funds. Initiative Statutory and Constitutional Amendment. Among others, this proposed initiative statutory and constitutional amendment would require a two-thirds vote in the state legislature to change laws that impose fees on hospitals for purpose of obtaining federal Medi-Cal matching funds.",True
+2016,"November 8, 2016 general election",,"Revenue Bonds. Statewide Voter Approval. Initiative Constitutional Amendment. This initiative constitutional amendment requires statewide voter approval for revenue bonds exceeding $2 billion for projects financed, owned, operated, or managed by the state or any joint agency created by or including the state.",False
+2016,"November 8, 2016 general election",,"Legislature. Legislation and Proceedings. Initiative Constitutional Amendment and Statute. Among other requirements, prohibits the legislature from passing any bill unless it has been published on the internet and in print for at least 72 hours prior to the vote.",True
+2016,"November 8, 2016 general election",,"Tax Extension to Fund Education and Healthcare. Initiative Constitutional Amendment. Extends income tax increases from 2012 and allocates the revenue from them for K-12 schools, community colleges, and healthcare programs.",True
+2016,"November 8, 2016 general election",,"Cigarette Tax to Fund Healthcare, Tobacco Use Prevention, Research, and Law Enforcement. Initiative Constitutional Amendment and Statute. Increases cigarette tax by $2.00 a pack and allocates revenues to healthcare programs and tobacco research.",True
+2016,"November 8, 2016 general election",,Criminal Sentences. Juvenile Criminal Proceedings and Sentencing. Initiative Constitutional Amendment and Statute. Increases access to parole for people convicted of nonviolent felonies and modifies how juvenile defendants can be tried as adults.,True
+2016,"November 8, 2016 general election",,"Senate Bill 1174: This mandatory proposition, placed by the state legislature and Governor on September 2, 2014, would repeal most of 1998's California Proposition 227, and thus allow multi-language education in public schools.",True
+2016,"November 8, 2016 general election",,"Senate Bill 254: This mandatory proposition asks voters if they want California to work towards overturning the Citizens United Supreme Court ruling, in a similar manner to Proposition 49 from 2014 (which was removed from the ballot by the state supreme court).",True
+2016,"November 8, 2016 general election",,"Adult Films. Condoms. Health Requirements. Among other requirements, this initiative statute would mandate the use of condoms in adult films and require that producers of said films pay for STI testing and vaccinations for their performers.",False
+2016,"November 8, 2016 general election",,State Prescription Drug Purchases. Pricing Standards. This initiative statute prohibits California state agencies from paying more for prescriptions drugs than the United States Department of Veterans Affairs pays.,False
+2016,"November 8, 2016 general election",,Death Penalty. Initiative Statute. Repeals the death penalty and replaces it with life imprisonment without the possibility of parole as the maximum punishment for murder.,False
+2016,"November 8, 2016 general election",,Firearms. Ammunition Sales. Initiative Statute.,True
+2016,"November 8, 2016 general election",,Marijuana Legalization. Initiative Statute. Legalizes marijuana and hemp while imposing cultivation taxes and distribution standards.,True
+2016,"November 8, 2016 general election",,Carry-Out Bags. Charges. Initiative Statute. Redirects revenues from the sale of carry-out bags at grocery stores to environmental projects under the Wildlife Conservation Board.,False
+2016,"November 8, 2016 general election",,Death Penalty. Procedures. Initiative Statute. Limits death penalty appeals and length of time for death penalty review. Invalidates Proposition 62 if passed by a larger proportion of the popular vote.,True
+2016,"November 8, 2016 general election",,"Referendum to Ban Single-Use Plastic Bags. This is a referendum on a law signed by the Governor on September 30, 2014, that would impose a statewide ban on the distribution of single-use plastic bags at grocery stores.",True
+2018,"June 5, 2018 primary",,"California Drought, Water, Parks, Climate, Coastal Protection, and Outdoor Access For All Act of 2018. Authorizes $4 billion in bonds to fund various water, parks and coastal protection projects.",True
+2018,"June 5, 2018 primary",,SB1 Gas Tax appropriations mandate and exempt from expenditures limit. This state constitution amendment ensures that revenues from SB1 Gas Taxes established by the Road Repair and Accountability Act of 2017 can only be used for transportation-related purposes.,True
+2018,"June 5, 2018 primary",,"Greenhouse Gas Reduction Reserve Fund. This state constitution amendment would have created a special fund, effective on January 1, 2024, that will collect the revenue from the California Air Resources Board's cap and trade programs, that were previously established by the Global Warming Solutions Act of 2006. A one-time, two-thirds vote in each chamber of the state legislature would then had been required for them to spend the money collected by this fund on greenhouse gas reduction projects.",False
+2018,"June 5, 2018 primary",,Ballot measures-effective date. This state constitution amendment moves the effective date of passed ballot measures from the day after the election to the fifth day after the secretary of state certifies the results.,True
+2018,"June 5, 2018 primary",,"Property tax: new construction exclusion: rain water capture system. This state constitution amendment excludes rainwater capture systems, completed on or after January 1, 2019, from property tax assessments.",True
+2018,"November 6, 2018 general election",,"Veterans and Affordable Housing Bond Act of 2018. This mandatory proposition, placed by the state legislature and the Governor, will authorize $4 billion in bonds to fund various veterans' home loans and affordable housing programs.",True
+2018,"November 6, 2018 general election",,"No Place Like Home Act of 2018. This mandatory proposition, placed by the state legislature and the Governor, will allow revenue generated by 2004's Proposition 63, the 1 percent tax on incomes above $1 million, be used for $2 billion in bonds for homelessness prevention housing.",True
+2018,"November 6, 2018 general election",,"Authorizes Bonds to Fund Projects for Water Supply and Quality, Watershed, Fish, Wildlife, Water Conveyance, and Groundwater Sustainability and Storage. Initiative Statute. Authorizes $8.877 billion in bonds to fund such infrastructure projects.",False
+2018,"November 6, 2018 general election",,Authorizes $1.5 billion in bonds to funding construction at various hospitals providing children’s health care. Initiative Statute. Authorizes $1.5 billion in bonds to fund grants for construction and improvements at various children's hospitals.,True
+2018,"November 6, 2018 general election",,"Changes Requirements for Certain Property Owners to Transfer Their Property Tax Base to Replacement Property. Initiative Constitutional Amendment and Statute. Will amend 1978's Proposition 13 by allowing homeowners who are over 55 years old or severely disabled to transfer their property tax base from their old home to their new one, regardless of the new residence's property value, location, or their previous transfers.",False
+2018,"November 6, 2018 general election",,Eliminates Recently Enacted Road Repair and Transportation Funding by Repealing Revenues Dedicated for those Purposes. Requires any Measure to Enact Certain Vehicle Fuel Taxes and Vehicle Fees be Submitted to and Approved by the Electorate. Initiative Constitutional Amendment. Repeals the fuel tax increases and vehicle fees under the Road Repair and Accountability Act of 2017. Any future increases would then require a mandatory proposition placed on the ballot.,False
+2018,"November 6, 2018 general election",,"Daylight Savings Time. This mandatory proposition, placed by the state legislature and the Governor, will repeal 1949's Proposition 12, allowing the state legislature to enact permanent daylight saving time, subject to approval by the U.S. Congress.",True
+2018,"November 6, 2018 general election",,"Authorizes State Regulation of Kidney Dialysis Clinics. Limits Charges for Patient Care. Initiative Statute. Among other requirements, mandates that kidney dialysis clinics issue refunds to their patients if their revenue exceeds 115 percent of their costs of direct patient care and health care quality improvements.",False
+2018,"November 6, 2018 general election",,"Expands Local Governments’ Authority to Enact Rent Control on Residential Property. Initiative Statute. Repeals the Costa–Hawkins Rental Housing Act of 1995, lifting its limits on municipal rent control ordinances.",False
+2018,"November 6, 2018 general election",,"Requires Private-Sector Emergency Ambulance Employees to Remain on Call During Work Breaks. Changes Other Conditions of Employment. Initiative Statute. Among other requirements, would require private-sector emergency ambulance employees to remain on call during breaks, be trained in certain emergency situations, and receive paid mental health services from their employers.",True
+2018,"November 6, 2018 general election",,Establishes New Standards for Confinement of Certain Farm Animals; Bans Sale of Certain Non-Complying Products. Initiative Statute. Requires meats and eggs be produced from farm animals that are confined in areas greater than a specific amount of space.,True
+2020,,13,"Public Preschool, K–12, and College Health and Safety Bond Act of 2020. Authorizes the issuance of $15 billion in bonds to finance capital improvements for public and charter schools statewide.",False
+2020,,14,Authorizes state bonds to be issued to the California Institute for Regenerative Medicine to continue stem cell research.,True
+2020,,15,"Schools and Communities First Initiative. Provides new funding for public schools, community colleges, and local government services by raising taxes on large commercial properties.",False
+2020,,16,"Allows government institutions to consider race, sex, or ethnicity in areas of public employment, public contracting, and public education, effectively allowing affirmative action in the public sector.",False
+2020,,17,Allows people who are on parole to vote and run for public office.,True
+2020,,18,Allows 17-year-olds to vote in primary and special elections if they will turn 18 by the subsequent general election.,False
+2020,,19,"Increases the property tax burden on owners of inherited property in favor of providing expanded property tax benefits to homeowners ages 55 years and older, disabled homeowners, and victims of wildfires and natural disasters.",True
+2020,,20,"Adds more crimes to the list of non-violent felonies for which early parole is restricted, and requires DNA collection for certain misdemeanors.",False
+2020,,21,Allow local governments to establish rent control on residential properties that have been occupied for over 15 years and allows landlords who own no more than two homes to exempt themselves from such policies.,False
+2020,,22,"Grants app-based transportation and delivery companies an exception to Assembly Bill 5 by classifying their drivers as ""independent contractors"", rather than ""employees,"" thereby exempting employers from providing certain mandated employee benefits.",True
+2020,,23,"Protect the Lives of Dialysis Patients Act Initiative. Increases regulations in dialysis clinics, requiring on-site physicians during treatment, report data on infections potentially caused by dialyses, seek permission prior to closing a clinic, and strengthening anti-discrimination protections for patients.",False
+2020,,24,"California Privacy Rights Act of 2020. Allows consumers to prevent businesses from sharing their personal data, correct inaccurate personal data, and limit businesses' usage of ""sensitive personal information."" Creates the California Privacy Protection Agency as a dedicated agency to implement and enforce state privacy laws, investigate violations, and assess penalties of violators.",True
+2020,,25,Referendum to overturn a 2018 law that replaced the money bail system with a system based on public safety risk.,False
+2022,,1,Right to Reproductive Freedom Amendment. Adds a reproductive freedom right to the Constitution of California.,True
+2022,,26,Legalizes sports betting at Native American casinos and licensed racetracks in California.,False
+2022,,27,Legalizes online and mobile sports wagering that are only offered by federally recognized Native American tribes and those eligible businesses that contract with them.,False
+2022,,28,Provides additional funding for arts and music education in K–12 public schools.,True
+2022,,29,"Requires on-site licensed medical professionals at kidney dialysis clinics, among others requirements.",False
+2022,,30,Increases taxes on personal incomes over $2 million to fund programs to reduce greenhouse gas emissions.,False
+2022,,31,A referendum on a 2020 law that prohibits the retail sale of certain flavored tobacco products.,True
+2024,,1,"Authorizes the issuance of $6.38 billion in bonds to build mental health treatment facilities, as well as fund housing for veterans and homeless individuals. Shifts about $140 million of annual existing tax revenue for existing mental health, drug, and alcohol treatment care from the counties to the state",True
+2024,,2,Authorizes the issuance of $10 billion in bonds to fund construction and upgrades to public schools and colleges.,True
+2024,,3,"Repeals 2008 California Proposition 8 and declares in the state constitution that the ""right to marry is a fundamental right"", effectively allowing same-sex couples to once again marry.",True
+2024,,32,"Raises the state minimum wage to $18 per hour by 2026, then annually adjusts it for inflation.",False
+2024,,33,"Repeals the Costa–Hawkins Rental Housing Act of 1995, allowing cities to once again establish their own rent controls on single-family dwellings, condominiums, and residential properties completed after February 1, 1995.",False
+2024,,34,"Requires health care providers that have spent over $100 million in any 10-year period on anything other than direct patient care, and operated multifamily housing with over 500 high-severity health and safety violations, to spend 98% of the revenues from federal discount prescription drug program on direct patient care.",True
+2024,,35,"Makes permanent the existing tax on managed health care insurance plans, currently set to expire in 2026. It would also require the revenues generated by the tax to only be used for specified Medi-Cal services, and prohibit the revenue from being used to replace other existing Medi-Cal funding.",True
+2024,,36,"Increases the penalties and sentences for certain drug and theft crimes from being only chargeable as misdemeanors. It would allow, among others, felony charges for possessing fentanyl and other certain drugs, and for thefts under $950, with two prior drug or theft convictions, respectively.",True
+2024,,4,"Authorizes the issuance of $10 billion in bonds to fund various water infrastructure, energy, and environmental protection projects.",True
+2024,,5,Lowers the supermajority vote requirement from 66.67% to 55% for any county or local bond measure that would fund affordable housing projects and public infrastructure.,False
+2024,,6,"Repeal the line in the state constitution saying, ""Involuntary servitude is prohibited except to punish crime"", replacing it with language saying that involuntary servitude is prohibited absolutely.",False

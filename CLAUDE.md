@@ -10,6 +10,10 @@ python3 -I scripts/analyze.py         # data/*.csv -> results/*.csv, results/sum
 python3 -I scripts/build_presidential.py  # data/raw/politics/pres_* -> data/presidential.csv
 python3 -I scripts/build_politics.py  # + gov_leg_*.csv -> data/state_politics.csv, data/measures_politics.csv
 python3 -I scripts/analyze_politics.py    # -> results/politics.json, results/politics_*.csv
+python3 -I scripts/build_population.py    # Census files in data/raw/population -> data/population.csv
+python3 -I scripts/build_votes.py     # votes per capita, margin, engagement -> data/measures_votes.csv
+python3 -I scripts/analyze_hotbuttons.py  # -> results/hotbuttons.json
+python3 -I scripts/build_explorer.py  # -> docs/explorer.html (interactive, data embedded)
 python3 -I scripts/robustness.py      # adversarial checks -> results/robustness.json (slow: bootstrap)
 python3 -I scripts/build_site.py      # results/*.json -> docs/index.html
 ```
@@ -23,7 +27,7 @@ Dependencies: `pip install -r requirements.txt`.
 - `data/raw/wiki/*.html` — Wikipedia state list pages fetched with `scripts/wiki.py` (MediaWiki API). Source of measure-level data for 15 states + DC. Re-fetch to refresh; the parser keys on `wikitable` tables with an `h3` year heading (California 1970–2009 uses bulleted lists).
 - `data/raw/iri_state_year.xls` — IRI initiative counts and approvals by state and year (all initiative states).
 - `data/measures.csv` — one row per measure: state, year, description, origin (`mtype`: initiative / legislative / unknown), topic, domain, passed, yes_pct, wording features.
-- Ballotpedia blocks automated access (403). Do not scrape around it. If full measure-level data for all 50 states is supplied (Ballotpedia export or Matsusaka's IRI database), add a loader in `build_dataset.py` and keep `measures.csv`'s schema.
+- Ballotpedia blocks automated access (403). Do not scrape around it. The same applies to the California Secretary of State's CDN (`elections.cdn.sos.ca.gov` returns 403 to plain requests): **do not spoof a browser User-Agent or otherwise get past a bot block**; the auto-mode classifier denied exactly that. Ask the user first. As a result **California has no vote counts** (`data/raw/ca_votes/todo.csv` is the ready-made input list if access is ever authorised or the user supplies the files; each row can be validated because yes>no must equal `passed`). If full measure-level data for all 50 states is supplied (Ballotpedia export or Matsusaka's IRI database), add a loader in `build_dataset.py` and keep `measures.csv`'s schema.
 
 - `data/raw/politics/pres_1976_2016.tsv` — MIT Election Lab state presidential returns (Harvard Dataverse, doi:10.7910/DVN/42MVDX, v20171015). 2020 and 2024 come from `tonmcg/US_County_Level_Election_Results` county files summed to state.
 - `data/raw/politics/gov_leg_{A,B,C,D}.csv` — governor party and legislative seat counts per state-year (15 states, 1976–2024) from Wikipedia "Political party strength in <State>". **Extracted by four subagents, not by a script**, so the pipeline cannot regenerate them. They passed row-count, chamber-size and 17 known-state-year checks, but are not fully audited. Ties are coded `tie` and counted as a split legislature. DC is excluded from all partisan analysis.
@@ -36,18 +40,29 @@ Dependencies: `pip install -r requirements.txt`.
 - Wording models are logits with state and decade fixed effects, errors clustered by state-election. Model A = all rows; Model B = known-origin rows with an origin control. Report both, and report null results as nulls.
 - Topic labels are keyword rules (`TOPICS` in `build_dataset.py`), roughly 75–80% accurate on a 40-row hand audit. Order of rules matters (first match wins); keep `\b` word boundaries (an earlier `rent\b` matched "current").
 
+## Vote-count metrics (hot-button analysis)
+
+- `votes_cast` = yes + no; `vpc` = votes_cast / state population that year (Census files, `scripts/build_population.py`); `margin` = 100·(yes−no)/(yes+no); `rel_engage` = votes / max votes on that state-year's ballot (ballots with ≥5 measures); `excess` = rel_engage minus its trend with ballot position (`pos`, from the source list order `src_order`).
+- Validation in `build_votes.py`: counts must agree with the stated yes % (Hawaii exempt: blanks count as "no", so its % is of all ballots), and votes must be 5–80% of residents. 26 rows are excluded and logged in `data/raw/excluded_vote_counts.csv`.
+- Raw votes per capita mostly measures election type (≈96% of top-decile measures are presidential-year). Always show the relative versions alongside it.
+- Never derive position or order from a file that has been re-sorted. Ballot position must come from `src_order` (parse order).
+
 ## Partisan-context definitions
 
 - `lean` = Democratic two-party presidential margin (pts) at the last presidential election strictly before the measure's year. `shift4` = lean minus the margin one race earlier (positive = state moved toward Democrats); `shift8` = two races earlier.
 - Models use state and decade fixed effects, so lean/shift are identified within state over time. The raw cross-state pattern (Republican-leaning states pass more) is a between-state difference and vanishes with fixed effects; don't report it as an effect of partisanship.
 - Yes/no is not ideologically signed: averaged over all measures the partisan effects can cancel. The report says so; testing direction needs per-measure ideological coding (not built yet).
-- Partisan results are mostly null. The one signal that survives is governor party on yes share (+2.6 pts; wild cluster bootstrap p≈0.006, 14 states; Bonferroni over ~10 tests ≈0.06); pass/fail odds ratio ≈1.17 is not significant. Report both together. With ~15 clusters never quote ordinary cluster-robust p-values for state-level regressors; use the bootstrap in `robustness.py`.
+- Partisan results are null. Governor party tilts slightly Democratic-higher (pass odds ratio ≈1.14, yes share +1.5 pts, wild bootstrap p≈0.21), none significant. An earlier +2.6 pts / p≈0.006 result was an artifact of Arizona 2010–2024 being dropped by a parser bug; do not resurrect it. With ~15 clusters never quote ordinary cluster-robust p-values for state-level regressors; use the bootstrap in `robustness.py`.
 
 ## Lessons from the adversarial pass
 
 - Wording regexes must use whole-word boundaries and be checked for what they actually match (`amend` once made "expansive" a proxy for "amendment"). Audit token counts after any regex change.
 - Origin comparisons need a within-state version; Oregon dominates the identified referrals.
 - Wikipedia lists omit measures (≥113 initiatives vs IRI). Don't present pooled counts as complete.
+
+- A silent parser skip changed a conclusion (Arizona). After any parser change, count rows per state-year against an independent source (IRI counts) and list skipped tables.
+- Extract regression coefficients by name, not by position (`params.iloc[1]` once returned a dummy variable).
+- Add an automated check wherever two fields should agree (counts vs stated %, passed vs yes>no).
 
 ## Honesty rules for this project
 

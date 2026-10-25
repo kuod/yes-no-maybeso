@@ -34,7 +34,7 @@ def header_cells(table):
         row = []
         for c in cells:
             span = int(c.get("colspan", 1))
-            row += [clean(c.text_content()).lower()] * span
+            row += [re.sub(r"(yes|no)(votes?)", r"\1 \2", clean(c.text_content()).lower())] * span
         labels.append(row)
     if not labels:
         return []
@@ -57,9 +57,9 @@ def colmap(hdr):
             m["desc"] = i
         elif any(k in h for k in ("status", "result", "passed", "outcome")) and "result" not in m:
             m["result"] = i
-        elif re.search(r"\byes\b", h) and "%" not in h and "yes" not in m:
+        elif re.search(r"\byes\b|^yes", h) and "%" not in h and "yes" not in m:
             m["yes"] = i
-        elif re.search(r"\bno\b", h) and "%" not in h and "no" not in m:
+        elif (re.search(r"\bno\b", h) or re.match(r"no\s*votes?$", h)) and "%" not in h and "no" not in m:
             m["no"] = i
         elif "% yes" in h or ("yes" in h and "%" in h):
             m["yespct"] = i
@@ -91,9 +91,12 @@ def parse_page(path, state):
     rows_out = []
     year = None
     section = ""
+    election = ""
     for el in doc.iter("h2", "h3", "h4", "table"):
         if el.tag != "table":
             txt = clean(el.text_content())
+            if re.search(r"(?i)january|february|march|april|may|june|july|august|september|october|november|december", txt) and len(txt) < 40:
+                election = txt
             m = re.search(r"\b(1[89]\d\d|20\d\d)\b", txt)
             if m and len(txt) < 40:
                 year = int(m.group(1))
@@ -104,6 +107,8 @@ def parse_page(path, state):
             continue
         hdr = header_cells(el)
         cm = colmap(hdr)
+        if state == "Arizona" and "yes" not in cm:  # stacked rowspan headers; fixed layout: No., Description, Yes, %, No, %, Type
+            cm = {"name": 0, "desc": 1, "yes": 2, "yespct": 3, "no": 4, "type": 6}
         if "yes" not in cm and "yespct" not in cm and "result" not in cm:
             continue
         for tr in el.findall(".//tr"):
@@ -124,7 +129,7 @@ def parse_page(path, state):
                 passed = yp > 50
             rows_out.append(dict(state=state, year=year, measure=name, description=desc,
                                  passed=passed, yes_votes=yes, no_votes=no, yes_pct=yp,
-                                 raw_type=g("type"), section=section,
+                                 raw_type=g("type"), section=section, election=election,
                                  mtype=classify_type(g("type"), section, name)))
     return rows_out
 
@@ -145,6 +150,7 @@ def parse_list_page(path, state):
         if not m:
             continue
         year = int(m.group())
+        election = clean(h.text_content())
         n = h.getparent().getnext()
         while n is not None and not (n.tag == "div" and "mw-heading" in (n.get("class") or "")):
             if n.tag == "ul":
@@ -156,7 +162,7 @@ def parse_list_page(path, state):
                     title = mm.group(3)
                     out.append(dict(state=state, year=year, measure=mm.group(1), description=title,
                                     passed=mm.group(2) == "Passed", yes_votes=None, no_votes=None, yes_pct=None,
-                                    raw_type="", section="", mtype=classify_ca(title)))
+                                    raw_type="", section="", election=election, mtype=classify_ca(title)))
             n = n.getnext()
     return out
 

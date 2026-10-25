@@ -182,6 +182,46 @@ SD_ = {r["shift_dir"]: r for r in PJ["by_shift_dir"]}; LC_ = {r["lean_cat"]: r f
 OY = {r["term"]: r for r in PJ["ols_yes"]["rows"]}
 CH = PJ["lean_change_1980_2024"]
 
+
+# ---------------- values that used to be hard-coded in prose ----------------
+_mp = pd.read_csv("data/measures_politics.csv"); _mp = _mp[(_mp.state != "District of Columbia") & _mp.gov_party.isin(["D", "R"])]
+_ws = []
+for _s, _g in _mp.groupby("state"):
+    _a, _b = _g[_g.gov_party == "D"], _g[_g.gov_party == "R"]
+    if len(_a) >= 15 and len(_b) >= 15:
+        _ws.append(_a.passed.mean() - _b.passed.mean())
+WS_POS, WS_N, WS_MEAN = int(sum(x > 0 for x in _ws)), len(_ws), 100 * sum(_ws) / len(_ws)
+_xh = _mp[_mp.state != "Hawaii"].groupby("gov_party").passed.mean()
+XHI_D, XHI_R = _xh["D"], _xh["R"]
+M4 = {r["term"]: r for r in PJ["m4"]["rows"]}; M5 = {r["term"]: r for r in PJ["m5"]["rows"]}
+EDU = M4["shift10:C(dom)[education]"]; M5L = M5["lean10"]; N_M5 = PJ["m5"]["n"]
+SM = {r["state"]: r for r in S["by_state"]}
+_cov = pd.read_csv("data/measures.csv").groupby("state").year.agg(["min", "max"])
+
+# ---------------- hot-button section ----------------
+HB = json.load(open("results/hotbuttons.json"))
+QN = ["Fewest voters", "2nd", "Middle", "4th", "Most voters"]
+def qchart(key, label):
+    rows_ = []
+    for nm, r in zip(QN, HB[key]):
+        rows_.append((nm, [(r["mean_margin"], r["margin_lo"], r["margin_hi"], f"{nm}: mean margin {r['mean_margin']:+.1f} pts (95% CI {r['margin_lo']:+.1f} to {r['margin_hi']:+.1f}); {pct(r['pass_rate'])} passed; n={int(r['n'])}")]))
+    return dotrange(rows_, [("Mean margin", B)], -5, 20, ref=0, fmt=lambda v: f"{v:+.0f}", xticks=[0, 5, 10, 15], label_w=130, row_h=24, xlabel=label)
+c_hb1 = qchart("by_vpc_quintile", "Mean margin, points (95% CI): raw votes per capita")
+c_hb2 = qchart("by_rel_quintile", "Mean margin, points (95% CI): engagement vs the same ballot")
+c_hb3 = qchart("by_excess_quintile", "Mean margin, points (95% CI): engagement beyond ballot position")
+def cf(d_, nd=1):
+    return f"{d_['coef']:+.{nd}f} pts (p={d_['p']:.2f})"
+hb_def = pd.DataFrame([
+    dict(a="Raw votes per capita", b=f"{HB['by_vpc_quintile'][4]['mean_margin']:+.1f} vs {HB['by_vpc_quintile'][0]['mean_margin']:+.1f}", c=cf(HB["m_margin_vpc_state_decade"]) + " (state + decade FE)", d="n/a"),
+    dict(a="Engagement vs the same ballot", b=f"{HB['by_rel_quintile'][4]['mean_margin']:+.1f} vs {HB['by_rel_quintile'][0]['mean_margin']:+.1f}", c=cf(HB["m_margin_rel_ballot_fe"]), d=f"{HB['m_pass_rel_ballot_fe']['odds']:.2f} (p={HB['m_pass_rel_ballot_fe']['p']:.2f})"),
+    dict(a="Engagement beyond ballot position", b=f"{HB['by_excess_quintile'][4]['mean_margin']:+.1f} vs {HB['by_excess_quintile'][0]['mean_margin']:+.1f}", c=cf(HB["m_margin_excess_ballot_fe"]), d=f"{HB['m_pass_excess_ballot_fe']['odds']:.2f} (p={HB['m_pass_excess_ballot_fe']['p']:.2f})")])
+t_hbdef = table(hb_def, [("a", "How 'hot' is defined"), ("b", "Mean margin: most vs fewest voters"), ("c", "Within the same ballot: margin per +1 SD of engagement"), ("d", "Odds of passing per +1 SD")])
+hb_top = pd.DataFrame([dict(m=f"{r['state']} {r['year']}" + (f" {r['measure']}" if isinstance(r['measure'], str) and r['measure'] not in ('', 'nan') else ""), d=(r["description"] or "")[:92], mg=r["margin"], v=r["vpc"] * 1000, p="Passed" if r["passed"] else "Failed") for r in HB["top_excess"][:14]])
+t_hbtop = table(hb_top, [("m", "Measure"), ("d", "What it was"), ("mg", "Margin", lambda v: f"{v:+.1f}"), ("v", "Votes per 1,000", lambda v: f"{v:.0f}"), ("p", "Result")])
+hb_dom = pd.DataFrame(HB["by_domain_relative"])
+t_hbdom = table(hb_dom, [("domain", "Topic area"), ("n", "n", int), ("mean_rel", "Engagement vs ballot top", lambda v: pct(v)), ("mean_margin", "Mean margin", lambda v: f"{v:+.1f}"), ("pass_rate", "Passed", lambda v: pct(v, 1))])
+HBV = {r["pres_year"]: r for r in HB["vpc_by_pres_year"]}
+
 # ---------------- text ----------------
 ini = next(r for r in S["type_known"] if r["mtype"] == "initiative")
 leg = next(r for r in S["type_known"] if r["mtype"] == "legislative")
@@ -192,7 +232,7 @@ wr = {r["feature"]: r for r in S["wording_raw"]}
 PAGE = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Yes, No, Maybe So</title>
-<meta name="description" content="Do yeses or nos win more on US state ballot measures, and does wording or topic change the odds? 2,465 measures, 1976–2024.">
+<meta name="description" content="Do yeses or nos win more on US state ballot measures, and does wording or topic change the odds? {H['n']:,} measures, 1976–2024.">
 <style>
 :root{{--bg:#fcfcfb;--panel:#f4f3f0;--ink:#0b0b0b;--ink2:#52514e;--grid:#e3e2dd;--s1:#2a78d6;--s2:#eb6834;--ref:#52514e;color-scheme:light}}
 @media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--s1:#3987e5;--s2:#d95926;--ref:#c3c2b7;color-scheme:dark}}}}
@@ -214,6 +254,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <p class="note">A data project on US state ballot measures, 1976–2024</p>
 <h1>Yes, No, Maybe So</h1>
 <p class="sub">Do voters say yes more than no? Does the way a measure is worded, or what it is about, change the odds?</p>
+<p><a href="explorer.html"><b>Interactive: sort every measure by voters per capita →</b></a></p>
 
 <div class="kpis">
 <div class="kpi"><b>{H['n']:,}</b><span>statewide measures decided, 1976–2024</span></div>
@@ -233,7 +274,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>One wording signal is robust: asking voters to repeal, eliminate or abolish something.</b> Those measures passed {pct(wr['mentions_repeal']['rate_with'])} of the time vs {pct(wr['mentions_repeal']['rate_without'])}, and the effect survives controls for state, decade, topic and length (odds ratio {rep['odds']:.2f}; {repB['odds']:.2f} in the stricter model).</li>
 <li><b>Most other wording features do nothing detectable</b> once state and topic are held fixed: restrictive vs expansive verbs, mentioning taxes or debt, or being a constitutional amendment.</li>
 <li><b>Topic matters, but less than origin.</b> Criminal-justice measures pass most (79%); environment, education, social and tax measures sit near 52–54%.</li>
-<li><b>Partisan climate mostly doesn't move the average yes/no.</b> Presidential lean and a state becoming more Democratic or Republican show no reliable effect once the state is held fixed, and legislative control shows none. The one signal that survives is the governor's party: yes share runs about {RB['gov_D_yes_share']['coef']:.1f} points higher under Democratic governors (bootstrap p={RB['gov_D_yes_share']['wild_bootstrap_p']:.3f}), though the pass/fail odds ratio ({M2['gov_D']['odds']:.2f}) is not significant (<a href="#politics">section 5</a>).</li>
+<li><b>Partisan climate does not reliably move the average yes/no.</b> Presidential lean and a state becoming more Democratic or Republican show no reliable effect once the state is held fixed, and neither does legislative control. Democratic-governor years pass a little more often ({M2['gov_D']['odds']:.2f}× the odds), but that is not statistically distinguishable from zero (<a href="#politics">section 5</a>).</li>
 <li><b>State culture matters a lot.</b> Pass rates range from {pct(st.iloc[0].pass_rate)} (South Dakota) to {pct(st.iloc[-1].pass_rate)} (Hawaii). A state's own track record is a strong predictor of any new measure (p&lt;0.001).</li>
 </ul>
 
@@ -266,7 +307,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 
 <h2>4. Cross-referencing with state history</h2>
 <div class="fig"><h3>How often measures pass, by state</h3>{c_state}{t_state}
-<p class="note">Hawaii, Florida, DC and Wyoming say yes most often. South Dakota, Oregon, Michigan and Colorado say no almost as often as yes. Compare the very different mean-yes figures: Arizona (45%) and South Dakota (47%) skew skeptical.</p></div>
+<p class="note">Hawaii, Florida, DC and Wyoming say yes most often. South Dakota, Oregon, Michigan and Colorado say no almost as often as yes. South Dakota is the most skeptical on vote share (mean yes {SM['South Dakota']['mean_yes_pct']:.0f}%).</p></div>
 <p><b>State history predicts the next result.</b> Using each measure's own state's pass rate from all <i>other</i> measures (leave-one-out) to predict the outcome gives a coefficient of {S['state_baseline']['coef']:.1f} (p&lt;0.001): a state that says yes often keeps saying yes, whatever the wording.</p>
 
 <h3>Sanity check against the official initiative record</h3>
@@ -286,7 +327,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 
 <h3>The raw picture</h3>
 <div class="fig">{c_split}{t_split}</div>
-<p>Raw differences are small and lean one way. Under Democratic governors {pct(G_['D']['pass_rate'], 1)} of measures passed vs {pct(G_['R']['pass_rate'], 1)} under Republicans. Under Democratic legislatures {pct(L_['D']['pass_rate'], 1)} vs {pct(L_['R']['pass_rate'], 1)} (Republican) and {pct(L_['split']['pass_rate'], 1)} (split). Democratic trifectas passed {pct(T_['D trifecta']['pass_rate'], 1)}, Republican trifectas {pct(T_['R trifecta']['pass_rate'], 1)}. The 95% intervals overlap in most comparisons. Part of the governor gap is state composition: Hawaii is mostly Democratic-run and passes 83% of its measures, and without it the gap roughly halves (58.3% vs 55.1% becomes 56.4% vs 54.8%).</p>
+<p>Raw differences are small and lean one way. Under Democratic governors {pct(G_['D']['pass_rate'], 1)} of measures passed vs {pct(G_['R']['pass_rate'], 1)} under Republicans. Under Democratic legislatures {pct(L_['D']['pass_rate'], 1)} vs {pct(L_['R']['pass_rate'], 1)} (Republican) and {pct(L_['split']['pass_rate'], 1)} (split). Democratic trifectas passed {pct(T_['D trifecta']['pass_rate'], 1)}, Republican trifectas {pct(T_['R trifecta']['pass_rate'], 1)}. The 95% intervals overlap in most comparisons. Part of the governor gap is state composition: Hawaii is mostly Democratic-run and passes 83% of its measures, and without it the gap roughly halves ({pct(G_['D']['pass_rate'], 1)} vs {pct(G_['R']['pass_rate'], 1)} becomes {pct(XHI_D, 1)} vs {pct(XHI_R, 1)}).</p>
 <p>Presidential lean points the other way in the raw data: measures in Republican-leaning states (more than 10 points) passed {pct(LC_['R-leaning (>10 pts)']['pass_rate'], 1)}, vs {pct(LC_['D-leaning (>10 pts)']['pass_rate'], 1)} in Democratic-leaning ones. And states that had just moved toward Democrats passed {pct(SD_['toward D (>2 pts)']['pass_rate'], 1)} vs {pct(SD_['toward R (>2 pts)']['pass_rate'], 1)} after moving toward Republicans.</p>
 
 <h3>With controls: mostly no detectable effect</h3>
@@ -295,30 +336,56 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <ul>
 <li><b>A state's presidential lean does not predict yes or no</b> once the state is held fixed (odds ratio {M1['lean10']['odds']:.2f} per 10 points, p={M1['lean10']['p']:.2f}). The raw Republican-state advantage is a difference between states, not an effect of partisanship.</li>
 <li><b>A state becoming more Democratic or more Republican shows no reliable effect</b> (odds ratio {M1['shift10']['odds']:.2f} per 10 points toward Democrats, p={M1['shift10']['p']:.2f}; the 8-year version is similar). The point estimate leans slightly negative, so the raw gap above is not distinguishable from noise.</li>
-<li><b>Governor's party is the most credible partisan signal, and it is modest.</b> Democratic-governor years pass slightly more often, but the pass/fail odds ratio ({M2['gov_D']['odds']:.2f}, CI {M2['gov_D']['lo']:.2f}–{M2['gov_D']['hi']:.2f}, p={M2['gov_D']['p']:.2f}) is not significant. Within states it is directionally consistent: more passes under Democratic governors in 10 of the 12 states with enough data (average +5.6 points), and the odds ratio stays between {RB['gov_D_loo_range'][0]:.2f} and {RB['gov_D_loo_range'][1]:.2f} whichever state is dropped. On vote share, yes runs <b>{RB['gov_D_yes_share']['coef']:+.1f} points higher under Democratic governors</b>. With only {RB['gov_D_yes_share']['clusters']} states contributing vote shares (California has none), ordinary standard errors are unreliable, so I used a wild cluster bootstrap (p={RB['gov_D_yes_share']['wild_bootstrap_p']:.3f}). It is one of roughly ten partisan tests, so a multiple-comparison correction puts it near the margin (Bonferroni ≈0.06). Real but small, and worth replicating.</li>
+<li><b>Governor's party shows a small tilt that is not statistically reliable.</b> Democratic-governor years pass slightly more often, but the pass/fail odds ratio ({M2['gov_D']['odds']:.2f}, CI {M2['gov_D']['lo']:.2f}–{M2['gov_D']['hi']:.2f}, p={M2['gov_D']['p']:.2f}) is not significant, and the odds ratio stays between {RB['gov_D_loo_range'][0]:.2f} and {RB['gov_D_loo_range'][1]:.2f} whichever state is dropped. Within states the direction is mostly the same: more passes under Democratic governors in {WS_POS} of the {WS_N} states with enough data (average {WS_MEAN:+.1f} points), though Arizona and Missouri go the other way. On vote share, yes runs {RB['gov_D_yes_share']['coef']:+.1f} points higher under Democratic governors, but with only {RB['gov_D_yes_share']['clusters']} states contributing vote shares (California has none) ordinary standard errors are unreliable, and a wild cluster bootstrap gives p={RB['gov_D_yes_share']['wild_bootstrap_p']:.2f}. <b>Correction:</b> an earlier version of this report called this effect significant (+2.6 points, p≈0.006). That result was an artifact of a parser bug that had silently dropped Arizona's 2010–2024 measures; with them restored, it disappears.</li>
 <li><b>Legislative control shows nothing</b> (Democratic: {M2['C(leg_cat, Treatment(\'R\'))[T.D]']['odds']:.2f}×, split: {M2['C(leg_cat, Treatment(\'R\'))[T.split]']['odds']:.2f}× vs Republican; both p&gt;0.5).</li>
-<li><b>Does it depend on topic or origin?</b> The one interaction that stands out is that education measures do worse as a state moves toward Democrats (odds ratio 0.68 per 10 points, p=0.03). It is one of twelve interaction terms, so it may be chance. Among initiatives with a known origin there is weak evidence of a lower pass rate in more Democratic states (odds ratio 0.79 per 10 points, p=0.07; n=884), and no clear difference for referrals.</li>
+<li><b>Does it depend on topic or origin?</b> The one interaction that stands out is that education measures do worse as a state moves toward Democrats (odds ratio {EDU['odds']:.2f} per 10 points, p={EDU['p']:.2f}). It is one of twelve interaction terms, so it may be chance. Among initiatives with a known origin there is weak evidence of a lower pass rate in more Democratic states (odds ratio {M5L['odds']:.2f} per 10 points, p={M5L['p']:.2f}; n={N_M5}), and no clear difference for referrals.</li>
 </ul>
 <div class="fig"><h3>Within the same state: after shifts toward Democrats vs toward Republicans</h3>{c_shift}{t_shift}
 <p class="note">Only the 14 states with at least 8 measures in each condition. Pass rates were higher after shifts toward Republicans in 9 of the 14 (average +3.1 points), which a sign test cannot distinguish from a coin flip (p=0.42). Intervals overlap in nearly every state.</p></div>
 <div class="callout"><b>Why the null result isn't surprising.</b> A "yes" vote is not inherently partisan: it can enact a conservative or a liberal policy. If Democratic-leaning electorates say yes to a minimum-wage hike and no to a tax cap while Republican ones do the opposite, the pass rate averaged across all measures cancels out. So these results show that a state's partisan climate does not make voters <i>generally</i> more or less willing to say yes. They say nothing about whether partisanship shapes <i>which</i> measures pass. Testing that needs each measure coded for its ideological direction, which this dataset does not yet have (see next steps).</div>
 
-<h2 id="stress">6. Stress tests: what I tried to break</h2>
+<h2 id="hotbuttons">6. Hot-button issues: do the most-voted measures lean yes or no?</h2>
+<p><a href="explorer.html"><b>Open the interactive Hot-Button Explorer →</b></a> sort every measure by votes per capita, filter by state, topic, origin and era, and see the margin for or against on the y-axis.</p>
+<p>I measured how many voters weighed in on each measure (yes plus no votes) and divided by the state's population that year. Three versions, because the obvious one is misleading:</p>
+<ul>
+<li><b>Raw votes per capita</b> mostly measures <i>which election it was</i>. In presidential years the median is {HBV[True]['median']*1000:.0f} voters per 1,000 residents vs {HBV[False]['median']*1000:.0f} otherwise, and {pct(HB['top_decile_vpc_share_pres_year'])} of the top-decile measures sit in presidential years (they are {pct(HB['share_pres_year'])} of all measures). The highest raw value of all is {HB['top_vpc'][0]['vpc']*1000:.0f} per 1,000 ({HB['top_vpc'][0]['state']}, {HB['top_vpc'][0]['year']}).</li>
+<li><b>Engagement vs the same ballot</b> divides a measure's votes by the most-voted measure on that state-year's ballot (ballots with at least 5 measures), which removes the election effect.</li>
+<li><b>Engagement beyond ballot position</b> additionally removes the small trend with where the measure sits on the ballot.</li>
+</ul>
+<div class="fig"><h3>Does the margin change as more voters weigh in? Mean margin by fifth, three definitions</h3>{c_hb1}{c_hb2}{c_hb3}
+<p class="note">Margin = (yes − no) ÷ (yes + no), in points; positive favors the measure. Hawaii counts blank ballots as "no" for passage. Bars show 95% intervals for the mean.</p></div>
+<h3>Findings</h3>
+{t_hbdef}
+<ul>
+<li><b>There is no reliable slant.</b> The raw and election-adjusted views both lean slightly toward "no" as engagement rises (the most-engaged fifth averages about {HB['by_rel_quintile'][4]['mean_margin']:+.0f} points vs {HB['by_rel_quintile'][0]['mean_margin']:+.0f} for the least-engaged). But comparing measures on the same ballot, the estimate is {HB['m_margin_rel_ballot_fe']['coef']:+.1f} points per standard deviation (p={HB['m_margin_rel_ballot_fe']['p']:.2f}), and it shrinks to {HB['m_margin_excess_ballot_fe']['coef']:+.1f} points (p={HB['m_margin_excess_ballot_fe']['p']:.2f}) once the ballot-position trend is removed; in that version the most-engaged fifth is not lower than the least-engaged ({HB['by_excess_quintile'][4]['mean_margin']:+.1f} vs {HB['by_excess_quintile'][0]['mean_margin']:+.1f}). The apparent direction depends on how "hot" is defined, and no version clears conventional significance.</li>
+<li><b>Hot is not the same as close.</b> More-engaged measures are not detectably more narrowly decided (margin size changes {HB['m_absmargin_excess_ballot_fe']['coef']:+.1f} points per SD, p={HB['m_absmargin_excess_ballot_fe']['p']:.2f}).</li>
+<li><b>Passing odds:</b> within a ballot, more-engaging measures pass slightly less often (odds ratio {HB['m_pass_rel_ballot_fe']['odds']:.2f} per SD, p={HB['m_pass_rel_ballot_fe']['p']:.2f}), a hint of status-quo bias that I would not lean on.</li>
+<li><b>Which topics draw voters?</b> Social-issue measures draw the most voters relative to their ballot, though the spread across topic areas is small (below).</li>
+</ul>
+{t_hbdom}
+<h3>The measures that drew the most voters beyond their ballot position</h3>
+{t_hbtop}
+<p class="note">Ranked by position-adjusted engagement on ballots with at least 5 measures. It includes real hot-button fights (Alaska's 1998 marriage definition, Colorado's 1988 English-language amendment, Washington's 2001 property-tax cap).</p>
+<div class="callout warn"><b>Two caveats specific to this section.</b> <b>California is missing.</b> It has no vote counts in my data: the Secretary of State publishes them as per-election PDFs on a CDN that rejects ordinary automated requests, and I have not pulled them. It holds many of the best-known hot-button measures (Props 13, 187, 209, 8, 64). Everything here covers the other 14 states and DC, {HB['n']:,} measures. <b>Votes per capita is not turnout:</b> the denominator is total resident population, so it understates participation and varies with age structure and non-citizens.</div>
+
+<h2 id="stress">7. Stress tests: what I tried to break</h2>
 <p>After the first version of this report I went looking for ways the headline results could be wrong. What I found and what held up:</p>
 <ul>
 <li><b>A bug in two wording features, now fixed.</b> The "expansive verbs" pattern contained <code>amend</code>, so it fired on nearly every constitutional amendment (correlation with "amendment" 0.62), and "restrictive" matched words like <i>capital</i> and <i>bargaining</i>. After fixing both (correlation now {RB['regex_corr_expansive_amendment']:.2f}), every wording estimate moved by a few hundredths at most and no conclusion changed, but the earlier "restrictive vs expansive" comparison did not measure what it claimed.</li>
 <li><b>The repeal effect holds up.</b> Dropping any one state leaves the odds ratio between {RB['repeal_loo']['min']:.2f} and {RB['repeal_loo']['max']:.2f} (all p&lt;{max(RB['repeal_loo']['max_p'], 0.001):.3f}). It appears in {RB['repeal_loo']['n_states_with_repeal']} states and within each origin: initiatives with repeal language passed {pct(RB['repeal_raw_by_origin']['initiative_1'])} vs {pct(RB['repeal_raw_by_origin']['initiative_0'])} without; referrals {pct(RB['repeal_raw_by_origin']['legislative_1'])} vs {pct(RB['repeal_raw_by_origin']['legislative_0'])}. Caveats: it is only {RB['repeal_loo']['n_repeal']} measures, the word's presence is not the same as the measure's main action, and a repeal measure is also a different policy.</li>
 <li><b>The origin gap is not an Oregon artifact, but the data are lopsided.</b> Oregon supplies {pct(RB['oregon_share_of_legislative'])} of identified legislative referrals, and {pct(RB['origin_share_from_text'])} of all origin labels are inferred from description text. Restricting to the {len(RB['origin_within_state']['states'])} states with at least 10 of each origin ({', '.join(RB['origin_within_state']['states'])}) and comparing within state, referrals still have {RB['origin_within_state']['odds']:.1f}× the odds (CI {RB['origin_within_state']['lo']:.1f}–{RB['origin_within_state']['hi']:.1f}). The direction is reversed or flat in a few small-sample states (Michigan, South Dakota).</li>
-<li><b>The lists are incomplete.</b> Against the IRI's official initiative counts, Wikipedia's lists are short by at least {RB['completeness']['initiatives_missing_lower_bound']} initiatives in {RB['completeness']['state_years_short']} of {RB['completeness']['state_years_checked']} state-years. Most of that is the late-starting windows noted above (Arizona, Missouri, Oklahoma, South Dakota); the rest are unexplained gaps in Montana, Ohio and Oregon (about {RB['completeness']['by_state'].get('Montana', 0) + RB['completeness']['by_state'].get('Ohio', 0) + RB['completeness']['by_state'].get('Oregon', 0)} initiatives). I cannot tell whether missing measures skew toward passes or failures; this is a lower bound only for initiatives, and referrals cannot be checked this way.</li>
+<li><b>The lists are incomplete.</b> Against the IRI's official initiative counts, Wikipedia's lists are short by at least {RB['completeness']['initiatives_missing_lower_bound']} initiatives in {RB['completeness']['state_years_short']} of {RB['completeness']['state_years_checked']} state-years. Most of that is the late-starting windows noted above (Missouri, Oklahoma, South Dakota); the rest are unexplained gaps in Arizona, Montana, Ohio and Oregon (about {sum(RB['completeness']['by_state'].get(k, 0) for k in ('Arizona', 'Montana', 'Ohio', 'Oregon'))} initiatives). I cannot tell whether missing measures skew toward passes or failures; this is a lower bound only for initiatives, and referrals cannot be checked this way.</li>
 <li><b>Partisan results under harsher inference.</b> Clustering by state (15 clusters) instead of by state-election changes none of the logit conclusions. Removing decade fixed effects makes shifts toward Democrats look slightly more negative (odds ratio {RB['politics_no_decade_fe']['shift10']['odds']:.2f}, p={RB['politics_no_decade_fe']['shift10']['p']:.2f}) but still not significant.</li>
+<li><b>A parser bug changed a conclusion.</b> While adding vote counts I found that Arizona's stacked-header tables for 2010–2024 had been silently skipped (57 measures). Restoring them moved the governor-party yes-share effect from +2.6 points (bootstrap p≈0.006, which I had reported as the most credible partisan signal) to {RB['gov_D_yes_share']['coef']:+.1f} points (p={RB['gov_D_yes_share']['wild_bootstrap_p']:.2f}). Other headline results moved by less than a point. Lesson: a result that hinges on a handful of states is only as good as the audit of each state's rows.</li>
+<li><b>Two errors caught in the hot-button analysis before publishing.</b> A helper that returned the wrong regression coefficient (it reported a dummy variable, producing spurious p&lt;0.001 results), and a "ballot position" variable that was accidentally each measure's own engagement rank (correlation −0.76 with engagement; the real correlation is +0.14). Both are fixed; the section 6 numbers use the corrected code.</li>
 <li><b>Not tested:</b> causation; whether Wikipedia's coverage is selective; independent double-extraction of the governor and legislature tables; and ideological direction of each measure. All results are associations in 15 states.</li>
 </ul>
 
 <h2 id="limits">Limits and next steps</h2>
 <ul>
-<li><b>Not all 50 states.</b> Measure-level data cover 15 states and DC; ~24 states allow citizen initiatives but all 50 hold referred measures. Coverage varies: Arizona 1990–2008, Missouri and South Dakota from 2000, Oklahoma from 2004, DC 1979 only. Pooled figures overweight California, Oregon, Colorado and Washington.</li>
-<li><b>Origin unknown for 59% of measures.</b> Pass rates by origin use only identifiable cases, and Oregon supplies nearly half of the identified referrals (section 6). Model B uses only those cases.</li>
-<li><b>Lists are incomplete.</b> At least {RB['completeness']['initiatives_missing_lower_bound']} initiatives from the IRI's official count are absent (section 6), and referral coverage cannot be checked.</li>
+<li><b>Not all 50 states.</b> Measure-level data cover 15 states and DC; ~24 states allow citizen initiatives but all 50 hold referred measures. Coverage varies: Arizona from 1990, Missouri and South Dakota from 2000, Oklahoma from 2004, Montana and Ohio from 1980, DC 1979 only. Pooled figures overweight California, Oregon, Colorado and Washington.</li>
+<li><b>Origin unknown for 59% of measures.</b> Pass rates by origin use only identifiable cases, and Oregon supplies nearly half of the identified referrals (section 7). Model B uses only those cases.</li>
+<li><b>Lists are incomplete.</b> At least {RB['completeness']['initiatives_missing_lower_bound']} initiatives from the IRI's official count are absent (section 7), and referral coverage cannot be checked.</li>
 <li><b>Topic labels are keyword rules</b> (about 75–80% sensible in a hand audit of 40 titles), so topic effects are blurred toward zero.</li>
 <li><b>Wording is measured from summaries, not full ballot language.</b> And "wording" is correlated with substance: a measure to repeal a law is also a different <i>policy</i>, so this is association, not proof that rewording would change outcomes.</li>
 <li><b>Outcomes:</b> passage matches simple majority in 98.3% of rows with vote data; exceptions are legitimate supermajority rules (Florida's 60%, Wyoming).</li>
@@ -327,7 +394,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>Next:</b> add Ballotpedia or IRI measure-level data for all states; add official ballot titles; add a better topic classifier; model state-level covariates (partisanship, signature rules).</li>
 </ul>
 
-<footer>Data: Wikipedia state ballot-measure and party-strength lists (CC BY-SA), IRI state-by-year initiative counts (Matsusaka, USC), MIT Election Data and Science Lab presidential returns 1976-2016, county-level presidential results 2020 and 2024 (tonmcg). Code, data and method: see the repository. Generated by <code>scripts/build_site.py</code> from <code>results/summary.json</code>.</footer>
+<footer>Data: Wikipedia state ballot-measure and party-strength lists (CC BY-SA), IRI state-by-year initiative counts (Matsusaka, USC), MIT Election Data and Science Lab presidential returns 1976-2016, county-level presidential results 2020 and 2024 (tonmcg), Census Bureau state population estimates. Code, data and method: see the repository. Generated by <code>scripts/build_site.py</code> from <code>results/summary.json</code>.</footer>
 </main></body></html>"""
 
 open("docs/index.html", "w").write(PAGE)

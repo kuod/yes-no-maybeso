@@ -129,6 +129,7 @@ def infer_type(df):
 
 def main():
     df = collect()
+    df["src_order"] = df.groupby(["state", "year"]).cumcount()   # position in the source list (ballot order), before any sorting
     df = df[df.year.between(FIRST, LAST) & df.passed.notna()].copy()
     df["passed"] = df.passed.astype(bool)
     df["description"] = df.description.fillna("").str.strip()
@@ -139,7 +140,7 @@ def main():
     df["domain"] = df.topic.map(broad)
     df = features(df)
     df["decade"] = (df.year // 10) * 10
-    cols = ["state", "year", "decade", "measure", "description", "mtype", "topic", "domain", "passed", "yes_votes", "no_votes", "yes_pct",
+    cols = ["state", "year", "election", "src_order", "decade", "measure", "description", "mtype", "topic", "domain", "passed", "yes_votes", "no_votes", "yes_pct",
             "n_words", "flesch", "restrictive", "expansive", "mentions_tax_debt", "is_amendment", "mentions_increase", "mentions_repeal", "has_year_title"]
     os.makedirs("data", exist_ok=True)
     df[cols].sort_values(["state", "year", "measure"]).to_csv("data/measures.csv", index=False)
