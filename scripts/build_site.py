@@ -225,6 +225,16 @@ t_hbdom = table(hb_dom, [("domain", "Topic area"), ("n", "n", int), ("mean_rel",
 HBV = {r["pres_year"]: r for r in HB["vpc_by_pres_year"]}
 
 
+SP = json.load(open("results/spending.json"))
+SPH, SPL = SP["median_split"]["high"], SP["median_split"]["low"]
+sp_tab = pd.DataFrame([
+    dict(a="Rank correlation, spending vs margin", b=f"r = {SP['spearman_margin']['r']:+.2f}", c=f"{SP['spearman_margin']['p']:.2f}", n=SP["n"]),
+    dict(a="Margin per 10x spending (OLS)", b=f"{SP['ols']['coef']:+.1f} pts (CI {SP['ols']['lo']:+.1f} to {SP['ols']['hi']:+.1f})", c=f"{SP['ols']['p']:.2f}", n=SP["n"]),
+    dict(a="Same, with year fixed effects", b=f"{SP['ols_year_fe']['coef']:+.1f} pts (CI {SP['ols_year_fe']['lo']:+.1f} to {SP['ols_year_fe']['hi']:+.1f})", c=f"{SP['ols_year_fe']['p']:.2f}", n=SP["n"]),
+    dict(a="Above-median vs below-median spending: pass rate", b=f"{pct(SPH['pass_rate'])} vs {pct(SPL['pass_rate'])}", c="n/a", n=SP["n"]),
+    dict(a="Yes side outspent vs not: pass rate (side attribution unreliable)", b=f"{pct(SP['side']['yes_outspent_pass'])} vs {pct(SP['side']['other_pass'])}", c=f"{SP['side']['fisher_p']:.2f}", n=SP["side"]["n"])])
+t_sp = table(sp_tab, [("a", "Test"), ("b", "Result"), ("c", "p"), ("n", "n", int)], label="Washington spending results", open_=True)
+
 rh = pd.DataFrame(RH["sensitivity"])
 t_rh = table(rh, [("label", "Specification"), ("n", "Measures", int), ("coef", "Margin per +1 SD engagement", lambda v: f"{v:+.1f}"), ("lo", "95% CI low", lambda v: f"{v:+.1f}"), ("hi", "95% CI high", lambda v: f"{v:+.1f}"), ("p", "p", lambda v: f"{v:.3f}"), ("pass_odds", "Pass odds ratio", lambda v: f"{v:.2f}"), ("pass_p", "p (pass)", lambda v: f"{v:.3f}")], label="The eight specifications", open_=True)
 RHS = {r["label"][:8]: r for r in RH["sensitivity"]}
@@ -279,6 +289,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>Yes wins slightly more than no</b>: {pct(H['pass_rate'])} of measures passed. The average hides a split: legislative referrals passed {pct(leg['pass_rate'])}, citizen initiatives only {pct(ini['pass_rate'])} (about {OR_ORIG:.1f}&times; the odds after controls). For initiatives, no wins more.</li>
 <li><b>Wording: one robust signal.</b> Measures that ask voters to repeal, eliminate or abolish something pass far less often (odds ratio {rep['odds']:.2f}). Verb framing, tax mentions and amendment status show nothing reliable once state and topic are held fixed.</li>
 <li><b>Type matters, but less than origin.</b> Criminal-justice measures pass most (79%); social, economic, environment and education sit around 52&ndash;57%.</li>
+<li><b>Campaign spending (exploratory, Washington only): costlier measures did worse, not reliably.</b> Across {SP['n']} Washington measures, above-median spenders passed {pct(SPH['pass_rate'])} vs {pct(SPL['pass_rate'])}, but the estimate is not significant with year controls and spending data are a lower bound (<a href="#hotbuttons">section 6</a>).</li>
 <li><b>State history matters most.</b> Pass rates run from {pct(st.iloc[0].pass_rate)} (South Dakota) to {pct(st.iloc[-1].pass_rate)} (Hawaii), and a state's record predicts its next result.</li>
 <li><b>Politics: no reliable effect.</b> Presidential lean, a state shifting toward either party, governor's party and legislative control do not move the average yes/no once the state is held fixed. Because a "yes" can be conservative or liberal, this does not rule out partisan effects on <i>which</i> measures pass.</li>
 <li><b>Hot-button issues: a mild, consistent tilt toward "no", not robust.</b> Measures that draw more voters than others on the same ballot have about {abs(RH_BASE['coef']):.1f} points lower margins per SD (negative in all eight specifications, significant in some). The test is underpowered, so this is suggestive, not settled.</li>
@@ -393,6 +404,14 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <h3>The measures that drew the most voters beyond their ballot position</h3>
 {t_hbtop}
 <p class="note">Ranked by position-adjusted engagement on ballots with at least 5 measures. It includes real hot-button fights (Alaska's 1998 marriage definition, Colorado's 1988 English-language amendment, Washington's 2001 property-tax cap).</p>
+<h3>Exploratory: does campaign spending change the trend? (Washington only)</h3>
+<p>The natural follow-up is whether <i>expensive</i> campaigns move yes or no. I could test it for one state only: Washington's Public Disclosure Commission publishes open campaign-finance data. I matched committee spending to {SP['n']} Washington initiatives and referendums ({SP['years'][0]}&ndash;{SP['years'][1]}; ${SP['total_spend']/1e6:.0f}M in total; median ${SP['median_spend']/1e6:.1f}M per measure).</p>
+{t_sp}
+<ul>
+<li><b>Higher-spending measures did worse, but not reliably.</b> Measures above the median spend passed {pct(SPH['pass_rate'])} of the time with a mean margin of {SPH['margin']:+.1f} points, vs {pct(SPL['pass_rate'])} and {SPL['margin']:+.1f} below it. The rank correlation is {SP['spearman_margin']['r']:+.2f} (p={SP['spearman_margin']['p']:.2f}), and with year fixed effects the slope shrinks and the interval spans zero. A plausible reading is that money flows to contested measures (reverse causation), not that spending causes losses.</li>
+<li><b>The side with more money won more often</b> ({pct(SP['side']['yes_outspent_pass'])} vs {pct(SP['side']['other_pass'])}, p={SP['side']['fisher_p']:.2f}), but I would not rely on this. Assigning committees to the yes or no side relied partly on their names.</li>
+</ul>
+<div class="callout warn"><b>Why this is only exploratory.</b> Only about half of the 329 statewide-ballot committees name the measure they work on, either in a data field or in their own name. The unattributed ones hold more money ($179M) than the attributed ones, so every spending figure here is a <b>lower bound</b>, and for/against totals are unreliable. Measures with no matched committee ({SP['n_initref']-SP['n']} of {SP['n_initref']} initiatives and referendums) are left out, not counted as zero. It is one state with a small sample, and spending was not randomly assigned. Answering the question properly needs a per-measure spending source across many states.</div>
 <div class="callout warn"><b>Two caveats specific to this section.</b> <b>California is missing.</b> It has no vote counts in my data: the Secretary of State publishes them as per-election PDFs on a CDN that rejects ordinary automated requests, and I have not pulled them. It holds many of the best-known hot-button measures (Props 13, 187, 209, 8, 64). Everything here covers the other 14 states and DC, {HB['n']:,} measures. <b>Votes per capita is not turnout:</b> the denominator is total resident population, so it understates participation and varies with age structure and non-citizens.</div>
 
 <h2 id="stress">7. Stress tests: what I tried to break</h2>

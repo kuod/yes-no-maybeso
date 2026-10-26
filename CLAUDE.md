@@ -14,6 +14,8 @@ python3 -I scripts/build_population.py    # Census files in data/raw/population 
 python3 -I scripts/build_votes.py     # votes per capita, margin, engagement -> data/measures_votes.csv
 python3 -I scripts/analyze_hotbuttons.py  # -> results/hotbuttons.json
 python3 -I scripts/build_explorer.py  # -> docs/explorer.html (interactive, data embedded)
+python3 -I scripts/build_spending.py   # exploratory WA spending join -> data/measures_spending.csv
+python3 -I scripts/analyze_spending.py   # -> results/spending.json
 python3 -I scripts/robustness_hotbuttons.py  # sensitivity of the hot-button estimate -> results/robustness_hotbuttons.json
 python3 -I scripts/robustness.py      # adversarial checks -> results/robustness.json (slow: bootstrap)
 python3 -I scripts/build_site.py      # results/*.json -> docs/index.html
@@ -49,10 +51,10 @@ Dependencies: `pip install -r requirements.txt`.
 - Raw votes per capita mostly measures election type (≈96% of top-decile measures are presidential-year). Always show the relative versions alongside it.
 - Never derive position or order from a file that has been re-sorted. Ballot position must come from `src_order` (parse order).
 
-## Campaign spending (exploratory, not in the report)
+## Campaign spending (exploratory; short note in report section 6)
 
 - `scripts/build_spending.py` joins Washington PDC open data (`data.wa.gov` dataset `3h9x-7bvm`, committee_category 'Statewide Ballot Measure', 2007+) to WA initiatives/referenda. Only ~half of committees name a measure in `ballot_number` or their name; the unattributed ones hold more money than the attributed ones, so spend is a **lower bound** and the for/against split is unreliable. Transaction-level `ballot_number` tags exist only from 2019. Do not hand-map committees to measures from memory.
-- Exploratory result (n=37): more spending goes with lower margins (Spearman -0.30, p≈0.07; not significant with year fixed effects). Not publishable as a finding. A real answer needs a source keyed by measure (Ballotpedia / National Institute on Money in Politics) for many states.
+- Exploratory result (n=37): more spending goes with lower margins (Spearman -0.30, p≈0.07; not significant with year fixed effects, p≈0.36). Reported only as a labelled exploratory note, never as a finding. A real answer needs a source keyed by measure (Ballotpedia / National Institute on Money in Politics) for many states.
 
 ## Partisan-context definitions
 

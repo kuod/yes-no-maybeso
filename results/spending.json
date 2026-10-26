@@ -1,0 +1,105 @@
+{
+ "n_initref": 45,
+ "n": 37,
+ "n_zero": 5,
+ "median_spend": 1637050.66,
+ "total_spend": 204721236.97,
+ "years": [
+  2007,
+  2024
+ ],
+ "spearman_margin": {
+  "r": -0.30334699739685406,
+  "p": 0.06798135927649697
+ },
+ "median_split": {
+  "low": {
+   "n": 19.0,
+   "pass_rate": 0.6842105263157895,
+   "margin": 9.444829397423126
+  },
+  "high": {
+   "n": 18.0,
+   "pass_rate": 0.5,
+   "margin": -0.4418742456288233
+  }
+ },
+ "ols": {
+  "coef": -4.773382582089264,
+  "p": 0.09783486612360622,
+  "lo": -10.424838671207912,
+  "hi": 0.8780735070293852
+ },
+ "ols_year_fe": {
+  "coef": -3.2779944511555836,
+  "p": 0.36260310265070905,
+  "lo": -10.334933542532031,
+  "hi": 3.778944640220865
+ },
+ "side": {
+  "n": 32,
+  "yes_outspent_n": 13,
+  "yes_outspent_pass": 0.8461538461538461,
+  "other_n": 19,
+  "other_pass": 0.42105263157894735,
+  "fisher_p": 0.02775004202967641
+ },
+ "top": [
+  {
+   "year": 2018,
+   "measure": "Initiative Measure 1631",
+   "spend": 47980340.02,
+   "yes_pct": 43.44,
+   "passed": false
+  },
+  {
+   "year": 2013,
+   "measure": "Initiative Measure 522",
+   "spend": 45125431.50000001,
+   "yes_pct": 48.91,
+   "passed": false
+  },
+  {
+   "year": 2024,
+   "measure": "Initiative 2117",
+   "spend": 17436971.71,
+   "yes_pct": 38.05,
+   "passed": false
+  },
+  {
+   "year": 2012,
+   "measure": "Referendum Measure 74",
+   "spend": 16698179.91,
+   "yes_pct": 53.7,
+   "passed": true
+  },
+  {
+   "year": 2024,
+   "measure": "Initiative 2124",
+   "spend": 13995901.52,
+   "yes_pct": 44.54,
+   "passed": false
+  },
+  {
+   "year": 2024,
+   "measure": "Initiative 2066",
+   "spend": 10593988.48,
+   "yes_pct": 51.71,
+   "passed": true
+  },
+  {
+   "year": 2012,
+   "measure": "Initiative Measure 502",
+   "spend": 6175640.86,
+   "yes_pct": 55.7,
+   "passed": true
+  },
+  {
+   "year": 2014,
+   "measure": "Initiative Measure 1351",
+   "spend": 5323414.64,
+   "yes_pct": 50.96,
+   "passed": true
+  }
+ ]
+}
