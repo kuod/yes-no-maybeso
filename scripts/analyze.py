@@ -18,9 +18,18 @@ def wilson(k, n, z=1.96):
     c = (p + z*z/(2*n)) / den; h = z*np.sqrt(p*(1-p)/n + z*z/(4*n*n)) / den
     return (c-h, c+h)
 
+def yes_ci(g):
+    """Mean yes share (%) with a t-based 95% interval; NaN when fewer than 3 measures have a share."""
+    y = g.yes_pct.dropna(); n = len(y)
+    if n < 3:
+        return dict(mean_yes_pct=y.mean() if n else float("nan"), yes_lo=float("nan"), yes_hi=float("nan"), yes_n=n)
+    h = stats.t.ppf(0.975, n - 1) * y.std(ddof=1) / n ** 0.5
+    return dict(mean_yes_pct=y.mean(), yes_lo=y.mean() - h, yes_hi=y.mean() + h, yes_n=n)
+
+
 def rate(g):
     n = len(g); k = int(g.passed.sum()); lo, hi = wilson(k, n)
-    return pd.Series(dict(n=n, passed=k, pass_rate=k/n, lo=lo, hi=hi, mean_yes_pct=g.yes_pct.mean()))
+    return pd.Series(dict(n=n, passed=k, pass_rate=k/n, lo=lo, hi=hi, **yes_ci(g)))
 
 d_bool = d[BOOL].copy()  # keep boolean views for the groupby tables; cast copies for model fitting
 # 1. headline

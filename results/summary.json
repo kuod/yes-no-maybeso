@@ -21,7 +21,10 @@
    "pass_rate": 0.8349,
    "lo": 0.754,
    "hi": 0.8929,
-   "mean_yes_pct": 59.0278
+   "mean_yes_pct": 59.0278,
+   "yes_lo": 56.6645,
+   "yes_hi": 61.3911,
+   "yes_n": 109.0
   },
   {
    "state": "Florida",
@@ -30,7 +33,10 @@
    "pass_rate": 0.7056,
    "lo": 0.6352,
    "hi": 0.7673,
-   "mean_yes_pct": 61.784
+   "mean_yes_pct": 61.784,
+   "yes_lo": 59.705,
+   "yes_hi": 63.8629,
+   "yes_n": 177.0
   },
   {
    "state": "District of Columbia",
@@ -39,7 +45,10 @@
    "pass_rate": 0.697,
    "lo": 0.5266,
    "hi": 0.8262,
-   "mean_yes_pct": 60.6933
+   "mean_yes_pct": 60.6933,
+   "yes_lo": 53.8563,
+   "yes_hi": 67.5303,
+   "yes_n": 33.0
   },
   {
    "state": "Wyoming",
@@ -48,7 +57,10 @@
    "pass_rate": 0.6719,
    "lo": 0.55,
    "hi": 0.7743,
-   "mean_yes_pct": 62.5595
+   "mean_yes_pct": 62.5595,
+   "yes_lo": 58.6559,
+   "yes_hi": 66.4632,
+   "yes_n": 62.0
   },
   {
    "state": "Missouri",
@@ -57,7 +69,10 @@
    "pass_rate": 0.6234,
    "lo": 0.5117,
    "hi": 0.7233,
-   "mean_yes_pct": 55.0447
+   "mean_yes_pct": 55.0447,
+   "yes_lo": 51.5958,
+   "yes_hi": 58.4935,
+   "yes_n": 77.0
   },
   {
    "state": "Oklahoma",
@@ -66,7 +81,10 @@
    "pass_rate": 0.619,
    "lo": 0.4088,
    "hi": 0.7925,
-   "mean_yes_pct": 55.3352
+   "mean_yes_pct": 55.3352,
+   "yes_lo": 48.2772,
+   "yes_hi": 62.3932,
+   "yes_n": 21.0
   },
   {
    "state": "Alaska",
@@ -75,7 +93,10 @@
    "pass_rate": 0.6058,
    "lo": 0.5222,
    "hi": 0.6837,
-   "mean_yes_pct": 52.3915
+   "mean_yes_pct": 52.3915,
+   "yes_lo": 50.0483,
+   "yes_hi": 54.7348,
+   "yes_n": 137.0
   },
   {
    "state": "Washington",
@@ -84,7 +105,10 @@
    "pass_rate": 0.5837,
    "lo": 0.516,
    "hi": 0.6485,
-   "mean_yes_pct": 53.1489
+   "mean_yes_pct": 53.1489,
+   "yes_lo": 51.3135,
+   "yes_hi": 54.9842,
+   "yes_n": 209.0
   },
   {
    "state": "Montana",
@@ -93,7 +117,10 @@
    "pass_rate": 0.5833,
    "lo": 0.4939,
    "hi": 0.6676,
-   "mean_yes_pct": 52.9401
+   "mean_yes_pct": 52.9401,
+   "yes_lo": 50.223,
+   "yes_hi": 55.6572,
+   "yes_n": 120.0
   },
   {
    "state": "California",
@@ -102,7 +129,10 @@
    "pass_rate": 0.5775,
    "lo": 0.5355,
    "hi": 0.6184,
-   "mean_yes_pct": NaN
+   "mean_yes_pct": NaN,
+   "yes_lo": NaN,
+   "yes_hi": NaN,
+   "yes_n": 0.0
   },
   {
    "state": "Arizona",
@@ -111,7 +141,10 @@
    "pass_rate": 0.5367,
    "lo": 0.4633,
    "hi": 0.6086,
-   "mean_yes_pct": 50.3398
+   "mean_yes_pct": 50.3398,
+   "yes_lo": 48.1447,
+   "yes_hi": 52.5349,
+   "yes_n": 177.0
   },
   {
    "state": "Ohio",
@@ -120,7 +153,10 @@
    "pass_rate": 0.5301,
    "lo": 0.4238,
    "hi": 0.6338,
-   "mean_yes_pct": 51.9052
+   "mean_yes_pct": 51.9052,
+   "yes_lo": 48.2071,
+   "yes_hi": 55.6032,
+   "yes_n": 83.0
   },
   {
    "state": "Colorado",
@@ -129,7 +165,10 @@
    "pass_rate": 0.4878,
    "lo": 0.426,
    "hi": 0.55,
-   "mean_yes_pct": 49.2625
+   "mean_yes_pct": 49.2625,
+   "yes_lo": 47.3684,
+   "yes_hi": 51.1565,
+   "yes_n": 246.0
   },
   {
    "state": "Michigan",
@@ -138,7 +177,10 @@
    "pass_rate": 0.4796,
    "lo": 0.3833,
    "hi": 0.5774,
-   "mean_yes_pct": 50.3078
+   "mean_yes_pct": 50.3078,
+   "yes_lo": 46.86,
+   "yes_hi": 53.7556,
+   "yes_n": 98.0
   },
   {
    "state": "Oregon",
@@ -147,7 +189,10 @@
    "pass_rate": 0.4785,
    "lo": 0.4266,
    "hi": 0.5309,
-   "mean_yes_pct": 51.1913
+   "mean_yes_pct": 51.1913,
+   "yes_lo": 49.4884,
+   "yes_hi": 52.8942,
+   "yes_n": 348.0
   },
   {
    "state": "South Dakota",
@@ -156,7 +201,10 @@
    "pass_rate": 0.4026,
    "lo": 0.3002,
    "hi": 0.5142,
-   "mean_yes_pct": 46.6878
+   "mean_yes_pct": 46.6878,
+   "yes_lo": 43.3383,
+   "yes_hi": 50.0373,
+   "yes_n": 77.0
   }
  ],
  "by_decade": [
@@ -167,7 +215,10 @@
    "pass_rate": 0.6292,
    "lo": 0.5834,
    "hi": 0.6728,
-   "mean_yes_pct": 54.6958
+   "mean_yes_pct": 54.6958,
+   "yes_lo": 52.8511,
+   "yes_hi": 56.5406,
+   "yes_n": 306.0
   },
   {
    "decade": 1970,
@@ -176,7 +227,10 @@
    "pass_rate": 0.6281,
    "lo": 0.5706,
    "hi": 0.6821,
-   "mean_yes_pct": 54.7814
+   "mean_yes_pct": 54.7814,
+   "yes_lo": 52.6095,
+   "yes_hi": 56.9532,
+   "yes_n": 229.0
   },
   {
    "decade": 2020,
@@ -185,7 +239,10 @@
    "pass_rate": 0.5795,
    "lo": 0.5093,
    "hi": 0.6466,
-   "mean_yes_pct": 54.4166
+   "mean_yes_pct": 54.4166,
+   "yes_lo": 52.4616,
+   "yes_hi": 56.3716,
+   "yes_n": 164.0
   },
   {
    "decade": 2010,
@@ -194,7 +251,10 @@
    "pass_rate": 0.5563,
    "lo": 0.5089,
    "hi": 0.6028,
-   "mean_yes_pct": 53.0923
+   "mean_yes_pct": 53.0923,
+   "yes_lo": 51.5345,
+   "yes_hi": 54.6501,
+   "yes_n": 357.0
   },
   {
    "decade": 2000,
@@ -203,7 +263,10 @@
    "pass_rate": 0.5374,
    "lo": 0.497,
    "hi": 0.5773,
-   "mean_yes_pct": 52.1988
+   "mean_yes_pct": 52.1988,
+   "yes_lo": 50.8133,
+   "yes_hi": 53.5844,
+   "yes_n": 473.0
   },
   {
    "decade": 1990,
@@ -212,7 +275,10 @@
    "pass_rate": 0.5352,
    "lo": 0.4946,
    "hi": 0.5753,
-   "mean_yes_pct": 51.9478
+   "mean_yes_pct": 51.9478,
+   "yes_lo": 50.4515,
+   "yes_hi": 53.4442,
+   "yes_n": 445.0
   }
  ],
  "by_domain": [
@@ -223,7 +289,10 @@
    "pass_rate": 0.6298,
    "lo": 0.5664,
    "hi": 0.689,
-   "mean_yes_pct": 55.3455
+   "mean_yes_pct": 55.3455,
+   "yes_lo": 53.0441,
+   "yes_hi": 57.6469,
+   "yes_n": 201.0
   },
   {
    "domain": "social",
@@ -232,7 +301,10 @@
    "pass_rate": 0.6148,
    "lo": 0.5731,
    "hi": 0.6549,
-   "mean_yes_pct": 55.0434
+   "mean_yes_pct": 55.0434,
+   "yes_lo": 53.6508,
+   "yes_hi": 56.4361,
+   "yes_n": 441.0
   },
   {
    "domain": "political process",
@@ -241,7 +313,10 @@
    "pass_rate": 0.5601,
    "lo": 0.5198,
    "hi": 0.5996,
-   "mean_yes_pct": 52.718
+   "mean_yes_pct": 52.718,
+   "yes_lo": 51.3214,
+   "yes_hi": 54.1145,
+   "yes_n": 486.0
   },
   {
    "domain": "economic",
@@ -250,7 +325,10 @@
    "pass_rate": 0.5513,
    "lo": 0.5151,
    "hi": 0.587,
-   "mean_yes_pct": 52.8801
+   "mean_yes_pct": 52.8801,
+   "yes_lo": 51.5366,
+   "yes_hi": 54.2235,
+   "yes_n": 533.0
   },
   {
    "domain": "education",
@@ -259,7 +337,10 @@
    "pass_rate": 0.5339,
    "lo": 0.4681,
    "hi": 0.5986,
-   "mean_yes_pct": 50.0343
+   "mean_yes_pct": 50.0343,
+   "yes_lo": 47.8208,
+   "yes_hi": 52.2477,
+   "yes_n": 169.0
   },
   {
    "domain": "environment",
@@ -268,7 +349,10 @@
    "pass_rate": 0.5147,
    "lo": 0.4465,
    "hi": 0.5824,
-   "mean_yes_pct": 50.7399
+   "mean_yes_pct": 50.7399,
+   "yes_lo": 48.1672,
+   "yes_hi": 53.3126,
+   "yes_n": 144.0
   }
  ],
  "by_topic": [
@@ -279,7 +363,10 @@
    "pass_rate": 0.7904,
    "lo": 0.7225,
    "hi": 0.8453,
-   "mean_yes_pct": 62.8415
+   "mean_yes_pct": 62.8415,
+   "yes_lo": 60.198,
+   "yes_hi": 65.485,
+   "yes_n": 125.0
   },
   {
    "topic": "transportation & infrastructure",
@@ -288,7 +375,10 @@
    "pass_rate": 0.7143,
    "lo": 0.5294,
    "hi": 0.8475,
-   "mean_yes_pct": 56.4091
+   "mean_yes_pct": 56.4091,
+   "yes_lo": 51.0433,
+   "yes_hi": 61.7749,
+   "yes_n": 23.0
   },
   {
    "topic": "other",
@@ -297,7 +387,10 @@
    "pass_rate": 0.6298,
    "lo": 0.5664,
    "hi": 0.689,
-   "mean_yes_pct": 55.3455
+   "mean_yes_pct": 55.3455,
+   "yes_lo": 53.0441,
+   "yes_hi": 57.6469,
+   "yes_n": 201.0
   },
   {
    "topic": "elections & government",
@@ -306,7 +399,10 @@
    "pass_rate": 0.5601,
    "lo": 0.5198,
    "hi": 0.5996,
-   "mean_yes_pct": 52.718
+   "mean_yes_pct": 52.718,
+   "yes_lo": 51.3214,
+   "yes_hi": 54.1145,
+   "yes_n": 486.0
   },
   {
    "topic": "health & welfare",
@@ -315,7 +411,10 @@
    "pass_rate": 0.5467,
    "lo": 0.4814,
    "hi": 0.6104,
-   "mean_yes_pct": 54.7533
+   "mean_yes_pct": 54.7533,
+   "yes_lo": 52.2901,
+   "yes_hi": 57.2165,
+   "yes_n": 154.0
   },
   {
    "topic": "taxes & budget",
@@ -324,7 +423,10 @@
    "pass_rate": 0.5439,
    "lo": 0.4991,
    "hi": 0.5881,
-   "mean_yes_pct": 51.8417
+   "mean_yes_pct": 51.8417,
+   "yes_lo": 50.1693,
+   "yes_hi": 53.5142,
+   "yes_n": 356.0
   },
   {
    "topic": "social",
@@ -333,7 +435,10 @@
    "pass_rate": 0.5362,
    "lo": 0.4855,
    "hi": 0.5862,
-   "mean_yes_pct": 51.9588
+   "mean_yes_pct": 51.9588,
+   "yes_lo": 50.4418,
+   "yes_hi": 53.4757,
+   "yes_n": 316.0
   },
   {
    "topic": "education",
@@ -342,7 +447,10 @@
    "pass_rate": 0.5339,
    "lo": 0.4681,
    "hi": 0.5986,
-   "mean_yes_pct": 50.0343
+   "mean_yes_pct": 50.0343,
+   "yes_lo": 47.8208,
+   "yes_hi": 52.2477,
+   "yes_n": 169.0
   },
   {
    "topic": "environment & resources",
@@ -351,7 +459,10 @@
    "pass_rate": 0.5147,
    "lo": 0.4465,
    "hi": 0.5824,
-   "mean_yes_pct": 50.7399
+   "mean_yes_pct": 50.7399,
+   "yes_lo": 48.1672,
+   "yes_hi": 53.3126,
+   "yes_n": 144.0
   }
  ],
  "by_mtype": [
@@ -362,7 +473,10 @@
    "pass_rate": 0.6271,
    "lo": 0.5756,
    "hi": 0.6759,
-   "mean_yes_pct": 54.9597
+   "mean_yes_pct": 54.9597,
+   "yes_lo": 53.2462,
+   "yes_hi": 56.6731,
+   "yes_n": 326.0
   },
   {
    "mtype": "unknown",
@@ -371,7 +485,10 @@
    "pass_rate": 0.6054,
    "lo": 0.5803,
    "hi": 0.6299,
-   "mean_yes_pct": 54.1039
+   "mean_yes_pct": 54.1039,
+   "yes_lo": 53.1439,
+   "yes_hi": 55.0639,
+   "yes_n": 1100.0
   },
   {
    "mtype": "initiative",
@@ -380,7 +497,10 @@
    "pass_rate": 0.4627,
    "lo": 0.4256,
    "hi": 0.5002,
-   "mean_yes_pct": 50.2478
+   "mean_yes_pct": 50.2478,
+   "yes_lo": 49.0954,
+   "yes_hi": 51.4002,
+   "yes_n": 548.0
   }
  ],
  "wording_raw": [
@@ -456,7 +576,10 @@
    "pass_rate": 0.5559,
    "lo": 0.5173,
    "hi": 0.5938,
-   "mean_yes_pct": 51.6528
+   "mean_yes_pct": 51.6528,
+   "yes_lo": 49.7324,
+   "yes_hi": 53.5732,
+   "yes_n": 298.0
   },
   {
    "len_bin": "short-mid",
@@ -465,7 +588,10 @@
    "pass_rate": 0.5432,
    "lo": 0.5057,
    "hi": 0.5802,
-   "mean_yes_pct": 52.443
+   "mean_yes_pct": 52.443,
+   "yes_lo": 51.1655,
+   "yes_hi": 53.7205,
+   "yes_n": 591.0
   },
   {
    "len_bin": "long-mid",
@@ -474,7 +600,10 @@
    "pass_rate": 0.5757,
    "lo": 0.5347,
    "hi": 0.6157,
-   "mean_yes_pct": 54.0782
+   "mean_yes_pct": 54.0782,
+   "yes_lo": 52.8,
+   "yes_hi": 55.3565,
+   "yes_n": 538.0
   },
   {
    "len_bin": "longest 25%",
@@ -483,7 +612,10 @@
    "pass_rate": 0.6077,
    "lo": 0.5689,
    "hi": 0.6451,
-   "mean_yes_pct": 53.9059
+   "mean_yes_pct": 53.9059,
+   "yes_lo": 52.6416,
+   "yes_hi": 55.1702,
+   "yes_n": 547.0
   }
  ],
  "len_vs_yespct": {
@@ -700,7 +832,10 @@
    "pass_rate": 0.4627,
    "lo": 0.4256,
    "hi": 0.5002,
-   "mean_yes_pct": 50.2478
+   "mean_yes_pct": 50.2478,
+   "yes_lo": 49.0954,
+   "yes_hi": 51.4002,
+   "yes_n": 548.0
   },
   {
    "mtype": "legislative",
@@ -709,7 +844,10 @@
    "pass_rate": 0.6271,
    "lo": 0.5756,
    "hi": 0.6759,
-   "mean_yes_pct": 54.9597
+   "mean_yes_pct": 54.9597,
+   "yes_lo": 53.2462,
+   "yes_hi": 56.6731,
+   "yes_n": 326.0
   }
  ],
  "type_chi2_p": 7.040188235945898e-07,
@@ -722,7 +860,10 @@
    "pass_rate": 0.4127,
    "lo": 0.3449,
    "hi": 0.4839,
-   "mean_yes_pct": 49.4538
+   "mean_yes_pct": 49.4538,
+   "yes_lo": 46.9958,
+   "yes_hi": 51.9117,
+   "yes_n": 144.0
   },
   {
    "domain": "economic",
@@ -732,7 +873,10 @@
    "pass_rate": 0.6354,
    "lo": 0.5357,
    "hi": 0.7248,
-   "mean_yes_pct": 55.2808
+   "mean_yes_pct": 55.2808,
+   "yes_lo": 51.9623,
+   "yes_hi": 58.5993,
+   "yes_n": 85.0
   },
   {
    "domain": "education",
@@ -742,7 +886,10 @@
    "pass_rate": 0.4167,
    "lo": 0.2885,
    "hi": 0.5572,
-   "mean_yes_pct": 46.3686
+   "mean_yes_pct": 46.3686,
+   "yes_lo": 41.2669,
+   "yes_hi": 51.4703,
+   "yes_n": 36.0
   },
   {
    "domain": "education",
@@ -752,7 +899,10 @@
    "pass_rate": 0.5758,
    "lo": 0.4081,
    "hi": 0.7276,
-   "mean_yes_pct": 49.3612
+   "mean_yes_pct": 49.3612,
+   "yes_lo": 43.4648,
+   "yes_hi": 55.2577,
+   "yes_n": 32.0
   },
   {
    "domain": "environment",
@@ -762,7 +912,10 @@
    "pass_rate": 0.3846,
    "lo": 0.2759,
    "hi": 0.5062,
-   "mean_yes_pct": 45.4595
+   "mean_yes_pct": 45.4595,
+   "yes_lo": 42.0138,
+   "yes_hi": 48.9051,
+   "yes_n": 57.0
   },
   {
    "domain": "environment",
@@ -772,7 +925,10 @@
    "pass_rate": 0.4737,
    "lo": 0.2733,
    "hi": 0.6829,
-   "mean_yes_pct": 48.2356
+   "mean_yes_pct": 48.2356,
+   "yes_lo": 39.7551,
+   "yes_hi": 56.716,
+   "yes_n": 18.0
   },
   {
    "domain": "other",
@@ -782,7 +938,10 @@
    "pass_rate": 0.4737,
    "lo": 0.3248,
    "hi": 0.6274,
-   "mean_yes_pct": 52.585
+   "mean_yes_pct": 52.585,
+   "yes_lo": 47.6977,
+   "yes_hi": 57.4723,
+   "yes_n": 38.0
   },
   {
    "domain": "other",
@@ -792,7 +951,10 @@
    "pass_rate": 0.8095,
    "lo": 0.6,
    "hi": 0.9233,
-   "mean_yes_pct": 63.311
+   "mean_yes_pct": 63.311,
+   "yes_lo": 56.3624,
+   "yes_hi": 70.2595,
+   "yes_n": 21.0
   },
   {
    "domain": "political process",
@@ -802,7 +964,10 @@
    "pass_rate": 0.5159,
    "lo": 0.4294,
    "hi": 0.6014,
-   "mean_yes_pct": 53.2872
+   "mean_yes_pct": 53.2872,
+   "yes_lo": 50.5892,
+   "yes_hi": 55.9853,
+   "yes_n": 90.0
   },
   {
    "domain": "political process",
@@ -812,7 +977,10 @@
    "pass_rate": 0.5882,
    "lo": 0.5042,
    "hi": 0.6674,
-   "mean_yes_pct": 53.8457
+   "mean_yes_pct": 53.8457,
+   "yes_lo": 51.0801,
+   "yes_hi": 56.6113,
+   "yes_n": 123.0
   },
   {
    "domain": "social",
@@ -822,7 +990,10 @@
    "pass_rate": 0.5069,
    "lo": 0.4409,
    "hi": 0.5727,
-   "mean_yes_pct": 51.147
+   "mean_yes_pct": 51.147,
+   "yes_lo": 49.3427,
+   "yes_hi": 52.9514,
+   "yes_n": 183.0
   },
   {
    "domain": "social",
@@ -832,7 +1003,10 @@
    "pass_rate": 0.7347,
    "lo": 0.5974,
    "hi": 0.8379,
-   "mean_yes_pct": 59.9496
+   "mean_yes_pct": 59.9496,
+   "yes_lo": 55.9141,
+   "yes_hi": 63.9851,
+   "yes_n": 47.0
   }
  ],
  "iri_state": [
@@ -1139,7 +1313,10 @@
    "pass_rate": 0.5253,
    "lo": 0.4278,
    "hi": 0.6208,
-   "mean_yes_pct": 50.0112
+   "mean_yes_pct": 50.0112,
+   "yes_lo": 45.9283,
+   "yes_hi": 54.094,
+   "yes_n": 68.0
   },
   {
    "year": 1977,
@@ -1148,7 +1325,10 @@
    "pass_rate": 0.6,
    "lo": 0.3575,
    "hi": 0.8018,
-   "mean_yes_pct": 50.5973
+   "mean_yes_pct": 50.5973,
+   "yes_lo": 43.2921,
+   "yes_hi": 57.9026,
+   "yes_n": 15.0
   },
   {
    "year": 1978,
@@ -1157,7 +1337,10 @@
    "pass_rate": 0.6719,
    "lo": 0.5866,
    "hi": 0.7472,
-   "mean_yes_pct": 56.3043
+   "mean_yes_pct": 56.3043,
+   "yes_lo": 53.2888,
+   "yes_hi": 59.3198,
+   "yes_n": 107.0
   },
   {
    "year": 1979,
@@ -1166,7 +1349,10 @@
    "pass_rate": 0.7442,
    "lo": 0.5976,
    "hi": 0.8507,
-   "mean_yes_pct": 60.5295
+   "mean_yes_pct": 60.5295,
+   "yes_lo": 54.6863,
+   "yes_hi": 66.3726,
+   "yes_n": 39.0
   },
   {
    "year": 1980,
@@ -1175,7 +1361,10 @@
    "pass_rate": 0.5625,
    "lo": 0.4534,
    "hi": 0.6659,
-   "mean_yes_pct": 51.7602
+   "mean_yes_pct": 51.7602,
+   "yes_lo": 47.6325,
+   "yes_hi": 55.8878,
+   "yes_n": 58.0
   },
   {
    "year": 1981,
@@ -1184,7 +1373,10 @@
    "pass_rate": 0.5,
    "lo": 0.2152,
    "hi": 0.7848,
-   "mean_yes_pct": 49.12
+   "mean_yes_pct": 49.12,
+   "yes_lo": 33.6456,
+   "yes_hi": 64.5944,
+   "yes_n": 8.0
   },
   {
    "year": 1982,
@@ -1193,7 +1385,10 @@
    "pass_rate": 0.4819,
    "lo": 0.3776,
    "hi": 0.5878,
-   "mean_yes_pct": 48.58
+   "mean_yes_pct": 48.58,
+   "yes_lo": 44.3565,
+   "yes_hi": 52.8035,
+   "yes_n": 56.0
   },
   {
    "year": 1983,
@@ -1202,7 +1397,10 @@
    "pass_rate": 0.2857,
    "lo": 0.0822,
    "hi": 0.6411,
-   "mean_yes_pct": 48.52
+   "mean_yes_pct": 48.52,
+   "yes_lo": 35.7181,
+   "yes_hi": 61.3219,
+   "yes_n": 7.0
   },
   {
    "year": 1984,
@@ -1211,7 +1409,10 @@
    "pass_rate": 0.7286,
    "lo": 0.6146,
    "hi": 0.8188,
-   "mean_yes_pct": 59.1884
+   "mean_yes_pct": 59.1884,
+   "yes_lo": 55.188,
+   "yes_hi": 63.1889,
+   "yes_n": 45.0
   },
   {
    "year": 1985,
@@ -1220,7 +1421,10 @@
    "pass_rate": 0.5,
    "lo": 0.1876,
    "hi": 0.8124,
-   "mean_yes_pct": 51.93
+   "mean_yes_pct": 51.93,
+   "yes_lo": 31.8088,
+   "yes_hi": 72.0512,
+   "yes_n": 6.0
   },
   {
    "year": 1986,
@@ -1229,7 +1433,10 @@
    "pass_rate": 0.6747,
    "lo": 0.5681,
    "hi": 0.7658,
-   "mean_yes_pct": 56.2336
+   "mean_yes_pct": 56.2336,
+   "yes_lo": 52.1534,
+   "yes_hi": 60.3138,
+   "yes_n": 59.0
   },
   {
    "year": 1987,
@@ -1238,7 +1445,10 @@
    "pass_rate": 0.4545,
    "lo": 0.2127,
    "hi": 0.7199,
-   "mean_yes_pct": 49.2664
+   "mean_yes_pct": 49.2664,
+   "yes_lo": 36.7462,
+   "yes_hi": 61.7865,
+   "yes_n": 11.0
   },
   {
    "year": 1988,
@@ -1247,7 +1457,10 @@
    "pass_rate": 0.7816,
    "lo": 0.6839,
    "hi": 0.8555,
-   "mean_yes_pct": 62.375
+   "mean_yes_pct": 62.375,
+   "yes_lo": 57.7737,
+   "yes_hi": 66.9763,
+   "yes_n": 46.0
   },
   {
    "year": 1989,
@@ -1256,7 +1469,10 @@
    "pass_rate": 0.6,
    "lo": 0.3127,
    "hi": 0.8318,
-   "mean_yes_pct": 57.773
+   "mean_yes_pct": 57.773,
+   "yes_lo": 40.4434,
+   "yes_hi": 75.1026,
+   "yes_n": 10.0
   },
   {
    "year": 1990,
@@ -1265,7 +1481,10 @@
    "pass_rate": 0.4505,
    "lo": 0.3611,
    "hi": 0.5431,
-   "mean_yes_pct": 48.5965
+   "mean_yes_pct": 48.5965,
+   "yes_lo": 44.137,
+   "yes_hi": 53.056,
+   "yes_n": 66.0
   },
   {
    "year": 1991,
@@ -1274,7 +1493,10 @@
    "pass_rate": 0.25,
    "lo": 0.0715,
    "hi": 0.5907,
-   "mean_yes_pct": 47.6375
+   "mean_yes_pct": 47.6375,
+   "yes_lo": 42.4269,
+   "yes_hi": 52.8481,
+   "yes_n": 8.0
   },
   {
    "year": 1992,
@@ -1283,7 +1505,10 @@
    "pass_rate": 0.5455,
    "lo": 0.4417,
    "hi": 0.6454,
-   "mean_yes_pct": 53.6264
+   "mean_yes_pct": 53.6264,
+   "yes_lo": 49.428,
+   "yes_hi": 57.8247,
+   "yes_n": 72.0
   },
   {
    "year": 1993,
@@ -1292,7 +1517,10 @@
    "pass_rate": 0.3889,
    "lo": 0.203,
    "hi": 0.6138,
-   "mean_yes_pct": 47.78
+   "mean_yes_pct": 47.78,
+   "yes_lo": 36.4292,
+   "yes_hi": 59.1308,
+   "yes_n": 11.0
   },
   {
    "year": 1994,
@@ -1301,7 +1529,10 @@
    "pass_rate": 0.55,
    "lo": 0.4524,
    "hi": 0.6439,
-   "mean_yes_pct": 52.8154
+   "mean_yes_pct": 52.8154,
+   "yes_lo": 49.1829,
+   "yes_hi": 56.448,
+   "yes_n": 79.0
   },
   {
    "year": 1995,
@@ -1310,7 +1541,10 @@
    "pass_rate": 0.6,
    "lo": 0.3127,
    "hi": 0.8318,
-   "mean_yes_pct": 58.672
+   "mean_yes_pct": 58.672,
+   "yes_lo": 43.446,
+   "yes_hi": 73.898,
+   "yes_n": 10.0
   },
   {
    "year": 1996,
@@ -1319,7 +1553,10 @@
    "pass_rate": 0.5135,
    "lo": 0.4216,
    "hi": 0.6045,
-   "mean_yes_pct": 50.4746
+   "mean_yes_pct": 50.4746,
+   "yes_lo": 47.4001,
+   "yes_hi": 53.5492,
+   "yes_n": 84.0
   },
   {
    "year": 1997,
@@ -1328,7 +1565,10 @@
    "pass_rate": 0.5,
    "lo": 0.28,
    "hi": 0.72,
-   "mean_yes_pct": 50.7387
+   "mean_yes_pct": 50.7387,
+   "yes_lo": 40.6275,
+   "yes_hi": 60.85,
+   "yes_n": 16.0
   },
   {
    "year": 1998,
@@ -1337,7 +1577,10 @@
    "pass_rate": 0.6571,
    "lo": 0.5622,
    "hi": 0.7409,
-   "mean_yes_pct": 54.3808
+   "mean_yes_pct": 54.3808,
+   "yes_lo": 51.3106,
+   "yes_hi": 57.4511,
+   "yes_n": 83.0
   },
   {
    "year": 1999,
@@ -1346,7 +1589,10 @@
    "pass_rate": 0.625,
    "lo": 0.3864,
    "hi": 0.8152,
-   "mean_yes_pct": 51.0744
+   "mean_yes_pct": 51.0744,
+   "yes_lo": 44.9351,
+   "yes_hi": 57.2137,
+   "yes_n": 16.0
   },
   {
    "year": 2000,
@@ -1355,7 +1601,10 @@
    "pass_rate": 0.52,
    "lo": 0.4331,
    "hi": 0.6057,
-   "mean_yes_pct": 49.6291
+   "mean_yes_pct": 49.6291,
+   "yes_lo": 46.6664,
+   "yes_hi": 52.5917,
+   "yes_n": 95.0
   },
   {
    "year": 2001,
@@ -1364,7 +1613,10 @@
    "pass_rate": 0.7778,
    "lo": 0.4526,
    "hi": 0.9368,
-   "mean_yes_pct": 60.4022
+   "mean_yes_pct": 60.4022,
+   "yes_lo": 49.3619,
+   "yes_hi": 71.4425,
+   "yes_n": 9.0
   },
   {
    "year": 2002,
@@ -1373,7 +1625,10 @@
    "pass_rate": 0.5545,
    "lo": 0.4614,
    "hi": 0.644,
-   "mean_yes_pct": 52.2733
+   "mean_yes_pct": 52.2733,
+   "yes_lo": 48.9025,
+   "yes_hi": 55.6441,
+   "yes_n": 97.0
   },
   {
    "year": 2003,
@@ -1382,7 +1637,10 @@
    "pass_rate": 0.3,
    "lo": 0.1078,
    "hi": 0.6032,
-   "mean_yes_pct": 45.1538
+   "mean_yes_pct": 45.1538,
+   "yes_lo": 27.9655,
+   "yes_hi": 62.342,
+   "yes_n": 8.0
   },
   {
    "year": 2004,
@@ -1391,7 +1649,10 @@
    "pass_rate": 0.6118,
    "lo": 0.5055,
    "hi": 0.7084,
-   "mean_yes_pct": 54.8657
+   "mean_yes_pct": 54.8657,
+   "yes_lo": 51.5268,
+   "yes_hi": 58.2045,
+   "yes_n": 65.0
   },
   {
    "year": 2005,
@@ -1400,7 +1661,10 @@
    "pass_rate": 0.2381,
    "lo": 0.1063,
    "hi": 0.4509,
-   "mean_yes_pct": 46.2492
+   "mean_yes_pct": 46.2492,
+   "yes_lo": 38.8741,
+   "yes_hi": 53.6244,
+   "yes_n": 13.0
   },
   {
    "year": 2006,
@@ -1409,7 +1673,10 @@
    "pass_rate": 0.5688,
    "lo": 0.4751,
    "hi": 0.6579,
-   "mean_yes_pct": 53.5882
+   "mean_yes_pct": 53.5882,
+   "yes_lo": 50.3046,
+   "yes_hi": 56.8718,
+   "yes_n": 94.0
   },
   {
    "year": 2007,
@@ -1418,7 +1685,10 @@
    "pass_rate": 0.8889,
    "lo": 0.565,
    "hi": 0.9801,
-   "mean_yes_pct": 55.2389
+   "mean_yes_pct": 55.2389,
+   "yes_lo": 49.223,
+   "yes_hi": 61.2548,
+   "yes_n": 9.0
   },
   {
    "year": 2008,
@@ -1427,7 +1697,10 @@
    "pass_rate": 0.4848,
    "lo": 0.3888,
    "hi": 0.582,
-   "mean_yes_pct": 51.4263
+   "mean_yes_pct": 51.4263,
+   "yes_lo": 47.9414,
+   "yes_hi": 54.9111,
+   "yes_n": 78.0
   },
   {
    "year": 2009,
@@ -1436,7 +1709,10 @@
    "pass_rate": 0.4545,
    "lo": 0.2127,
    "hi": 0.7199,
-   "mean_yes_pct": 57.346
+   "mean_yes_pct": 57.346,
+   "yes_lo": 44.0218,
+   "yes_hi": 70.6702,
+   "yes_n": 5.0
   },
   {
    "year": 2010,
@@ -1445,7 +1721,10 @@
    "pass_rate": 0.5833,
    "lo": 0.4834,
    "hi": 0.6769,
-   "mean_yes_pct": 54.2306
+   "mean_yes_pct": 54.2306,
+   "yes_lo": 50.7958,
+   "yes_hi": 57.6654,
+   "yes_n": 82.0
   },
   {
    "year": 2011,
@@ -1454,7 +1733,10 @@
    "pass_rate": 0.5556,
    "lo": 0.2666,
    "hi": 0.8112,
-   "mean_yes_pct": 54.2822
+   "mean_yes_pct": 54.2822,
+   "yes_lo": 43.1854,
+   "yes_hi": 65.3791,
+   "yes_n": 9.0
   },
   {
    "year": 2012,
@@ -1463,7 +1745,10 @@
    "pass_rate": 0.4588,
    "lo": 0.357,
    "hi": 0.5642,
-   "mean_yes_pct": 50.5828
+   "mean_yes_pct": 50.5828,
+   "yes_lo": 47.0747,
+   "yes_hi": 54.0908,
+   "yes_n": 72.0
   },
   {
    "year": 2013,
@@ -1472,7 +1757,10 @@
    "pass_rate": 0.25,
    "lo": 0.0456,
    "hi": 0.6994,
-   "mean_yes_pct": 46.7525
+   "mean_yes_pct": 46.7525,
+   "yes_lo": 24.9577,
+   "yes_hi": 68.5473,
+   "yes_n": 4.0
   },
   {
    "year": 2014,
@@ -1481,7 +1769,10 @@
    "pass_rate": 0.5357,
    "lo": 0.407,
    "hi": 0.6598,
-   "mean_yes_pct": 51.1379
+   "mean_yes_pct": 51.1379,
+   "yes_lo": 46.7902,
+   "yes_hi": 55.4856,
+   "yes_n": 48.0
   },
   {
    "year": 2015,
@@ -1490,7 +1781,10 @@
    "pass_rate": 0.7143,
    "lo": 0.3589,
    "hi": 0.9178,
-   "mean_yes_pct": 52.8971
+   "mean_yes_pct": 52.8971,
+   "yes_lo": 34.8509,
+   "yes_hi": 70.9434,
+   "yes_n": 7.0
   },
   {
    "year": 2016,
@@ -1499,7 +1793,10 @@
    "pass_rate": 0.64,
    "lo": 0.527,
    "hi": 0.7394,
-   "mean_yes_pct": 55.3854
+   "mean_yes_pct": 55.3854,
+   "yes_lo": 51.3395,
+   "yes_hi": 59.4313,
+   "yes_n": 57.0
   },
   {
    "year": 2017,
@@ -1508,7 +1805,10 @@
    "pass_rate": 0.5,
    "lo": 0.0945,
    "hi": 0.9055,
-   "mean_yes_pct": 51.72
+   "mean_yes_pct": 51.72,
+   "yes_lo": NaN,
+   "yes_hi": NaN,
+   "yes_n": 2.0
   },
   {
    "year": 2018,
@@ -1517,7 +1817,10 @@
    "pass_rate": 0.5632,
    "lo": 0.4585,
    "hi": 0.6626,
-   "mean_yes_pct": 54.0701
+   "mean_yes_pct": 54.0701,
+   "yes_lo": 50.888,
+   "yes_hi": 57.2523,
+   "yes_n": 71.0
   },
   {
    "year": 2019,
@@ -1526,7 +1829,10 @@
    "pass_rate": 0.6,
    "lo": 0.2307,
    "hi": 0.8824,
-   "mean_yes_pct": 53.046
+   "mean_yes_pct": 53.046,
+   "yes_lo": 44.1625,
+   "yes_hi": 61.9295,
+   "yes_n": 5.0
   },
   {
    "year": 2020,
@@ -1535,7 +1841,10 @@
    "pass_rate": 0.6842,
    "lo": 0.5552,
    "hi": 0.79,
-   "mean_yes_pct": 58.9752
+   "mean_yes_pct": 58.9752,
+   "yes_lo": 55.1614,
+   "yes_hi": 62.7891,
+   "yes_n": 44.0
   },
   {
    "year": 2021,
@@ -1544,7 +1853,10 @@
    "pass_rate": 0.0,
    "lo": 0.0,
    "hi": 0.5615,
-   "mean_yes_pct": 43.9133
+   "mean_yes_pct": 43.9133,
+   "yes_lo": 39.9611,
+   "yes_hi": 47.8656,
+   "yes_n": 3.0
   },
   {
    "year": 2022,
@@ -1553,7 +1865,10 @@
    "pass_rate": 0.6226,
    "lo": 0.4881,
    "hi": 0.7406,
-   "mean_yes_pct": 55.7872
+   "mean_yes_pct": 55.7872,
+   "yes_lo": 51.9156,
+   "yes_hi": 59.6587,
+   "yes_n": 46.0
   },
   {
    "year": 2023,
@@ -1562,7 +1877,10 @@
    "pass_rate": 0.6,
    "lo": 0.2307,
    "hi": 0.8824,
-   "mean_yes_pct": 53.016
+   "mean_yes_pct": 53.016,
+   "yes_lo": 39.1795,
+   "yes_hi": 66.8525,
+   "yes_n": 5.0
   },
   {
    "year": 2024,
@@ -1571,7 +1889,10 @@
    "pass_rate": 0.4935,
    "lo": 0.3848,
    "hi": 0.6028,
-   "mean_yes_pct": 51.0058
+   "mean_yes_pct": 51.0058,
+   "yes_lo": 48.0847,
+   "yes_hi": 53.9269,
+   "yes_n": 66.0
   }
  ],
  "trend_pass_rate": {
@@ -2306,7 +2627,10 @@
    "pass_rate": 0.619,
    "lo": 0.5577,
    "hi": 0.6768,
-   "mean_yes_pct": 53.786
+   "mean_yes_pct": 53.786,
+   "yes_lo": 51.526,
+   "yes_hi": 56.0459,
+   "yes_n": 196.0
   },
   {
    "decade": 1980,
@@ -2315,7 +2639,10 @@
    "pass_rate": 0.6292,
    "lo": 0.5834,
    "hi": 0.6728,
-   "mean_yes_pct": 54.6958
+   "mean_yes_pct": 54.6958,
+   "yes_lo": 52.8511,
+   "yes_hi": 56.5406,
+   "yes_n": 306.0
   },
   {
    "decade": 1990,
@@ -2324,7 +2651,10 @@
    "pass_rate": 0.538,
    "lo": 0.4953,
    "hi": 0.5802,
-   "mean_yes_pct": 52.4258
+   "mean_yes_pct": 52.4258,
+   "yes_lo": 50.8005,
+   "yes_hi": 54.0511,
+   "yes_n": 388.0
   },
   {
    "decade": 2000,
@@ -2333,7 +2663,10 @@
    "pass_rate": 0.5443,
    "lo": 0.4987,
    "hi": 0.5891,
-   "mean_yes_pct": 52.5995
+   "mean_yes_pct": 52.5995,
+   "yes_lo": 51.0345,
+   "yes_hi": 54.1644,
+   "yes_n": 348.0
   },
   {
    "decade": 2010,
@@ -2342,7 +2675,10 @@
    "pass_rate": 0.5527,
    "lo": 0.4973,
    "hi": 0.6068,
-   "mean_yes_pct": 53.4632
+   "mean_yes_pct": 53.4632,
+   "yes_lo": 51.6121,
+   "yes_hi": 55.3144,
+   "yes_n": 244.0
   },
   {
    "decade": 2020,
@@ -2351,7 +2687,10 @@
    "pass_rate": 0.6014,
    "lo": 0.5181,
    "hi": 0.6793,
-   "mean_yes_pct": 56.9035
+   "mean_yes_pct": 56.9035,
+   "yes_lo": 54.4684,
+   "yes_hi": 59.3385,
+   "yes_n": 107.0
   }
  ]
 }

@@ -6,7 +6,10 @@
    "pass_rate": 0.5812,
    "lo": 0.5552,
    "hi": 0.6067,
-   "mean_yes_pct": 53.5927
+   "mean_yes_pct": 53.5927,
+   "yes_lo": 52.6954,
+   "yes_hi": 54.49,
+   "yes_n": 1167.0
   },
   {
    "gov_party": "R",
@@ -14,7 +17,10 @@
    "pass_rate": 0.5526,
    "lo": 0.5227,
    "hi": 0.582,
-   "mean_yes_pct": 52.2177
+   "mean_yes_pct": 52.2177,
+   "yes_lo": 51.1316,
+   "yes_hi": 53.3039,
+   "yes_n": 764.0
   }
  ],
  "by_leg": [
@@ -24,7 +30,10 @@
    "pass_rate": 0.5897,
    "lo": 0.5611,
    "hi": 0.6176,
-   "mean_yes_pct": 53.8531
+   "mean_yes_pct": 53.8531,
+   "yes_lo": 52.6847,
+   "yes_hi": 55.0215,
+   "yes_n": 644.0
   },
   {
    "leg_ctrl": "R",
@@ -32,7 +41,10 @@
    "pass_rate": 0.5523,
    "lo": 0.5198,
    "hi": 0.5843,
-   "mean_yes_pct": 52.6342
+   "mean_yes_pct": 52.6342,
+   "yes_lo": 51.6158,
+   "yes_hi": 53.6525,
+   "yes_n": 904.0
   },
   {
    "leg_ctrl": "split",
@@ -40,7 +52,10 @@
    "pass_rate": 0.5429,
    "lo": 0.495,
    "hi": 0.5899,
-   "mean_yes_pct": 52.6752
+   "mean_yes_pct": 52.6752,
+   "yes_lo": 51.1009,
+   "yes_hi": 54.2496,
+   "yes_n": 393.0
   }
  ],
  "by_trifecta": [
@@ -50,7 +65,10 @@
    "pass_rate": 0.604,
    "lo": 0.5673,
    "hi": 0.6395,
-   "mean_yes_pct": 54.5991
+   "mean_yes_pct": 54.5991,
+   "yes_lo": 53.2693,
+   "yes_hi": 55.9288,
+   "yes_n": 468.0
   },
   {
    "trifecta": "R trifecta",
@@ -58,7 +76,10 @@
    "pass_rate": 0.5455,
    "lo": 0.5004,
    "hi": 0.5898,
-   "mean_yes_pct": 52.5819
+   "mean_yes_pct": 52.5819,
+   "yes_lo": 51.2597,
+   "yes_hi": 53.9041,
+   "yes_n": 471.0
   },
   {
    "trifecta": "divided",
@@ -66,7 +87,10 @@
    "pass_rate": 0.5571,
    "lo": 0.5301,
    "hi": 0.5837,
-   "mean_yes_pct": 52.5405
+   "mean_yes_pct": 52.5405,
+   "yes_lo": 51.5337,
+   "yes_hi": 53.5473,
+   "yes_n": 1002.0
   }
  ],
  "by_lean_cat": [
@@ -76,7 +100,10 @@
    "pass_rate": 0.602,
    "lo": 0.5653,
    "hi": 0.6376,
-   "mean_yes_pct": 53.5437
+   "mean_yes_pct": 53.5437,
+   "yes_lo": 52.2322,
+   "yes_hi": 54.8552,
+   "yes_n": 584.0
   },
   {
    "lean_cat": "competitive (\u00b110)",
@@ -84,7 +111,10 @@
    "pass_rate": 0.5572,
    "lo": 0.5281,
    "hi": 0.586,
-   "mean_yes_pct": 53.077
+   "mean_yes_pct": 53.077,
+   "yes_lo": 52.1295,
+   "yes_hi": 54.0244,
+   "yes_n": 1014.0
   },
   {
    "lean_cat": "D-leaning (>10 pts)",
@@ -92,7 +122,10 @@
    "pass_rate": 0.5552,
    "lo": 0.5138,
    "hi": 0.5957,
-   "mean_yes_pct": 52.6318
+   "mean_yes_pct": 52.6318,
+   "yes_lo": 50.9552,
+   "yes_hi": 54.3083,
+   "yes_n": 275.0
   }
  ],
  "by_shift_dir": [
@@ -102,7 +135,10 @@
    "pass_rate": 0.5792,
    "lo": 0.5463,
    "hi": 0.6115,
-   "mean_yes_pct": 54.0492
+   "mean_yes_pct": 54.0492,
+   "yes_lo": 52.8619,
+   "yes_hi": 55.2365,
+   "yes_n": 678.0
   },
   {
    "shift_dir": "flat (\u00b12)",
@@ -110,7 +146,10 @@
    "pass_rate": 0.5909,
    "lo": 0.5331,
    "hi": 0.6463,
-   "mean_yes_pct": 53.153
+   "mean_yes_pct": 53.153,
+   "yes_lo": 51.3167,
+   "yes_hi": 54.9894,
+   "yes_n": 260.0
   },
   {
    "shift_dir": "toward D (>2 pts)",
@@ -118,7 +157,10 @@
    "pass_rate": 0.5392,
    "lo": 0.5082,
    "hi": 0.57,
-   "mean_yes_pct": 52.009
+   "mean_yes_pct": 52.009,
+   "yes_lo": 50.9166,
+   "yes_hi": 53.1015,
+   "yes_n": 749.0
   }
  ],
  "gov_by_origin": [
@@ -129,7 +171,10 @@
    "pass_rate": 0.4623,
    "lo": 0.4154,
    "hi": 0.5098,
-   "mean_yes_pct": 50.0207
+   "mean_yes_pct": 50.0207,
+   "yes_lo": 48.6331,
+   "yes_hi": 51.4083,
+   "yes_n": 357.0
   },
   {
    "mtype": "initiative",
@@ -138,7 +183,10 @@
    "pass_rate": 0.4449,
    "lo": 0.3829,
    "hi": 0.5087,
-   "mean_yes_pct": 49.5926
+   "mean_yes_pct": 49.5926,
+   "yes_lo": 47.5301,
+   "yes_hi": 51.655,
+   "yes_n": 168.0
   },
   {
    "mtype": "legislative",
@@ -147,7 +195,10 @@
    "pass_rate": 0.6404,
    "lo": 0.5762,
    "hi": 0.6998,
-   "mean_yes_pct": 55.7135
+   "mean_yes_pct": 55.7135,
+   "yes_lo": 53.5146,
+   "yes_hi": 57.9123,
+   "yes_n": 213.0
   },
   {
    "mtype": "legislative",
@@ -156,7 +207,10 @@
    "pass_rate": 0.6032,
    "lo": 0.5159,
    "hi": 0.6843,
-   "mean_yes_pct": 53.5388
+   "mean_yes_pct": 53.5388,
+   "yes_lo": 50.8198,
+   "yes_hi": 56.2578,
+   "yes_n": 113.0
   }
  ],
  "leg_by_origin": [
@@ -167,7 +221,10 @@
    "pass_rate": 0.4441,
    "lo": 0.3884,
    "hi": 0.5011,
-   "mean_yes_pct": 49.497
+   "mean_yes_pct": 49.497,
+   "yes_lo": 47.6878,
+   "yes_hi": 51.3061,
+   "yes_n": 164.0
   },
   {
    "mtype": "initiative",
@@ -176,7 +233,10 @@
    "pass_rate": 0.4608,
    "lo": 0.3958,
    "hi": 0.5273,
-   "mean_yes_pct": 49.832
+   "mean_yes_pct": 49.832,
+   "yes_lo": 47.958,
+   "yes_hi": 51.706,
+   "yes_n": 216.0
   },
   {
    "mtype": "initiative",
@@ -185,7 +245,10 @@
    "pass_rate": 0.473,
    "lo": 0.3942,
    "hi": 0.5531,
-   "mean_yes_pct": 50.3981
+   "mean_yes_pct": 50.3981,
+   "yes_lo": 48.0517,
+   "yes_hi": 52.7446,
+   "yes_n": 145.0
   },
   {
    "mtype": "legislative",
@@ -194,7 +257,10 @@
    "pass_rate": 0.6706,
    "lo": 0.5968,
    "hi": 0.7368,
-   "mean_yes_pct": 56.6735
+   "mean_yes_pct": 56.6735,
+   "yes_lo": 53.9622,
+   "yes_hi": 59.3848,
+   "yes_n": 143.0
   },
   {
    "mtype": "legislative",
@@ -203,7 +269,10 @@
    "pass_rate": 0.6,
    "lo": 0.5172,
    "hi": 0.6774,
-   "mean_yes_pct": 53.8347
+   "mean_yes_pct": 53.8347,
+   "yes_lo": 51.3658,
+   "yes_hi": 56.3036,
+   "yes_n": 139.0
   },
   {
    "mtype": "legislative",
@@ -212,7 +281,10 @@
    "pass_rate": 0.5455,
    "lo": 0.4007,
    "hi": 0.6829,
-   "mean_yes_pct": 52.9436
+   "mean_yes_pct": 52.9436,
+   "yes_lo": 47.9736,
+   "yes_hi": 57.9137,
+   "yes_n": 44.0
   }
  ],
  "state_shift": [
@@ -223,7 +295,10 @@
    "pass_rate": 0.58,
    "lo": 0.4423,
    "hi": 0.7063,
-   "mean_yes_pct": 53.1536
+   "mean_yes_pct": 53.1536,
+   "yes_lo": 48.7446,
+   "yes_hi": 57.5626,
+   "yes_n": 50.0
   },
   {
    "state": "Alaska",
@@ -232,7 +307,10 @@
    "pass_rate": 0.5854,
    "lo": 0.4337,
    "hi": 0.7224,
-   "mean_yes_pct": 52.2302
+   "mean_yes_pct": 52.2302,
+   "yes_lo": 47.788,
+   "yes_hi": 56.6725,
+   "yes_n": 41.0
   },
   {
    "state": "Arizona",
@@ -241,7 +319,10 @@
    "pass_rate": 0.5306,
    "lo": 0.3938,
    "hi": 0.663,
-   "mean_yes_pct": 52.2855
+   "mean_yes_pct": 52.2855,
+   "yes_lo": 47.4308,
+   "yes_hi": 57.1402,
+   "yes_n": 49.0
   },
   {
    "state": "Arizona",
@@ -250,7 +331,10 @@
    "pass_rate": 0.5446,
    "lo": 0.4476,
    "hi": 0.6383,
-   "mean_yes_pct": 49.5641
+   "mean_yes_pct": 49.5641,
+   "yes_lo": 46.8424,
+   "yes_hi": 52.2857,
+   "yes_n": 101.0
   },
   {
    "state": "California",
@@ -259,7 +343,10 @@
    "pass_rate": 0.5758,
    "lo": 0.5061,
    "hi": 0.6425,
-   "mean_yes_pct": NaN
+   "mean_yes_pct": NaN,
+   "yes_lo": NaN,
+   "yes_hi": NaN,
+   "yes_n": 0.0
   },
   {
    "state": "California",
@@ -268,7 +355,10 @@
    "pass_rate": 0.5602,
    "lo": 0.497,
    "hi": 0.6214,
-   "mean_yes_pct": NaN
+   "mean_yes_pct": NaN,
+   "yes_lo": NaN,
+   "yes_hi": NaN,
+   "yes_n": 0.0
   },
   {
    "state": "Colorado",
@@ -277,7 +367,10 @@
    "pass_rate": 0.473,
    "lo": 0.3634,
    "hi": 0.5852,
-   "mean_yes_pct": 47.8523
+   "mean_yes_pct": 47.8523,
+   "yes_lo": 44.1167,
+   "yes_hi": 51.5879,
+   "yes_n": 74.0
   },
   {
    "state": "Colorado",
@@ -286,7 +379,10 @@
    "pass_rate": 0.4828,
    "lo": 0.3938,
    "hi": 0.5728,
-   "mean_yes_pct": 49.7817
+   "mean_yes_pct": 49.7817,
+   "yes_lo": 46.9377,
+   "yes_hi": 52.6257,
+   "yes_n": 116.0
   },
   {
    "state": "Florida",
@@ -295,7 +391,10 @@
    "pass_rate": 0.7857,
    "lo": 0.6865,
    "hi": 0.8599,
-   "mean_yes_pct": 64.3112
+   "mean_yes_pct": 64.3112,
+   "yes_lo": 61.7268,
+   "yes_hi": 66.8956,
+   "yes_n": 84.0
   },
   {
    "state": "Florida",
@@ -304,7 +403,10 @@
    "pass_rate": 0.7018,
    "lo": 0.5734,
    "hi": 0.8047,
-   "mean_yes_pct": 61.6251
+   "mean_yes_pct": 61.6251,
+   "yes_lo": 57.8311,
+   "yes_hi": 65.419,
+   "yes_n": 55.0
   },
   {
    "state": "Hawaii",
@@ -313,7 +415,10 @@
    "pass_rate": 0.7576,
    "lo": 0.5898,
    "hi": 0.8717,
-   "mean_yes_pct": 54.8185
+   "mean_yes_pct": 54.8185,
+   "yes_lo": 49.1751,
+   "yes_hi": 60.4618,
+   "yes_n": 33.0
   },
   {
    "state": "Hawaii",
@@ -322,7 +427,10 @@
    "pass_rate": 0.7097,
    "lo": 0.5341,
    "hi": 0.839,
-   "mean_yes_pct": 54.6181
+   "mean_yes_pct": 54.6181,
+   "yes_lo": 50.8878,
+   "yes_hi": 58.3483,
+   "yes_n": 31.0
   },
   {
    "state": "Michigan",
@@ -331,7 +439,10 @@
    "pass_rate": 0.625,
    "lo": 0.4271,
    "hi": 0.7884,
-   "mean_yes_pct": 57.1183
+   "mean_yes_pct": 57.1183,
+   "yes_lo": 49.909,
+   "yes_hi": 64.3276,
+   "yes_n": 24.0
   },
   {
    "state": "Michigan",
@@ -340,7 +451,10 @@
    "pass_rate": 0.4118,
    "lo": 0.2637,
    "hi": 0.5778,
-   "mean_yes_pct": 48.845
+   "mean_yes_pct": 48.845,
+   "yes_lo": 43.0566,
+   "yes_hi": 54.6334,
+   "yes_n": 34.0
   },
   {
    "state": "Missouri",
@@ -349,7 +463,10 @@
    "pass_rate": 0.5849,
    "lo": 0.4509,
    "hi": 0.7074,
-   "mean_yes_pct": 54.2785
+   "mean_yes_pct": 54.2785,
+   "yes_lo": 49.9983,
+   "yes_hi": 58.5587,
+   "yes_n": 53.0
   },
   {
    "state": "Missouri",
@@ -358,7 +475,10 @@
    "pass_rate": 0.7083,
    "lo": 0.5083,
    "hi": 0.8509,
-   "mean_yes_pct": 56.7367
+   "mean_yes_pct": 56.7367,
+   "yes_lo": 50.5679,
+   "yes_hi": 62.9054,
+   "yes_n": 24.0
   },
   {
    "state": "Montana",
@@ -367,7 +487,10 @@
    "pass_rate": 0.6415,
    "lo": 0.5069,
    "hi": 0.757,
-   "mean_yes_pct": 53.3779
+   "mean_yes_pct": 53.3779,
+   "yes_lo": 49.5338,
+   "yes_hi": 57.2221,
+   "yes_n": 53.0
   },
   {
    "state": "Montana",
@@ -376,7 +499,10 @@
    "pass_rate": 0.5161,
    "lo": 0.3945,
    "hi": 0.6359,
-   "mean_yes_pct": 52.2553
+   "mean_yes_pct": 52.2553,
+   "yes_lo": 48.2401,
+   "yes_hi": 56.2705,
+   "yes_n": 62.0
   },
   {
    "state": "Ohio",
@@ -385,7 +511,10 @@
    "pass_rate": 0.3684,
    "lo": 0.1915,
    "hi": 0.5896,
-   "mean_yes_pct": 47.8247
+   "mean_yes_pct": 47.8247,
+   "yes_lo": 38.4062,
+   "yes_hi": 57.2433,
+   "yes_n": 19.0
   },
   {
    "state": "Ohio",
@@ -394,7 +523,10 @@
    "pass_rate": 0.6471,
    "lo": 0.4791,
    "hi": 0.7851,
-   "mean_yes_pct": 55.2697
+   "mean_yes_pct": 55.2697,
+   "yes_lo": 49.4243,
+   "yes_hi": 61.1151,
+   "yes_n": 34.0
   },
   {
    "state": "Oregon",
@@ -403,7 +535,10 @@
    "pass_rate": 0.4839,
    "lo": 0.3977,
    "hi": 0.571,
-   "mean_yes_pct": 51.5306
+   "mean_yes_pct": 51.5306,
+   "yes_lo": 48.8326,
+   "yes_hi": 54.2285,
+   "yes_n": 123.0
   },
   {
    "state": "Oregon",
@@ -412,7 +547,10 @@
    "pass_rate": 0.442,
    "lo": 0.3619,
    "hi": 0.5253,
-   "mean_yes_pct": 49.6427
+   "mean_yes_pct": 49.6427,
+   "yes_lo": 46.9774,
+   "yes_hi": 52.308,
+   "yes_n": 138.0
   },
   {
    "state": "South Dakota",
@@ -421,7 +559,10 @@
    "pass_rate": 0.5,
    "lo": 0.3363,
    "hi": 0.6637,
-   "mean_yes_pct": 49.5666
+   "mean_yes_pct": 49.5666,
+   "yes_lo": 43.8505,
+   "yes_hi": 55.2826,
+   "yes_n": 32.0
   },
   {
    "state": "South Dakota",
@@ -430,7 +571,10 @@
    "pass_rate": 0.2857,
    "lo": 0.1381,
    "hi": 0.4996,
-   "mean_yes_pct": 45.3871
+   "mean_yes_pct": 45.3871,
+   "yes_lo": 39.4752,
+   "yes_hi": 51.2991,
+   "yes_n": 21.0
   },
   {
    "state": "Washington",
@@ -439,7 +583,10 @@
    "pass_rate": 0.587,
    "lo": 0.4434,
    "hi": 0.7171,
-   "mean_yes_pct": 53.6107
+   "mean_yes_pct": 53.6107,
+   "yes_lo": 49.5308,
+   "yes_hi": 57.6905,
+   "yes_n": 46.0
   },
   {
    "state": "Washington",
@@ -448,7 +595,10 @@
    "pass_rate": 0.5286,
    "lo": 0.4132,
    "hi": 0.641,
-   "mean_yes_pct": 51.8617
+   "mean_yes_pct": 51.8617,
+   "yes_lo": 48.7892,
+   "yes_hi": 54.9342,
+   "yes_n": 70.0
   },
   {
    "state": "Wyoming",
@@ -457,7 +607,10 @@
    "pass_rate": 0.6786,
    "lo": 0.4934,
    "hi": 0.8207,
-   "mean_yes_pct": 63.1632
+   "mean_yes_pct": 63.1632,
+   "yes_lo": 58.0137,
+   "yes_hi": 68.3127,
+   "yes_n": 28.0
   },
   {
    "state": "Wyoming",
@@ -466,7 +619,10 @@
    "pass_rate": 0.625,
    "lo": 0.4271,
    "hi": 0.7884,
-   "mean_yes_pct": 62.4809
+   "mean_yes_pct": 62.4809,
+   "yes_lo": 55.1053,
+   "yes_hi": 69.8565,
+   "yes_n": 22.0
   }
  ],
  "m1": {

@@ -61,6 +61,25 @@ def table(df, cols, label="View as table", open_=False):
     return f'<details{" open" if open_ else ""}><summary>{esc(label)}</summary><div class="tw"><table><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div></details>'
 
 
+def yrow(r, name=None):
+    """Yes-share (vote direction) counterpart of wrow: mean yes % with a 95% interval."""
+    if r is None or pd.isna(r["yes_lo"]):
+        return None
+    return (r["mean_yes_pct"], r["yes_lo"], r["yes_hi"], f"{name or ''} mean yes share {r['mean_yes_pct']:.1f}% (95% CI {r['yes_lo']:.1f}–{r['yes_hi']:.1f}), n={int(r['yes_n'])} with vote shares".strip())
+
+
+def sg(v):
+    return "0" if v == 0 else f"{v:+g}"
+
+
+def pc(v):
+    return f"{v:.0f}%"
+
+
+def facets(p, y, tp="Passed or failed: share of measures that passed", ty="Yes or no: mean share of the vote that was yes"):
+    return f'<div class="facet"><h4>{tp}</h4>{p}<h4>{ty}</h4>{y}</div>'
+
+
 def wrow(r, name=None):
     n = int(r["n"])
     return (r["pass_rate"], r["lo"], r["hi"], f"{name or ''} {pct(r['pass_rate'], 1)} passed (95% CI {pct(r['lo'])}–{pct(r['hi'])}), n={n}".strip())
@@ -74,6 +93,11 @@ for _, r in dec.iterrows():
     rf = dec_f.loc[r.decade] if r.decade in dec_f.index else None
     rows.append((f"{int(r.decade)}s", [wrow(r, "All sample:"), wrow(rf, "Full-coverage states:") if rf is not None else None]))
 c_decade = dotrange(rows, [("All 16 jurisdictions", B), ("11 full-coverage states only", O)], 0.35, 0.75, ref=0.5, xticks=[0.4, 0.5, 0.6, 0.7], xlabel="Share of measures that passed (95% CI)")
+rows = []
+for _, r in dec.iterrows():
+    rf = dec_f.loc[r.decade] if r.decade in dec_f.index else None
+    rows.append((f"{int(r.decade)}s", [yrow(r, "All sample:"), yrow(rf, "Full-coverage states:")]))
+c_decade_y = dotrange(rows, [("All 16 jurisdictions", B), ("11 full-coverage states only", O)], 45, 65, ref=50, fmt=pc, xticks=[45, 50, 55, 60, 65], xlabel="Mean yes share of votes, % (95% CI)")
 t_decade = table(dec, [("decade", "Decade", lambda v: f"{int(v)}s"), ("n", "Measures", int), ("pass_rate", "Pass rate", lambda v: pct(v, 1)), ("mean_yes_pct", "Mean yes %", lambda v: f"{v:.1f}")])
 
 ty = pd.DataFrame(S["by_domain_type"])
@@ -84,14 +108,22 @@ for dom in order:
     b = ty[(ty.domain == dom) & (ty.mtype == "legislative")]
     rows.append((dom.capitalize(), [wrow(a.iloc[0], "Citizen initiatives:") if len(a) else None, wrow(b.iloc[0], "Legislative referrals:") if len(b) else None]))
 c_type = dotrange(rows, [("Citizen initiatives", B), ("Legislative referrals", O)], 0.15, 0.95, ref=0.5, xticks=[0.2, 0.4, 0.5, 0.6, 0.8], xlabel="Share passed (95% CI), origin known only")
+rows = []
+for dom in order:
+    a = ty[(ty.domain == dom) & (ty.mtype == "initiative")]
+    b = ty[(ty.domain == dom) & (ty.mtype == "legislative")]
+    rows.append((dom.capitalize(), [yrow(a.iloc[0], "Citizen initiatives:") if len(a) else None, yrow(b.iloc[0], "Legislative referrals:") if len(b) else None]))
+c_type_y = dotrange(rows, [("Citizen initiatives", B), ("Legislative referrals", O)], 35, 80, ref=50, fmt=pc, xticks=[40, 50, 60, 70], xlabel="Mean yes share of votes, % (95% CI), origin known only")
 t_type = table(ty, [("domain", "Domain"), ("mtype", "Origin"), ("n", "n", int), ("pass_rate", "Pass rate", lambda v: pct(v, 1))])
 
 tp = pd.DataFrame(S["by_topic"]).sort_values("pass_rate")
 c_topic = dotrange([(r.topic.capitalize(), [wrow(r)]) for _, r in tp.iterrows()], [("Passed", B)], 0.3, 0.95, ref=0.5, xticks=[0.4, 0.5, 0.6, 0.7, 0.8, 0.9], label_w=210, xlabel="Share passed (95% CI), all measures")
+c_topic_y = dotrange([(r.topic.capitalize(), [yrow(r)]) for _, r in tp.iterrows()], [("Yes share", B)], 40, 70, ref=50, fmt=pc, xticks=[40, 50, 60, 70], label_w=210, xlabel="Mean yes share of votes, % (95% CI), same row order")
 t_topic = table(tp.sort_values("pass_rate", ascending=False), [("topic", "Topic"), ("n", "n", int), ("pass_rate", "Pass rate", lambda v: pct(v, 1)), ("mean_yes_pct", "Mean yes %", lambda v: "n/a" if pd.isna(v) else f"{v:.1f}")])
 
 st = pd.DataFrame(S["by_state"]).sort_values("pass_rate")
 c_state = dotrange([(f"{r.state} ({int(r.n)})", [wrow(r)]) for _, r in st.iterrows()], [("Passed", B)], 0.2, 1.0, ref=0.5, xticks=[0.3, 0.5, 0.7, 0.9], label_w=190, xlabel="Share passed (95% CI); n in brackets")
+c_state_y = dotrange([(f"{r.state} ({int(r.yes_n)})" if r.yes_n else f"{r.state} (no vote counts)", [yrow(r)]) for _, r in st.iterrows()], [("Yes share", B)], 30, 75, ref=50, fmt=pc, xticks=[35, 50, 65], label_w=190, xlabel="Mean yes share, % (95% CI); n with vote shares in brackets; same row order")
 t_state = table(st.sort_values("pass_rate", ascending=False), [("state", "State"), ("n", "n", int), ("pass_rate", "Pass rate", lambda v: pct(v, 1)), ("mean_yes_pct", "Mean yes %", lambda v: "n/a" if pd.isna(v) else f"{v:.1f}")])
 
 cv = pd.DataFrame(S["scrape_vs_iri"])
@@ -118,6 +150,10 @@ for k, lab in LABELS.items():
     tab.append(dict(term=lab, a=f"{ra['odds']:.2f} ({ra['lo']:.2f}–{ra['hi']:.2f}), p={ra['p']:.3f}", b=f"{rb['odds']:.2f} ({rb['lo']:.2f}–{rb['hi']:.2f}), p={rb['p']:.3f}"))
 c_forest = dotrange(rowsf, [(f"Model A: all measures (n={S['logit_n']:,})", B), (f"Model B: origin known, origin controlled (n={S['logit_known_n']:,})", O)], 0.12, 3.5, ref=1.0, log=True,
                     fmt=lambda v: f"{v:g}×", xticks=[0.25, 0.5, 1, 2], label_w=250, xlabel="Odds ratio of passing (1× = no effect; left = hurts, right = helps)")
+OLSW = {r["term"]: r for r in S["ols_yespct"]}
+def ols_pt(r, nm):
+    return (r["coef"], r["coef"] - 1.96 * r["se"], r["coef"] + 1.96 * r["se"], f"{nm}: {r['coef']:+.2f} pts of yes share (95% CI {r['coef'] - 1.96 * r['se']:+.2f} to {r['coef'] + 1.96 * r['se']:+.2f}), p={r['p']:.3f}")
+c_forest_y = dotrange([(lab, [ols_pt(OLSW[k], "OLS, all measures")]) for k, lab in LABELS.items()], [(f"OLS on yes share, all measures with vote shares (n={S['ols_n']:,})", B)], -10, 6, ref=0, fmt=sg, xticks=[-8, -4, 0, 4], label_w=250, xlabel="Change in yes share, percentage points (95% CI; same controls as Model A)")
 t_forest = table(pd.DataFrame(tab), [("term", "Wording feature"), ("a", "Model A: OR (95% CI)"), ("b", "Model B: OR (95% CI)")])
 
 
@@ -141,6 +177,18 @@ for r in PJ["by_lean_cat"]:
 for r in PJ["by_shift_dir"]:
     split_rows.append(prow(r, "Since last race: " + r["shift_dir"]))
 c_split = dotrange(split_rows, [("Passed", B)], 0.4, 0.75, ref=0.5, xticks=[0.4, 0.5, 0.6, 0.7], label_w=250, xlabel="Share of measures that passed (95% CI)")
+ysplit_rows = []
+for r in PJ["by_gov"]:
+    ysplit_rows.append((f"Governor: {PEOPLE[r['gov_party']]}", [yrow(r)]))
+for r in sorted(PJ["by_leg"], key=lambda r: {"D": 0, "R": 1, "split": 2}[r["leg_ctrl"]]):
+    ysplit_rows.append(({"D": "Legislature: Democratic (both chambers)", "R": "Legislature: Republican (both chambers)", "split": "Legislature: split or tied"}[r["leg_ctrl"]], [yrow(r)]))
+for r in sorted(PJ["by_trifecta"], key=lambda r: {"D trifecta": 0, "R trifecta": 1, "divided": 2}[r["trifecta"]]):
+    ysplit_rows.append(({"D trifecta": "Democratic trifecta", "R trifecta": "Republican trifecta", "divided": "Divided government"}[r["trifecta"]], [yrow(r)]))
+for r in PJ["by_lean_cat"]:
+    ysplit_rows.append(("State lean: " + r["lean_cat"], [yrow(r)]))
+for r in PJ["by_shift_dir"]:
+    ysplit_rows.append(("Since last race: " + r["shift_dir"], [yrow(r)]))
+c_split_y = dotrange(ysplit_rows, [("Yes share", B)], 44, 62, ref=50, fmt=pc, xticks=[45, 50, 55, 60], label_w=250, xlabel="Mean yes share of votes, % (95% CI)")
 t_split = table(pd.DataFrame([dict(group=l, n=int(x[0][3].split("n=")[1]), rate=x[0][0]) for l, x in split_rows]), [("group", "Context"), ("n", "n", int), ("rate", "Pass rate", lambda v: pct(v, 1))])
 
 sh = pd.DataFrame(PJ["state_shift"])
@@ -153,6 +201,13 @@ for st_ in pv.index:
                  [cell("toward D (>2 pts)", "after a shift toward D"), cell("toward R (>2 pts)", "after a shift toward R")]))
 rows.sort(key=lambda r: r[1][0][0] - r[1][1][0])
 c_shift = dotrange(rows, [("After the state moved toward Democrats", B), ("After the state moved toward Republicans", O)], 0.1, 1.0, ref=0.5, xticks=[0.2, 0.4, 0.6, 0.8, 1.0], label_w=190, xlabel="Share passed (95% CI); n in brackets = toward R / toward D")
+pvy = sh.pivot(index="state", columns="shift_dir", values=["mean_yes_pct", "yes_lo", "yes_hi", "yes_n"])
+def ycell(st_, k, nm):
+    if pd.isna(pvy.loc[st_, ("yes_lo", k)]):
+        return None
+    return (pvy.loc[st_, ("mean_yes_pct", k)], pvy.loc[st_, ("yes_lo", k)], pvy.loc[st_, ("yes_hi", k)], f"{st_}, {nm}: mean yes share {pvy.loc[st_, ('mean_yes_pct', k)]:.1f}%, n={int(pvy.loc[st_, ('yes_n', k)])}")
+yrows = [(lab, [ycell(nm_, "toward D (>2 pts)", "after a shift toward D"), ycell(nm_, "toward R (>2 pts)", "after a shift toward R")]) for (lab, _), nm_ in zip(rows, [r_[0].split(" (")[0] for r_ in rows])]
+c_shift_y = dotrange(yrows, [("After the state moved toward Democrats", B), ("After the state moved toward Republicans", O)], 30, 75, ref=50, fmt=pc, xticks=[35, 50, 65], label_w=190, xlabel="Mean yes share, % (95% CI); same row order and n as above")
 t_shift = table(sh, [("state", "State"), ("shift_dir", "Shift"), ("n", "n", int), ("pass_rate", "Pass rate", lambda v: pct(v, 1))])
 
 def fmtm(v):
@@ -176,6 +231,8 @@ for k, lab in LAB2.items():
     ftab.append(dict(term=lab, a="–" if k not in M1 else f"{M1[k]['odds']:.2f} ({M1[k]['lo']:.2f}–{M1[k]['hi']:.2f}), p={M1[k]['p']:.2f}", b=f"{M2[k]['odds']:.2f} ({M2[k]['lo']:.2f}–{M2[k]['hi']:.2f}), p={M2[k]['p']:.2f}"))
 c_pforest = dotrange(frows, [(f"Model 1: presidential lean and shift (n={PJ['m1']['n']:,})", B), (f"Model 2: plus governor and legislature (n={PJ['m2']['n']:,})", O)], 0.5, 2.0, ref=1.0, log=True,
                      fmt=lambda v: f"{v:g}×", xticks=[0.5, 0.75, 1, 1.5, 2], label_w=290, xlabel="Odds ratio of passing (1× = no effect)")
+OYR = {r["term"]: r for r in PJ["ols_yes"]["rows"]}
+c_pforest_y = dotrange([(lab, [ols_pt(OYR[k], "OLS with state and decade effects")]) for k, lab in LAB2.items()], [(f"OLS on yes share, state and decade effects (n={PJ['ols_yes']['n']:,})", B)], -6, 6, ref=0, fmt=sg, xticks=[-4, -2, 0, 2, 4], label_w=290, xlabel="Change in yes share, percentage points (95% CI; state-clustered SEs are unreliable with ~15 states)")
 t_pforest = table(pd.DataFrame(ftab), [("term", "Partisan context"), ("a", "Model 1: OR (95% CI)"), ("b", "Model 2: OR (95% CI)")])
 G_ = {r["gov_party"]: r for r in PJ["by_gov"]}; L_ = {r["leg_ctrl"]: r for r in PJ["by_leg"]}; T_ = {r["trifecta"]: r for r in PJ["by_trifecta"]}
 SD_ = {r["shift_dir"]: r for r in PJ["by_shift_dir"]}; LC_ = {r["lean_cat"]: r for r in PJ["by_lean_cat"]}
@@ -266,7 +323,7 @@ h1{{font-size:2.3rem;line-height:1.15;margin:.2em 0 .3em}}h2{{font-size:1.4rem;m
 .chart{{width:100%;height:auto;display:block;margin:6px 0 4px}}.grid{{stroke:var(--grid);stroke-width:1}}.ref{{stroke:var(--ref);stroke-width:1.2;stroke-dasharray:4 3}}
 .tick,.axis{{fill:var(--ink2);font-size:11.5px}}.lab{{fill:var(--ink);font-size:12.5px}}.pt:hover .dot{{r:6.5}}
 .legend{{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;color:var(--ink2);margin-top:8px}}.legend i{{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}}
-.fig{{margin:18px 0 8px}}.fig h3{{margin-top:0}}.note{{color:var(--ink2);font-size:.9rem}}
+.facet h4{{font-size:.92rem;margin:1.1em 0 0;color:var(--ink2);font-weight:600}}.fig{{margin:18px 0 8px}}.fig h3{{margin-top:0}}.note{{color:var(--ink2);font-size:.9rem}}
 details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:pointer}}.tw{{overflow-x:auto}}table{{border-collapse:collapse;width:100%;margin-top:6px}}th,td{{text-align:left;padding:4px 10px 4px 0;border-bottom:1px solid var(--grid);white-space:nowrap}}
 .callout{{background:var(--panel);border-left:4px solid var(--s1);padding:10px 16px;border-radius:0 8px 8px 0;margin:18px 0}}
 .warn{{border-left-color:var(--s2)}}code{{font-size:.9em}}footer{{margin-top:50px;color:var(--ink2);font-size:.88rem}}
@@ -286,7 +343,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <div class="callout" id="summary"><b>Executive summary</b>
 <p><b>Question.</b> Across {H['n']:,} statewide ballot measures (1976&ndash;2024, 15 states plus DC), do yeses or nos win more, and do wording, topic, origin or politics change the odds?</p>
 <ul>
-<li><b>Yes wins slightly more than no</b>: {pct(H['pass_rate'])} of measures passed. The average hides a split: legislative referrals passed {pct(leg['pass_rate'])}, citizen initiatives only {pct(ini['pass_rate'])} (about {OR_ORIG:.1f}&times; the odds after controls). For initiatives, no wins more.</li>
+<li><b>Yes wins slightly more than no</b>: {pct(H['pass_rate'])} of measures passed. The average hides a split: legislative referrals passed {pct(leg['pass_rate'])}, citizen initiatives only {pct(ini['pass_rate'])} (about {OR_ORIG:.1f}&times; the odds after controls). For initiatives, no wins more, though on vote share they split almost exactly 50&ndash;50 ({ini['mean_yes_pct']:.1f}% yes).</li>
 <li><b>Wording: one robust signal.</b> Measures that ask voters to repeal, eliminate or abolish something pass far less often (odds ratio {rep['odds']:.2f}). Verb framing, tax mentions and amendment status show nothing reliable once state and topic are held fixed.</li>
 <li><b>Type matters, but less than origin.</b> Criminal-justice measures pass most (79%); social, economic, environment and education sit around 52&ndash;57%.</li>
 <li><b>Campaign spending (exploratory, Washington only): costlier measures did worse, not reliably.</b> Across {SP['n']} Washington measures, above-median spenders passed {pct(SPH['pass_rate'])} vs {pct(SPL['pass_rate'])}, but the estimate is not significant with year controls and spending data are a lower bound (<a href="#hotbuttons">section 6</a>).</li>
@@ -315,33 +372,35 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 
 <h2>1. Do yeses win more than nos?</h2>
 <p>Across all measures, yes wins {pct(H['pass_rate'])} of the time, higher than a coin flip (binomial p&lt;0.001). The mean passing measure gets {S['margins']['mean_yes_when_pass']:.0f}% yes; the mean failing one gets {S['margins']['mean_yes_when_fail']:.0f}%. Results are usually decisive: {pct(S['margins']['share_pass_above_60'])} of passes top 60%, and {pct(S['margins']['share_fail_below_40'])} of failures are below 40%.</p>
+<p><b>The yes/no view tells a slightly different story.</b> Citizen initiatives draw a mean yes share of {ini['mean_yes_pct']:.1f}% (95% CI {ini['yes_lo']:.1f}&ndash;{ini['yes_hi']:.1f}), which is an even split, even though only {pct(ini['pass_rate'])} of them pass (the average vote is not a rejection). Legislative referrals average {leg['mean_yes_pct']:.1f}% yes. Repeal language costs about {abs(OLSW['mentions_repeal']['coef']):.1f} points of yes share (the strongest wording effect in either view, p={OLSW['mentions_repeal']['p']:.3f}). The yes-share view also nudges a few other features: tax/debt mentions {OLSW['mentions_tax_debt']['coef']:+.1f} points (p={OLSW['mentions_tax_debt']['p']:.3f}), constitutional amendments {OLSW['is_amendment']['coef']:+.1f} (p={OLSW['is_amendment']['p']:.3f}) and longer text {OLSW['zlen']['coef']:+.1f} per SD (p={OLSW['zlen']['p']:.3f}). With eight features tested, only repeal survives a Bonferroni correction (p&lt;0.006); treat the rest as hints.</p>
 <p>The pooled number is partly an artifact of mix, though. Legislative referrals, often routine constitutional housekeeping, pass easily. Citizen initiatives, which are contested, usually fail.</p>
-<div class="fig"><h3>Pass rate by decade</h3>{c_decade}{t_decade}
+<p class="note"><b>Two views of every figure.</b> <i>Passed or failed</i> asks whether yes cleared the bar. <i>Yes or no</i> asks how the vote went: the mean share of ballots cast that were yes, so a measure that lost 49&ndash;51 and one that lost 20&ndash;80 count the same in the first view and very differently in the second. Vote shares exist for every measure except California's (no vote counts) and a few others, so the yes-share panels use fewer measures; the n is in each hover label. Hawaii's share counts blank ballots as "no", which pulls its yes share down. Where supermajorities apply (FL, WY), a measure can pass with under 50% yes.</p>
+<div class="fig"><h3>Pass rate by decade</h3>{facets(c_decade, c_decade_y)}{t_decade}
 <p class="note">Pooled data suggest a fall from ~63% in the 1970s–80s to ~54% in the 1990s–2000s. Part of that is composition: Arizona, Missouri, South Dakota and Oklahoma only enter the data later. Restricted to the 11 states covered across the whole period (orange), the drop is real but between the 1980s and 1990s, then flat, with a 2020s rebound (small n). The linear trend in the pooled series is not significant (p={S['trend_pass_rate']['p']:.2f}).</p></div>
 
 <h2>2. Does the type of measure matter?</h2>
 <h3>By origin</h3>
 <p>Origin is explicit in the data for {ini['n'] + leg['n']:,.0f} measures (California titles say "Initiative"; Oregon, Alaska, DC and others label it; some descriptions state it). Initiatives: <b>{pct(ini['pass_rate'])}</b> passed. Legislative referrals: <b>{pct(leg['pass_rate'])}</b> (difference p&lt;0.001). The gap holds within every topic area.</p>
-<div class="fig"><h3>Pass rate by topic area and origin</h3>{c_type}{t_type}
+<div class="fig"><h3>Pass rate by topic area and origin</h3>{facets(c_type, c_type_y)}{t_type}
 <p class="note">"Social" combines social issues (drugs, guns, abortion, marriage, gambling…) and criminal justice. "Economic" combines taxes/budget, transportation, health/welfare and labor. Topics are assigned by keyword rules and are imperfect (see limits).</p></div>
 
 <h3>By topic</h3>
-<div class="fig">{c_topic}{t_topic}
+<div class="fig">{facets(c_topic, c_topic_y)}{t_topic}
 <p class="note">Criminal-justice measures (victims' rights, sentencing, bail) pass about four times in five. The rest cluster around 52–57%. "Other" is a grab-bag; in the regression it serves as the reference category, so every named topic shows a negative coefficient against it. Read the raw rates above instead.</p></div>
 
 <h2>3. Does the wording matter?</h2>
 <p>For each measure I extracted features from the official or summarized title: verbs that restrict (ban, limit, cut) or expand (allow, create, provide), whether it mentions taxes/fees/bonds, an increase, or a repeal; whether it is a constitutional amendment; length; and reading ease (Flesch). I then fit logistic regressions of passing on all of them at once, with state and decade fixed effects and topic controls, so each feature is judged against similar measures in the same state and era.</p>
-<div class="fig"><h3>Effect of each wording feature on the odds of passing</h3>{c_forest}{t_forest}
+<div class="fig"><h3>Effect of each wording feature on the odds of passing</h3>{facets(c_forest, c_forest_y, 'Passed or failed: odds of passing', 'Yes or no: change in the yes share of the vote')}{t_forest}
 <p class="note">Model A uses everything. Model B keeps only measures whose origin is known and controls for it. Standard errors cluster by state-election. A bar crossing 1× means the effect is indistinguishable from zero.</p></div>
 <ul>
 <li><b>Repeal language is the one clear signal.</b> Both models agree: odds of passing are roughly 60% lower. Voters appear to resist taking things away, especially when the measure frames itself as undoing an existing law.</li>
-<li><b>Restrictive vs expansive framing, tax/debt mentions, "increase" language and amendment status</b> show no reliable effect after controls, even where raw differences look large (for example amendments pass {pct(wr['is_amendment']['rate_with'])} vs {pct(wr['is_amendment']['rate_without'])} raw, but that gap is mostly origin and state).</li>
+<li><b>Restrictive vs expansive framing, tax/debt mentions, "increase" language and amendment status</b> show no reliable effect on <i>passing</i> after controls (the yes-share panel above shows small hints for tax/debt and amendments), even where raw differences look large (for example amendments pass {pct(wr['is_amendment']['rate_with'])} vs {pct(wr['is_amendment']['rate_without'])} raw, but that gap is mostly origin and state).</li>
 <li><b>Length and readability are suggestive, not conclusive.</b> Longer text goes with higher pass rates (rank correlation with yes share ρ={S['len_vs_yespct']['rho']:.2f}). In Model B each extra SD of length raises the odds ~{(b['zlen']['odds'] - 1) * 100:.0f}% and harder-to-read text does slightly better. In Model A neither survives. With eight features tested, treat these as hypotheses.</li>
 </ul>
 <div class="callout"><b>An important caveat on "wording".</b> Wikipedia's text is a mix of official ballot titles (California, Oregon, Washington) and editors' plain-English summaries (Colorado, Missouri, Wyoming and others). So some "wording" differences are really differences in who wrote the summary. State fixed effects absorb most of this, but a true test of wording effects needs the official ballot language for every measure. That is the main upgrade this project needs.</div>
 
 <h2>4. Cross-referencing with state history</h2>
-<div class="fig"><h3>How often measures pass, by state</h3>{c_state}{t_state}
+<div class="fig"><h3>How often measures pass, by state</h3>{facets(c_state, c_state_y)}{t_state}
 <p class="note">Hawaii, Florida, DC and Wyoming say yes most often. South Dakota, Oregon, Michigan and Colorado say no almost as often as yes. South Dakota is the most skeptical on vote share (mean yes {SM['South Dakota']['mean_yes_pct']:.0f}%).</p></div>
 <p><b>State history predicts the next result.</b> Using each measure's own state's pass rate from all <i>other</i> measures (leave-one-out) to predict the outcome gives a coefficient of {S['state_baseline']['coef']:.1f} (p&lt;0.001): a state that says yes often keeps saying yes, whatever the wording.</p>
 
@@ -361,13 +420,13 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <p class="note">Colors here mark the year, not a party. Over this period, the states in the data that became <b>more Democratic</b> were California ({CH['California']:+.0f} pts), Colorado ({CH['Colorado']:+.0f}), Washington ({CH['Washington']:+.0f}), Arizona ({CH['Arizona']:+.0f}) and Oregon ({CH['Oregon']:+.0f}), plus Alaska and Hawaii (about +21). The states that became <b>more Republican</b> were Missouri ({CH['Missouri']:+.0f}), Wyoming ({CH['Wyoming']:+.0f}) and Oklahoma ({CH['Oklahoma']:+.0f}). Margins are two-party, so they ignore third-party votes (Anderson in 1980, Perot in 1992 and 1996) and long-run comparisons are approximate.</p></div>
 
 <h3>The raw picture</h3>
-<div class="fig">{c_split}{t_split}</div>
+<div class="fig">{facets(c_split, c_split_y)}{t_split}</div>
 <p>Raw differences are small and lean one way. Under Democratic governors {pct(G_['D']['pass_rate'], 1)} of measures passed vs {pct(G_['R']['pass_rate'], 1)} under Republicans. Under Democratic legislatures {pct(L_['D']['pass_rate'], 1)} vs {pct(L_['R']['pass_rate'], 1)} (Republican) and {pct(L_['split']['pass_rate'], 1)} (split). Democratic trifectas passed {pct(T_['D trifecta']['pass_rate'], 1)}, Republican trifectas {pct(T_['R trifecta']['pass_rate'], 1)}. The 95% intervals overlap in most comparisons. Part of the governor gap is state composition: Hawaii is mostly Democratic-run and passes 83% of its measures, and without it the gap roughly halves ({pct(G_['D']['pass_rate'], 1)} vs {pct(G_['R']['pass_rate'], 1)} becomes {pct(XHI_D, 1)} vs {pct(XHI_R, 1)}).</p>
 <p>Presidential lean points the other way in the raw data: measures in Republican-leaning states (more than 10 points) passed {pct(LC_['R-leaning (>10 pts)']['pass_rate'], 1)}, vs {pct(LC_['D-leaning (>10 pts)']['pass_rate'], 1)} in Democratic-leaning ones. And states that had just moved toward Democrats passed {pct(SD_['toward D (>2 pts)']['pass_rate'], 1)} vs {pct(SD_['toward R (>2 pts)']['pass_rate'], 1)} after moving toward Republicans.</p>
 
 <h3>With controls: mostly no detectable effect</h3>
 <p>The cleaner test uses state fixed effects, so lean and shift are identified by <i>the same state changing over time</i> rather than comparing, say, Wyoming with California. It also controls for decade and topic and clusters by state-election.</p>
-<div class="fig">{c_pforest}{t_pforest}</div>
+<div class="fig">{facets(c_pforest, c_pforest_y, 'Passed or failed: odds of passing', 'Yes or no: change in the yes share of the vote')}{t_pforest}</div>
 <ul>
 <li><b>A state's presidential lean does not predict yes or no</b> once the state is held fixed (odds ratio {M1['lean10']['odds']:.2f} per 10 points, p={M1['lean10']['p']:.2f}). The raw Republican-state advantage is a difference between states, not an effect of partisanship.</li>
 <li><b>A state becoming more Democratic or more Republican shows no reliable effect</b> (odds ratio {M1['shift10']['odds']:.2f} per 10 points toward Democrats, p={M1['shift10']['p']:.2f}; the 8-year version is similar). The point estimate leans slightly negative, so the raw gap above is not distinguishable from noise.</li>
@@ -375,7 +434,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>Legislative control shows nothing</b> (Democratic: {M2['C(leg_cat, Treatment(\'R\'))[T.D]']['odds']:.2f}×, split: {M2['C(leg_cat, Treatment(\'R\'))[T.split]']['odds']:.2f}× vs Republican; both p&gt;0.5).</li>
 <li><b>Does it depend on topic or origin?</b> The one interaction that stands out is that education measures do worse as a state moves toward Democrats (odds ratio {EDU['odds']:.2f} per 10 points, p={EDU['p']:.2f}). It is one of twelve interaction terms, so it may be chance. Among initiatives with a known origin there is weak evidence of a lower pass rate in more Democratic states (odds ratio {M5L['odds']:.2f} per 10 points, p={M5L['p']:.2f}; n={N_M5}), and no clear difference for referrals.</li>
 </ul>
-<div class="fig"><h3>Within the same state: after shifts toward Democrats vs toward Republicans</h3>{c_shift}{t_shift}
+<div class="fig"><h3>Within the same state: after shifts toward Democrats vs toward Republicans</h3>{facets(c_shift, c_shift_y)}{t_shift}
 <p class="note">Only the 14 states with at least 8 measures in each condition. Pass rates were higher after shifts toward Republicans in 9 of the 14 (average +3.1 points), which a sign test cannot distinguish from a coin flip (p=0.42). Intervals overlap in nearly every state.</p></div>
 <div class="callout"><b>Why the null result isn't surprising.</b> A "yes" vote is not inherently partisan: it can enact a conservative or a liberal policy. If Democratic-leaning electorates say yes to a minimum-wage hike and no to a tax cap while Republican ones do the opposite, the pass rate averaged across all measures cancels out. So these results show that a state's partisan climate does not make voters <i>generally</i> more or less willing to say yes. They say nothing about whether partisanship shapes <i>which</i> measures pass. Testing that needs each measure coded for its ideological direction, which this dataset does not yet have (see next steps).</div>
 

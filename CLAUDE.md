@@ -73,6 +73,11 @@ Dependencies: `pip install -r requirements.txt`.
 - Extract regression coefficients by name, not by position (`params.iloc[1]` once returned a dummy variable).
 - Add an automated check wherever two fields should agree (counts vs stated %, passed vs yes>no).
 
+## Pass/fail and yes/no views
+
+- Every group figure in the report has two panels: **passed or failed** (share passed, Wilson CI) and **yes or no** (mean yes share of the vote, t-based CI). `rate()` in `analyze.py` / `analyze_politics.py` emits `mean_yes_pct`, `yes_lo`, `yes_hi`, `yes_n`; `build_site.py` renders the pair with `facets()`. Wording and partisan forests pair the logit odds ratios with the OLS yes-share coefficients (CI = coef ± 1.96 SE).
+- Yes shares exclude California (no counts) and a few unparsed rows; Hawaii's share counts blanks as "no". Say so next to the panels. In the yes-share OLS several wording features look nominally significant (tax/debt, amendment, length); with eight tests only repeal survives Bonferroni.
+
 ## Honesty rules for this project
 
 - The report must state that wording results come from the 16-jurisdiction subset, not all 50 states.
