@@ -82,4 +82,4 @@ Python 3.13, pandas/statsmodels/scipy, no notebooks. Scripts are plain files run
 1. Full 50-state measure-level data.
 2. Official ballot-title text for every measure.
 3. Better topic classifier (labelled sample plus a model, or manual coding).
-4. Ideological direction coding of each measure (conservative / liberal / neutral) to test climate-by-direction effects; other state covariates (signature requirements, turnout).
+4. Ideological direction coding of each measure (conservative / liberal / neutral) to test climate-by-direction effects; other state covariates (signature requirements, turnout, per-measure campaign spending).
