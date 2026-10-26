@@ -49,6 +49,11 @@ Dependencies: `pip install -r requirements.txt`.
 - Raw votes per capita mostly measures election type (≈96% of top-decile measures are presidential-year). Always show the relative versions alongside it.
 - Never derive position or order from a file that has been re-sorted. Ballot position must come from `src_order` (parse order).
 
+## Campaign spending (exploratory, not in the report)
+
+- `scripts/build_spending.py` joins Washington PDC open data (`data.wa.gov` dataset `3h9x-7bvm`, committee_category 'Statewide Ballot Measure', 2007+) to WA initiatives/referenda. Only ~half of committees name a measure in `ballot_number` or their name; the unattributed ones hold more money than the attributed ones, so spend is a **lower bound** and the for/against split is unreliable. Transaction-level `ballot_number` tags exist only from 2019. Do not hand-map committees to measures from memory.
+- Exploratory result (n=37): more spending goes with lower margins (Spearman -0.30, p≈0.07; not significant with year fixed effects). Not publishable as a finding. A real answer needs a source keyed by measure (Ballotpedia / National Institute on Money in Politics) for many states.
+
 ## Partisan-context definitions
 
 - `lean` = Democratic two-party presidential margin (pts) at the last presidential election strictly before the measure's year. `shift4` = lean minus the margin one race earlier (positive = state moved toward Democrats); `shift8` = two races earlier.
