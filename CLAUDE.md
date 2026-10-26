@@ -14,6 +14,7 @@ python3 -I scripts/build_population.py    # Census files in data/raw/population 
 python3 -I scripts/build_votes.py     # votes per capita, margin, engagement -> data/measures_votes.csv
 python3 -I scripts/analyze_hotbuttons.py  # -> results/hotbuttons.json
 python3 -I scripts/build_explorer.py  # -> docs/explorer.html (interactive, data embedded)
+python3 -I scripts/robustness_hotbuttons.py  # sensitivity of the hot-button estimate -> results/robustness_hotbuttons.json
 python3 -I scripts/robustness.py      # adversarial checks -> results/robustness.json (slow: bootstrap)
 python3 -I scripts/build_site.py      # results/*.json -> docs/index.html
 ```
@@ -44,6 +45,7 @@ Dependencies: `pip install -r requirements.txt`.
 
 - `votes_cast` = yes + no; `vpc` = votes_cast / state population that year (Census files, `scripts/build_population.py`); `margin` = 100·(yes−no)/(yes+no); `rel_engage` = votes / max votes on that state-year's ballot (ballots with ≥5 measures); `excess` = rel_engage minus its trend with ballot position (`pos`, from the source list order `src_order`).
 - Validation in `build_votes.py`: counts must agree with the stated yes % (Hawaii exempt: blanks count as "no", so its % is of all ballots), and votes must be 5–80% of residents. 26 rows are excluded and logged in `data/raw/excluded_vote_counts.csv`.
+- A "ballot" here is a state-year, which can mix a primary/special with the general election (~6% of ballots show >2× vote spread). Hot-button estimates are negative in every specification (−1.7 to −3.5 margin pts per SD) but only some are significant, and power is low (MDE ≈4.6 pts/SD). Say "consistent, not robust"; do not say "no slant".
 - Raw votes per capita mostly measures election type (≈96% of top-decile measures are presidential-year). Always show the relative versions alongside it.
 - Never derive position or order from a file that has been re-sorted. Ballot position must come from `src_order` (parse order).
 

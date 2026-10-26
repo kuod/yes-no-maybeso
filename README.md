@@ -10,7 +10,7 @@ Do yeses or nos win more on US statewide ballot measures, 1976–2024? Does word
 - Wording that asks voters to *repeal, eliminate or abolish* something cuts the odds of passing by roughly 60%. Most other wording features show no reliable effect.
 - State track record is a strong predictor (Hawaii 83% pass, South Dakota 40%).
 - Partisan climate does not reliably move the average yes/no: presidential lean, a state becoming more Democratic or Republican, governor party and legislative control all show no significant effect once the state is held fixed.
-- Hot-button issues (the most voters per capita) show no reliable yes/no slant. Explore every measure in the [interactive Hot-Button Explorer](https://kuod.github.io/yes-no-maybeso/explorer.html). California is missing from that view (no vote counts).
+- Hot-button issues (the most voters per capita) lean slightly toward "no" in every specification tried (about −2 to −3 margin points per SD of engagement), but only some variants are significant and the test is underpowered. Explore every measure in the [interactive Hot-Button Explorer](https://kuod.github.io/yes-no-maybeso/explorer.html). California is missing from that view (no vote counts).
 
 **Caveat:** measure-level data come from Wikipedia lists for 16 jurisdictions, not all 50 states. Initiative counts for every initiative state come from the Initiative & Referendum Institute. See the report's "Limits" section and `CLAUDE.md`.
 

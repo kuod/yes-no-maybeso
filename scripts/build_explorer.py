@@ -13,6 +13,10 @@ for r in v.itertuples():
         v=round(float(r.vpc), 4), re=None if pd.isna(r.rel_engage) or r.n_on_ballot < 5 else round(float(r.rel_engage), 4),
         ex=None if pd.isna(r.excess) else round(float(r.excess), 4), mg=round(float(r.margin), 2), p=int(bool(r.passed)),
         yv=int(r.yes_votes), nv=int(r.no_votes), pop=int(r.population), n=int(r.n_on_ballot), h=int(bool(r.blank_counts_as_no))))
+try:
+    _rb = json.load(open("results/robustness_hotbuttons.json")); MIX = f"{100 * _rb['ballots_votes_ratio_gt2'] / _rb['ballots_total']:.0f}%"
+except Exception:
+    MIX = "a few percent"
 meta = dict(n=len(rows), excluded=int(len(ex)), states=int(v.state.nunique()))
 
 TEMPLATE = r'''<!doctype html>
@@ -79,6 +83,7 @@ table{border-collapse:collapse;width:100%;font-size:.85rem}th,td{text-align:left
 <li><b>Votes per capita</b> = votes cast on the measure (yes + no) divided by the state's total resident population that year. It is <i>not</i> turnout among eligible voters (children and non-citizens are in the denominator), and it mostly reflects <i>which election it was</i>: about 96% of the top-decile measures are in presidential years. Use the other two sorts to compare measures on equal footing.</li>
 <li><b>Engagement vs. the same ballot</b> = votes on this measure ÷ votes on the most-voted measure on that state-year's ballot (ballots with at least 5 measures). <b>Beyond ballot position</b> removes the small trend with where the measure sits on the list.</li>
 <li><b>Margin</b> = (yes − no) ÷ (yes + no), in points. Blank ballots are not in the source counts. <b>Hawaii</b> treats blank ballots as "no" for passage, so a measure can have a positive margin here and still fail there.</li>
+<li><b>A "ballot" is a state-year</b>, which can combine a primary or special election with the general election; about __MIX__ of ballots show vote counts that differ by more than 2× between measures, a sign of mixed electorates. That adds noise to the engagement measures.</li>
 <li><b>Not shown:</b> California (no vote counts yet) and __EXCLUDED__ measures whose parsed counts disagreed with the stated yes percentage. Data: Wikipedia state lists; Census population estimates. All associations, not causes.</li>
 </ul>
 </main>
@@ -140,8 +145,8 @@ function draw(){
   if(n>=8) g+=`<polyline points="${pts.join(" ")}" fill="none" stroke="var(--bg)" stroke-width="4.5" stroke-linejoin="round"/><polyline points="${pts.join(" ")}" fill="none" stroke="var(--line)" stroke-width="2.2" stroke-linejoin="round"/>`;
   // x axis
   const m=$("sort").value, M=METRIC[m]; g+=`<g class="axis">`;
-  [0,.25,.5,.75,1].forEach(f=>{const i=Math.min(n-1,Math.round(f*(n-1))), x=ml+(i+.5)*bw; g+=`<line class="grid" x1="${x}" x2="${x}" y1="${mt+ph}" y2="${mt+ph+5}"/><text x="${Math.min(Math.max(x,ml+30),W-mr-30)}" y="${mt+ph+18}" text-anchor="middle">#${i+1}</text><text x="${Math.min(Math.max(x,ml+40),W-mr-40)}" y="${mt+ph+31}" text-anchor="middle">${esc(M.fmt(view[i][m]))}</text>`;});
-  g+=`<text class="lab" x="${ml+pw/2}" y="${H-4}" text-anchor="middle">${$("dir").value==="1"?"hottest → coolest":"coolest → hottest"} by ${M.name} (one bar per measure)</text></g>`;
+  (W<560?[0,.5,1]:[0,.25,.5,.75,1]).forEach(f=>{const i=Math.min(n-1,Math.round(f*(n-1))), x=ml+(i+.5)*bw; g+=`<line class="grid" x1="${x}" x2="${x}" y1="${mt+ph}" y2="${mt+ph+5}"/><text x="${Math.min(Math.max(x,ml+30),W-mr-30)}" y="${mt+ph+18}" text-anchor="middle">#${i+1}</text><text x="${Math.min(Math.max(x,ml+40),W-mr-40)}" y="${mt+ph+31}" text-anchor="middle">${esc(M.fmt(view[i][m]))}</text>`;});
+  g+=`<text class="lab" x="${ml+pw/2}" y="${H-4}" text-anchor="middle">${$("dir").value==="1"?"hottest → coolest":"coolest → hottest"}${W<560?"":" by "+M.name} (one bar per measure)</text></g>`;
   g+=`<rect id="hl" x="0" y="${mt}" width="${Math.max(bw,2)}" height="${ph}" fill="var(--hi)" opacity=".13" style="display:none"/><rect id="cap" x="${ml}" y="${mt}" width="${pw}" height="${ph}" fill="transparent" style="cursor:crosshair"/>`;
   svg.innerHTML=g;
   const cap=$("cap"), hl=$("hl"), tip=$("tip");
@@ -176,7 +181,7 @@ new ResizeObserver(()=>{if(view.length||DATA.length)draw();}).observe($("chartwr
 $("topn").dataset.auto="1"; render();
 </script></body></html>'''
 
-html = TEMPLATE.replace("/*DATA*/", json.dumps(rows, separators=(",", ":"))).replace("/*META*/", json.dumps(meta)).replace("__EXCLUDED__", str(meta["excluded"]))
+html = TEMPLATE.replace("/*DATA*/", json.dumps(rows, separators=(",", ":"))).replace("/*META*/", json.dumps(meta)).replace("__EXCLUDED__", str(meta["excluded"])).replace("__MIX__", MIX)
 os.makedirs("docs", exist_ok=True)
 open("docs/explorer.html", "w").write(html)
 print("wrote docs/explorer.html", len(html), "bytes;", len(rows), "measures")

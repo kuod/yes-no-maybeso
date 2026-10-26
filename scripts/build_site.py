@@ -55,10 +55,10 @@ def dotrange(rows, series, xmin, xmax, ref=None, log=False, fmt=lambda v: pct(v)
     return leg + "".join(g)
 
 
-def table(df, cols):
+def table(df, cols, label="View as table", open_=False):
     th = "".join(f"<th>{esc(c[1])}</th>" for c in cols)
     tr = "".join("<tr>" + "".join(f"<td>{esc(c[2](r[c[0]]) if len(c) > 2 else r[c[0]])}</td>" for c in cols) + "</tr>" for _, r in df.iterrows())
-    return f'<details><summary>View as table</summary><div class="tw"><table><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div></details>'
+    return f'<details{" open" if open_ else ""}><summary>{esc(label)}</summary><div class="tw"><table><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div></details>'
 
 
 def wrow(r, name=None):
@@ -200,6 +200,8 @@ _cov = pd.read_csv("data/measures.csv").groupby("state").year.agg(["min", "max"]
 
 # ---------------- hot-button section ----------------
 HB = json.load(open("results/hotbuttons.json"))
+RH = json.load(open("results/robustness_hotbuttons.json"))
+_x = pd.read_csv("data/measures.csv").dropna(subset=["yes_pct"]); PASS_MAJ = 100 * (_x.passed == (_x.yes_pct > 50)).mean()
 QN = ["Fewest voters", "2nd", "Middle", "4th", "Most voters"]
 def qchart(key, label):
     rows_ = []
@@ -215,12 +217,19 @@ hb_def = pd.DataFrame([
     dict(a="Raw votes per capita", b=f"{HB['by_vpc_quintile'][4]['mean_margin']:+.1f} vs {HB['by_vpc_quintile'][0]['mean_margin']:+.1f}", c=cf(HB["m_margin_vpc_state_decade"]) + " (state + decade FE)", d="n/a"),
     dict(a="Engagement vs the same ballot", b=f"{HB['by_rel_quintile'][4]['mean_margin']:+.1f} vs {HB['by_rel_quintile'][0]['mean_margin']:+.1f}", c=cf(HB["m_margin_rel_ballot_fe"]), d=f"{HB['m_pass_rel_ballot_fe']['odds']:.2f} (p={HB['m_pass_rel_ballot_fe']['p']:.2f})"),
     dict(a="Engagement beyond ballot position", b=f"{HB['by_excess_quintile'][4]['mean_margin']:+.1f} vs {HB['by_excess_quintile'][0]['mean_margin']:+.1f}", c=cf(HB["m_margin_excess_ballot_fe"]), d=f"{HB['m_pass_excess_ballot_fe']['odds']:.2f} (p={HB['m_pass_excess_ballot_fe']['p']:.2f})")])
-t_hbdef = table(hb_def, [("a", "How 'hot' is defined"), ("b", "Mean margin: most vs fewest voters"), ("c", "Within the same ballot: margin per +1 SD of engagement"), ("d", "Odds of passing per +1 SD")])
+t_hbdef = table(hb_def, [("a", "How 'hot' is defined"), ("b", "Mean margin: most vs fewest voters"), ("c", "Within the same ballot: margin per +1 SD of engagement"), ("d", "Odds of passing per +1 SD")], label="Compare the three definitions of 'hot'", open_=True)
 hb_top = pd.DataFrame([dict(m=f"{r['state']} {r['year']}" + (f" {r['measure']}" if isinstance(r['measure'], str) and r['measure'] not in ('', 'nan') else ""), d=(r["description"] or "")[:92], mg=r["margin"], v=r["vpc"] * 1000, p="Passed" if r["passed"] else "Failed") for r in HB["top_excess"][:14]])
-t_hbtop = table(hb_top, [("m", "Measure"), ("d", "What it was"), ("mg", "Margin", lambda v: f"{v:+.1f}"), ("v", "Votes per 1,000", lambda v: f"{v:.0f}"), ("p", "Result")])
+t_hbtop = table(hb_top, [("m", "Measure"), ("d", "What it was"), ("mg", "Margin", lambda v: f"{v:+.1f}"), ("v", "Votes per 1,000", lambda v: f"{v:.0f}"), ("p", "Result")], label="The 14 hottest measures")
 hb_dom = pd.DataFrame(HB["by_domain_relative"])
-t_hbdom = table(hb_dom, [("domain", "Topic area"), ("n", "n", int), ("mean_rel", "Engagement vs ballot top", lambda v: pct(v)), ("mean_margin", "Mean margin", lambda v: f"{v:+.1f}"), ("pass_rate", "Passed", lambda v: pct(v, 1))])
+t_hbdom = table(hb_dom, [("domain", "Topic area"), ("n", "n", int), ("mean_rel", "Engagement vs ballot top", lambda v: pct(v)), ("mean_margin", "Mean margin", lambda v: f"{v:+.1f}"), ("pass_rate", "Passed", lambda v: pct(v, 1))], label="Topic areas: engagement, margin, pass rate")
 HBV = {r["pres_year"]: r for r in HB["vpc_by_pres_year"]}
+
+
+rh = pd.DataFrame(RH["sensitivity"])
+t_rh = table(rh, [("label", "Specification"), ("n", "Measures", int), ("coef", "Margin per +1 SD engagement", lambda v: f"{v:+.1f}"), ("lo", "95% CI low", lambda v: f"{v:+.1f}"), ("hi", "95% CI high", lambda v: f"{v:+.1f}"), ("p", "p", lambda v: f"{v:.3f}"), ("pass_odds", "Pass odds ratio", lambda v: f"{v:.2f}"), ("pass_p", "p (pass)", lambda v: f"{v:.3f}")], label="The eight specifications", open_=True)
+RHS = {r["label"][:8]: r for r in RH["sensitivity"]}
+RH_COEF = [r["coef"] for r in RH["sensitivity"]]; RH_ODDS = [r["pass_odds"] for r in RH["sensitivity"]]
+RH_EVEN = next(r for r in RH["sensitivity"] if r["label"].startswith("even years")); RH_TIGHT = next(r for r in RH["sensitivity"] if r["label"].startswith("only ballots")); RH_BASE = RH["sensitivity"][0]
 
 # ---------------- text ----------------
 ini = next(r for r in S["type_known"] if r["mtype"] == "initiative")
@@ -275,6 +284,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>Most other wording features do nothing detectable</b> once state and topic are held fixed: restrictive vs expansive verbs, mentioning taxes or debt, or being a constitutional amendment.</li>
 <li><b>Topic matters, but less than origin.</b> Criminal-justice measures pass most (79%); environment, education, social and tax measures sit near 52–54%.</li>
 <li><b>Partisan climate does not reliably move the average yes/no.</b> Presidential lean and a state becoming more Democratic or Republican show no reliable effect once the state is held fixed, and neither does legislative control. Democratic-governor years pass a little more often ({M2['gov_D']['odds']:.2f}× the odds), but that is not statistically distinguishable from zero (<a href="#politics">section 5</a>).</li>
+<li><b>Hot-button issues lean slightly toward "no", but not robustly.</b> Measures that draw more voters than others on the same ballot have somewhat lower margins and pass less often (about {RH_BASE['coef']:+.1f} points and {RH_BASE['pass_odds']:.2f}× the odds per SD), consistent in sign across eight specifications but significant in only some, and the test is underpowered (<a href="#hotbuttons">section 6</a>, <a href="explorer.html">explorer</a>).</li>
 <li><b>State culture matters a lot.</b> Pass rates range from {pct(st.iloc[0].pass_rate)} (South Dakota) to {pct(st.iloc[-1].pass_rate)} (Hawaii). A state's own track record is a strong predictor of any new measure (p&lt;0.001).</li>
 </ul>
 
@@ -357,11 +367,14 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <h3>Findings</h3>
 {t_hbdef}
 <ul>
-<li><b>There is no reliable slant.</b> The raw and election-adjusted views both lean slightly toward "no" as engagement rises (the most-engaged fifth averages about {HB['by_rel_quintile'][4]['mean_margin']:+.0f} points vs {HB['by_rel_quintile'][0]['mean_margin']:+.0f} for the least-engaged). But comparing measures on the same ballot, the estimate is {HB['m_margin_rel_ballot_fe']['coef']:+.1f} points per standard deviation (p={HB['m_margin_rel_ballot_fe']['p']:.2f}), and it shrinks to {HB['m_margin_excess_ballot_fe']['coef']:+.1f} points (p={HB['m_margin_excess_ballot_fe']['p']:.2f}) once the ballot-position trend is removed; in that version the most-engaged fifth is not lower than the least-engaged ({HB['by_excess_quintile'][4]['mean_margin']:+.1f} vs {HB['by_excess_quintile'][0]['mean_margin']:+.1f}). The apparent direction depends on how "hot" is defined, and no version clears conventional significance.</li>
+<li><b>A modest, consistent tilt toward "no" as engagement rises, but not a robust one.</b> The raw and election-adjusted views lean slightly toward "no" (the most-engaged fifth averages about {HB['by_rel_quintile'][4]['mean_margin']:+.0f} points vs {HB['by_rel_quintile'][0]['mean_margin']:+.0f} for the least-engaged). Comparing measures on the same ballot, the baseline estimate is {RH_BASE['coef']:+.1f} points per standard deviation of engagement (95% CI {RH_BASE['lo']:+.1f} to {RH_BASE['hi']:+.1f}, p={RH_BASE['p']:.2f}). Across the eight variants I tried, the estimate is <b>never positive</b> ({min(RH_COEF):+.1f} to {max(RH_COEF):+.1f} points; pass odds {min(RH_ODDS):.2f}–{max(RH_ODDS):.2f}). It strengthens when the electorates are cleaner: counting only even-year, non-special ballots gives {RH_EVEN['coef']:+.1f} points (p={RH_EVEN['p']:.3f}; pass odds {RH_EVEN['pass_odds']:.2f}, p={RH_EVEN['pass_p']:.3f}), and only ballots whose measures all drew similar vote counts gives {RH_TIGHT['coef']:+.1f} (p={RH_TIGHT['p']:.2f}; pass odds {RH_TIGHT['pass_odds']:.2f}, p={RH_TIGHT['pass_p']:.2f}). Because I tried eight variants, treat the two significant ones as suggestive. The ballot-position-adjusted version is weaker ({HB['m_margin_excess_ballot_fe']['coef']:+.1f}, p={HB['m_margin_excess_ballot_fe']['p']:.2f}) and its fifths do not slope downward ({HB['by_excess_quintile'][4]['mean_margin']:+.1f} vs {HB['by_excess_quintile'][0]['mean_margin']:+.1f}).</li>
+<li><b>The test is underpowered.</b> With these standard errors the smallest slant I could reliably detect is about {RH['mde_points_per_sd']:.1f} points per standard deviation, larger than every estimate above. So "not significant" here does not mean "no slant"; a real tilt of the size observed would usually go undetected.</li>
 <li><b>Hot is not the same as close.</b> More-engaged measures are not detectably more narrowly decided (margin size changes {HB['m_absmargin_excess_ballot_fe']['coef']:+.1f} points per SD, p={HB['m_absmargin_excess_ballot_fe']['p']:.2f}).</li>
-<li><b>Passing odds:</b> within a ballot, more-engaging measures pass slightly less often (odds ratio {HB['m_pass_rel_ballot_fe']['odds']:.2f} per SD, p={HB['m_pass_rel_ballot_fe']['p']:.2f}), a hint of status-quo bias that I would not lean on.</li>
+<li><b>Passing odds:</b> within a ballot, more-engaging measures pass less often in every variant (odds ratio {HB['m_pass_rel_ballot_fe']['odds']:.2f} per SD in the baseline, p={HB['m_pass_rel_ballot_fe']['p']:.2f}), consistent with a mild status-quo bias: when more people vote, "no" gains a little.</li>
 <li><b>Which topics draw voters?</b> Social-issue measures draw the most voters relative to their ballot, though the spread across topic areas is small (below).</li>
 </ul>
+<p class="note"><b>How the same-ballot estimate changes with how the sample is cut</b> (margin per +1 SD of engagement vs the same ballot):</p>
+{t_rh}
 {t_hbdom}
 <h3>The measures that drew the most voters beyond their ballot position</h3>
 {t_hbtop}
@@ -377,6 +390,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>The lists are incomplete.</b> Against the IRI's official initiative counts, Wikipedia's lists are short by at least {RB['completeness']['initiatives_missing_lower_bound']} initiatives in {RB['completeness']['state_years_short']} of {RB['completeness']['state_years_checked']} state-years. Most of that is the late-starting windows noted above (Missouri, Oklahoma, South Dakota); the rest are unexplained gaps in Arizona, Montana, Ohio and Oregon (about {sum(RB['completeness']['by_state'].get(k, 0) for k in ('Arizona', 'Montana', 'Ohio', 'Oregon'))} initiatives). I cannot tell whether missing measures skew toward passes or failures; this is a lower bound only for initiatives, and referrals cannot be checked this way.</li>
 <li><b>Partisan results under harsher inference.</b> Clustering by state (15 clusters) instead of by state-election changes none of the logit conclusions. Removing decade fixed effects makes shifts toward Democrats look slightly more negative (odds ratio {RB['politics_no_decade_fe']['shift10']['odds']:.2f}, p={RB['politics_no_decade_fe']['shift10']['p']:.2f}) but still not significant.</li>
 <li><b>A parser bug changed a conclusion.</b> While adding vote counts I found that Arizona's stacked-header tables for 2010–2024 had been silently skipped (57 measures). Restoring them moved the governor-party yes-share effect from +2.6 points (bootstrap p≈0.006, which I had reported as the most credible partisan signal) to {RB['gov_D_yes_share']['coef']:+.1f} points (p={RB['gov_D_yes_share']['wild_bootstrap_p']:.2f}). Other headline results moved by less than a point. Lesson: a result that hinges on a handful of states is only as good as the audit of each state's rows.</li>
+<li><b>The first hot-button conclusion was too strong.</b> I first wrote "no reliable slant." A sensitivity check showed that state-year "ballots" sometimes mix a primary or special election with the general (about {100*RH['ballots_votes_ratio_gt2']/RH['ballots_total']:.0f}% of ballots have vote counts differing by more than 2×), which attenuates the engagement measure, and that the test could only detect effects above ~{RH['mde_points_per_sd']:.0f} points per SD. The conclusion was revised to "a consistent but not robust tilt toward no" (section 6).</li>
 <li><b>Two errors caught in the hot-button analysis before publishing.</b> A helper that returned the wrong regression coefficient (it reported a dummy variable, producing spurious p&lt;0.001 results), and a "ballot position" variable that was accidentally each measure's own engagement rank (correlation −0.76 with engagement; the real correlation is +0.14). Both are fixed; the section 6 numbers use the corrected code.</li>
 <li><b>Not tested:</b> causation; whether Wikipedia's coverage is selective; independent double-extraction of the governor and legislature tables; and ideological direction of each measure. All results are associations in 15 states.</li>
 </ul>
@@ -388,7 +402,7 @@ details{{margin:4px 0 16px;font-size:.88rem;color:var(--ink2)}}summary{{cursor:p
 <li><b>Lists are incomplete.</b> At least {RB['completeness']['initiatives_missing_lower_bound']} initiatives from the IRI's official count are absent (section 7), and referral coverage cannot be checked.</li>
 <li><b>Topic labels are keyword rules</b> (about 75–80% sensible in a hand audit of 40 titles), so topic effects are blurred toward zero.</li>
 <li><b>Wording is measured from summaries, not full ballot language.</b> And "wording" is correlated with substance: a measure to repeal a law is also a different <i>policy</i>, so this is association, not proof that rewording would change outcomes.</li>
-<li><b>Outcomes:</b> passage matches simple majority in 98.3% of rows with vote data; exceptions are legitimate supermajority rules (Florida's 60%, Wyoming).</li>
+<li><b>Outcomes:</b> passage matches simple majority in {PASS_MAJ:.1f}% of rows with vote data; exceptions are legitimate supermajority rules (Florida's 60%, Wyoming).</li>
 <li><b>Partisan context:</b> governor and legislature data were extracted from Wikipedia's party-strength pages by four parallel agents, then checked for row counts, chamber sizes and 17 known state-years. Treat individual cells as probably right, not audited. Ties are coded as split. Years are as shown on the page, with the governor in office that year. Only 15 states, so partisan estimates are noisy. Without ideological coding of each measure, the partisan analysis cannot say whether liberal or conservative measures fare differently by climate.</li>
 <li><b>Next (also):</b> code each measure's ideological direction (conservative, liberal, neutral) to test climate-by-direction effects, the natural follow-up to section 5.</li>
 <li><b>Next:</b> add Ballotpedia or IRI measure-level data for all states; add official ballot titles; add a better topic classifier; model state-level covariates (partisanship, signature rules).</li>
