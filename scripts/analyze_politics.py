@@ -2,11 +2,15 @@
 Reads data/measures_politics.csv; writes results/politics.json and results/politics_*.csv. Run from repo root."""
 import json, warnings
 import numpy as np, pandas as pd
+import sys, os
+sys.path.insert(0, os.path.dirname(__file__))
 import statsmodels.formula.api as smf
+from ci import yes_ci, pass_ci
 from scipy import stats
 warnings.filterwarnings("ignore")
 
 d = pd.read_csv("data/measures_politics.csv")
+d["yes_pct"] = d.yes_share      # yes share of valid votes (Hawaii recomputed from counts)
 d = d[d.state != "District of Columbia"].copy()          # no governor/legislature
 d["sy"] = d.state + d.year.astype(str)
 d["passed_i"] = d.passed.astype(int)
@@ -22,17 +26,8 @@ def wilson(k, n, z=1.96):
     h = z * np.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
     return c - h, c + h
 
-def yes_ci(g):
-    """Mean yes share (%) with a t-based 95% interval; NaN when fewer than 3 measures have a share."""
-    y = g.yes_pct.dropna(); n = len(y)
-    if n < 3:
-        return dict(mean_yes_pct=y.mean() if n else float("nan"), yes_lo=float("nan"), yes_hi=float("nan"), yes_n=n)
-    h = stats.t.ppf(0.975, n - 1) * y.std(ddof=1) / n ** 0.5
-    return dict(mean_yes_pct=y.mean(), yes_lo=y.mean() - h, yes_hi=y.mean() + h, yes_n=n)
-
-
 def rate(g):
-    n = len(g); k = int(g.passed.sum()); lo, hi = wilson(k, n)
+    n = len(g); k = int(g.passed.sum()); lo, hi = pass_ci(g)
     return pd.Series(dict(n=n, pass_rate=k / n, lo=lo, hi=hi, **yes_ci(g)))
 
 def tab(df, key, name):

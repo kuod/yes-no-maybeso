@@ -58,6 +58,7 @@ out["gov_D_loo_range"] = [min(g1.values()), max(g1.values())]
 mn = runp(f"pi ~ lean10 + shift10 + gov_D + legD + legS + C(domain,Treatment('other')) + C(state)", p, "state")
 out["politics_no_decade_fe"] = {t: dict(odds=float(np.exp(mn.params[t])), p=float(mn.pvalues[t])) for t in ["lean10", "shift10", "gov_D"]}
 
+p["yes_pct"] = p.yes_share   # valid-vote share (Hawaii recomputed from counts)
 dy = p.dropna(subset=["yes_pct"]).copy()
 y, X = patsy.dmatrices("yes_pct ~ lean10 + shift10 + gov_D + legD + legS + " + base, dy, return_type="dataframe")
 cols = list(X.columns); j_ = cols.index("gov_D"); g = pd.factorize(dy.state)[0]; G = int(g.max() + 1); Xv, yv = X.values, y.values.ravel()

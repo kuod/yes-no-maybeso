@@ -21,7 +21,9 @@ AGAINST = r"\b(?:no on|vote no|against|reject|stop|oppose|opposed|no to|defeat)\
 def number(r):
     if pd.notna(r.ballot_number) and re.search(r"\d+", str(r.ballot_number)):
         return int(re.search(r"\d+", str(r.ballot_number)).group())
-    m = re.search(r"\b(?:I|R|INITIATIVE|REFERENDUM|REF|SJR|HJR)[\s\-#]*(\d{1,4})\b", r.filer_name.upper())
+    nm = r.filer_name.upper()
+    m = re.search(r"\b(?:I|R|INITIATIVE|REFERENDUM|REF|SJR|HJR)[\s\-#]*(\d{1,4})\b", nm) \
+        or re.search(r"\b(?:YES|NO|APPROVE|REJECT|DEFEAT|STOP|SAVE|VOTE|PASS|SUPPORT|OPPOSE|FOR|AGAINST|ON|TO)\b[\s/]*(?:ON |TO |FOR )?(?:I|R|REF)?[\s\-#]*(\d{2,4})\b", nm)
     return int(m.group(1)) if m else None
 
 
@@ -35,6 +37,9 @@ def side(r):
 d["num"] = d.apply(number, axis=1)
 d["side"] = d.apply(side, axis=1)
 matched = d[d.num.notna()].copy()
+win = d[d.year.between(2007, 2024)]
+cov = dict(committees=int(len(win)), attributed=int(win.num.notna().sum()), spend_attr=float(win[win.num.notna()].spend.sum()), spend_unattr=float(win[win.num.isna()].spend.sum()))
+import json; json.dump(cov, open("data/spending_coverage.json", "w"))
 print(f"committees: {len(d)}; attributed to a measure: {len(matched)}; unattributed: {len(d) - len(matched)} (spend ${d[d.num.isna()].spend.sum()/1e6:.1f}M)")
 
 agg = matched.groupby(["year", "num"]).apply(lambda g: pd.Series(dict(

@@ -53,7 +53,7 @@ Dependencies: `pip install -r requirements.txt`.
 
 ## Campaign spending (exploratory; short note in report section 6)
 
-- `scripts/build_spending.py` joins Washington PDC open data (`data.wa.gov` dataset `3h9x-7bvm`, committee_category 'Statewide Ballot Measure', 2007+) to WA initiatives/referenda. Only ~half of committees name a measure in `ballot_number` or their name; the unattributed ones hold more money than the attributed ones, so spend is a **lower bound** and the for/against split is unreliable. Transaction-level `ballot_number` tags exist only from 2019. Do not hand-map committees to measures from memory.
+- `scripts/build_spending.py` joins Washington PDC open data (`data.wa.gov` dataset `3h9x-7bvm`, committee_category 'Statewide Ballot Measure', 2007+) to WA initiatives/referenda. Only ~half of committees name a measure in `ballot_number` or their name; roughly 48% of committees (about a third of the money) are unattributed, so spend is a **lower bound** and the for/against split is unreliable. Transaction-level `ballot_number` tags exist only from 2019. Do not hand-map committees to measures from memory.
 - Exploratory result (n=37): more spending goes with lower margins (Spearman -0.30, p≈0.07; not significant with year fixed effects, p≈0.36). Reported only as a labelled exploratory note, never as a finding. A real answer needs a source keyed by measure (Ballotpedia / National Institute on Money in Politics) for many states.
 
 ## Partisan-context definitions
@@ -77,6 +77,14 @@ Dependencies: `pip install -r requirements.txt`.
 
 - Every group figure in the report has two panels: **passed or failed** (share passed, Wilson CI) and **yes or no** (mean yes share of the vote, t-based CI). `rate()` in `analyze.py` / `analyze_politics.py` emits `mean_yes_pct`, `yes_lo`, `yes_hi`, `yes_n`; `build_site.py` renders the pair with `facets()`. Wording and partisan forests pair the logit odds ratios with the OLS yes-share coefficients (CI = coef ± 1.96 SE).
 - Yes shares exclude California (no counts) and a few unparsed rows; Hawaii's share counts blanks as "no". Say so next to the panels. In the yes-share OLS several wording features look nominally significant (tax/debt, amendment, length); with eight tests only repeal survives Bonferroni.
+
+## Lessons from adversarial pass 3
+
+- Group CIs (pass rate and mean yes share) are cluster-aware: `scripts/ci.py` inflates for state-year clustering (design effect up to ~1.6 on pooled groups). Never go back to plain Wilson / t intervals. The wording yes-share OLS is clustered by state-year (it was HC1).
+- `yes_share` (build_dataset) is the yes share of valid votes; Hawaii is recomputed from counts because its stated % counts blanks as "no". Analysis scripts set `yes_pct = yes_share` after loading. Use `yes_share` for any new yes-share work.
+- Spending: matching by name needs bare-number patterns ("Yes on 1183", "Defeat 1098"); the first regex missed these and skewed the sides. My claim that unattributed money exceeded attributed money was wrong once restricted to 2007-2024 (attributed ≈ $272M vs unattributed ≈ $119M). Same-year permutation (p≈0.19) is the right test; the plain rank correlation (p≈0.03) overstates.
+- Report claims must not contradict each other ("origin matters most" vs "state history matters most"). Grep the generated page for superlatives after edits.
+- Phone width: charts are scaled SVGs, so text is small at 390px. Horizontal-scroll wrappers hide the data behind the labels; do not use them.
 
 ## Honesty rules for this project
 

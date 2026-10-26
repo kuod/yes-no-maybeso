@@ -140,7 +140,10 @@ def main():
     df["domain"] = df.topic.map(broad)
     df = features(df)
     df["decade"] = (df.year // 10) * 10
-    cols = ["state", "year", "election", "src_order", "decade", "measure", "description", "mtype", "topic", "domain", "passed", "yes_votes", "no_votes", "yes_pct",
+    # yes share of valid votes (yes / (yes + no)). Hawaii's stated % counts blank ballots as "no", so use the counts there.
+    cnt = 100 * df.yes_votes / (df.yes_votes + df.no_votes)
+    df["yes_share"] = df.yes_pct.where(~((df.state == "Hawaii") & cnt.notna()), cnt)
+    cols = ["state", "year", "election", "src_order", "decade", "measure", "description", "mtype", "topic", "domain", "passed", "yes_votes", "no_votes", "yes_pct", "yes_share",
             "n_words", "flesch", "restrictive", "expansive", "mentions_tax_debt", "is_amendment", "mentions_increase", "mentions_repeal", "has_year_title"]
     os.makedirs("data", exist_ok=True)
     df[cols].sort_values(["state", "year", "measure"]).to_csv("data/measures.csv", index=False)

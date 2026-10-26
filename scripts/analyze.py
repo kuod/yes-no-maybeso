@@ -1,11 +1,15 @@
 """Run the analysis; writes results/*.json and results/*.csv consumed by the site."""
 import json, os, warnings
 import numpy as np, pandas as pd
+import sys, os
+sys.path.insert(0, os.path.dirname(__file__))
 import statsmodels.formula.api as smf
+from ci import yes_ci, pass_ci
 from scipy import stats
 warnings.filterwarnings("ignore")
 os.makedirs("results", exist_ok=True)
 d = pd.read_csv("data/measures.csv")
+d["yes_pct"] = d.yes_share      # yes share of valid votes (Hawaii recomputed from counts; see build_dataset)
 iri = pd.read_csv("data/state_year.csv")
 out = {}
 BOOL = ["passed", "restrictive", "expansive", "mentions_tax_debt", "is_amendment", "mentions_increase", "mentions_repeal", "has_year_title"]
@@ -18,23 +22,14 @@ def wilson(k, n, z=1.96):
     c = (p + z*z/(2*n)) / den; h = z*np.sqrt(p*(1-p)/n + z*z/(4*n*n)) / den
     return (c-h, c+h)
 
-def yes_ci(g):
-    """Mean yes share (%) with a t-based 95% interval; NaN when fewer than 3 measures have a share."""
-    y = g.yes_pct.dropna(); n = len(y)
-    if n < 3:
-        return dict(mean_yes_pct=y.mean() if n else float("nan"), yes_lo=float("nan"), yes_hi=float("nan"), yes_n=n)
-    h = stats.t.ppf(0.975, n - 1) * y.std(ddof=1) / n ** 0.5
-    return dict(mean_yes_pct=y.mean(), yes_lo=y.mean() - h, yes_hi=y.mean() + h, yes_n=n)
-
-
 def rate(g):
-    n = len(g); k = int(g.passed.sum()); lo, hi = wilson(k, n)
+    n = len(g); k = int(g.passed.sum()); lo, hi = pass_ci(g)
     return pd.Series(dict(n=n, passed=k, pass_rate=k/n, lo=lo, hi=hi, **yes_ci(g)))
 
 d_bool = d[BOOL].copy()  # keep boolean views for the groupby tables; cast copies for model fitting
 # 1. headline
 k, n = int(d.passed.sum()), len(d)
-out["headline"] = dict(n=n, passed=k, pass_rate=k/n, ci=wilson(k, n), states=int(d.state.nunique()),
+out["headline"] = dict(n=n, passed=k, pass_rate=k/n, ci=pass_ci(d), states=int(d.state.nunique()),
                        binom_p=float(stats.binomtest(k, n, 0.5).pvalue),
                        mean_yes_pct=float(d.yes_pct.mean()), median_yes_pct=float(d.yes_pct.median()), n_with_pct=int(d.yes_pct.notna().sum()))
 
@@ -74,7 +69,7 @@ out["logit_n"] = int(m.nobs); out["logit_pseudo_r2"] = float(m.prsquared)
 
 # 4b. within-state yes% OLS (continuous outcome, where vote shares exist)
 dp = dd.dropna(subset=["yes_pct"])
-mo = smf.ols("yes_pct ~ restrictive + expansive + mentions_tax_debt + mentions_increase + mentions_repeal + is_amendment + zlen + zflesch + C(domain, Treatment('other')) + C(state) + C(decade)", dp).fit(cov_type="HC1")
+mo = smf.ols("yes_pct ~ restrictive + expansive + mentions_tax_debt + mentions_increase + mentions_repeal + is_amendment + zlen + zflesch + C(domain, Treatment('other')) + C(state) + C(decade)", dp).fit(cov_type="cluster", cov_kwds={"groups": pd.factorize(dp.state + dp.year.astype(str))[0]})
 co2 = pd.DataFrame(dict(coef=mo.params, se=mo.bse, p=mo.pvalues))
 co2 = co2[~co2.index.str.startswith(("C(state)", "C(decade)", "Intercept"))]
 co2.to_csv("results/ols_yespct.csv"); out["ols_yespct"] = co2.round(4).reset_index().rename(columns={"index": "term"}).to_dict("records"); out["ols_n"] = int(mo.nobs)
