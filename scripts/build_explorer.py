@@ -24,10 +24,10 @@ TEMPLATE = r'''<!doctype html>
 <title>Hot-Button Explorer</title>
 <meta name="description" content="Every statewide ballot measure with vote counts, sorted by how many voters turned out per capita, with the margin for or against.">
 <style>
-:root{--bg:#fcfcfb;--panel:#f4f3f0;--ink:#0b0b0b;--ink2:#52514e;--grid:#e3e2dd;--pos:#2a78d6;--neg:#eb6834;--line:#0b0b0b;--hi:#0b0b0b;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--pos:#3987e5;--neg:#d95926;--line:#f0efec;--hi:#f0efec;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--pos:#3987e5;--neg:#d95926;--line:#f0efec;--hi:#f0efec;color-scheme:dark}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+:root{--bg:#fcfcfb;--panel:#f4f3f0;--ink:#0b0b0b;--ink2:#52514e;--grid:#e3e2dd;--pos:#7a4fd0;--neg:#eb6834;--line:#0b0b0b;--hi:#0b0b0b;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--pos:#9470e0;--neg:#d95926;--line:#f0efec;--hi:#f0efec;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--pos:#9470e0;--neg:#d95926;--line:#f0efec;--hi:#f0efec;color-scheme:dark}
+*{box-sizing:border-box}input[type=range]{accent-color:var(--s1)}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 main{max-width:1060px;margin:0 auto;padding:28px 16px 70px}
 h1{font-size:1.9rem;margin:.1em 0 .2em}p{margin:.5em 0}.sub{color:var(--ink2)}a{color:var(--pos)}
 .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:18px 0 10px;padding:12px 14px;background:var(--panel);border-radius:10px}
@@ -52,7 +52,7 @@ table{border-collapse:collapse;width:100%;font-size:.85rem}th,td{text-align:left
 </style></head><body><main>
 <p class="note"><a href="./">&larr; Back to the report</a></p>
 <h1>Hot-Button Explorer</h1>
-<p class="sub">Every statewide measure with vote counts, sorted by how many voters weighed in. Each bar is one measure; its height is the margin (yes minus no, as a share of votes cast). <span class="pos">Blue</span> = in favor, <span class="neg">orange</span> = against.</p>
+<p class="sub">Every statewide measure with vote counts, sorted by how many voters weighed in. Each bar is one measure; its height is the margin (yes minus no, as a share of votes cast). <span class="pos">Purple</span> = in favor, <span class="neg">orange</span> = against.</p>
 
 <div class="controls" role="group" aria-label="Controls">
 <label>Sort by<select id="sort">

@@ -254,9 +254,9 @@ PAGE = f"""<!doctype html>
 <title>Yes, No, Maybe So</title>
 <meta name="description" content="Do yeses or nos win more on US state ballot measures, and does wording or topic change the odds? {H['n']:,} measures, 1976–2024.">
 <style>
-:root{{--bg:#fcfcfb;--panel:#f4f3f0;--ink:#0b0b0b;--ink2:#52514e;--grid:#e3e2dd;--s1:#2a78d6;--s2:#eb6834;--ref:#52514e;color-scheme:light}}
-@media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--s1:#3987e5;--s2:#d95926;--ref:#c3c2b7;color-scheme:dark}}}}
-:root[data-theme="dark"]{{--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--s1:#3987e5;--s2:#d95926;--ref:#c3c2b7;color-scheme:dark}}
+:root{{--bg:#fcfcfb;--panel:#f4f3f0;--ink:#0b0b0b;--ink2:#52514e;--grid:#e3e2dd;--s1:#7a4fd0;--s2:#eb6834;--ref:#52514e;color-scheme:light}}
+@media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--s1:#9470e0;--s2:#d95926;--ref:#c3c2b7;color-scheme:dark}}}}
+:root[data-theme="dark"]{{--bg:#1a1a19;--panel:#242422;--ink:#f0efec;--ink2:#c3c2b7;--grid:#34342f;--s1:#9470e0;--s2:#d95926;--ref:#c3c2b7;color-scheme:dark}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}}
 main{{max-width:760px;margin:0 auto;padding:40px 16px 80px}}
 h1{{font-size:2.3rem;line-height:1.15;margin:.2em 0 .3em}}h2{{font-size:1.4rem;margin:2.2em 0 .4em}}h3{{font-size:1.05rem;margin:1.6em 0 .2em}}

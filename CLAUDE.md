@@ -82,7 +82,7 @@ Dependencies: `pip install -r requirements.txt`.
 
 ## Style
 
-Python 3.13, pandas/statsmodels/scipy, no notebooks. Scripts are plain files run with `python3 -I` from the repo root. Charts are hand-built inline SVG with CSS custom properties for light/dark themes (palette from the dataviz skill: slot 1 blue, slot 2 orange), always with a table view.
+Python 3.13, pandas/statsmodels/scipy, no notebooks. Scripts are plain files run with `python3 -I` from the repo root. Charts are hand-built inline SVG with CSS custom properties for light/dark themes (palette from the dataviz skill: slot 1 purple #7a4fd0 light / #9470e0 dark, slot 2 orange; deliberately no red/blue, which reads as partisan), always with a table view.
 
 ## Open scope
 
