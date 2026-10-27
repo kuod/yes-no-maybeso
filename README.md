@@ -6,11 +6,13 @@ Do yeses or nos win more on US statewide ballot measures, 1976–2024? Does word
 
 **Headline results** (2,522 measures, 15 states + DC):
 
-- 57% of measures passed overall, but citizen initiatives passed only 46% vs 62% for legislative referrals.
+- 57% of measures passed overall, but citizen initiatives passed only 46% vs 63% for legislative referrals. On vote share initiatives average 50.3% yes, an even split. Every figure shows both views: passed/failed and yes/no (mean yes share), with cluster-aware 95% intervals.
 - Wording that asks voters to *repeal, eliminate or abolish* something cuts the odds of passing by roughly 60%. Most other wording features show no reliable effect.
 - State track record is a strong predictor (Hawaii 83% pass, South Dakota 40%).
 - Partisan climate does not reliably move the average yes/no: presidential lean, a state becoming more Democratic or Republican, governor party and legislative control all show no significant effect once the state is held fixed.
 - Hot-button issues (the most voters per capita) lean slightly toward "no" in every specification tried (about −2 to −3 margin points per SD of engagement), but only some variants are significant and the test is underpowered. Explore every measure in the [interactive Hot-Button Explorer](https://kuod.github.io/yes-no-maybeso/explorer.html). California is missing from that view (no vote counts).
+
+- Campaign spending (exploratory, Washington only, 42 measures): costlier measures did worse, but not robustly (p=0.03 on a plain rank correlation, p=0.19 when spending is shuffled within each year). Spending data are a lower bound because many committees don't name their measure.
 
 **Caveat:** measure-level data come from Wikipedia lists for 16 jurisdictions, not all 50 states. Initiative counts for every initiative state come from the Initiative & Referendum Institute. See the report's "Limits" section and `CLAUDE.md`.
 
@@ -24,7 +26,9 @@ Roughly in order of how much they would improve the findings:
 4. **Ideological direction coding.** Label each measure conservative / liberal / neutral to test whether partisan climate affects *which* measures pass. Averaged over all measures, the partisan effects can cancel.
 5. **Better topic classifier.** Keyword rules are roughly 75-80% accurate; a hand-labelled sample plus a model would help.
 6. **Election-type flags.** Mark primary, special and general elections so hot-button "ballots" don't mix electorates (about 6% do). This should sharpen the engagement estimate, which is currently consistent but underpowered.
-7. **More covariates.** Signature requirements, turnout, and per-measure campaign spending.
+7. **Campaign spending beyond Washington.** The Washington result is a lower bound on one state. A per-measure spending source (National Institute on Money in Politics, Ballotpedia) across many states would answer "do costlier campaigns change yes/no" properly.
+8. **More covariates.** Signature requirements and turnout.
+9. **Narrow-screen charts.** Chart text is small at phone width; redraw with larger labels or fewer rows on narrow screens.
 
 ## Reproduce
 
@@ -39,6 +43,9 @@ python3 -I scripts/build_population.py
 python3 -I scripts/build_votes.py
 python3 -I scripts/analyze_hotbuttons.py
 python3 -I scripts/build_explorer.py
+python3 -I scripts/robustness_hotbuttons.py
+python3 -I scripts/build_spending.py     # exploratory Washington spending join
+python3 -I scripts/analyze_spending.py
 python3 -I scripts/robustness.py   # slow
 python3 -I scripts/build_site.py
 ```
